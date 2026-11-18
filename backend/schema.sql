@@ -250,5 +250,145 @@ LEFT JOIN inscripcion i ON i.estudiante = e.codigo
 LEFT JOIN asignatura a ON a.codigo = i.asignatura
 GROUP BY e.codigo, e.nombre, e.periodo_actual, p.creditos_total;
 
+
+-- =====================================================================
+-- SEMESTRE ACTUAL · notas por evaluación (escala 0,0 – 5,0) y tareas
+-- La app lee y escribe estas tablas por la API REST de Supabase (PostgREST).
+-- =====================================================================
+DROP TABLE IF EXISTS tarea, evaluacion CASCADE;
+
+CREATE TABLE evaluacion (
+  id          TEXT PRIMARY KEY,
+  estudiante  TEXT NOT NULL,
+  asignatura  TEXT NOT NULL REFERENCES asignatura(codigo),
+  nombre      TEXT NOT NULL,
+  tipo        TEXT NOT NULL DEFAULT 'parcial',        -- parcial | quiz | taller | laboratorio | proyecto | examen | exposicion | informe | otro
+  corte       INT  NOT NULL CHECK (corte BETWEEN 1 AND 3),
+  peso        NUMERIC(5,2) NOT NULL CHECK (peso >= 0 AND peso <= 100),   -- % de la nota final
+  nota        NUMERIC(3,1) CHECK (nota >= 0 AND nota <= 5),               -- NULL = aún sin calificar
+  fecha       DATE NOT NULL
+);
+CREATE INDEX ON evaluacion (estudiante, asignatura);
+
+CREATE TABLE tarea (
+  id            TEXT PRIMARY KEY,
+  estudiante    TEXT NOT NULL,
+  asignatura    TEXT NOT NULL REFERENCES asignatura(codigo),
+  titulo        TEXT NOT NULL,
+  descripcion   TEXT,
+  fecha_entrega DATE NOT NULL,
+  estado        TEXT NOT NULL DEFAULT 'pendiente' CHECK (estado IN ('pendiente','en_progreso','entregada','calificada')),
+  progreso      INT  NOT NULL DEFAULT 0 CHECK (progreso BETWEEN 0 AND 100),
+  nota          NUMERIC(3,1) CHECK (nota >= 0 AND nota <= 5),
+  evaluacion_id TEXT REFERENCES evaluacion(id) ON DELETE SET NULL
+);
+CREATE INDEX ON tarea (estudiante, fecha_entrega);
+
+-- Notas del semestre: acumulado, nota actual, nota necesaria para 3,0 y estado
+CREATE OR REPLACE VIEW v_notas_semestre AS
+SELECT e.estudiante, e.asignatura, a.nombre AS asignatura_nombre, a.creditos,
+       SUM(e.peso)                                                        AS peso_total,
+       COALESCE(SUM(e.peso) FILTER (WHERE e.nota IS NOT NULL), 0)        AS peso_evaluado,
+       ROUND(COALESCE(SUM(e.nota * e.peso / 100), 0), 2)                 AS acumulado,
+       ROUND(SUM(e.nota * e.peso) FILTER (WHERE e.nota IS NOT NULL)
+             / NULLIF(SUM(e.peso) FILTER (WHERE e.nota IS NOT NULL), 0), 2) AS nota_actual,
+       CASE WHEN SUM(e.peso) - COALESCE(SUM(e.peso) FILTER (WHERE e.nota IS NOT NULL), 0) > 0
+            THEN ROUND((3.0 - COALESCE(SUM(e.nota * e.peso / 100), 0))
+                 / ((SUM(e.peso) - COALESCE(SUM(e.peso) FILTER (WHERE e.nota IS NOT NULL), 0)) / 100), 2) END AS nota_necesaria,
+       CASE
+         WHEN COUNT(*) = COUNT(e.nota) THEN CASE WHEN ROUND(SUM(e.nota * e.peso) / SUM(e.peso), 1) >= 3.0 THEN 'APROBADA' ELSE 'REPROBADA' END
+         WHEN COALESCE(SUM(e.nota * e.peso / 100), 0) >= 3.0 THEN 'APROBADA ASEGURADA'
+         WHEN COALESCE(SUM(e.nota * e.peso / 100), 0) + (SUM(e.peso) - COALESCE(SUM(e.peso) FILTER (WHERE e.nota IS NOT NULL), 0)) / 100 * 5 < 3.0 THEN 'PERDIDA'
+         WHEN SUM(e.nota * e.peso) FILTER (WHERE e.nota IS NOT NULL) / NULLIF(SUM(e.peso) FILTER (WHERE e.nota IS NOT NULL), 0) < 3.0 THEN 'EN RIESGO'
+         ELSE 'APROBANDO' END AS estado
+FROM evaluacion e JOIN asignatura a ON a.codigo = e.asignatura
+GROUP BY e.estudiante, e.asignatura, a.nombre, a.creditos;
+
+-- Tareas con categoría calculada
+CREATE OR REPLACE VIEW v_tareas AS
+SELECT t.*, a.nombre AS asignatura_nombre, (t.fecha_entrega - CURRENT_DATE) AS dias_para_entrega,
+       CASE WHEN t.estado IN ('entregada','calificada') THEN 'entregada'
+            WHEN t.fecha_entrega < CURRENT_DATE THEN 'vencida'
+            WHEN t.estado = 'en_progreso' THEN 'incompleta'
+            ELSE 'por hacer' END AS categoria
+FROM tarea t JOIN asignatura a ON a.codigo = t.asignatura;
+
+-- Acceso desde la app con la anon key (proyecto de demostración académica).
+-- En producción se reemplaza por autenticación (Supabase Auth) y políticas por estudiante.
+ALTER TABLE evaluacion ENABLE ROW LEVEL SECURITY;
+ALTER TABLE tarea      ENABLE ROW LEVEL SECURITY;
+DO $$ BEGIN
+  IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'anon') THEN
+    EXECUTE 'CREATE POLICY demo_evaluacion ON evaluacion FOR ALL TO anon USING (true) WITH CHECK (true)';
+    EXECUTE 'CREATE POLICY demo_tarea ON tarea FOR ALL TO anon USING (true) WITH CHECK (true)';
+    EXECUTE 'GRANT SELECT, INSERT, UPDATE, DELETE ON evaluacion, tarea TO anon';
+    EXECUTE 'GRANT SELECT ON v_notas_semestre, v_tareas, asignatura TO anon';
+  END IF;
+END $$;
+
+-- Datos de ejemplo del semestre (fechas relativas a hoy)
+INSERT INTO evaluacion (id, estudiante, asignatura, nombre, tipo, corte, peso, nota, fecha) VALUES
+  ('ev_001', '20221045', 'CINT', 'Parcial 1', 'parcial', 1, 20, 2.6, CURRENT_DATE + -70),
+  ('ev_002', '20221045', 'CINT', 'Quiz 1: antiderivadas', 'quiz', 1, 10, 3.4, CURRENT_DATE + -63),
+  ('ev_003', '20221045', 'CINT', 'Parcial 2', 'parcial', 2, 20, 2.8, CURRENT_DATE + -35),
+  ('ev_004', '20221045', 'CINT', 'Taller: integración por partes', 'taller', 2, 10, 3.6, CURRENT_DATE + -28),
+  ('ev_005', '20221045', 'CINT', 'Proyecto integrador (energía fotovoltaica)', 'proyecto', 3, 20, NULL, CURRENT_DATE + 6),
+  ('ev_006', '20221045', 'CINT', 'Examen final', 'examen', 3, 20, NULL, CURRENT_DATE + 12),
+  ('ev_007', '20221045', 'ELEC', 'Parcial 1', 'parcial', 1, 25, 3.5, CURRENT_DATE + -68),
+  ('ev_008', '20221045', 'ELEC', 'Quiz: ley de Gauss', 'quiz', 1, 5, 3.8, CURRENT_DATE + -60),
+  ('ev_009', '20221045', 'ELEC', 'Parcial 2', 'parcial', 2, 25, 3.2, CURRENT_DATE + -33),
+  ('ev_010', '20221045', 'ELEC', 'Taller: circuitos RC', 'taller', 2, 5, 4, CURRENT_DATE + -26),
+  ('ev_011', '20221045', 'ELEC', 'Examen final', 'examen', 3, 40, NULL, CURRENT_DATE + 13),
+  ('ev_012', '20221045', 'LELE', 'Informe 1: ley de Ohm', 'informe', 1, 25, 4.2, CURRENT_DATE + -65),
+  ('ev_013', '20221045', 'LELE', 'Informe 2: capacitores', 'informe', 2, 25, 4, CURRENT_DATE + -38),
+  ('ev_014', '20221045', 'LELE', 'Informe 3: campo magnético', 'informe', 2, 25, 4.5, CURRENT_DATE + -20),
+  ('ev_015', '20221045', 'LELE', 'Informe 4: ley de Faraday', 'informe', 3, 25, NULL, CURRENT_DATE + 2),
+  ('ev_016', '20221045', 'IOP1', 'Parcial 1: programación lineal', 'parcial', 1, 20, 4, CURRENT_DATE + -66),
+  ('ev_017', '20221045', 'IOP1', 'Taller: método Simplex', 'taller', 1, 10, 4.3, CURRENT_DATE + -58),
+  ('ev_018', '20221045', 'IOP1', 'Parcial 2: transporte y asignación', 'parcial', 2, 20, 3.7, CURRENT_DATE + -31),
+  ('ev_019', '20221045', 'IOP1', 'Quiz: dualidad', 'quiz', 2, 10, 4.5, CURRENT_DATE + -24),
+  ('ev_020', '20221045', 'IOP1', 'Trabajo de investigación: modelos de inventarios', 'proyecto', 3, 20, NULL, CURRENT_DATE + 3),
+  ('ev_021', '20221045', 'IOP1', 'Examen final', 'examen', 3, 20, NULL, CURRENT_DATE + 11),
+  ('ev_022', '20221045', 'PIS2', 'Avance 1: diseño del prototipo', 'proyecto', 1, 30, 4.5, CURRENT_DATE + -60),
+  ('ev_023', '20221045', 'PIS2', 'Avance 2: prototipo funcional', 'proyecto', 2, 30, 4.3, CURRENT_DATE + -25),
+  ('ev_024', '20221045', 'PIS2', 'Sustentación final ante jurado', 'exposicion', 3, 40, NULL, CURRENT_DATE + 6),
+  ('ev_025', '20221045', 'CIBS', 'Parcial 1', 'parcial', 1, 20, 3.9, CURRENT_DATE + -64),
+  ('ev_026', '20221045', 'CIBS', 'Laboratorio TryHackMe', 'laboratorio', 1, 10, 4.6, CURRENT_DATE + -55),
+  ('ev_027', '20221045', 'CIBS', 'Parcial 2', 'parcial', 2, 20, 4.1, CURRENT_DATE + -30),
+  ('ev_028', '20221045', 'CIBS', 'Informe de riesgos MAGERIT', 'informe', 2, 10, 4.4, CURRENT_DATE + -21),
+  ('ev_029', '20221045', 'CIBS', 'Hackathon CyberRisk 2.0', 'proyecto', 3, 20, NULL, CURRENT_DATE + 4),
+  ('ev_030', '20221045', 'CIBS', 'Examen final', 'examen', 3, 20, NULL, CURRENT_DATE + 10),
+  ('ev_031', '20221045', 'ECX1', 'Perfil profesional en LinkedIn', 'taller', 1, 20, 4.8, CURRENT_DATE + -62),
+  ('ev_032', '20221045', 'ECX1', 'Portafolio digital', 'proyecto', 2, 25, 4.5, CURRENT_DATE + -29),
+  ('ev_033', '20221045', 'ECX1', 'Pitch personal (video)', 'exposicion', 2, 15, 4.2, CURRENT_DATE + -18),
+  ('ev_034', '20221045', 'ECX1', 'Proyecto final: estrategia de marca personal', 'proyecto', 3, 40, NULL, CURRENT_DATE + 8),
+  ('ev_035', '20221045', 'EPR3', 'Taller: aprendizaje supervisado', 'taller', 1, 15, 4.2, CURRENT_DATE + -61),
+  ('ev_036', '20221045', 'EPR3', 'Parcial 1', 'parcial', 1, 20, 3.6, CURRENT_DATE + -52),
+  ('ev_037', '20221045', 'EPR3', 'Parcial 2: redes neuronales', 'parcial', 2, 15, 3.9, CURRENT_DATE + -27),
+  ('ev_038', '20221045', 'EPR3', 'Proyecto: detector de somnolencia con Roboflow', 'proyecto', 3, 30, NULL, CURRENT_DATE + 5),
+  ('ev_039', '20221045', 'EPR3', 'Examen final', 'examen', 3, 20, NULL, CURRENT_DATE + 13);
+
+INSERT INTO tarea (id, estudiante, asignatura, titulo, descripcion, fecha_entrega, estado, progreso, nota, evaluacion_id) VALUES
+  ('tk_001', '20221045', 'CINT', 'Proyecto integrador · Fase 3 (energía fotovoltaica)', 'Confirmar con el profesor si se entrega póster o documento escrito.', CURRENT_DATE + 6, 'en_progreso', 40, NULL, 'ev_005'),
+  ('tk_002', '20221045', 'CINT', 'Taller 5: volúmenes de sólidos de revolución', 'Ejercicios 1 a 12 de la guía.', CURRENT_DATE + -1, 'pendiente', 0, NULL, NULL),
+  ('tk_003', '20221045', 'CINT', 'Guía de repaso para el examen final', 'Integración por partes, fracciones parciales e impropias.', CURRENT_DATE + 10, 'pendiente', 0, NULL, NULL),
+  ('tk_004', '20221045', 'LELE', 'Informe 4: ley de Faraday', 'Falta análisis de error y conclusiones.', CURRENT_DATE + 2, 'en_progreso', 60, NULL, 'ev_015'),
+  ('tk_005', '20221045', 'ELEC', 'Taller: circuitos RC', NULL, CURRENT_DATE + -26, 'calificada', 100, 4, NULL),
+  ('tk_006', '20221045', 'ELEC', 'Ejercicios de inducción (cap. 30)', 'Preparación para el final.', CURRENT_DATE + 7, 'pendiente', 0, NULL, NULL),
+  ('tk_007', '20221045', 'IOP1', 'Trabajo de investigación: modelos de inventarios (EOQ, Silver-Meal) · LaTeX IEEE', 'En Overleaf. Faltan la sección de Silver-Meal y las referencias.', CURRENT_DATE + 3, 'en_progreso', 55, NULL, 'ev_020'),
+  ('tk_008', '20221045', 'PIS2', 'Presentación del dispositivo de hardware', 'Sustentación ante jurado.', CURRENT_DATE + 6, 'en_progreso', 80, NULL, 'ev_024'),
+  ('tk_009', '20221045', 'PIS2', 'Documento final y póster', 'Formato institucional.', CURRENT_DATE + 5, 'en_progreso', 70, NULL, NULL),
+  ('tk_010', '20221045', 'PIS2', 'Ensayo de la sustentación', 'Cronometrar 15 minutos.', CURRENT_DATE + 4, 'pendiente', 0, NULL, NULL),
+  ('tk_011', '20221045', 'CIBS', 'Hackathon CyberRisk 2.0 · Reto 1: The Marketplace (TryHackMe)', 'Rol: líder de análisis de riesgos. Parte Red Team.', CURRENT_DATE + 4, 'en_progreso', 30, NULL, 'ev_029'),
+  ('tk_012', '20221045', 'CIBS', 'Matriz de riesgos MAGERIT del reto', 'Activos, amenazas, impacto y probabilidad.', CURRENT_DATE + 4, 'pendiente', 0, NULL, NULL),
+  ('tk_013', '20221045', 'EPR3', 'Dataset etiquetado en Roboflow', 'Faltan ~80 imágenes por etiquetar (ojos cerrados / bostezo).', CURRENT_DATE + -2, 'en_progreso', 70, NULL, NULL),
+  ('tk_014', '20221045', 'EPR3', 'Proyecto: detector de somnolencia con Roboflow + Camo', 'Entrenar el modelo y probar en tiempo real con la cámara del celular.', CURRENT_DATE + 5, 'en_progreso', 45, NULL, 'ev_038'),
+  ('tk_015', '20221045', 'ECX1', 'Proyecto final: estrategia de marca personal', 'Plan de contenidos de 4 semanas y métricas.', CURRENT_DATE + 8, 'pendiente', 0, NULL, 'ev_034'),
+  ('tk_016', '20221045', 'ECX1', 'Publicar 3 posts en LinkedIn', NULL, CURRENT_DATE + -12, 'calificada', 100, 4.6, NULL);
+
+-- Consultas útiles:
+--   SELECT * FROM v_notas_semestre WHERE estudiante = '20221045';
+--   SELECT titulo, asignatura_nombre, fecha_entrega, categoria FROM v_tareas WHERE estudiante = '20221045' ORDER BY fecha_entrega;
+
 -- Nota: n8n crea solas las tablas n8n_chat_histories (memoria) y n8n_vectors (RAG)
 -- la primera vez que corren los nodos Postgres Chat Memory y PGVector Store.

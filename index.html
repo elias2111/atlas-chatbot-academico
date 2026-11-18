@@ -277,6 +277,47 @@ button.cchip:active{background:rgba(62,230,255,.12)}
 .install{position:relative;margin:2px 0 6px;padding:10px 34px 10px 12px;border-radius:12px;font-size:12.5px;line-height:1.4;background:rgba(139,92,255,.12);border:1px solid rgba(139,92,255,.45)}
 .install b{color:#fff}.install .shr{display:inline-block;padding:0 6px;border-radius:6px;border:1px solid var(--ln2);color:var(--cy)}
 .install button{position:absolute;right:8px;top:8px;width:22px;height:22px;color:var(--mut)}
+.sc{border:1px solid var(--ln);border-radius:14px;padding:12px;margin-bottom:10px;background:rgba(62,230,255,.03)}
+.sch{display:flex;align-items:center;gap:10px;cursor:pointer}
+.sch .bar{width:4px;align-self:stretch;border-radius:4px}
+.sch .nm{flex:1;font-size:14.5px;font-weight:600}.sch .nm small{display:block;font-family:var(--mono);font-size:10px;color:var(--mut);font-weight:400;margin-top:2px}
+.sch .big{font-family:var(--hud);font-size:22px;font-weight:900;text-align:right;line-height:1}
+.sch .big small{display:block;margin-top:5px}
+.pst{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:99px;border:1px solid}
+.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}.mut{color:var(--mut)}
+.pst.ok{border-color:rgba(56,245,166,.45)}.pst.warn{border-color:rgba(255,176,32,.5)}.pst.bad{border-color:rgba(255,77,109,.5)}.pst.mut{border-color:var(--ln)}
+.sc .prog{position:relative;height:6px;border-radius:6px;background:#0d2230;margin:11px 0 7px;overflow:visible}
+.sc .prog i{position:absolute;left:0;top:0;display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--cy2),var(--cy))}
+.sc .prog i.okb{background:linear-gradient(90deg,#1fbf7f,var(--ok))}
+.sc .prog u{position:absolute;left:0;top:0;height:100%;border-radius:6px;background:rgba(62,230,255,.16)}
+.sc .acc{font-family:var(--mono);font-size:10px;color:var(--dim);margin-bottom:6px}.sc .acc b{color:var(--tx)}
+.sc .prog em{position:absolute;top:-3px;width:2px;height:12px;background:var(--or);box-shadow:0 0 6px var(--or)}
+.sc .need{font-size:12.5px;color:var(--mut)}.sc .need b{color:#fff}
+.cortes{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.cortes span{font-family:var(--mono);font-size:10px;color:var(--mut);border:1px solid var(--ln);border-radius:7px;padding:3px 7px}.cortes b{color:var(--tx)}
+.sc .evs{display:none;margin-top:10px;border-top:1px dashed rgba(62,230,255,.15);padding-top:6px}
+.sc.open .evs{display:block}
+.evrow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:8px 2px;border-bottom:1px dashed rgba(62,230,255,.08);font-size:13px}
+.evrow .ct{font-family:var(--mono);font-size:10px;color:var(--cy);border:1px solid var(--ln2);border-radius:6px;padding:2px 5px}
+.evrow .en{flex:1}.evrow .en small{display:block;font-family:var(--mono);font-size:10px;color:var(--mut);margin-top:2px}
+.evrow b{font-family:var(--hud);font-size:15px}.evrow b.na{color:var(--dim)}.evrow b.lo{color:var(--bad)}.evrow b.hi{color:var(--ok)}
+.wpeso{font-size:11.5px;color:var(--warn);margin:8px 0 0}
+.addbtn{margin-top:8px;font-size:12.5px;color:var(--cy);padding:7px 10px;border-radius:9px;border:1px dashed var(--ln2)}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:10px}.chips::-webkit-scrollbar{display:none}
+.chips button{flex:0 0 auto;font-size:12px;padding:7px 11px;border-radius:99px;border:1px solid var(--ln);color:var(--mut)}
+.chips button i{font-style:normal;font-family:var(--mono);font-size:10px;margin-left:3px;opacity:.8}
+.chips button.on{border-color:var(--cy);color:#001018;background:var(--cy)}
+.task{display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:11px 4px;border-bottom:1px dashed rgba(62,230,255,.1)}
+.task .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+.task .tt{flex:1;font-size:13.5px;min-width:0}.task .tt small{display:block;font-family:var(--mono);font-size:10px;color:var(--mut);margin-top:3px}
+.task .tp{display:block;height:4px;border-radius:4px;background:#0d2230;margin-top:6px;overflow:hidden;max-width:180px}.task .tp i{display:block;height:100%;background:var(--cy)}
+.task .tw{text-align:right;font-size:11.5px;font-weight:600;flex:0 0 auto;max-width:42%}.task .tw small{display:block;font-family:var(--mono);font-size:9.5px;font-weight:400;color:var(--mut);margin-top:3px}
+.task .tw.vencidas{color:var(--bad)}.task .tw.incompletas{color:var(--warn)}.task .tw.porhacer{color:var(--cy)}.task .tw.entregadas{color:var(--ok)}
+.task.entregadas .tt{opacity:.6}
+.field textarea{width:100%;padding:12px;border-radius:12px;background:rgba(3,12,20,.8);border:1px solid var(--ln2);outline:0;font:inherit;font-size:16px;color:var(--tx);resize:vertical}
+.field input[type=date]{width:100%;padding:12px;border-radius:12px;background:rgba(3,12,20,.8);border:1px solid var(--ln2);outline:0;font-size:16px;color:var(--tx);color-scheme:dark}
+.btn.danger{border-color:rgba(255,77,109,.5);color:var(--bad);background:none}
+.btns3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+@media (max-width:420px){.clock{display:none}}
 .msg .inl{margin-top:8px;font-size:12px;padding:6px 10px;border-radius:9px;border:1px solid var(--ln2);color:var(--cy)}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes blink{0%,100%{opacity:.35}50%{opacity:1}}
@@ -301,10 +342,11 @@ button.cchip:active{background:rgba(62,230,255,.12)}
   <header class="top">
     <div class="brand">
       <div class="logo"></div>
-      <div><b id="brandName">ATLAS</b><small>Apoyo académico · v2.1</small></div>
+      <div><b id="brandName">ATLAS</b><small>Apoyo académico · v3</small></div>
     </div>
     <div class="chips-top">
       <span class="pill demo" id="modePill"><i></i><span>Demo</span></span>
+      <span class="pill" id="dbPill">BD: local</span>
       <span class="clock" id="clock">--:--</span>
     </div>
   </header>
@@ -328,6 +370,18 @@ button.cchip:active{background:rgba(62,230,255,.12)}
         <button type="submit" class="ib send" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></button>
         <button type="button" class="ib mic" id="micBtn" aria-label="Hablar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></button>
       </form>
+    </section>
+
+    <!-- SEMESTRE -->
+    <section class="view" id="v-semestre">
+      <h2 class="vt">Semestre <span id="semTerm" style="color:var(--mut);letter-spacing:.1em"></span></h2>
+      <div class="banner" id="semDemo"><div>Notas y tareas de <b>ejemplo</b> (las tareas son tus proyectos reales). Toca cualquier evaluación o tarea para poner tus datos.</div><button id="semUseMine">Usar mis datos</button></div>
+      <div class="card"><div class="stats" id="semStats" style="grid-template-columns:1fr 1fr"></div></div>
+      <div id="semAlerts"></div>
+      <div class="seg-tabs" id="semTabs"><button data-k="notas" class="on">Notas</button><button data-k="tareas">Tareas</button></div>
+      <div id="semNotasWrap"><div class="card"><h3>Notas por materia <span class="tag">pasa con 3,0</span></h3><div id="semNotas"></div>
+        <p class="empty" style="font-size:11.5px;margin-top:6px">Toca una materia para ver sus evaluaciones. La línea naranja marca el 3,0. Cuando todas las notas estén puestas, la definitiva pasa sola a tu expediente.</p></div></div>
+      <div id="semTareasWrap" hidden><div class="card"><h3>Tareas <button class="addbtn" id="addTask" style="margin:0">+ Nueva</button></h3><div class="chips" id="taskChips"></div><div id="taskList"></div></div></div>
     </section>
 
     <!-- AVANCE -->
@@ -412,6 +466,14 @@ button.cchip:active{background:rgba(62,230,255,.12)}
           <div class="help">Con la URL, cada pregunta va al agente RAG de n8n (PostgreSQL + reglamento + LLM) junto con tu expediente. Vacío = IA directa o motor local.</div></div>
         <div class="btns"><button class="btn" id="testHook">Probar conexión</button><button class="btn ghost" id="clearHook">Desconectar</button></div>
       </div>
+      <div class="card"><h3>Base de datos académica</h3>
+        <p class="empty" style="margin-bottom:12px">Sin configurar, las notas y tareas se guardan en este teléfono. Para conectarla a una base de datos PostgreSQL real, crea un proyecto gratis en Supabase, ejecuta <code>backend/schema.sql</code> y pega aquí la URL y la <i>anon key</i> (Project Settings → API).</p>
+        <div class="field"><label>URL del proyecto Supabase</label><input type="url" id="sbUrl" placeholder="https://xxxx.supabase.co"></div>
+        <div class="field"><label>Anon key</label><input type="password" id="sbKey" placeholder="eyJhbGciOi…" autocomplete="off"></div>
+        <div class="btns" style="margin-bottom:10px"><button class="btn" id="sbPull">Conectar y descargar</button><button class="btn" id="sbPush">Subir mis datos</button></div>
+        <p class="empty" id="sbStatus" style="font-size:12px;margin-bottom:10px"></p>
+        <div class="btns3"><button class="btn ghost" id="sbOff">Desconectar</button><button class="btn ghost" id="dbDemo">Recargar datos de ejemplo</button><button class="btn ghost" id="dbEmpty">Vaciar semestre</button></div>
+      </div>
       <div class="card"><h3>IA directa (sin n8n)</h3>
         <div class="field"><label>API key de OpenAI</label><input type="password" id="sKey" placeholder="sk-..." autocomplete="off">
           <div class="help">Opcional. Con la key, ATLAS responde preguntas abiertas con IA usando tu expediente. Se guarda solo en este teléfono. Si hay webhook de n8n, se usa n8n primero.</div></div>
@@ -451,8 +513,18 @@ button.cchip:active{background:rgba(62,230,255,.12)}
     <div class="btns"><button class="btn ghost" id="shCancel">Cancelar</button><button class="btn solid" id="shSave">Guardar</button></div>
   </div>
 
+<div class="sheet-bg" id="fsBg"></div>
+  <div class="sheet" id="fsheet" role="dialog" aria-modal="true">
+    <div class="grab"></div>
+    <h3 id="fsTitle">Editar</h3>
+    <div class="meta" id="fsMeta"></div>
+    <div id="fsBody"></div>
+    <div class="btns3"><button class="btn danger" id="fsDelete">Eliminar</button><button class="btn ghost" id="fsCancel">Cancelar</button><button class="btn solid" id="fsSave">Guardar</button></div>
+  </div>
+
   <nav class="tabs" id="tabs">
     <button data-v="asistente" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="8" stroke-dasharray="3 2.2"/><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5"/></svg>ATLAS</button>
+    <button data-v="semestre"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Semestre</button>
     <button data-v="avance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Avance</button>
     <button data-v="proyeccion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="6" r="2.2"/><path d="M7 18h6a3 3 0 0 0 0-6h-2a3 3 0 0 1 0-6h6"/></svg>Ruta</button>
     <button data-v="rumbo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg>Rumbo</button>
@@ -666,6 +738,9 @@ function analyze(){
       const av = areaAvg[c.area];
       if(av && av < 3.8){ h *= 1.25; why.push(`tu promedio en ${AREAS[c.area].n} es ${fmt(av)}`); }
       if(c.area === "pry"){ h *= 1.3; why.push("entregas del proyecto"); }
+      if(typeof semInfo === "function" && hasEvals(code)){ const si = semInfo(code);
+        if(si.st === "riesgo" || si.st === "perdida"){ h *= 1.4; why.push(`vas en riesgo (necesitas ${fmtG(Math.max(0, si.need ?? 0))})`); }
+        else if(si.st === "asegurada"){ h *= 0.7; why.push("ya la tienes asegurada"); } }
       return {code, name:nm(code), h:Math.round(h), why, hot: why.length > 0};
     }).sort((a,b)=>b.h-a.h);
   }
@@ -698,7 +773,7 @@ function analyze(){
 
   return {approved, enrolled, failed, status:st, apCr, enCr, gpa, areaAvg, unlocks, pendingUnlocks, proj, gradTerm, finished, canTake, alerts, weeklyPlan, recommendations, studentSem, englishDone, graded};
 }
-function refresh(){ A = analyze(); renderAll(); }
+function refresh(){ A = analyze(); renderAll(); if(typeof renderSemester === "function") renderSemester(); }
 
 /* ---------------- UI ---------------- */
 function renderAll(){
@@ -821,7 +896,7 @@ $("#rFile").onchange = async e => {
 };
 
 /* ---------------- navegación ---------------- */
-const VIEWS = ["asistente","avance","proyeccion","rumbo","ajustes"];
+const VIEWS = ["asistente","semestre","avance","proyeccion","rumbo","ajustes"];
 function go(v){
   if(!VIEWS.includes(v)) v = "asistente";
   $$(".view").forEach(el => el.classList.toggle("on", el.id === "v-"+v));
@@ -1069,6 +1144,7 @@ function localCommand(raw){
     const lab = {proyeccion:"proyección",configuracion:"configuración"}[nav[2]] || nav[2];
     setTimeout(()=>go(map[nav[2]]), 900); return {show:`Abriendo ${lab}, ${T()}.`}; }
 
+  if(typeof semCommand === "function"){ const sc = semCommand(raw); if(sc) return sc; }
   // inglés
   if(/\bingles\b/.test(q) && /\b(aprobe|pase|gane|termine|inscribi|matricule|estoy viendo|estoy cursando|voy en|estoy en|voy a ver)\b/.test(q)){
     const m = (" "+q+" ").match(/ (a1|a2|b1 1|b1 2|b2 1|b2 2|c1|b1|b2) /);
@@ -1079,18 +1155,19 @@ function localCommand(raw){
   }
 
   // las preguntas («¿qué materias estoy viendo?») nunca modifican el expediente
-  const isQuestion = /\?/.test(raw) || /^(que|cuales|cual|cuantas|cuantos|dime|digame|muestrame|como|cuando|donde|puedo|tengo|sabes|me dices|me puedes|podrias|quiero saber|cuentame|ensename|lista|listame)\b/.test(q) || /\b(que|cuales) (materias|asignaturas|cursos)\b/.test(q);
+  const isQuestion = /\?/.test(raw) || /^(que|cuales|cual|cuanto|cuanta|cuantas|cuantos|dime|digame|muestrame|como|cuando|donde|puedo|tengo|sabes|me dices|me puedes|podrias|quiero saber|cuentame|ensename|lista|listame)\b/.test(q) || /\b(que|cuales) (materias|asignaturas|cursos)\b/.test(q);
   if(isQuestion) return null;
   let act = null;
   if(/\b(aprobe|pase|gane|ya vi|ya pase|termine)\b/.test(q)) act = "ap";
   else if(/\b(perdi|reprobe|me rajaron|me tiraron|reprobada)\b/.test(q)) act = "re";
   else if(/\b(inscribi|matricule|estoy viendo|estoy cursando|voy a ver|meti|empece|tomare|tome)\b/.test(q)) act = "en";
-  else if(/\b(cancele|retire|desmatricule|saque|quite)\b/.test(q) && !/\bsaque (un|una|\d)/.test(q)) act = "pe";
+  else if(/\b(cancele|retire|desmatricule|quite)\b/.test(q)) act = "pe";
   if(!act) return null;
   const gNum = parseGrade(raw);
   const qNoGrade = q.replace(/(con|nota|saque|de) (\d( \d{1,2})?|cero|uno|dos|tres|cuatro|cinco)( (punto|coma) \w+)?/g, " ");
   const code = findCourseStrong(qNoGrade) || findCourseWeak(qNoGrade);
   if(!code) return q.split(" ").length <= 3 ? {show:`¿Qué asignatura, ${T()}? Dígame por ejemplo: «aprobé Cálculo integral con 4,2».`} : null;
+  if(act === "ap" && gNum == null && typeof hasEvals === "function" && hasEvals(code) && cs(code).st === "en") return null;   // «¿aprobé X?» → lo responde la base de datos
   const x = cs(code); let g = gNum;
   if(act === "ap" && g != null && g < 3) act = "re";
   if(act === "re" && g != null && g >= 3) act = "ap";
@@ -1112,13 +1189,17 @@ function localBrain(raw){
   const hour = new Date().getHours(), saludo = hour < 12 ? "Buenos días" : hour < 19 ? "Buenas tardes" : "Buenas noches";
   if(has(/\bingles\b/)) return {show:`Inglés: nivel <b>${REC.english.level}</b> (${REC.english.st==="ap"?"aprobado":REC.english.st==="en"?"cursando":"pendiente"}). Requisito de grado: ${REC.english.req}. ${A.englishDone ? "Cumplido ✔" : "Aún pendiente."}`};
   if(has(/^(hola|hey|buenas|buenos|que tal|saludos|atlas|hi)\b/) && words <= 4)
-    return {show:`${saludo}, ${T()}. Sistemas en línea. Lleva el <b>${pctNow()}%</b> del plan${A.enrolled.size ? ` y tiene ${A.enrolled.size} asignaturas en curso en ${REC.term}` : ""}. ¿En qué le ayudo?`};
+    { let extra = "";
+      if(typeof semCodes === "function"){ const risk = semCodes().map(semInfo).filter(s => s.st === "riesgo" || s.st === "perdida"); const week = openTasks().filter(t => daysUntil(t.fecha) <= 7); const late = DB.tk.filter(tLate);
+        extra = ` Esta semana tiene <b>${week.length} entrega${week.length === 1 ? "" : "s"}</b>${late.length ? ` y ${late.length} vencida${late.length > 1 ? "s" : ""}` : ""}.${risk.length ? ` Atención: <b>${risk.map(s => nm(s.code)).join(", ")}</b> va en riesgo.` : ""}`; }
+      return {show:`${saludo}, ${T()}. Sistemas en línea. Lleva el <b>${pctNow()}%</b> del plan${A.enrolled.size ? ` y ${A.enrolled.size} asignaturas en curso` : ""}.${extra} ¿En qué le ayudo?`}; }
   if(has(/(gracias|perfecto|excelente|genial|listo)/) && words <= 5) return {show: rnd([`A su servicio, ${T()}.`, `Siempre un placer, ${T()}.`, `Para eso estoy, ${T()}.`])};
   if(has(/(quien eres|que eres|que puedes|que sabes|ayuda|como funcionas|para que sirves|que haces)/))
     return {show:`Soy ${settings.aiName}, su asistente de trayectoria académica. Puedo:` + ul(["Consultar su matrícula y avance del plan (151 créditos)","Proyectar los semestres que le faltan y la fecha de grado","Alertarle de requisitos y prerrequisitos pendientes","Darle recomendaciones de investigación, autoaprendizaje y educación de precisión","Actualizar su expediente por voz: «aprobé Cálculo integral con 4,2»"]),
             say:`Soy ${settings.aiName}, su asistente de trayectoria académica. Consulto su matrícula y avance, proyecto su fecha de grado, le alerto de requisitos pendientes y le doy recomendaciones. También puede actualizar su expediente por voz, por ejemplo: aprobé cálculo integral con cuatro punto dos.`};
   if(has(/(que hora|hora es|que dia es|fecha de hoy)/)){ const d = new Date(); return {show:`Son las ${d.toLocaleTimeString("es-CO",{hour:"numeric",minute:"2-digit"})} del ${d.toLocaleDateString("es-CO",{weekday:"long",day:"numeric",month:"long"})}, ${T()}.`}; }
 
+  if(typeof semBrain === "function" && !has(/(puedo (ver|inscribir|tomar|matricular)|prerrequisit|requisito|habilitad|desbloquea)/)){ const sb = semBrain(raw, q); if(sb) return sb; }
   const strong = findCourseStrong(q);
   if(strong && !has(/(cuando me graduo|semestres me faltan|cuantos semestres)/)) return courseInfo(strong, q);
 
@@ -1191,12 +1272,13 @@ function studentContext(){
     proyeccion: A.proj.map(p => ({periodo: p.term, creditos: p.cr, asignaturas: p.courses.map(c=>nm(c.code))})),
     grado_estimado: A.gradTerm, alertas: A.alerts().map(a => `${a.t}: ${a.d}`),
     plan_semanal_horas: A.weeklyPlan().map(r => ({asignatura: r.name, horas: r.h})),
-    promedio_por_area: Object.fromEntries(Object.entries(A.areaAvg).map(([k,v]) => [AREAS[k].n, +v.toFixed(2)]))
+    promedio_por_area: Object.fromEntries(Object.entries(A.areaAvg).map(([k,v]) => [AREAS[k].n, +v.toFixed(2)])),
+    semestre_actual: typeof semContext === "function" ? semContext() : undefined
   };
 }
 function systemPrompt(){
   return `Eres ${settings.aiName}, el asistente académico por voz de un estudiante de Ingeniería de Sistemas, con el estilo de un mayordomo de IA elegante y eficiente (cortés, seguro, con humor sutil). Llama al estudiante "${settings.trato === "name" ? first() : settings.trato}".
-Reglas: responde en español, en 2 a 5 frases (máx. ~110 palabras), porque se lee en voz alta. Usa solo los datos del CONTEXTO; no inventes notas, créditos ni normas institucionales; si algo no está, dilo y sugiere consultar Registro Académico o la coordinación. Ya tienes calculadas la proyección, las alertas y el plan semanal: úsalos. Para recomendaciones, cubre investigación, autoaprendizaje y educación de precisión (basada en sus notas por área y la ruta crítica). Sin tablas ni markdown complejo; viñetas cortas con "- " si enumeras. Si el estudiante quiere registrar notas o cambiar el estado de una materia, dile que lo diga así: "aprobé <materia> con <nota>" o "estoy viendo <materia>".
+Reglas: responde en español, en 2 a 5 frases (máx. ~110 palabras), porque se lee en voz alta. La escala de notas es de 0,0 a 5,0 y se aprueba con 3,0: usa "semestre_actual" del CONTEXTO para notas por corte, nota necesaria, si aprobó o no, y tareas (por hacer, incompletas, vencidas, entregadas) con sus fechas. También eres tutor de sus materias: si pregunta un tema (por ejemplo integración por partes, ley de Faraday, método Simplex, MAGERIT o redes neuronales), explícalo claro y paso a paso con un ejemplo corto (puedes llegar a ~180 palabras en ese caso). Usa solo los datos del CONTEXTO; no inventes notas, créditos ni normas institucionales; si algo no está, dilo y sugiere consultar Registro Académico o la coordinación. Ya tienes calculadas la proyección, las alertas y el plan semanal: úsalos. Para recomendaciones, cubre investigación, autoaprendizaje y educación de precisión (basada en sus notas por área y la ruta crítica). Sin tablas ni markdown complejo; viñetas cortas con "- " si enumeras. Si el estudiante quiere registrar notas o cambiar el estado de una materia, dile que lo diga así: "aprobé <materia> con <nota>" o "estoy viendo <materia>".
 Fecha: ${new Date().toLocaleDateString("es-CO",{dateStyle:"long"})}.
 CONTEXTO: ${JSON.stringify(studentContext())}`;
 }
@@ -1264,7 +1346,7 @@ async function handleUser(text){
   speak(res.say || strip(res.show), () => { if(voiceTurn && settings.convo) setTimeout(() => startListening(true), 400); });
 }
 
-const QUICK = ["¿Cuál es mi estado de matrícula?","¿Cuándo me gradúo?","¿Qué requisitos tengo pendientes?","¿Puedo ver Ecuaciones diferenciales?","Dame recomendaciones","Arma mi plan semanal","¿Cómo voy en el plan?","¿Cuál es mi promedio?","Aprobé Cálculo integral con 4,2"];
+const QUICK = ["Dame el informe del semestre","¿Cómo voy en Cálculo integral?","¿Qué tareas tengo pendientes?","¿Qué tengo para esta semana?","¿Tengo tareas vencidas?","¿Qué materias estoy viendo?","¿Cuándo me gradúo?","¿Qué requisitos tengo pendientes?","Dame recomendaciones","Saqué 3,5 en el examen final de Electromagnetismo"];
 $("#quick").innerHTML = QUICK.map(q=>`<button>${q}</button>`).join("");
 $$("#quick button").forEach(b => b.onclick = () => { lastVoice = false; handleUser(b.textContent); });
 $("#form").onsubmit = e => { e.preventDefault(); const v = $("#input").value; $("#input").value = ""; $("#input").blur(); lastVoice = false; handleUser(v); };
@@ -1330,7 +1412,7 @@ $("#clearChat").onclick = () => { logEl.innerHTML = ""; chatHist.length = 0; toa
 /* ---------------- arranque ---------------- */
 A = analyze();
 function boot(){
-  const lines = ["› Cargando núcleo de voz…","› Plan de Ingeniería de Sistemas: " + PLAN.length + " asignaturas · " + TOTAL + " créditos",`› Expediente: ${A.apCr} cr aprobados · ${A.enrolled.size} en curso`,`› Proyección calculada: grado ${A.gradTerm}`,`› ${A.alerts().length} alertas de requisitos`,"› Sistema listo."];
+  const lines = ["› Cargando núcleo de voz…","› Plan de Ingeniería de Sistemas: " + PLAN.length + " asignaturas · " + TOTAL + " créditos",`› Expediente: ${A.apCr} cr aprobados · ${A.enrolled.size} en curso`,`› Proyección calculada: grado ${A.gradTerm}`,`› ${A.alerts().length} alertas de requisitos`,"› Base de datos del semestre: notas y tareas","› Sistema listo."];
   let i = 0; const pre = $("#bootlog");
   const iv = setInterval(() => { pre.textContent += lines[i++] + "\n"; if(i >= lines.length){ clearInterval(iv); $("#bootgo").classList.add("show"); } }, 240);
   $("#bootgo").onclick = () => {
@@ -1352,6 +1434,540 @@ boot();
   $("#installX").onclick = () => { $("#installTip").hidden = true; store.set("installTipClosed", true); };
 })();
 if("serviceWorker" in navigator && location.protocol === "https:"){ navigator.serviceWorker.register("sw.js").catch(()=>{}); }
+
+</script>
+<script>
+"use strict";
+/* =====================================================================
+   SEMESTRE · base de datos de notas (escala 0,0 – 5,0) y tareas
+   Tablas: evaluacion (asignatura, corte, peso %, nota) y tarea (estado, fecha, progreso)
+   Se guarda en el teléfono y, opcionalmente, se sincroniza con PostgreSQL (Supabase).
+   ===================================================================== */
+const PASS = 3.0;
+const round1 = x => Math.round(x * 10 + 1e-9) / 10;
+const today12 = () => { const d = new Date(); d.setHours(12,0,0,0); return d; };
+const isoDays = n => { const d = today12(); d.setDate(d.getDate() + n); return d.toISOString().slice(0,10); };
+const daysUntil = iso => Math.round((new Date(iso + "T12:00:00") - today12()) / 864e5);
+const fmtDate = iso => new Date(iso + "T12:00:00").toLocaleDateString("es-CO", {weekday:"short", day:"numeric", month:"short"});
+const relDay = n => n === 0 ? "hoy" : n === 1 ? "mañana" : n === -1 ? "ayer" : n > 1 ? `en ${n} días` : `hace ${-n} días`;
+const uid = p => p + Math.random().toString(36).slice(2, 9);
+
+const TIPOS = {parcial:"Parcial", quiz:"Quiz", taller:"Taller", laboratorio:"Laboratorio", proyecto:"Proyecto", examen:"Examen", exposicion:"Exposición", informe:"Informe", otro:"Otro"};
+const T_EST = {pendiente:"Por hacer", en_progreso:"En progreso", entregada:"Entregada", calificada:"Calificada"};
+
+const TEMAS = {
+  CINT:["Antiderivadas e integral indefinida","Sumas de Riemann e integral definida","Teorema fundamental del cálculo","Sustitución, integración por partes y fracciones parciales","Sustitución trigonométrica","Integrales impropias","Áreas entre curvas, volúmenes de sólidos de revolución y longitud de arco","Aplicaciones: trabajo, energía y valor promedio"],
+  ELEC:["Carga eléctrica y ley de Coulomb","Campo eléctrico y ley de Gauss","Potencial eléctrico y capacitancia","Corriente, resistencia y circuitos DC (Kirchhoff, RC)","Campo magnético y fuerza de Lorentz","Ley de Biot–Savart y ley de Ampère","Inducción: ley de Faraday y ley de Lenz","Ecuaciones de Maxwell (introducción)"],
+  LELE:["Mediciones con multímetro y osciloscopio","Ley de Ohm y circuitos serie/paralelo","Carga y descarga de un capacitor (RC)","Campo magnético de una bobina","Inducción electromagnética (Faraday)","Informes de laboratorio y análisis de error"],
+  IOP1:["Modelado de problemas de optimización","Programación lineal: método gráfico y Simplex","Dualidad y análisis de sensibilidad","Problemas de transporte y asignación","Programación entera","Modelos de inventarios: EOQ, faltantes, descuentos por cantidad, Silver-Meal","Uso de solver (Excel / Python)"],
+  PIS2:["Desarrollo e integración del prototipo","Pruebas y validación","Documento final (formato institucional)","Póster y artículo","Sustentación ante jurado"],
+  CIBS:["Fundamentos: tríada CIA, amenazas y vulnerabilidades","Análisis y gestión de riesgos (MAGERIT, ISO 27005)","Criptografía aplicada","Seguridad en redes y firewalls","Hacking ético: reconocimiento, explotación (Red Team) y defensa (Blue Team)","OWASP Top 10 y seguridad web","Respuesta a incidentes y forense básico"],
+  ECX1:["Identidad y propuesta de valor personal","Perfil profesional (LinkedIn, GitHub)","Portafolio digital","Estrategia de contenido y storytelling","Networking y reputación en línea","Pitch personal"],
+  EPR3:["Agentes inteligentes y búsqueda","Aprendizaje supervisado y no supervisado","Redes neuronales y deep learning","Visión por computador: detección de objetos (YOLO, Roboflow)","Métricas de evaluación de modelos","Ética y despliegue de sistemas inteligentes"]
+};
+
+function demoDB(){
+  const ev = [], tk = []; let ne = 0, nt = 0;   // ids estables = los mismos de backend/schema.sql
+  const pad = n => String(n).padStart(3, "0");
+  const E = (c, nombre, tipo, corte, peso, nota, dd) => { const o = {id:"ev_" + pad(++ne), c, nombre, tipo, corte, peso, nota, fecha: typeof dd === "string" ? dd : isoDays(dd)}; ev.push(o); return o; };
+  const T = (c, titulo, dd, estado, progreso, desc, evRef, nota) => tk.push({id:"tk_" + pad(++nt), c, titulo, desc: desc || "", fecha: typeof dd === "string" ? dd : isoDays(dd), estado, progreso, ev: evRef ? evRef.id : null, nota: nota ?? null});
+  const sust = new Date("2026-11-23T12:00:00") > today12() ? "2026-11-23" : isoDays(6);
+
+  E("CINT","Parcial 1","parcial",1,20,2.6,-70); E("CINT","Quiz 1: antiderivadas","quiz",1,10,3.4,-63);
+  E("CINT","Parcial 2","parcial",2,20,2.8,-35); E("CINT","Taller: integración por partes","taller",2,10,3.6,-28);
+  const cintProy = E("CINT","Proyecto integrador (energía fotovoltaica)","proyecto",3,20,null,6); E("CINT","Examen final","examen",3,20,null,12);
+
+  E("ELEC","Parcial 1","parcial",1,25,3.5,-68); E("ELEC","Quiz: ley de Gauss","quiz",1,5,3.8,-60);
+  E("ELEC","Parcial 2","parcial",2,25,3.2,-33); E("ELEC","Taller: circuitos RC","taller",2,5,4.0,-26);
+  E("ELEC","Examen final","examen",3,40,null,13);
+
+  E("LELE","Informe 1: ley de Ohm","informe",1,25,4.2,-65); E("LELE","Informe 2: capacitores","informe",2,25,4.0,-38);
+  E("LELE","Informe 3: campo magnético","informe",2,25,4.5,-20); const lab4 = E("LELE","Informe 4: ley de Faraday","informe",3,25,null,2);
+
+  E("IOP1","Parcial 1: programación lineal","parcial",1,20,4.0,-66); E("IOP1","Taller: método Simplex","taller",1,10,4.3,-58);
+  E("IOP1","Parcial 2: transporte y asignación","parcial",2,20,3.7,-31); E("IOP1","Quiz: dualidad","quiz",2,10,4.5,-24);
+  const ioTrab = E("IOP1","Trabajo de investigación: modelos de inventarios","proyecto",3,20,null,3); E("IOP1","Examen final","examen",3,20,null,11);
+
+  E("PIS2","Avance 1: diseño del prototipo","proyecto",1,30,4.5,-60); E("PIS2","Avance 2: prototipo funcional","proyecto",2,30,4.3,-25);
+  const sustEv = E("PIS2","Sustentación final ante jurado","exposicion",3,40,null,sust);
+
+  E("CIBS","Parcial 1","parcial",1,20,3.9,-64); E("CIBS","Laboratorio TryHackMe","laboratorio",1,10,4.6,-55);
+  E("CIBS","Parcial 2","parcial",2,20,4.1,-30); E("CIBS","Informe de riesgos MAGERIT","informe",2,10,4.4,-21);
+  const hack = E("CIBS","Hackathon CyberRisk 2.0","proyecto",3,20,null,4); E("CIBS","Examen final","examen",3,20,null,10);
+
+  E("ECX1","Perfil profesional en LinkedIn","taller",1,20,4.8,-62); E("ECX1","Portafolio digital","proyecto",2,25,4.5,-29);
+  E("ECX1","Pitch personal (video)","exposicion",2,15,4.2,-18); const marca = E("ECX1","Proyecto final: estrategia de marca personal","proyecto",3,40,null,8);
+
+  E("EPR3","Taller: aprendizaje supervisado","taller",1,15,4.2,-61); E("EPR3","Parcial 1","parcial",1,20,3.6,-52);
+  E("EPR3","Parcial 2: redes neuronales","parcial",2,15,3.9,-27); const robo = E("EPR3","Proyecto: detector de somnolencia con Roboflow","proyecto",3,30,null,5);
+  E("EPR3","Examen final","examen",3,20,null,13);
+
+  T("CINT","Proyecto integrador · Fase 3 (energía fotovoltaica)",6,"en_progreso",40,"Confirmar con el profesor si se entrega póster o documento escrito.",cintProy);
+  T("CINT","Taller 5: volúmenes de sólidos de revolución",-1,"pendiente",0,"Ejercicios 1 a 12 de la guía.");
+  T("CINT","Guía de repaso para el examen final",10,"pendiente",0,"Integración por partes, fracciones parciales e impropias.");
+  T("LELE","Informe 4: ley de Faraday",2,"en_progreso",60,"Falta análisis de error y conclusiones.",lab4);
+  T("ELEC","Taller: circuitos RC",-26,"calificada",100,"",null,4.0);
+  T("ELEC","Ejercicios de inducción (cap. 30)",7,"pendiente",0,"Preparación para el final.");
+  T("IOP1","Trabajo de investigación: modelos de inventarios (EOQ, Silver-Meal) · LaTeX IEEE",3,"en_progreso",55,"En Overleaf. Faltan la sección de Silver-Meal y las referencias.",ioTrab);
+  T("PIS2","Presentación del dispositivo de hardware",sust,"en_progreso",80,"Sustentación ante jurado.",sustEv);
+  T("PIS2","Documento final y póster",Math.max(1, daysUntil(sust) - 1),"en_progreso",70,"Formato institucional.");
+  T("PIS2","Ensayo de la sustentación",Math.max(0, daysUntil(sust) - 2),"pendiente",0,"Cronometrar 15 minutos.");
+  T("CIBS","Hackathon CyberRisk 2.0 · Reto 1: The Marketplace (TryHackMe)",4,"en_progreso",30,"Rol: líder de análisis de riesgos. Parte Red Team.",hack);
+  T("CIBS","Matriz de riesgos MAGERIT del reto",4,"pendiente",0,"Activos, amenazas, impacto y probabilidad.");
+  T("EPR3","Dataset etiquetado en Roboflow",-2,"en_progreso",70,"Faltan ~80 imágenes por etiquetar (ojos cerrados / bostezo).");
+  T("EPR3","Proyecto: detector de somnolencia con Roboflow + Camo",5,"en_progreso",45,"Entrenar el modelo y probar en tiempo real con la cámara del celular.",robo);
+  T("ECX1","Proyecto final: estrategia de marca personal",8,"pendiente",0,"Plan de contenidos de 4 semanas y métricas.",marca);
+  T("ECX1","Publicar 3 posts en LinkedIn",-12,"calificada",100,"",null,4.6);
+  return {term: REC.term, ev, tk, deleted: [], demo: true, updated: Date.now()};
+}
+function validDB(d){
+  if(!d || !Array.isArray(d.ev) || !Array.isArray(d.tk)) return null;
+  const okC = c => !!C[c];
+  return { term: d.term || REC.term, demo: !!d.demo, updated: d.updated || Date.now(), deleted: Array.isArray(d.deleted) ? d.deleted : [],
+    ev: d.ev.filter(e => okC(e.c)).map(e => ({id: String(e.id || uid("ev_")), c: e.c, nombre: String(e.nombre || "Evaluación"), tipo: TIPOS[e.tipo] ? e.tipo : "otro",
+      corte: [1,2,3].includes(+e.corte) ? +e.corte : 1, peso: Math.max(0, Math.min(100, +e.peso || 0)),
+      nota: (e.nota === null || e.nota === undefined || e.nota === "" || isNaN(+e.nota)) ? null : Math.max(0, Math.min(5, +e.nota)), fecha: /^\d{4}-\d{2}-\d{2}$/.test(e.fecha) ? e.fecha : isoDays(0)})),
+    tk: d.tk.filter(t => okC(t.c)).map(t => ({id: String(t.id || uid("tk_")), c: t.c, titulo: String(t.titulo || "Tarea"), desc: String(t.desc || ""),
+      fecha: /^\d{4}-\d{2}-\d{2}$/.test(t.fecha) ? t.fecha : isoDays(0), estado: T_EST[t.estado] ? t.estado : "pendiente",
+      progreso: Math.max(0, Math.min(100, +t.progreso || 0)), ev: t.ev || null, nota: (t.nota === null || t.nota === undefined || isNaN(+t.nota)) ? null : +t.nota}))
+  };
+}
+let DB = validDB(store.get("db", null)) || demoDB();
+let syncTimer = null;
+function saveDB(push = true){
+  DB.updated = Date.now(); store.set("db", DB);
+  closeFinishedCourses();
+  if(push && settings.sbUrl && settings.sbKey){ clearTimeout(syncTimer); syncTimer = setTimeout(() => sbPush(true), 1200); }
+}
+
+/* ---------------- cálculos de nota ---------------- */
+const semCodes = () => [...new Set(DB.ev.map(e => e.c).concat(DB.tk.map(t => t.c)))].sort((a,b) => C[a].sem - C[b].sem || nm(a).localeCompare(nm(b)));
+const hasEvals = code => DB.ev.some(e => e.c === code);
+function semInfo(code){
+  const evs = DB.ev.filter(e => e.c === code).sort((a,b) => a.corte - b.corte || a.fecha.localeCompare(b.fecha));
+  const pesoTot = sum(evs.map(e => e.peso));
+  const graded = evs.filter(e => e.nota !== null);
+  const pesoEv = sum(graded.map(e => e.peso));
+  const acum = sum(graded.map(e => e.nota * e.peso / 100));            // puntos ganados sobre 5,0
+  const avg = pesoEv ? acum / (pesoEv / 100) : null;                    // promedio de lo evaluado
+  const rest = Math.max(0, pesoTot - pesoEv);
+  const need = rest > 0 ? (PASS - acum) / (rest / 100) : null;          // nota mínima en lo que falta
+  const maxPossible = acum + rest / 100 * 5;
+  const final = pesoTot > 0 && rest === 0;
+  const def = final ? round1(acum * 100 / pesoTot) : null;
+  let st;
+  if(!evs.length) st = "sin";
+  else if(final) st = def >= PASS ? "aprobada" : "reprobada";
+  else if(acum >= PASS) st = "asegurada";
+  else if(maxPossible < PASS - 1e-9) st = "perdida";
+  else if(avg === null) st = "sin";
+  else if(avg < PASS || need > 4.0) st = "riesgo";
+  else st = "aprobando";
+  const cortes = [1,2,3].map(k => { const ce = evs.filter(e => e.corte === k), cg = ce.filter(e => e.nota !== null), pw = sum(cg.map(e => e.peso));
+    return {k, peso: sum(ce.map(e => e.peso)), nota: pw ? sum(cg.map(e => e.nota * e.peso)) / pw : null, completo: ce.length > 0 && cg.length === ce.length}; });
+  const tasks = DB.tk.filter(t => t.c === code);
+  const next = evs.filter(e => e.nota === null).sort((a,b) => a.fecha.localeCompare(b.fecha))[0] || null;
+  return {code, evs, pesoTot, pesoEv, acum, avg, rest, need, maxPossible, final, def, st, cortes, tasks, next};
+}
+const ST_SEM = {
+  aprobando:{l:"Aprobando", c:"ok"}, riesgo:{l:"En riesgo", c:"warn"}, asegurada:{l:"Aprobada asegurada", c:"ok"}, perdida:{l:"Perdida", c:"bad"},
+  aprobada:{l:"Aprobada", c:"ok"}, reprobada:{l:"Reprobada", c:"bad"}, sin:{l:"Sin notas", c:"mut"}
+};
+function semAvg(){
+  const rows = semCodes().map(semInfo).filter(s => s.avg !== null && C[s.code].cr > 0);
+  const w = sum(rows.map(s => C[s.code].cr));
+  return w ? sum(rows.map(s => (s.final ? s.def : s.avg) * C[s.code].cr)) / w : null;
+}
+// Cuando todas las evaluaciones tienen nota, la materia se cierra sola en el expediente
+function closeFinishedCourses(){
+  let changed = false; REC.autoClosed = REC.autoClosed || {};
+  semCodes().forEach(code => {
+    const s = semInfo(code), x = cs(code);
+    if(s.final){ const st = s.def >= PASS ? "ap" : "re"; if(x.st !== st || x.g !== s.def){ x.st = st; x.g = s.def; REC.autoClosed[code] = true; changed = true; } }
+    else if(REC.autoClosed[code] && (x.st === "ap" || x.st === "re")){ x.st = "en"; x.g = null; delete REC.autoClosed[code]; changed = true; }
+  });
+  if(changed){ saveRec(); }
+  return changed;
+}
+
+/* ---------------- tareas ---------------- */
+const tDone = t => t.estado === "entregada" || t.estado === "calificada";
+const tLate = t => !tDone(t) && daysUntil(t.fecha) < 0;
+const tCat = t => tDone(t) ? "entregadas" : tLate(t) ? "vencidas" : t.estado === "en_progreso" ? "incompletas" : "porhacer";
+const openTasks = () => DB.tk.filter(t => !tDone(t)).sort((a,b) => a.fecha.localeCompare(b.fecha));
+function taskLine(t, html = true){
+  const d = daysUntil(t.fecha), when = tDone(t) ? (t.estado === "calificada" && t.nota != null ? `calificada ${fmtG(t.nota)}` : "entregada") : d < 0 ? `venció ${relDay(d)}` : `vence ${relDay(d)}`;
+  const prog = !tDone(t) && t.progreso > 0 ? ` · ${t.progreso}%` : "";
+  return html ? `<b>${esc(t.titulo)}</b> (${esc(nm(t.c))}) · ${when}${prog}` : `${t.titulo}, de ${nm(t.c)}, ${when}`;
+}
+function semAlerts(){
+  const out = [];
+  semCodes().map(semInfo).forEach(s => {
+    if(s.st === "perdida") out.push({lvl:"crit", t:`${nm(s.code)}: perdida`, d:`Aunque saques 5,0 en lo que falta llegarías a ${fmt(s.maxPossible)}. Habla con el profesor sobre opciones (supletorio, habilitación).`});
+    else if(s.st === "riesgo") out.push({lvl:"crit", t:`${nm(s.code)}: en riesgo`, d:`Llevas ${fmt(s.avg)} con el ${s.pesoEv}% evaluado. Necesitas mínimo ${fmt(Math.max(0, s.need))} en el ${s.rest}% que falta.`});
+    else if(s.st === "reprobada") out.push({lvl:"crit", t:`${nm(s.code)}: reprobada (${fmtG(s.def)})`, d:"Definitiva por debajo de 3,0."});
+  });
+  const late = DB.tk.filter(tLate);
+  if(late.length) out.push({lvl:"warn", t:`${late.length} tarea${late.length > 1 ? "s" : ""} vencida${late.length > 1 ? "s" : ""}`, d: late.map(t => `${t.titulo} (${nm(t.c)})`).join(", ")});
+  const soon = openTasks().filter(t => { const d = daysUntil(t.fecha); return d >= 0 && d <= 2; });
+  if(soon.length) out.push({lvl:"warn", t:`Entregas en las próximas 48 h (${soon.length})`, d: soon.map(t => `${t.titulo} · ${relDay(daysUntil(t.fecha))}`).join(" · ")});
+  return out;
+}
+
+/* ---------------- UI: pestaña Semestre ---------------- */
+let taskFilter = "pendientes";
+function renderSemester(){
+  if(!$("#v-semestre")) return;
+  const infos = semCodes().map(semInfo), sa = semAvg(), late = DB.tk.filter(tLate).length, open = openTasks();
+  const risk = infos.filter(s => ["riesgo","perdida","reprobada"].includes(s.st)).length;
+  $("#semTerm").textContent = REC.term;
+  $("#semDemo").hidden = !DB.demo;
+  $("#semStats").innerHTML = [
+    ["Promedio parcial", fmt(sa), sa != null && sa < PASS ? "o" : "g"], ["Materias en riesgo", String(risk), risk ? "o" : "g"],
+    ["Tareas abiertas", `${open.length}${late ? ` · ${late} venc.` : ""}`, late ? "o" : ""],
+    ["Próxima entrega", open.find(t => daysUntil(t.fecha) >= 0) ? relDay(daysUntil(open.find(t => daysUntil(t.fecha) >= 0).fecha)) : "—", ""]
+  ].map(([k,v,c]) => `<div class="stat"><small>${k}</small><b class="${c}">${v}</b></div>`).join("");
+  const al = semAlerts();
+  $("#semAlerts").innerHTML = al.map(a => `<div class="alert ${a.lvl}"><div class="ic">${a.lvl==="crit"?"!":"▲"}</div><div><b>${esc(a.t)}</b><p>${esc(a.d)}</p></div></div>`).join("");
+  $("#semAlerts").hidden = !al.length;
+
+  // Notas
+  $("#semNotas").innerHTML = infos.map(s => {
+    const c = C[s.code], st = ST_SEM[s.st];
+    const big = s.final ? fmtG(s.def) : fmt(s.avg);
+    const needTxt = s.final ? `Definitiva ${fmtG(s.def)} · ${s.def >= PASS ? "APROBADA" : "REPROBADA"}` :
+      s.st === "asegurada" ? `Ya tienes ${fmt(s.acum)} acumulado: aprobada pase lo que pase` :
+      s.st === "perdida" ? `Máximo posible: ${fmt(s.maxPossible)}. No alcanza 3,0` :
+      s.need != null ? `Necesitas <b>${fmt(Math.max(0, s.need))}</b> en el ${s.rest}% restante` : "Sin evaluaciones registradas";
+    const rows = s.evs.map(e => `<button class="evrow" data-ev="${e.id}"><span class="ct">C${e.corte}</span><span class="en">${esc(e.nombre)}<small>${e.peso}% · ${fmtDate(e.fecha)}</small></span><b class="${e.nota === null ? "na" : e.nota < PASS ? "lo" : "hi"}">${e.nota === null ? "—" : fmtG(e.nota)}</b></button>`).join("");
+    const warnPeso = s.pesoTot !== 100 && s.evs.length ? `<p class="wpeso">Los pesos suman ${s.pesoTot}% (deberían sumar 100%).</p>` : "";
+    return `<div class="sc" data-code="${s.code}">
+      <div class="sch"><div class="bar" style="background:${AREAS[c.area].c};box-shadow:0 0 8px ${AREAS[c.area].c}"></div>
+        <div class="nm">${esc(nm(s.code))}<small>${c.cr} cr · ${s.pesoEv}% evaluado</small></div>
+        <div class="big ${st.c}">${big}<small class="pst ${st.c}">${st.l}</small></div></div>
+      <div class="prog" title="Acumulado sobre 5,0"><u style="width:${Math.min(100, s.maxPossible / 5 * 100)}%"></u><i class="${s.acum >= PASS ? "okb" : ""}" style="width:${Math.min(100, s.acum / 5 * 100)}%"></i><em style="left:${PASS / 5 * 100}%"></em></div>
+      <div class="acc">Acumulado <b>${fmt(s.acum)}</b> / 5,0 · máximo posible ${fmt(s.maxPossible)} · <span style="color:var(--or)">▍</span>3,0</div>
+      <div class="need">${needTxt}</div>
+      <div class="cortes">${s.cortes.filter(k => k.peso).map(k => `<span>Corte ${k.k} (${k.peso}%) <b>${k.nota === null ? "—" : fmtG(k.nota)}</b></span>`).join("")}</div>
+      <div class="evs">${rows}${warnPeso}<button class="addbtn" data-addev="${s.code}">+ Agregar evaluación</button></div>
+    </div>`;
+  }).join("") || `<p class="empty">No hay materias del semestre en la base de datos. Agrega una evaluación o tarea.</p>`;
+  $$("#semNotas .sch").forEach(el => el.onclick = () => el.parentElement.classList.toggle("open"));
+  $$("#semNotas [data-ev]").forEach(el => el.onclick = e => { e.stopPropagation(); editEval(el.dataset.ev); });
+  $$("#semNotas [data-addev]").forEach(el => el.onclick = e => { e.stopPropagation(); editEval(null, el.dataset.addev); });
+
+  // Tareas
+  const counts = {pendientes: open.length, porhacer: DB.tk.filter(t => tCat(t) === "porhacer").length, incompletas: DB.tk.filter(t => tCat(t) === "incompletas" || tCat(t) === "vencidas").length, vencidas: late, entregadas: DB.tk.filter(tDone).length, todas: DB.tk.length};
+  const labels = {pendientes:"Pendientes", porhacer:"Por hacer", incompletas:"Incompletas", vencidas:"Vencidas", entregadas:"Entregadas", todas:"Todas"};
+  $("#taskChips").innerHTML = Object.keys(labels).map(k => `<button data-f="${k}" class="${taskFilter === k ? "on" : ""}">${labels[k]} <i>${counts[k]}</i></button>`).join("");
+  $$("#taskChips button").forEach(b => b.onclick = () => { taskFilter = b.dataset.f; renderSemester(); });
+  const pick = {pendientes: t => !tDone(t), porhacer: t => tCat(t) === "porhacer", incompletas: t => ["incompletas","vencidas"].includes(tCat(t)), vencidas: tLate, entregadas: tDone, todas: () => true}[taskFilter];
+  const list = DB.tk.filter(pick).sort((a,b) => tDone(a) - tDone(b) || a.fecha.localeCompare(b.fecha));
+  $("#taskList").innerHTML = list.map(t => { const d = daysUntil(t.fecha), cat = tCat(t), col = AREAS[C[t.c].area].c;
+    const when = tDone(t) ? (t.estado === "calificada" && t.nota != null ? `Calificada · ${fmtG(t.nota)}` : "Entregada") : d < 0 ? `Venció ${relDay(d)}` : d === 0 ? "Vence hoy" : `Vence ${relDay(d)}`;
+    return `<button class="task ${cat}" data-tk="${t.id}"><span class="dot" style="background:${col};box-shadow:0 0 8px ${col}"></span>
+      <span class="tt">${esc(t.titulo)}<small>${esc(nm(t.c))} · ${fmtDate(t.fecha)}</small>${!tDone(t) ? `<span class="tp"><i style="width:${t.progreso}%"></i></span>` : ""}</span>
+      <span class="tw ${cat}">${when}<small>${T_EST[t.estado]}${!tDone(t) && t.progreso ? ` · ${t.progreso}%` : ""}</small></span></button>`; }).join("") || `<p class="empty">Nada por aquí. 🎉</p>`;
+  $$("#taskList [data-tk]").forEach(el => el.onclick = () => editTask(el.dataset.tk));
+}
+$$("#semTabs button").forEach(b => b.onclick = () => {
+  $$("#semTabs button").forEach(x => x.classList.toggle("on", x === b));
+  $("#semNotasWrap").hidden = b.dataset.k !== "notas"; $("#semTareasWrap").hidden = b.dataset.k !== "tareas";
+});
+$("#addTask").onclick = () => editTask(null);
+$("#semUseMine").onclick = () => { DB.demo = false; saveDB(); refreshAll(); toast("Listo: edita las evaluaciones y tareas con tu información real."); };
+
+/* ---------------- hoja genérica de edición ---------------- */
+function formSheet({title, meta, fields, onSave, onDelete}){
+  $("#fsTitle").textContent = title; $("#fsMeta").textContent = meta || "";
+  $("#fsBody").innerHTML = fields.map(f => {
+    const id = "fs_" + f.k;
+    if(f.type === "select") return `<div class="field"><label>${f.label}</label><select id="${id}">${f.options.map(([v,l]) => `<option value="${esc(v)}"${String(v) === String(f.value) ? " selected" : ""}>${esc(l)}</option>`).join("")}</select></div>`;
+    if(f.type === "range") return `<div class="field"><label>${f.label} · <span id="${id}_v">${f.value}%</span></label><input type="range" id="${id}" min="0" max="100" step="5" value="${f.value}"></div>`;
+    if(f.type === "textarea") return `<div class="field"><label>${f.label}</label><textarea id="${id}" rows="2">${esc(f.value || "")}</textarea></div>`;
+    return `<div class="field"><label>${f.label}</label><input id="${id}" type="${f.type || "text"}" ${f.step ? `step="${f.step}"` : ""} ${f.min != null ? `min="${f.min}"` : ""} ${f.max != null ? `max="${f.max}"` : ""} ${f.inputmode ? `inputmode="${f.inputmode}"` : ""} placeholder="${esc(f.ph || "")}" value="${esc(f.value ?? "")}"></div>`;
+  }).join("");
+  fields.filter(f => f.type === "range").forEach(f => { const el = $("#fs_" + f.k); el.oninput = () => $("#fs_" + f.k + "_v").textContent = el.value + "%"; });
+  $("#fsDelete").hidden = !onDelete;
+  $("#fsDelete").textContent = "Eliminar"; delete $("#fsDelete").dataset.arm;
+  $("#fsDelete").onclick = () => confirmBtn($("#fsDelete"), "Eliminar", () => { onDelete(); closeFS(); });
+  $("#fsSave").onclick = () => { const v = {}; fields.forEach(f => v[f.k] = $("#fs_" + f.k).value); if(onSave(v) !== false) closeFS(); };
+  $("#fsBg").classList.add("on"); $("#fsheet").classList.add("on");
+}
+function closeFS(){ $("#fsBg").classList.remove("on"); $("#fsheet").classList.remove("on"); }
+$("#fsBg").onclick = closeFS; $("#fsCancel").onclick = closeFS;
+const courseOptions = () => { const codes = [...new Set([...semCodes(), ...A.enrolled])]; return codes.map(c => [c, nm(c)]); };
+const parseNota = v => { v = String(v).trim().replace(",", "."); if(v === "") return null; const n = parseFloat(v); return isNaN(n) ? NaN : round1(Math.max(0, Math.min(5, n))); };
+
+function editEval(id, code){
+  const e = id ? DB.ev.find(x => x.id === id) : {c: code || courseOptions()[0]?.[0], nombre:"", tipo:"parcial", corte:3, peso:"", nota:null, fecha: isoDays(7)};
+  if(!e) return;
+  const s = semInfo(e.c);
+  formSheet({
+    title: id ? e.nombre : "Nueva evaluación", meta: `${nm(e.c)} · los pesos de la materia suman ${s.pesoTot}%`,
+    fields: [
+      {k:"c", label:"Asignatura", type:"select", options: courseOptions(), value: e.c},
+      {k:"nombre", label:"Nombre", value: e.nombre, ph:"Ej. Parcial 3"},
+      {k:"tipo", label:"Tipo", type:"select", options: Object.entries(TIPOS), value: e.tipo},
+      {k:"corte", label:"Corte", type:"select", options: [[1,"Corte 1"],[2,"Corte 2"],[3,"Corte 3"]], value: e.corte},
+      {k:"peso", label:"Peso (%)", type:"number", min:0, max:100, step:1, inputmode:"numeric", value: e.peso, ph:"20"},
+      {k:"nota", label:"Nota (0,0 – 5,0) · vacío si aún no la tienes", type:"number", min:0, max:5, step:0.1, inputmode:"decimal", value: e.nota ?? "", ph:"Ej. 3.8"},
+      {k:"fecha", label:"Fecha", type:"date", value: e.fecha}
+    ],
+    onSave: v => {
+      const nota = parseNota(v.nota); if(Number.isNaN(nota)){ toast("Nota no válida (0,0 a 5,0)."); return false; }
+      if(!v.nombre.trim()){ toast("Ponle un nombre a la evaluación."); return false; }
+      const o = id ? e : {id: uid("ev_")};
+      Object.assign(o, {c: v.c, nombre: v.nombre.trim(), tipo: v.tipo, corte: +v.corte, peso: Math.max(0, Math.min(100, +v.peso || 0)), nota, fecha: v.fecha || isoDays(0)});
+      if(!id) DB.ev.push(o);
+      DB.demo = false; saveDB(); refreshAll();
+      const si = semInfo(o.c); toast(`✔ ${nm(o.c)}: ${ST_SEM[si.st].l}${si.avg != null ? " · " + (si.final ? fmtG(si.def) : fmt(si.avg)) : ""}`);
+    },
+    onDelete: id ? () => { DB.ev = DB.ev.filter(x => x.id !== id); DB.deleted.push({t:"evaluacion", id}); DB.tk.forEach(t => { if(t.ev === id) t.ev = null; }); saveDB(); refreshAll(); toast("Evaluación eliminada."); } : null
+  });
+}
+function editTask(id){
+  const t = id ? DB.tk.find(x => x.id === id) : {c: courseOptions()[0]?.[0], titulo:"", desc:"", fecha: isoDays(3), estado:"pendiente", progreso:0, ev:null, nota:null};
+  if(!t) return;
+  const evOpts = [["","— Ninguna —"], ...DB.ev.filter(e => e.c === t.c).map(e => [e.id, `${e.nombre} (${e.peso}%)`])];
+  formSheet({
+    title: id ? "Editar tarea" : "Nueva tarea", meta: id ? `${nm(t.c)} · ${T_EST[t.estado]}` : "",
+    fields: [
+      {k:"titulo", label:"Tarea", value: t.titulo, ph:"Ej. Taller 6 de integrales"},
+      {k:"c", label:"Asignatura", type:"select", options: courseOptions(), value: t.c},
+      {k:"fecha", label:"Fecha de entrega", type:"date", value: t.fecha},
+      {k:"estado", label:"Estado", type:"select", options: Object.entries(T_EST), value: t.estado},
+      {k:"progreso", label:"Avance", type:"range", value: t.progreso},
+      {k:"nota", label:"Nota (si ya está calificada)", type:"number", min:0, max:5, step:0.1, inputmode:"decimal", value: t.nota ?? "", ph:"Ej. 4.2"},
+      {k:"ev", label:"Cuenta para la evaluación", type:"select", options: evOpts, value: t.ev || ""},
+      {k:"desc", label:"Notas", type:"textarea", value: t.desc}
+    ],
+    onSave: v => {
+      if(!v.titulo.trim()){ toast("Escribe el nombre de la tarea."); return false; }
+      const nota = parseNota(v.nota); if(Number.isNaN(nota)){ toast("Nota no válida (0,0 a 5,0)."); return false; }
+      const o = id ? t : {id: uid("tk_")};
+      let estado = v.estado, progreso = +v.progreso;
+      if(nota != null) estado = "calificada";
+      if(estado === "entregada" || estado === "calificada") progreso = 100;
+      else if(progreso > 0 && estado === "pendiente") estado = "en_progreso";
+      Object.assign(o, {titulo: v.titulo.trim(), c: v.c, fecha: v.fecha || isoDays(0), estado, progreso, nota, ev: (v.ev && DB.ev.some(e => e.id === v.ev && e.c === v.c)) ? v.ev : null, desc: v.desc.trim()});
+      if(!id) DB.tk.push(o);
+      if(o.ev && nota != null){ const e = DB.ev.find(x => x.id === o.ev); if(e) e.nota = nota; }
+      DB.demo = false; saveDB(); refreshAll(); toast(`✔ ${o.titulo}: ${T_EST[o.estado]}`);
+    },
+    onDelete: id ? () => { DB.tk = DB.tk.filter(x => x.id !== id); DB.deleted.push({t:"tarea", id}); saveDB(); refreshAll(); toast("Tarea eliminada."); } : null
+  });
+}
+function refreshAll(){ A = analyze(); renderAll(); renderSemester(); }
+
+/* ---------------- CEREBRO: notas y tareas ---------------- */
+const ORD = q => (" " + q + " ").replace(/ (primer|primero|1er) (parcial|quiz|taller|informe|avance|corte) /g, " $2 1 ").replace(/ (segundo|2do) (parcial|quiz|taller|informe|avance|corte) /g, " $2 2 ").replace(/ (tercer|tercero|3er) (parcial|quiz|taller|informe|avance|corte) /g, " $2 3 ").replace(/ (cuarto) (parcial|quiz|taller|informe|avance|corte) /g, " $2 4 ")
+  .replace(/ (parcial|quiz|taller|informe|avance|corte) (uno) /g, " $1 1 ").replace(/ (parcial|quiz|taller|informe|avance|corte) (dos) /g, " $1 2 ").replace(/ (parcial|quiz|taller|informe|avance|corte) (tres) /g, " $1 3 ").replace(/ (parcial|quiz|taller|informe|avance|corte) (cuatro) /g, " $1 4 ");
+const EV_WORDS = ["parcial","quiz","taller","laboratorio","lab","proyecto","examen","final","informe","avance","sustentacion","exposicion","hackathon","trabajo","pitch","portafolio","perfil"];
+function findEval(code, q){
+  if(!code) return null;
+  const qq = ORD(q), toks = qq.trim().split(" ");
+  let best = null, score = 0;
+  DB.ev.filter(e => e.c === code).forEach(e => {
+    const n = ORD(norm(e.nombre)).trim().split(" ");
+    const typeHit = n.some(w => EV_WORDS.includes(w) && toks.includes(w)) || (toks.includes("final") && e.tipo === "examen") || (toks.includes("lab") && e.tipo === "laboratorio");
+    if(!typeHit) return;
+    const num = n.find(w => /^\d$/.test(w)); const qnum = toks.find(w => /^\d$/.test(w) && qq.includes(" " + w + " "));
+    if(num && toks.some(w => /^[1-4]$/.test(w)) && !toks.includes(num)) return;
+    let s = 1 + n.filter(w => w.length >= 4 && toks.includes(w)).length + (num && toks.includes(num) ? 2 : 0);
+    if(s > score){ score = s; best = e; }
+  });
+  return best;
+}
+const TSTOP = new Set("tarea tareas entregue termine complete hice subi envie trabajo para sobre esta este como cuando donde ya la el los las del de que con una uno".split(" "));
+function findTask(q, code){
+  const toks = q.split(" ").filter(w => w.length >= 4 && !TSTOP.has(w));
+  let best = null, score = 0;
+  DB.tk.filter(t => !code || t.c === code).forEach(t => {
+    const n = norm(t.titulo + " " + nm(t.c)).split(" "); let s = toks.filter(w => n.includes(w)).length;
+    if(!tDone(t)) s += 0.5;
+    if(s > score){ score = s; best = t; }
+  });
+  return score >= 1.5 ? best : null;
+}
+function gradeFrom(raw){
+  const g = parseGrade(raw); if(g != null) return g;
+  const q = norm(raw.replace(/(\d),(\d)/g, "$1.$2")).replace(/(parcial|quiz|taller|laboratorio|informe|avance|corte|fase|reto|lab) \d/g, " ");
+  const m = raw.toLowerCase().replace(/(parcial|quiz|taller|laboratorio|informe|avance|corte|fase|reto|lab)\s*\d/g, " ").match(/(?:^|\s)([0-5](?:[.,]\d{1,2})?)(?=\s|$|[^\d%])/);
+  if(m){ const n = parseFloat(m[1].replace(",", ".")); if(n >= 0 && n <= 5) return n; }
+  return null;
+}
+
+function semCommand(raw){
+  const q = norm(raw);
+  if(/\?/.test(raw) || /^(que|cuales|cual|cuantas|cuantos|dime|digame|muestrame|como|cuando|donde|puedo|tengo|sabes|me dices|cuanto)\b/.test(q)) return null;
+  // 1) nota de una evaluación: «saqué 4,5 en el parcial 2 de cálculo integral»
+  if(/\b(saque|me saque|obtuve|registra|anota|pon|ponme|me pusieron|me califico|me calificaron|me fue|sacamos)\b/.test(q)){
+    const g = gradeFrom(raw);
+    const qn = ORD(q);
+    const code = findCourseStrong(qn.replace(/ (parcial|quiz|taller|informe|avance|corte) \d /g, " ")) || findCourseWeak(qn);
+    const ev = findEval(code, norm(raw.replace(/(\d)[.,](\d)/g, "$1p$2")));
+    if(g != null && code && ev){
+      ev.nota = round1(g); DB.demo = false; saveDB(); refreshAll();
+      const s = semInfo(code);
+      const tail = s.final ? `Definitiva: <b>${fmtG(s.def)}</b>, ${s.def >= PASS ? "aprobada. ¡Felicitaciones!" : "reprobada."}` :
+        s.st === "asegurada" ? `Ya tiene la materia asegurada con ${fmt(s.acum)} acumulado.` :
+        s.st === "perdida" ? `Lo siento, ${T()}: aunque saque 5,0 en lo que falta no alcanza el 3,0.` :
+        `Ahora lleva <b>${fmt(s.avg)}</b> y necesita <b>${fmt(Math.max(0, s.need))}</b> en el ${s.rest}% restante.`;
+      return {show:`Registrado, ${T()}: <b>${fmtG(ev.nota)}</b> en ${esc(ev.nombre)} de ${esc(nm(code))} (${ev.peso}%). ${tail}`};
+    }
+    if(g != null && code && !ev) return {show:`¿En qué evaluación de ${nm(code)}, ${T()}? Tiene: ${DB.ev.filter(e => e.c === code).map(e => e.nombre).join(", ")}.`};
+  }
+  // 2) avance de una tarea: «voy en el 70% del informe de Faraday»
+  const pm = q.match(/\b(?:voy en el|voy por el|llevo el|llevo|avance del|avance de|tengo el)\s*(\d{1,3})\s*(?:%|por ciento)?/);
+  if(pm){ const t = findTask(q); if(t){ t.progreso = Math.min(100, +pm[1]); t.estado = t.progreso >= 100 ? "entregada" : "en_progreso"; saveDB(); refreshAll(); return {show:`Anotado: <b>${esc(t.titulo)}</b> al ${t.progreso}%. ${tDone(t) ? "¡Completada!" : `Vence ${relDay(daysUntil(t.fecha))}.`}`}; } }
+  // 3) tarea entregada: «entregué el informe de Faraday»
+  if(/\b(entregue|ya entregue|subi|envie|mande|termine la tarea|termine el taller|termine el informe|termine el trabajo|complete la tarea|ya hice)\b/.test(q) || (/\btermine\b/.test(q) && /\b(tarea|taller|informe|trabajo|guia|dataset|documento|matriz|ensayo|proyecto)\b/.test(q))){
+    const code = findCourseStrong(q);
+    const t = findTask(q, null) || (code ? openTasks().find(x => x.c === code) : null);
+    if(t){ t.estado = "entregada"; t.progreso = 100; saveDB(); refreshAll();
+      const left = openTasks(); return {show:`Excelente, ${T()}. Marqué <b>${esc(t.titulo)}</b> como entregada. Le quedan ${left.length} tarea${left.length === 1 ? "" : "s"} abiertas${left[0] ? `; la siguiente: ${taskLine(left[0])}` : ""}.`}; }
+    if(/\b(tarea|taller|informe|trabajo)\b/.test(q)) return {show:`¿Cuál tarea, ${T()}? Las abiertas son:` + ul(openTasks().slice(0,5).map(t => taskLine(t)))};
+  }
+  return null;
+}
+
+function courseGradeReport(code, q){
+  const s = semInfo(code), st = ST_SEM[s.st];
+  const ev = /(cuanto saque|que saque|cuanto me saque|nota del|nota de la|nota en el|nota en la|como me fue|cuando es|cuando son|cuando tengo|fecha del|fecha de la)/.test(q) ? findEval(code, q) : null;
+  if(ev) return ev.nota === null
+    ? {show:`${esc(ev.nombre)} de ${esc(nm(code))} aún no tiene nota. Es el ${fmtDate(ev.fecha)} (${relDay(daysUntil(ev.fecha))}) y vale ${ev.peso}%.`}
+    : {show:`En ${esc(ev.nombre)} de ${esc(nm(code))} sacó <b>${fmtG(ev.nota)}</b> (vale ${ev.peso}%, corte ${ev.corte}). ${ev.nota >= PASS ? "Aprobada." : "Por debajo de 3,0."} Su nota actual en la materia es ${(s.final ? fmtG(s.def) : fmt(s.avg))}.`};
+  let head, say;
+  if(s.final){ head = `<b>${esc(nm(code))}</b>: definitiva <b>${fmtG(s.def)}</b>. ${s.def >= PASS ? "✔ APROBADA" : "✖ REPROBADA"}.`; say = `${nm(code)}: definitiva ${fmtG(s.def)}. ${s.def >= PASS ? "Aprobada." : "Reprobada."}`; }
+  else if(s.st === "sin"){ head = `${esc(nm(code))} todavía no tiene notas registradas.`; say = head; }
+  else {
+    const needTxt = s.st === "asegurada" ? `Ya tiene ${fmt(s.acum)} acumulado de 5,0: <b>la materia está aprobada</b> pase lo que pase.` :
+      s.st === "perdida" ? `Aunque saque 5,0 en lo que falta llegaría a ${fmt(s.maxPossible)}: <b>no alcanza el 3,0</b>.` :
+      `Para aprobar necesita mínimo <b>${fmt(Math.max(0, s.need))}</b> en el ${s.rest}% que falta.`;
+    head = `<b>${esc(nm(code))}</b>: ${st.l.toLowerCase()}. Lleva <b>${fmt(s.avg)}</b> con el ${s.pesoEv}% evaluado. ${needTxt}`;
+    say = `${nm(code)}: ${st.l}. Lleva ${fmt(s.avg)} con el ${s.pesoEv} por ciento evaluado. ${needTxt.replace(/<[^>]+>/g, "")}`;
+  }
+  const evl = s.evs.map(e => e.nota === null ? `⏳ ${esc(e.nombre)} · ${e.peso}% · ${fmtDate(e.fecha)}` : `${e.nota >= PASS ? "✔" : "✖"} ${esc(e.nombre)} · ${e.peso}% · <b>${fmtG(e.nota)}</b>`);
+  const pend = s.tasks.filter(t => !tDone(t));
+  return {show: head + ul(evl) + (pend.length ? `Tareas abiertas: ${pend.map(t => taskLine(t)).join("; ")}.` : ""), say: say + (pend.length ? ` Tiene ${pend.length} tarea${pend.length > 1 ? "s" : ""} abierta${pend.length > 1 ? "s" : ""} en esta materia.` : "")};
+}
+function briefing(){
+  const infos = semCodes().map(semInfo).filter(s => s.st !== "sin"), sa = semAvg();
+  const risk = infos.filter(s => ["riesgo","perdida","reprobada"].includes(s.st)), safe = infos.filter(s => ["asegurada","aprobada"].includes(s.st));
+  const open = openTasks(), late = DB.tk.filter(tLate), week = open.filter(t => { const d = daysUntil(t.fecha); return d >= 0 && d <= 7; });
+  const show = `Informe del semestre ${REC.term}, ${T()}. Promedio parcial: <b>${fmt(sa)}</b>.` + ul([
+    ...infos.map(s => `${s.st === "riesgo" || s.st === "perdida" || s.st === "reprobada" ? "🔴" : s.st === "asegurada" || s.st === "aprobada" ? "🟢" : "🔵"} <b>${esc(nm(s.code))}</b>: ${(s.final ? fmtG(s.def) : fmt(s.avg))} · ${ST_SEM[s.st].l}${!s.final && s.need != null && s.st !== "asegurada" && s.st !== "perdida" ? ` (necesita ${fmt(Math.max(0, s.need))})` : ""}`),
+    `📋 Tareas: ${open.length} abiertas${late.length ? `, <b>${late.length} vencida${late.length > 1 ? "s" : ""}</b>` : ""}, ${week.length} para esta semana`
+  ]) + (week.length ? `Próximas entregas: ${week.slice(0,3).map(t => taskLine(t)).join("; ")}.` : "");
+  const say = `Informe del semestre. Promedio parcial: ${fmt(sa)}. ${risk.length ? `En riesgo: ${risk.map(s => `${nm(s.code)}, necesita ${fmt(Math.max(0, s.need ?? 0))}`).join("; ")}.` : "Ninguna materia en riesgo."} ${safe.length ? `Ya aseguradas: ${safe.map(s => nm(s.code)).join(", ")}.` : ""} Tiene ${open.length} tareas abiertas${late.length ? `, ${late.length} vencidas` : ""}. ${week[0] ? `La próxima: ${taskLine(week[0], false)}.` : ""}`;
+  return {show, say};
+}
+function tasksAnswer(q){
+  const code = findCourseStrong(q);
+  let list = DB.tk.slice(), label = "abiertas";
+  if(/(vencid|atrasad|se me paso|no entregue)/.test(q)){ list = list.filter(tLate); label = "vencidas"; }
+  else if(/(incomplet|a medias|sin terminar|en progreso|empezad)/.test(q)){ list = list.filter(t => ["incompletas","vencidas"].includes(tCat(t))); label = "incompletas"; }
+  else if(/(entregad|ya hice|ya entregue|hechas|completad|terminad)/.test(q)){ list = list.filter(tDone); label = "entregadas"; }
+  else if(/(por hacer|no he empezado|sin empezar|por empezar)/.test(q)){ list = list.filter(t => tCat(t) === "porhacer"); label = "por hacer"; }
+  else list = list.filter(t => !tDone(t));
+  let when = "";
+  if(/\bhoy\b/.test(q)){ list = list.filter(t => daysUntil(t.fecha) <= 0); when = " para hoy"; }
+  else if(/\bmanana\b/.test(q)){ list = list.filter(t => daysUntil(t.fecha) === 1); when = " para mañana"; }
+  else if(/(esta semana|estos dias|proximos dias)/.test(q)){ list = list.filter(t => daysUntil(t.fecha) <= 7); when = " para esta semana"; }
+  else if(/(proxima semana|semana que viene)/.test(q)){ list = list.filter(t => { const d = daysUntil(t.fecha); return d > 7 && d <= 14; }); when = " para la próxima semana"; }
+  if(code){ list = list.filter(t => t.c === code); when += ` en ${nm(code)}`; }
+  list.sort((a,b) => a.fecha.localeCompare(b.fecha));
+  if(!list.length) return {show:`No tiene tareas ${label}${when}, ${T()}.`};
+  return {show:`Tiene <b>${list.length} tarea${list.length > 1 ? "s" : ""} ${label}</b>${when}:` + ul(list.map(t => taskLine(t))),
+          say:`Tiene ${list.length} tarea${list.length > 1 ? "s" : ""} ${label}${when}. ${list.slice(0,4).map(t => taskLine(t, false)).join(". ")}.`};
+}
+function semBrain(raw, q){
+  if(/(requisit|prerrequisit)/.test(q)) return null;
+  // tareas
+  if(/(tarea|tareas|entrega|entregas|deberes|pendientes por entregar|por hacer|incomplet|vencid|que tengo para|que debo hacer|que me toca hacer|que tengo que hacer|agenda|trabajos pendientes|que tengo pendiente|tengo pendiente)/.test(q) && !/(materias|asignaturas) (pendientes|me faltan)/.test(q)) return tasksAnswer(q);
+  // informe del semestre
+  if(/(informe|resumen|reporte|dime todo|briefing|como va (el|mi) semestre|como voy (en )?(el|este|mi) semestre|estado (del|de mi) semestre|en riesgo|voy perdiendo|estoy perdiendo|materias perdiendo|perdiendo materias|promedio (actual|del semestre|de este semestre|parcial)|notas del semestre|mis notas|todas mis notas|como voy en (mis|las) materias|como voy en general)/.test(q)) return briefing();
+  // temario
+  const code = findCourseStrong(q) || (/(temas|temario|nota|notas|parcial|pasando|aprob|perd|necesito|examen|final|quiz|taller|informe|proyecto|cuando es|como voy)/.test(q) ? findCourseWeak(q) : null);
+  if(code && /(temas|temario|contenido|de que trata|que se ve|que vemos|que ven|syllabus)/.test(q)){
+    const t = TEMAS[code]; return t ? {show:`Temas de <b>${esc(nm(code))}</b>:` + ul(t.map(esc)), say:`${nm(code)} cubre: ${t.join(", ")}.`} : {show:`No tengo el temario de ${nm(code)}.`};
+  }
+  // notas de una materia
+  if(code && hasEvals(code) && /(como voy|nota|notas|calific|pasando|aprobando|perdiendo|paso|pierdo|aprob|reprob|necesito|cuanto|saque|parcial|quiz|taller|final|definitiva|examen|corte|gano|voy|informe|proyecto|sustentacion|hackathon|cuando es|cuando tengo)/.test(q)) return courseGradeReport(code, q);
+  // preguntas de contenido sin IA
+  if(/^(explica|explicame|que es|que son|como se|como resuelvo|como hago|ayudame con|dame un ejemplo|ejemplo de|formula de|cual es la formula|demuestra|calcula|resuelve|deriva|integra)\b/.test(q) || /\b(explicame|explica)\b/.test(q)){
+    const c = code || findCourseWeak(q);
+    return {show:`Para explicarle temas de las materias necesito la IA conectada, ${T()} (Ajustes → IA directa o n8n). ${c && TEMAS[c] ? `Mientras tanto, estos son los temas de ${esc(nm(c))}:` + ul(TEMAS[c].map(esc)) : ""}`, say:`Para explicarle temas de las materias necesito la inteligencia artificial conectada en Ajustes.`};
+  }
+  return null;
+}
+function semContext(){
+  return {
+    escala: "0,0 a 5,0; se aprueba con 3,0; la definitiva se redondea a una décima",
+    promedio_parcial_semestre: semAvg() != null ? round1(semAvg()) : null,
+    materias: semCodes().map(semInfo).map(s => ({
+      asignatura: nmFull(s.code), creditos: C[s.code].cr, estado: ST_SEM[s.st].l, nota_actual: s.avg != null ? +s.avg.toFixed(2) : null,
+      porcentaje_evaluado: s.pesoEv, acumulado_sobre_5: +s.acum.toFixed(2), nota_necesaria_en_lo_que_falta: s.need != null && !s.final ? +Math.max(0, s.need).toFixed(2) : null,
+      maximo_posible: +s.maxPossible.toFixed(2), definitiva: s.def,
+      evaluaciones: s.evs.map(e => ({nombre: e.nombre, corte: e.corte, peso: e.peso, nota: e.nota, fecha: e.fecha})),
+      temas: TEMAS[s.code] || []
+    })),
+    tareas: DB.tk.map(t => ({tarea: t.titulo, asignatura: nm(t.c), entrega: t.fecha, dias_para_entrega: daysUntil(t.fecha), estado: T_EST[t.estado], categoria: tCat(t), avance: t.progreso, nota: t.nota, detalle: t.desc || undefined}))
+  };
+}
+
+/* ---------------- PostgreSQL en la nube (Supabase · REST) ---------------- */
+const sbCode = () => settings.studentId || "20221045";
+async function sbFetch(path, opts = {}){
+  const url = settings.sbUrl.replace(/\/+$/, "") + "/rest/v1/" + path;
+  const r = await fetchJSON(url, Object.assign({}, opts, {headers: Object.assign({apikey: settings.sbKey, Authorization: "Bearer " + settings.sbKey, "Content-Type": "application/json"}, opts.headers || {})}), 15000);
+  if(!r.ok){ let m = ""; try{ const j = await r.json(); m = j.message || j.hint || ""; }catch(e){} throw new Error(`HTTP ${r.status}${m ? " · " + m.slice(0,90) : ""}`); }
+  const txt = await r.text(); return txt ? JSON.parse(txt) : null;
+}
+function setSbStatus(txt, ok){ const el = $("#sbStatus"); if(el){ el.textContent = txt; el.style.color = ok === true ? "var(--ok)" : ok === false ? "var(--bad)" : "var(--mut)"; } const p = $("#dbPill"); if(p){ p.textContent = settings.sbUrl && settings.sbKey ? (ok === false ? "BD: error" : "BD: nube") : "BD: local"; } }
+async function sbPull(silent){
+  if(!settings.sbUrl || !settings.sbKey) return false;
+  try{
+    const code = encodeURIComponent(sbCode());
+    const [ev, tk] = await Promise.all([sbFetch(`evaluacion?estudiante=eq.${code}&select=*`), sbFetch(`tarea?estudiante=eq.${code}&select=*`)]);
+    if(!ev.length && !tk.length){ setSbStatus(`Conectado. La base de datos no tiene datos del código ${sbCode()}: toca «Subir mis datos».`, true); return false; }
+    DB = validDB({term: REC.term, demo: false, ev: ev.map(r => ({id:r.id, c:r.asignatura, nombre:r.nombre, tipo:r.tipo, corte:r.corte, peso:+r.peso, nota: r.nota === null ? null : +r.nota, fecha:r.fecha})),
+      tk: tk.map(r => ({id:r.id, c:r.asignatura, titulo:r.titulo, desc:r.descripcion, fecha:r.fecha_entrega, estado:r.estado, progreso:r.progreso, ev:r.evaluacion_id, nota: r.nota === null ? null : +r.nota})), deleted: []});
+    store.set("db", DB); closeFinishedCourses(); refreshAll();
+    setSbStatus(`✔ Sincronizado con la base de datos · ${ev.length} evaluaciones, ${tk.length} tareas · ${new Date().toLocaleTimeString("es-CO",{hour:"2-digit",minute:"2-digit"})}`, true);
+    if(!silent) toast(`✔ Datos descargados de la base de datos (${ev.length} evaluaciones, ${tk.length} tareas).`);
+    return true;
+  }catch(e){ setSbStatus("✖ " + (e.name === "AbortError" ? "tiempo agotado" : e.message), false); if(!silent) toast("No pude leer la base de datos: " + e.message, 5000); return false; }
+}
+async function sbPush(silent){
+  if(!settings.sbUrl || !settings.sbKey) return false;
+  try{
+    const code = sbCode();
+    const evRows = DB.ev.map(e => ({id:e.id, estudiante:code, asignatura:e.c, nombre:e.nombre, tipo:e.tipo, corte:e.corte, peso:e.peso, nota:e.nota, fecha:e.fecha}));
+    const tkRows = DB.tk.map(t => ({id:t.id, estudiante:code, asignatura:t.c, titulo:t.titulo, descripcion:t.desc, fecha_entrega:t.fecha, estado:t.estado, progreso:t.progreso, nota:t.nota, evaluacion_id:t.ev}));
+    const up = {method:"POST", headers:{Prefer:"resolution=merge-duplicates,return=minimal"}};
+    if(evRows.length) await sbFetch("evaluacion?on_conflict=id", Object.assign({body: JSON.stringify(evRows)}, up));
+    if(tkRows.length) await sbFetch("tarea?on_conflict=id", Object.assign({body: JSON.stringify(tkRows)}, up));
+    for(const tbl of ["tarea","evaluacion"]){ const ids = DB.deleted.filter(d => d.t === tbl).map(d => d.id); if(ids.length) await sbFetch(`${tbl}?id=in.(${ids.map(encodeURIComponent).join(",")})`, {method:"DELETE"}); }
+    DB.deleted = []; store.set("db", DB);
+    setSbStatus(`✔ Guardado en la base de datos · ${new Date().toLocaleTimeString("es-CO",{hour:"2-digit",minute:"2-digit"})}`, true);
+    if(!silent) toast(`✔ Subido a la base de datos: ${evRows.length} evaluaciones y ${tkRows.length} tareas.`);
+    return true;
+  }catch(e){ setSbStatus("✖ " + (e.name === "AbortError" ? "tiempo agotado" : e.message), false); if(!silent) toast("No pude guardar en la base de datos: " + e.message, 5000); return false; }
+}
+$("#sbPull").onclick = async () => { settings.sbUrl = $("#sbUrl").value.trim(); settings.sbKey = $("#sbKey").value.trim(); saveSettings(); if(!settings.sbUrl || !settings.sbKey){ toast("Escribe la URL y la anon key de Supabase."); return; } setSbStatus("Conectando…"); await sbPull(false); };
+$("#sbPush").onclick = async () => { settings.sbUrl = $("#sbUrl").value.trim(); settings.sbKey = $("#sbKey").value.trim(); saveSettings(); if(!settings.sbUrl || !settings.sbKey){ toast("Escribe la URL y la anon key de Supabase."); return; } setSbStatus("Subiendo…"); await sbPush(false); };
+$("#sbOff").onclick = () => { settings.sbUrl = ""; settings.sbKey = ""; saveSettings(); $("#sbUrl").value = ""; $("#sbKey").value = ""; setSbStatus("Modo local: los datos viven solo en este teléfono."); toast("Base de datos en la nube desconectada."); };
+$("#dbDemo").onclick = e => confirmBtn(e.target, "Recargar datos de ejemplo", () => { const old = DB; DB = demoDB(); DB.deleted = old.ev.map(x => ({t:"evaluacion", id:x.id})).concat(old.tk.map(x => ({t:"tarea", id:x.id}))); saveDB(); refreshAll(); toast("Datos de ejemplo del semestre recargados."); });
+$("#dbEmpty").onclick = e => confirmBtn(e.target, "Vaciar semestre", () => { DB.deleted = DB.ev.map(x => ({t:"evaluacion", id:x.id})).concat(DB.tk.map(x => ({t:"tarea", id:x.id}))); DB.ev = []; DB.tk = []; DB.demo = false; saveDB(); refreshAll(); toast("Semestre vacío. Agrega tus evaluaciones y tareas."); });
+
+/* ---------------- arranque del módulo ---------------- */
+$("#sbUrl").value = settings.sbUrl || ""; $("#sbKey").value = settings.sbKey || "";
+setSbStatus(settings.sbUrl && settings.sbKey ? "Conectando…" : "Modo local: los datos viven solo en este teléfono.");
+closeFinishedCourses();
+refreshAll();
+if(settings.sbUrl && settings.sbKey) sbPull(true);
 
 </script>
 </body>
