@@ -1,0 +1,153 @@
+{
+  "name": "ATLAS · Ingesta RAG",
+  "nodes": [
+    {
+      "id": "7b270d41-1a6e-4baf-a09d-18aa03ad0a3e",
+      "name": "Subir documento",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -400,
+        0
+      ],
+      "webhookId": "09159bbe-7ba2-4ade-a1bc-2c724242b145",
+      "parameters": {
+        "formTitle": "ATLAS · Cargar documento al RAG",
+        "formDescription": "Sube el reglamento estudiantil, el plan de estudios o lineamientos del programa (PDF, DOCX o TXT).",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Documento",
+              "fieldType": "file",
+              "multipleFiles": false,
+              "acceptFileTypes": ".pdf,.txt,.docx,.md",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "6858e21e-c84f-4378-a3ee-0c8f904b1e28",
+      "name": "Guardar en PGVector",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "typeVersion": 1.1,
+      "position": [
+        -120,
+        0
+      ],
+      "parameters": {
+        "mode": "insert",
+        "tableName": "n8n_vectors",
+        "options": {}
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS"
+        }
+      }
+    },
+    {
+      "id": "8126eed7-95e6-47e0-b0e6-f3c949b6ca0f",
+      "name": "Cargador de documentos",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        220
+      ],
+      "parameters": {
+        "dataType": "binary",
+        "options": {}
+      }
+    },
+    {
+      "id": "28ffbe61-c0b8-4831-b765-92a37e84d2b6",
+      "name": "Divisor de texto",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        420
+      ],
+      "parameters": {
+        "chunkSize": 1000,
+        "chunkOverlap": 150,
+        "options": {}
+      }
+    },
+    {
+      "id": "f0bd1517-1eaf-4763-b5e4-9ae5db6a0f70",
+      "name": "Embeddings",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -220,
+        220
+      ],
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "REEMPLAZAR",
+          "name": "OpenAI"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Subir documento": {
+      "main": [
+        [
+          {
+            "node": "Guardar en PGVector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cargador de documentos": {
+      "ai_document": [
+        [
+          {
+            "node": "Guardar en PGVector",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Divisor de texto": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Cargador de documentos",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Guardar en PGVector",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}

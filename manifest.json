@@ -1,0 +1,16 @@
+{
+  "name": "ATLAS · Asistente Académico",
+  "short_name": "ATLAS",
+  "description": "Chatbot de apoyo académico para Ingeniería de Sistemas: matrícula, avance, proyección, requisitos y recomendaciones, con voz.",
+  "lang": "es-CO",
+  "start_url": "./index.html#asistente",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#02060c",
+  "theme_color": "#02060c",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

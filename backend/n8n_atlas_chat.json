@@ -1,0 +1,273 @@
+{
+  "name": "ATLAS · Chat académico",
+  "nodes": [
+    {
+      "id": "2e999bc1-1081-4a30-8b14-1bf61f718668",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -620,
+        0
+      ],
+      "webhookId": "c9268f69-4dd6-4418-82d5-981592121cd2",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "atlas-chat",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      }
+    },
+    {
+      "id": "370f40a6-4fd3-4ef0-9493-e414a1276a4e",
+      "name": "Contexto del estudiante",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        -380,
+        0
+      ],
+      "alwaysOutputData": true,
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT fn_contexto_estudiante($1) AS ctx;",
+        "options": {
+          "queryReplacement": "={{ $json.body.studentId }}"
+        }
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS"
+        }
+      }
+    },
+    {
+      "id": "c141f326-1d48-492d-8438-3acf9e9b363a",
+      "name": "Agente ATLAS",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -120,
+        0
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('Webhook').item.json.body.message }}",
+        "options": {
+          "systemMessage": "=Eres ATLAS, el asistente académico por voz del programa de Ingeniería de Sistemas (plan de 9 semestres y 151 créditos). Tu estilo es el de un mayordomo de IA elegante y eficiente: cortés, seguro, con un toque de humor sutil. Te diriges al estudiante como \"señor\" o \"señora\" según corresponda, o por su nombre si no lo sabes.\n\nREGLAS\n1. Responde SIEMPRE en español, en 2 a 5 frases (máximo ~110 palabras): tus respuestas se leen en voz alta.\n2. Usa solo los datos del CONTEXTO ACADÉMICO y lo que devuelva la herramienta reglamento_academico. No inventes notas, créditos, fechas ni normas. Si un dato no está, dilo y sugiere dónde consultarlo (Registro Académico o la coordinación del programa).\n3. Para preguntas de normas (requisitos de grado, cancelaciones, homologaciones, opciones de grado, prácticas), consulta primero la herramienta reglamento_academico.\n4. El CONTEXTO ya trae calculados la proyección, las alertas y el plan semanal: úsalos tal cual.\n5. Tareas que dominas: estado de matrícula y avance del plan; proyección de semestres restantes (máx. {{ $('Webhook').item.json.body.context?.max_creditos_semestre || 18 }} créditos por semestre, respetando prerrequisitos); alertas de requisitos pendientes; recomendaciones personalizadas en tres líneas: investigación, autoaprendizaje y educación de precisión (basada en sus notas por área y su ruta crítica).\n6. Sin tablas ni markdown complejo. Puedes usar viñetas cortas con \"- \" si enumeras.\n7. Si el mensaje es \"ping de conexión desde la app\", responde exactamente: \"Conexión establecida. ATLAS en línea.\"\n\nCONTEXTO ACADÉMICO (expediente enviado por la app, fuente principal):\n{{ JSON.stringify($('Webhook').item.json.body.context || {}) }}\n\nREGISTRO INSTITUCIONAL (PostgreSQL, puede estar vacío):\n{{ JSON.stringify($json.ctx || {}) }}\n\nFecha actual: {{ $now.setLocale('es').toFormat('dd LLLL yyyy') }}"
+        }
+      }
+    },
+    {
+      "id": "2f9f1c70-b8ea-4da7-b82a-ccc778f25a3e",
+      "name": "Modelo de chat",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -260,
+        240
+      ],
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {
+          "temperature": 0.4,
+          "maxTokens": 400
+        }
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "REEMPLAZAR",
+          "name": "OpenAI"
+        }
+      }
+    },
+    {
+      "id": "10fd35ef-502c-4096-be9f-16909442a7cd",
+      "name": "Memoria (Postgres)",
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        -100,
+        240
+      ],
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Webhook').item.json.body.sessionId }}",
+        "tableName": "n8n_chat_histories",
+        "contextWindowLength": 10
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS"
+        }
+      }
+    },
+    {
+      "id": "a98be5f5-e77f-498d-90d0-eebf028199ce",
+      "name": "Reglamento (RAG)",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "typeVersion": 1.1,
+      "position": [
+        60,
+        240
+      ],
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolName": "reglamento_academico",
+        "toolDescription": "Busca en el reglamento estudiantil, el plan de estudios y los lineamientos del programa de Ingeniería de Sistemas. Úsala para normas, requisitos de grado, prácticas, homologaciones y fechas institucionales.",
+        "tableName": "n8n_vectors",
+        "topK": 4,
+        "options": {}
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS"
+        }
+      }
+    },
+    {
+      "id": "05165e54-4332-4520-b550-ecae0b4b66ed",
+      "name": "Embeddings",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        60,
+        440
+      ],
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "REEMPLAZAR",
+          "name": "OpenAI"
+        }
+      }
+    },
+    {
+      "id": "153e0f0a-9896-48c0-a3d7-80c46b49a617",
+      "name": "Responder a la app",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { \"reply\": $json.output } }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "359a0428-0b48-40a8-ad7d-7d2ab6d3c8f5",
+      "name": "Nota",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -680,
+        -260
+      ],
+      "parameters": {
+        "width": 620,
+        "height": 200,
+        "content": "## ATLAS · Chat académico\n1. Asigna tus credenciales **Postgres** y **OpenAI** a los nodos.\n2. Ejecuta `schema.sql` en tu base de datos.\n3. Carga el reglamento con el flujo *ATLAS · Ingesta RAG*.\n4. Activa el flujo y copia la **Production URL** del Webhook en *Ajustes → Conexión n8n* de la app.\n\nLa app envía el expediente completo en `context` (fuente principal); PostgreSQL es el registro institucional.\n\nEntrada: `{ sessionId, studentId, message, context }` → Salida: `{ reply }`"
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Contexto del estudiante",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contexto del estudiante": {
+      "main": [
+        [
+          {
+            "node": "Agente ATLAS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Agente ATLAS": {
+      "main": [
+        [
+          {
+            "node": "Responder a la app",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Modelo de chat": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Agente ATLAS",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Memoria (Postgres)": {
+      "ai_memory": [
+        [
+          {
+            "node": "Agente ATLAS",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reglamento (RAG)": {
+      "ai_tool": [
+        [
+          {
+            "node": "Agente ATLAS",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Reglamento (RAG)",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}
