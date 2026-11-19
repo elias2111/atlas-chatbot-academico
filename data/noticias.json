@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-18T23:58:19-05:00",
+  "actualizado": "2026-11-19T00:14:53-05:00",
   "ventana_horas": 48,
   "total": 24,
   "categorias": [
@@ -12,13 +12,13 @@
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 11
+      "items": 10
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 9
+      "items": 8
     },
     {
       "fuente": "Google Noticias",
@@ -63,6 +63,15 @@
       "fecha": "2026-11-19T03:04:15+00:00",
       "resumen": "",
       "id": "7e1ec4cfa4a29e20"
+    },
+    {
+      "titulo": "Black Friday en Colombia: ropa, tecnología y electrodomésticos encabezan las compras durante las ofertas",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQY3V3cjBkM1JLN04xVWUtcTJ5T1ktenIyNm5mRXhyZnNHbV9tZXkwUWRCZ0NkY3kyanY0eVU0WlJSRjdOTjRuRC1CUWpGUzExWmJoYWZlQmxyNzVMcVl1RzEteWt6ckNWQTNRMjBzODJXRDE5MVhLU1Bjd3VvSHF3STdsYXNGS3pOa2pzNHFRWTA3VlV5Y3ZMMk5vWERITlUxVHhSbEdnMEZCRXRHUzBMNFVpT1EyTWR1dkloVlU3ai1pWW5DMkdFM2x4WHgxSGV6SldfaG1BNUgyS2ZlOUxwVENoYjZxemxGNXZ30gHwAUFVX3lxTE54S0swa1lIQzNzUkQ2cTRBTlZBcjh1YUZqdWUwLW83Q0dYTnNwakVZQnh2LVdjNXZadWtsbm1ZRkk4cWNhZkNiTzdTZXU0a1pMYWxkbWRHS1REaDllSG5ZUXN1TkliTV9td2J5enpzeVVXN0JPbEZlalVXUmNXNW5vZU9xYlRvVUxsdlc3SEk3SlFFeWdfMlBjSmRYMjFNQWZ1NzVXTk5EeGt5YUx6cmREVGMzZGp0WXNHMFkxODdSckhZeFdkajNuQW9IaDdCNHFhODNfSjAxbXZiUWJHOFZkdmJId0pzalZ6cXc4R2F6cA?oc=5",
+      "fuente": "Portafolio.co",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-19T02:51:19+00:00",
+      "resumen": "",
+      "id": "b02ef2e44569f02d"
     },
     {
       "titulo": "Colombia aún no tiene una Ley integral que regule la Inteligencia Artificial",
@@ -121,7 +130,7 @@
     {
       "titulo": "¡Oportunidad de oro! El ICETEX lanza becas para hacer una maestría o un doctorado en China: Requisitos y Fechas.",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxObjVmekhXQU9BRm96YVpndU9CbzRMWUJZY29wandZVmVGU3AtT193alVlYmdtWVFXdVd5VHFDeG1UMFJkOHNoX1pHQkRjREFxQV9nS21NeGFrbTlfZnVCNmRZMC1qekhha2hCV29Ib2lrZ2JKMUloaGpUVjdKbE1SNy13TjdFdTNpUzdrTFlhZ1hnR1I2VXhJZF9YOHR2UmJWU2RneFlTTU9EWmJqQmd1TmRKWEhDN1IxQVZMV2Zfd1YzaHROV1hGMVNCRENsbjlwR0tN?oc=5",
-      "fuente": "noscogiolanoche.com",
+      "fuente": "Nos Cogió la Noche",
       "categoria": "Educación",
       "fecha": "2026-11-18T21:37:26+00:00",
       "resumen": "",
@@ -144,15 +153,6 @@
       "fecha": "2026-11-18T20:25:20+00:00",
       "resumen": "",
       "id": "dd68c2c23fe24dd6"
-    },
-    {
-      "titulo": "Start-Up Chile realiza su primer Demo Day Govtech: ocho startups compiten por llevar sus soluciones a municipios",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOcUxlZnNXZzFUY19sNXV0aDNKQTdoQkNXZWJKcXZNRWhPM1NRVk9FMnAtLXFSTk1tQ1FPRHhSSXB5N1ZJQ01admhiTmlHZFpacVNOWm8wT083aXpkTUQ2QVFwVDExWDdKcmc4QzNyUXltZXhYUV9IQUh6OXdQMGwxSmN3NUo0eVVvUWx1QjFIM0ZlOXZlYmVSWERFUS14T2ZFT3hsYV9UcDFneDI2TWg0ZVBDWUFVVE5XeHk5ZU9zdlNoUVpJLUhDeERCZ2twNG5IS1BRcUtXRS1wRmR3STZGN29OajV4SG94V2c?oc=5",
-      "fuente": "Diario Sustentable",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-18T20:21:20+00:00",
-      "resumen": "",
-      "id": "e03a6bf8d254afd4"
     },
     {
       "titulo": "Universidades asumirán compromisos por el bienestar universitario",
