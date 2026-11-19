@@ -1,136 +1,121 @@
 # ATLAS · Chatbot de apoyo académico con n8n
 
-> **Trabajo final de Ciencia de Datos, Tema 2** · Ingeniería de Sistemas
+> **Trabajo final · Ciencia de Datos · Tema 2** · Ingeniería de Sistemas, Universidad Autónoma de Bucaramanga (UNAB)
 > Autor: José Elías Cruz
 
-**▶ App en vivo:** https://elias2111.github.io/atlas-chatbot-academico/
-(ábrela en Safari desde el iPhone y toca **Compartir → Agregar a pantalla de inicio**)
+[![App en vivo](https://img.shields.io/badge/App-en%20vivo-3ee6ff?style=for-the-badge)](https://elias2111.github.io/atlas-chatbot-academico/)
+[![Scraper de noticias](https://github.com/elias2111/atlas-chatbot-academico/actions/workflows/scraper-noticias.yml/badge.svg)](https://github.com/elias2111/atlas-chatbot-academico/actions/workflows/scraper-noticias.yml)
 
-ATLAS es un asistente académico **por voz**, al estilo de un mayordomo de IA, que apoya al estudiante de Ingeniería de Sistemas en:
+**ATLAS** es un modelo en **n8n** que apoya al estudiante de Ingeniería de Sistemas en la **matrícula**, el **estado académico actual** y su **proyección**, con **requisitos** y **recomendaciones** para tener éxito en el programa: **investigación, autoaprendizaje y educación de precisión**. Se usa por voz, al estilo de un mayordomo de IA, desde una app móvil.
 
-1. **Estado de matrícula y avance del plan de estudios**: los 9 semestres y 151 créditos del plan oficial, más el **portal del semestre** con notas por corte, nota necesaria para aprobar y tareas.
-2. **Proyección de semestres restantes y alertas de requisitos pendientes**: ruta crítica, rezago, carga, inglés y práctica.
-3. **Recomendaciones personalizadas para el éxito académico**: educación de precisión, investigación y autoaprendizaje.
-4. **Base conceptual**: chatbot institucional con **arquitectura RAG, n8n, PostgreSQL y app móvil**.
+**▶ App:** https://elias2111.github.io/atlas-chatbot-academico/ (Android: Chrome → *Instalar app* · iPhone: Safari → *Compartir* → *Agregar a pantalla de inicio*)
 
-| Asistente de voz | Notas del semestre | Tareas | Avance | Ruta | Recomendaciones |
+| Asistente de voz | Notas del semestre | Tareas | Reglamento (RAG) | Ruta y requisitos | Recomendaciones y noticias |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| ![](docs/1-asistente.png) | ![](docs/2-notas.png) | ![](docs/3-tareas.png) | ![](docs/4-avance.png) | ![](docs/5-proyeccion.png) | ![](docs/6-rumbo.png) |
+| ![](docs/1-asistente.png) | ![](docs/2-notas.png) | ![](docs/3-tareas.png) | ![](docs/7-reglamento.png) | ![](docs/5-proyeccion.png) | ![](docs/6-rumbo.png) |
 
----
+## Componentes
+
+| Componente requerido | Implementación en ATLAS | Documentación |
+|---|---|---|
+| **Base de datos PostgreSQL** | Plan de 151 créditos, prerrequisitos, matrícula, notas por evaluación, tareas y noticias; vistas y funciones que calculan nota actual, nota necesaria y estado | [BASE_DE_DATOS.md](docs/BASE_DE_DATOS.md) · [schema.sql](backend/schema.sql) |
+| **n8n con agente** | Agente con `gpt-4o-mini`, memoria en PostgreSQL, herramientas RAG y MCP, y **guardrails** de entrada y salida | [WORKFLOWS_N8N.md](docs/WORKFLOWS_N8N.md) |
+| **RAG** | Reglamento UNAB, plan de estudios y guía de éxito académico → fragmentos 1000/150 → `text-embedding-3-small` → pgvector. Evaluado: precisión@1 83 %, recall@3 100 % | [RAG.md](docs/RAG.md) · [evidencia](rag/EVIDENCIA_RECUPERACION.md) |
+| **Servidor MCP** | 6 herramientas (estado académico, notas, tareas, prerrequisitos, noticias, reglamento) en n8n y en un servidor Python probado 7/7 | [MCP_Y_WEBHOOK.md](docs/MCP_Y_WEBHOOK.md) · [evidencia](mcp-server/EVIDENCIA_PRUEBAS.md) |
+| **Webhook** | `POST /webhook/atlas-chat`, `GET /webhook/atlas-noticias`; pruebas con curl y Postman | [tests/](tests) |
+| **Scraper de noticias** | GitHub Actions dos veces al día (y flujo de n8n equivalente): educación, tecnología e ingeniería de sistemas, con fuente y fecha | [SCRAPER.md](docs/SCRAPER.md) · [ejecuciones](https://github.com/elias2111/atlas-chatbot-academico/actions/workflows/scraper-noticias.yml) |
+| **App móvil Android** | PWA instalable (Android e iPhone): voz, notas, tareas, proyección, alertas, recomendaciones y noticias, conectada al webhook | [ANDROID.md](docs/ANDROID.md) · [MANUAL_USUARIO.md](docs/MANUAL_USUARIO.md) |
 
 ## Arquitectura
 
-```
- ┌──────────────────────────┐      POST {message, context}      ┌───────────────────────────────┐
- │  App móvil (PWA · iPhone) │ ────────────────────────────────▶ │ n8n · Webhook /atlas-chat     │
- │  • Voz: Web Speech API    │                                   │   ├─ PostgreSQL (expediente)  │
- │  • Expediente editable    │ ◀──────────────────────────────── │   ├─ Agente IA + memoria      │
- │  • Motor local offline    │            {reply}                │   └─ RAG: reglamento (pgvector)│
- └──────────────────────────┘                                   └───────────────────────────────┘
-          │  sin n8n
-          └──▶ IA directa (OpenAI) ──▶ o motor local de intenciones (sin internet)
+```mermaid
+flowchart LR
+  APP["📱 App ATLAS<br/>PWA Android/iPhone<br/>voz · guardrails"] -->|"POST /atlas-chat"| WH["n8n Webhook"]
+  WH --> GI["🛡️ Guardrail<br/>entrada"] --> AG["🤖 Agente<br/>gpt-4o-mini + memoria"]
+  AG -->|reglamento_academico| RAG[("🔎 RAG<br/>pgvector")]
+  AG -->|MCP Client| MCP["🔌 Servidor MCP<br/>6 herramientas"]
+  MCP -->|SQL parametrizado| PG[("🐘 PostgreSQL<br/>Supabase")]
+  AG --> GO["🛡️ Guardrail<br/>salida"] -->|"{ reply }"| APP
+  SCR["📰 Scraper<br/>GitHub Actions / n8n"] -->|noticias| PG
+  SCR -->|data/noticias.json| APP
+  APP -->|"REST: notas y tareas"| PG
+  ING["📄 Ingesta RAG<br/>1000/150 · embeddings"] --> RAG
 ```
 
-La app tiene **tres niveles de inteligencia** y siempre usa el más alto disponible; si uno falla, pasa al siguiente:
+Diagrama completo, secuencia de una consulta y **justificación de cada decisión de diseño**: [docs/ARQUITECTURA.md](docs/ARQUITECTURA.md).
 
-| Nivel | Requiere | Qué hace |
+## Qué responde ATLAS
+
+| Pregunta (por voz o texto) | Respuesta | Fuente de los datos |
 |---|---|---|
-| 1. Motor local | Nada (funciona sin internet) | Entiende preguntas sobre matrícula, avance, grado, requisitos, materias, promedio y recomendaciones, y comandos que actualizan el expediente |
-| 2. IA directa | API key de OpenAI (Ajustes) | Preguntas abiertas respondidas con todo el expediente como contexto |
-| 3. n8n + RAG | Flujo de `backend/` activo | Agente con memoria en PostgreSQL y búsqueda en el reglamento estudiantil |
+| "Dame el informe del semestre" | Promedio parcial, materias en riesgo, tareas vencidas, próximas entregas | `v_notas_semestre`, `v_tareas` |
+| "¿Cómo voy en Cálculo integral?" | "En riesgo: llevas 2,97 con el 60 % evaluado; necesitas 3,05 en el 40 % que falta" | `fn_notas_semestre` (MCP) |
+| "¿Puedo habilitar Cálculo integral?" | Arts. 47 y 48 + cálculo personal de la nota de habilitación | RAG + base de datos |
+| "¿Qué tareas tengo vencidas?" | Lista con fecha y avance | `fn_tareas` (MCP) |
+| "¿Cuándo me gradúo?" / "¿Qué inscribo el próximo semestre?" | Proyección semestre a semestre respetando prerrequisitos y el límite de créditos | plan + expediente |
+| "¿Qué requisitos tengo pendientes?" | Ruta crítica, rezago, carga, inglés B2, Saber Pro, PGA ≥ 3,20, práctica | reglamento + expediente |
+| "Dame recomendaciones" | Educación de precisión, investigación y autoaprendizaje, con fuentes | guía de éxito académico (RAG) |
+| "Noticias de tecnología de hoy" | Titulares con fuente y fecha | scraper |
+| "Saqué 3,5 en el examen final de Electromagnetismo" | Registra la nota y dice si aprobó (definitiva sin aproximar, Art. 39) | escribe en `evaluacion` |
 
-## Funcionalidades
-
-### Portal del semestre (base de datos de notas y tareas)
-- **Notas por evaluación y corte** en la escala **0,0 – 5,0**: cada evaluación tiene un peso (%) y una nota. Para cada materia ATLAS calcula:
-  - **Nota actual**: el promedio ponderado de lo evaluado.
-  - **Acumulado**: los puntos ganados sobre 5,0.
-  - **Nota necesaria**: la mínima que te falta sacar en lo restante para llegar a **3,0**, con la fórmula `(3,0 − acumulado) ÷ (peso restante)`.
-  - **Estado**: *Aprobando*, *En riesgo*, *Aprobada asegurada* (ya tienes 3,0 acumulado), *Perdida* (ni con 5,0 alcanzas), y al final *Aprobada* o *Reprobada* con la definitiva redondeada a una décima.
-- **Cierre automático**: cuando todas las evaluaciones de una materia tienen nota, la definitiva pasa sola al expediente y se recalculan el avance, la proyección y el grado.
-- **Tareas**: con fecha de entrega, avance (%) y estado. Se clasifican en **por hacer**, **incompletas**, **vencidas** y **entregadas**, y se pueden vincular a una evaluación.
-- **Alertas del semestre**: materias en riesgo o perdidas, tareas vencidas y entregas en las próximas 48 horas.
-- **Base de datos**: funciona en el teléfono sin configurar nada, o conectada a **PostgreSQL en Supabase** por su API REST (Ajustes → Base de datos académica). Cada cambio se sincroniza solo.
-
-### Asistente y expediente
-
-- **Conversación por voz**: tocas el núcleo, hablas y ATLAS te responde en voz alta. Con la *conversación continua* vuelve a escucharte al terminar. Si tocas el núcleo mientras habla, lo interrumpes.
-- **Expediente editable y persistente**: tocas cualquier materia y la marcas como Aprobada, Cursando, Pendiente o Reprobada, con su nota. A las electivas les pones el nombre real. Todo se recalcula al instante y se guarda en el teléfono. Se puede exportar e importar en JSON.
-- **Comandos por voz**: "aprobé Cálculo integral con 4,2", "perdí Investigación de operaciones I", "estoy viendo Ecuaciones diferenciales", "cancelé…", "aprobé inglés B2.1".
-- **Proyección inteligente**: arma los semestres restantes respetando los prerrequisitos y el límite de créditos por semestre (configurable), y calcula la fecha estimada de grado.
-- **Alertas**: materias reprobadas, ruta crítica (por ejemplo, Cálculo integral bloquea a Ecuaciones diferenciales y a Dinámica de sistemas), prerrequisitos sin aprobar, carga alta, materias rezagadas, requisito de inglés, práctica y bases débiles.
-- **Educación de precisión**: plan semanal de horas calculado con los créditos, la ruta crítica y tu rendimiento por área.
-- **PWA instalable**: pantalla completa, ícono propio y funcionamiento sin conexión gracias al service worker.
-
-## Probarla
-
-**En el iPhone (para la demo)**
-1. Abre https://elias2111.github.io/atlas-chatbot-academico/ en **Safari**.
-2. Toca **Compartir → Agregar a pantalla de inicio** y ábrela desde el ícono.
-3. Toca **INICIAR SISTEMA** y luego el núcleo. Permite el micrófono y el reconocimiento de voz.
-4. Si iOS no deja usar la voz dentro de la app instalada, ábrela directamente en la pestaña de Safari o usa el micrófono del teclado. ATLAS igual responde en voz alta.
-
-**En el computador**: abre la página en **Chrome** o **Edge**, sin VPN. Firefox y Opera no tienen reconocimiento de voz.
-
-**Frases para probar**
-
-| Dile a ATLAS | Resultado |
-|---|---|
-| "Dame el informe del semestre" | Promedio parcial, materias en riesgo, tareas y próximas entregas |
-| "¿Cómo voy en Cálculo integral?" / "¿Aprobé Ciberseguridad?" | Nota actual, nota necesaria para 3,0 y estado |
-| "¿Cuánto saqué en el parcial 2 de Cálculo integral?" | La nota de esa evaluación |
-| "¿Cuándo es la sustentación del proyecto de grado?" | Fecha y peso |
-| "¿Qué tareas tengo pendientes?" / "¿Tengo tareas vencidas?" / "¿Qué tengo para esta semana?" | Tareas filtradas |
-| "Saqué 3,5 en el examen final de Electromagnetismo" | Registra la nota y te dice si aprobaste |
-| "Entregué el informe de Faraday" / "Voy en el 80% del trabajo de inventarios" | Actualiza la tarea |
-| "Explícame integración por partes" | Tutor de la materia (con IA conectada) |
-| "¿Qué materias estoy viendo?" | Matrícula actual y créditos |
-| "¿Cuándo me gradúo?" | Proyección semestre a semestre |
-| "¿Qué requisitos tengo pendientes?" | Alertas priorizadas |
-| "¿Puedo ver Dinámica de sistemas?" | Prerrequisitos y si está habilitada |
-| "Aprobé Cálculo integral con 4,2" | Actualiza el expediente y recalcula todo |
-| "Dame recomendaciones" / "Arma mi plan semanal" | Educación de precisión |
-| "Abre mi ruta" | Navega a la pestaña Ruta |
-
-## Backend (n8n + PostgreSQL)
+## Estructura del repositorio
 
 ```
-backend/
-├── schema.sql                 # plan de 151 créditos, expediente, notas (evaluacion), tareas (tarea), vistas v_notas_semestre y v_tareas
-├── n8n_atlas_chat.json        # Webhook → Postgres → Agente IA (memoria + RAG) → respuesta
-└── n8n_atlas_ingesta_rag.json # formulario para cargar el reglamento (PDF) a pgvector
+├── index.html                 # app completa (PWA): voz, motor local, RAG BM25, guardrails, notas, tareas, noticias
+├── manifest.json · sw.js      # instalación y modo sin conexión
+├── data/
+│   ├── noticias.json          # lo publica el scraper (GitHub Actions)
+│   └── rag_index.json         # índice RAG para la app (35 fragmentos)
+├── backend/
+│   ├── schema.sql             # PostgreSQL: tablas, datos, vistas, funciones, permisos
+│   ├── consultas_demo.sql     # consultas para la sustentación
+│   ├── n8n_atlas_chat.json            # agente + LLM + memoria + RAG + MCP + guardrails
+│   ├── n8n_atlas_mcp_server.json      # MCP Server Trigger con 6 herramientas
+│   ├── n8n_atlas_scraper_noticias.json
+│   └── n8n_atlas_ingesta_rag.json
+├── rag/
+│   ├── docs/                  # corpus: reglamento UNAB, plan de estudios, guía de éxito académico
+│   ├── rag_local.py           # fragmentación 1000/150, índice y evaluación
+│   └── EVIDENCIA_RECUPERACION.md
+├── mcp-server/
+│   ├── atlas_mcp_server.py    # servidor MCP (stdio + HTTP), solo biblioteca estándar
+│   ├── probar_mcp.py          # cliente de prueba
+│   └── EVIDENCIA_PRUEBAS.md
+├── scraper/scraper_noticias.py
+├── .github/workflows/scraper-noticias.yml
+├── tests/                     # probar_webhook.sh (curl) · ATLAS.postman_collection.json
+└── docs/                      # arquitectura, RAG, BD, n8n, MCP, scraper, Android, manual, prompts, guía de evidencias
 ```
 
-1. Ejecuta `backend/schema.sql` en PostgreSQL con pgvector (Supabase o Neon). Para probarlo:
-   `SELECT * FROM v_notas_semestre WHERE estudiante = '20221045';` y `SELECT * FROM v_tareas ORDER BY fecha_entrega;`
-2. **Conectar la app a la base de datos**: en Supabase ve a *Project Settings → API*, copia la **URL** y la **anon key**, pégalas en la app en **Ajustes → Base de datos académica** y toca **Conectar y descargar**. Desde ese momento la app lee y escribe las notas y tareas en PostgreSQL.
-3. En n8n, importa los dos JSON y asigna las credenciales de **Postgres** y **OpenAI**.
-4. Activa *ATLAS · Ingesta RAG* y sube el reglamento estudiantil.
-5. Activa *ATLAS · Chat académico* y copia la **Production URL** del Webhook en **Ajustes → Conexión n8n** de la app.
+## Instalación
 
-**Contrato de la API**
+1. **App**: ya está publicada. Para tu propia copia, haz un *fork* y activa GitHub Pages (Settings → Pages → `main` / root).
+2. **Base de datos**: crea un proyecto en Supabase y ejecuta `backend/schema.sql` en el SQL Editor ([detalle](docs/BASE_DE_DATOS.md)).
+3. **n8n**: importa los 4 JSON de `backend/`, crea las credenciales de Postgres y OpenAI, sube los documentos del RAG y activa los flujos ([detalle](docs/WORKFLOWS_N8N.md)).
+4. **Conecta la app**: en Ajustes pega la URL del webhook de n8n (Conexión n8n) y la URL y *anon key* de Supabase (Base de datos académica).
+5. **Scraper**: ya corre en GitHub Actions. Si agregas los secretos `SUPABASE_URL` y `SUPABASE_KEY`, también guarda las noticias en PostgreSQL.
+6. **Pruebas**: `bash tests/probar_webhook.sh`, `python mcp-server/probar_mcp.py`, `python rag/rag_local.py eval`.
 
-```http
-POST /webhook/atlas-chat
-{ "sessionId": "s-ab12cd34", "studentId": "20221045", "message": "¿Cuándo me gradúo?", "context": { ...expediente... } }
+La guía paso a paso, con la lista de capturas por criterio de la rúbrica, está en **[docs/GUIA_DESPLIEGUE_Y_EVIDENCIAS.md](docs/GUIA_DESPLIEGUE_Y_EVIDENCIAS.md)**.
 
-→ 200 { "reply": "Si aprueba lo que cursa, señor, se gradúa en 2027-2…" }
-```
+## Pertinencia pedagógica
 
-## Estructura del proyecto
-
-```
-├── index.html        # la app completa (HTML + CSS + JS, sin dependencias)
-├── manifest.json     # instalación como app
-├── sw.js             # service worker (red primero, caché sin conexión)
-├── icons/            # íconos
-├── docs/             # capturas
-└── backend/          # n8n + PostgreSQL
-```
+- **Educación de precisión** (Yang, 2021; Luan y Tsai, 2021):
+  - *Diagnóstico*: notas por área y por corte.
+  - *Predicción*: nota necesaria en lo que falta y proyección de grado.
+  - *Intervención*: plan semanal de horas ponderado por ruta crítica y riesgo.
+  - *Prevención*: alertas de requisitos, tareas vencidas y PGA.
+- **Autoaprendizaje**: práctica de recuperación y práctica distribuida, las dos técnicas de mayor utilidad según Dunlosky et al. (2013); pruebas de práctica (Roediger y Karpicke, 2006).
+- **Investigación**: semilleros, radar bibliográfico, publicación del proyecto de grado y noticias del día como insumo.
+- **Reglamento UNAB aplicado**:
+  - definitiva sin aproximar (Art. 39);
+  - habilitación con nota ≥ 2,5, ponderada 60/40 (Arts. 47 y 48);
+  - estado condicional y prueba académica (Arts. 10–12);
+  - requisitos de grado: PGA ≥ 3,20, inglés B2 y Saber Pro (Art. 67).
+- Los prompts usados y ejemplos de respuestas están en **[docs/PROMPTS.md](docs/PROMPTS.md)**.
 
 ## Notas
 
-- **Plan de estudios**: las asignaturas y los créditos son los del plan oficial de Ingeniería de Sistemas. El plan no publica los prerrequisitos, así que la app usa una propuesta lógica; se ajusta en la constante `PLAN` de `index.html`.
-- **Datos de ejemplo**: al abrir la app por primera vez se cargan datos de ejemplo. Las notas del semestre son inventadas; las tareas corresponden a proyectos reales del semestre. En **Avance → Usar mis datos** o **Empezar en blanco** se registra el expediente real.
-- **Privacidad**: el expediente y la API key se guardan solo en el navegador del dispositivo (`localStorage`).
+- **Plan de estudios**: las asignaturas y créditos son los del plan oficial. Los prerrequisitos son una propuesta, porque el plan no los publica; se ajustan en la constante `PLAN` de `index.html` y en `backend/schema.sql`.
+- **Datos de ejemplo**: las notas del estudiante de ejemplo son inventadas; las tareas corresponden a proyectos reales del semestre 2026-2.
+- **Privacidad**: el expediente y las claves se guardan en el dispositivo (`localStorage`), salvo que se conecte Supabase. En producción, la *anon key* debe acompañarse de Supabase Auth y políticas RLS por estudiante.

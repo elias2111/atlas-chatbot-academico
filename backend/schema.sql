@@ -286,7 +286,7 @@ CREATE INDEX ON tarea (estudiante, fecha_entrega);
 
 -- Notas del semestre: acumulado, nota actual, nota necesaria para 3,0 y estado
 CREATE OR REPLACE VIEW v_notas_semestre AS
-SELECT e.estudiante, e.asignatura, a.nombre AS asignatura_nombre, a.creditos,
+SELECT e.estudiante, e.asignatura, COALESCE(MAX(i.nombre_electiva), a.nombre) AS asignatura_nombre, a.creditos,
        SUM(e.peso)                                                        AS peso_total,
        COALESCE(SUM(e.peso) FILTER (WHERE e.nota IS NOT NULL), 0)        AS peso_evaluado,
        ROUND(COALESCE(SUM(e.nota * e.peso / 100), 0), 2)                 AS acumulado,
@@ -296,17 +296,19 @@ SELECT e.estudiante, e.asignatura, a.nombre AS asignatura_nombre, a.creditos,
             THEN ROUND((3.0 - COALESCE(SUM(e.nota * e.peso / 100), 0))
                  / ((SUM(e.peso) - COALESCE(SUM(e.peso) FILTER (WHERE e.nota IS NOT NULL), 0)) / 100), 2) END AS nota_necesaria,
        CASE
-         WHEN COUNT(*) = COUNT(e.nota) THEN CASE WHEN ROUND(SUM(e.nota * e.peso) / SUM(e.peso), 1) >= 3.0 THEN 'APROBADA' ELSE 'REPROBADA' END
+         WHEN COUNT(*) = COUNT(e.nota) THEN CASE WHEN TRUNC(SUM(e.nota * e.peso) / SUM(e.peso), 1) >= 3.0 THEN 'APROBADA' ELSE 'REPROBADA' END
          WHEN COALESCE(SUM(e.nota * e.peso / 100), 0) >= 3.0 THEN 'APROBADA ASEGURADA'
          WHEN COALESCE(SUM(e.nota * e.peso / 100), 0) + (SUM(e.peso) - COALESCE(SUM(e.peso) FILTER (WHERE e.nota IS NOT NULL), 0)) / 100 * 5 < 3.0 THEN 'PERDIDA'
          WHEN SUM(e.nota * e.peso) FILTER (WHERE e.nota IS NOT NULL) / NULLIF(SUM(e.peso) FILTER (WHERE e.nota IS NOT NULL), 0) < 3.0 THEN 'EN RIESGO'
          ELSE 'APROBANDO' END AS estado
 FROM evaluacion e JOIN asignatura a ON a.codigo = e.asignatura
+LEFT JOIN inscripcion i ON i.estudiante = e.estudiante AND i.asignatura = e.asignatura AND i.estado = 'cursando'
 GROUP BY e.estudiante, e.asignatura, a.nombre, a.creditos;
 
 -- Tareas con categoría calculada
 CREATE OR REPLACE VIEW v_tareas AS
-SELECT t.*, a.nombre AS asignatura_nombre, (t.fecha_entrega - CURRENT_DATE) AS dias_para_entrega,
+SELECT t.*, COALESCE((SELECT i.nombre_electiva FROM inscripcion i WHERE i.estudiante = t.estudiante AND i.asignatura = t.asignatura AND i.estado = 'cursando' LIMIT 1), a.nombre) AS asignatura_nombre,
+       (t.fecha_entrega - CURRENT_DATE) AS dias_para_entrega,
        CASE WHEN t.estado IN ('entregada','calificada') THEN 'entregada'
             WHEN t.fecha_entrega < CURRENT_DATE THEN 'vencida'
             WHEN t.estado = 'en_progreso' THEN 'incompleta'
@@ -389,6 +391,82 @@ INSERT INTO tarea (id, estudiante, asignatura, titulo, descripcion, fecha_entreg
 -- Consultas útiles:
 --   SELECT * FROM v_notas_semestre WHERE estudiante = '20221045';
 --   SELECT titulo, asignatura_nombre, fecha_entrega, categoria FROM v_tareas WHERE estudiante = '20221045' ORDER BY fecha_entrega;
+
+
+-- =====================================================================
+-- NOTICIAS DEL DÍA (las llena el scraper: GitHub Actions o el flujo de n8n)
+-- =====================================================================
+DROP TABLE IF EXISTS noticias CASCADE;
+CREATE TABLE noticias (
+  id         TEXT PRIMARY KEY,                 -- hash de la URL
+  titulo     TEXT NOT NULL,
+  url        TEXT NOT NULL UNIQUE,
+  fuente     TEXT NOT NULL,
+  categoria  TEXT NOT NULL CHECK (categoria IN ('Educación','Tecnología','Ingeniería de sistemas')),
+  fecha      TIMESTAMPTZ,
+  resumen    TEXT,
+  creado     TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+CREATE INDEX ON noticias (fecha DESC);
+
+CREATE OR REPLACE VIEW v_noticias_hoy AS
+SELECT id, titulo, url, fuente, categoria, fecha, resumen
+FROM noticias
+WHERE fecha >= now() - interval '48 hours'
+ORDER BY fecha DESC;
+
+-- =====================================================================
+-- FUNCIONES QUE USAN EL SERVIDOR MCP Y EL AGENTE (consultas parametrizadas)
+-- =====================================================================
+-- normaliza tildes sin depender de la extensión unaccent
+CREATE OR REPLACE FUNCTION unaccent_lower(t TEXT) RETURNS TEXT LANGUAGE sql IMMUTABLE AS $$
+  SELECT translate(lower(t), 'áéíóúüñ', 'aeiouun');
+$$;
+
+CREATE OR REPLACE FUNCTION fn_prerrequisitos(p_asignatura TEXT)
+RETURNS JSON LANGUAGE sql STABLE AS $$
+  SELECT json_build_object(
+    'asignatura', a.nombre, 'codigo', a.codigo, 'semestre', a.semestre, 'creditos', a.creditos,
+    'prerrequisitos', COALESCE((SELECT json_agg(json_build_object('codigo', r.codigo, 'nombre', r.nombre))
+                                FROM prerrequisito p JOIN asignatura r ON r.codigo = p.requiere WHERE p.asignatura = a.codigo), '[]'),
+    'desbloquea',     COALESCE((SELECT json_agg(json_build_object('codigo', d.codigo, 'nombre', d.nombre))
+                                FROM prerrequisito p JOIN asignatura d ON d.codigo = p.asignatura WHERE p.requiere = a.codigo), '[]'))
+  FROM asignatura a
+  WHERE a.codigo = upper(p_asignatura)
+     OR unaccent_lower(a.nombre) LIKE '%' || unaccent_lower(p_asignatura) || '%'
+  ORDER BY (a.codigo = upper(p_asignatura)) DESC, length(a.nombre)
+  LIMIT 1;
+$$;
+
+CREATE OR REPLACE FUNCTION fn_notas_semestre(p_codigo TEXT)
+RETURNS JSON LANGUAGE sql STABLE AS $$
+  SELECT COALESCE(json_agg(json_build_object(
+           'asignatura', v.asignatura_nombre, 'estado', v.estado, 'nota_actual', v.nota_actual, 'acumulado', v.acumulado,
+           'porcentaje_evaluado', v.peso_evaluado, 'nota_necesaria', v.nota_necesaria,
+           'evaluaciones', (SELECT json_agg(json_build_object('nombre', e.nombre, 'corte', e.corte, 'peso', e.peso, 'nota', e.nota, 'fecha', e.fecha) ORDER BY e.corte, e.fecha)
+                            FROM evaluacion e WHERE e.estudiante = v.estudiante AND e.asignatura = v.asignatura))), '[]')
+  FROM v_notas_semestre v WHERE v.estudiante = p_codigo;
+$$;
+
+CREATE OR REPLACE FUNCTION fn_tareas(p_codigo TEXT, p_categoria TEXT DEFAULT NULL)
+RETURNS JSON LANGUAGE sql STABLE AS $$
+  SELECT COALESCE(json_agg(json_build_object('tarea', t.titulo, 'asignatura', t.asignatura_nombre, 'entrega', t.fecha_entrega,
+           'dias_para_entrega', t.dias_para_entrega, 'estado', t.estado, 'categoria', t.categoria, 'avance', t.progreso) ORDER BY t.fecha_entrega), '[]')
+  FROM v_tareas t
+  WHERE t.estudiante = p_codigo AND (p_categoria IS NULL OR p_categoria = '' OR t.categoria = p_categoria);
+$$;
+
+
+-- Permisos para la API REST de Supabase (proyecto académico de demostración)
+DO $$ BEGIN
+  IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'anon') THEN
+    EXECUTE 'ALTER TABLE noticias ENABLE ROW LEVEL SECURITY';
+    EXECUTE 'CREATE POLICY demo_noticias ON noticias FOR ALL TO anon USING (true) WITH CHECK (true)';
+    EXECUTE 'GRANT SELECT, INSERT, UPDATE ON noticias TO anon';
+    EXECUTE 'GRANT SELECT ON v_noticias_hoy, v_avance, estudiante, inscripcion, prerrequisito, programa TO anon';
+    EXECUTE 'GRANT EXECUTE ON FUNCTION fn_contexto_estudiante(TEXT), fn_prerrequisitos(TEXT), fn_notas_semestre(TEXT), fn_tareas(TEXT, TEXT), unaccent_lower(TEXT) TO anon';
+  END IF;
+END $$;
 
 -- Nota: n8n crea solas las tablas n8n_chat_histories (memoria) y n8n_vectors (RAG)
 -- la primera vez que corren los nodos Postgres Chat Memory y PGVector Store.

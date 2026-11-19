@@ -1,0 +1,246 @@
+{
+  "name": "ATLAS · Scraper de noticias",
+  "nodes": [
+    {
+      "id": "8f708f80-440b-4411-80a9-056061b6f219",
+      "name": "Cada día 6:00 y 13:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -700,
+        0
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 6,13 * * *"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "eb56054d-afda-4f4d-8444-6b0ba471639e",
+      "name": "Fuentes RSS",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -480,
+        0
+      ],
+      "parameters": {
+        "jsCode": "// Fuentes RSS (Google Noticias Colombia + Xataka)\nconst g = q => 'https://news.google.com/rss/search?q=' + encodeURIComponent(q + ' when:2d') + '&hl=es-419&gl=CO&ceid=CO:es-419';\nreturn [\n  { categoria: 'Ingeniería de sistemas', url: g('\"ingeniería de sistemas\" OR \"ingeniería de software\" OR programadores Colombia') },\n  { categoria: 'Ingeniería de sistemas', url: g('ciberseguridad OR \"desarrollo de software\" OR \"ciencia de datos\" empleo Colombia') },\n  { categoria: 'Tecnología', url: g('\"inteligencia artificial\" OR tecnología OR startups Colombia') },\n  { categoria: 'Tecnología', url: 'https://www.xataka.com/feedburner.xml' },\n  { categoria: 'Educación', url: g('educación superior OR universidades OR \"Ministerio de Educación\" Colombia') },\n  { categoria: 'Educación', url: g('ICETEX OR \"Saber Pro\" OR becas universitarias Colombia') },\n].map(f => ({ json: f }));"
+      }
+    },
+    {
+      "id": "cbcc5899-de6c-401b-a3ce-499ed7ab6f8b",
+      "name": "Leer RSS",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        -260,
+        0
+      ],
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "6b309d42-10d1-45f3-ae24-e1d76e73c616",
+      "name": "Filtrar y clasificar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -40,
+        0
+      ],
+      "parameters": {
+        "jsCode": "// Filtra últimas 48 h, clasifica por palabras clave, quita duplicados (igual que scraper/scraper_noticias.py)\nconst norm = t => (t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');\nconst CLAVES = {\n  'Ingeniería de sistemas': ['ingenieria de sistemas','software','programador','programacion','desarrollador','ciberseguridad','datos','nube','cloud','algoritmo','devops'],\n  'Tecnología': ['inteligencia artificial',' ia ','openai','chatgpt','tecnologia','robot','chip','startup','app','celular','google','microsoft','ciber'],\n  'Educación': ['universidad','educacion','estudiante','icetex','saber pro','beca','mineducacion','colegio','docente','matricula','pregrado'],\n};\nconst hash = s => { let h = 5381; for (const c of s) h = ((h << 5) + h + c.charCodeAt(0)) >>> 0; return h.toString(16).padStart(8, '0'); };\nconst limite = Date.now() - 48 * 3600e3;\nconst vistos = new Set(); const out = [];\nfor (const it of $input.all()) {\n  const n = it.json; let titulo = (n.title || '').trim(); let fuente = (n.creator || n.source || 'RSS');\n  if (/news\\.google\\.com/.test(n.link || '') && titulo.includes(' - ')) { const i = titulo.lastIndexOf(' - '); fuente = titulo.slice(i + 3); titulo = titulo.slice(0, i); }\n  const fecha = new Date(n.isoDate || n.pubDate || Date.now());\n  if (isNaN(fecha) || fecha.getTime() < limite) continue;\n  const texto = ' ' + norm(titulo + ' ' + (n.contentSnippet || '')) + ' ';\n  const puntos = Object.fromEntries(Object.entries(CLAVES).map(([k, v]) => [k, v.filter(w => texto.includes(w)).length]));\n  const cat = Object.entries(puntos).sort((a, b) => b[1] - a[1])[0];\n  if (!cat || cat[1] === 0) continue;\n  const clave = norm(titulo).split(/\\W+/).filter(w => w.length > 3).slice(0, 8).sort().join(' ');\n  if (vistos.has(clave) || vistos.has(n.link)) continue; vistos.add(clave); vistos.add(n.link);\n  out.push({ json: { id: hash(n.link), titulo, url: n.link, fuente, categoria: cat[0], fecha: fecha.toISOString(), resumen: (n.contentSnippet || '').slice(0, 280) } });\n}\nreturn out.slice(0, 30);"
+      }
+    },
+    {
+      "id": "45e54c76-7a41-4cf9-a56c-3eb38ad2df77",
+      "name": "Guardar en PostgreSQL",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        180,
+        0
+      ],
+      "parameters": {
+        "operation": "upsert",
+        "schema": {
+          "__rl": true,
+          "value": "public",
+          "mode": "list"
+        },
+        "table": {
+          "__rl": true,
+          "value": "noticias",
+          "mode": "list"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": []
+        },
+        "options": {}
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS (Supabase)"
+        }
+      }
+    },
+    {
+      "id": "905fac4c-3c80-4b58-9267-e869e89e68b6",
+      "name": "GET /atlas-noticias",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -700,
+        260
+      ],
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "atlas-noticias",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "webhookId": "1c1074ef-fd49-4452-afd6-b17aba8b8277"
+    },
+    {
+      "id": "ee5dadd4-31ed-4889-b4d6-0d597fa27c5c",
+      "name": "Noticias de hoy",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        -480,
+        260
+      ],
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT titulo, fuente, categoria, fecha, url, resumen FROM v_noticias_hoy LIMIT 30;",
+        "options": {}
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS (Supabase)"
+        }
+      }
+    },
+    {
+      "id": "a288df7b-3b6d-459b-b168-ec27e0c786e6",
+      "name": "Responder noticias",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        -260,
+        260
+      ],
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      }
+    },
+    {
+      "id": "d374e49a-4732-4061-ac6f-65d6c0030090",
+      "name": "Nota",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -760,
+        -260
+      ],
+      "parameters": {
+        "width": 700,
+        "height": 200,
+        "content": "## ATLAS · Scraper de noticias\nCada día recolecta noticias de educación, tecnología e ingeniería de sistemas, las filtra (48 h), clasifica, quita duplicados y las guarda en `noticias`.\nEl endpoint **GET /webhook/atlas-noticias** las entrega a la app; el agente las consulta con la herramienta MCP `noticias_del_dia`.\nVersión equivalente sin servidor: `scraper/scraper_noticias.py` + GitHub Actions."
+      }
+    }
+  ],
+  "connections": {
+    "Cada día 6:00 y 13:00": {
+      "main": [
+        [
+          {
+            "node": "Fuentes RSS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fuentes RSS": {
+      "main": [
+        [
+          {
+            "node": "Leer RSS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leer RSS": {
+      "main": [
+        [
+          {
+            "node": "Filtrar y clasificar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtrar y clasificar": {
+      "main": [
+        [
+          {
+            "node": "Guardar en PostgreSQL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GET /atlas-noticias": {
+      "main": [
+        [
+          {
+            "node": "Noticias de hoy",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Noticias de hoy": {
+      "main": [
+        [
+          {
+            "node": "Responder noticias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}

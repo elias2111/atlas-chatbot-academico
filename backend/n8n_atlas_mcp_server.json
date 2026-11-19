@@ -1,0 +1,287 @@
+{
+  "name": "ATLAS · Servidor MCP",
+  "nodes": [
+    {
+      "id": "a95d17a7-1aca-4616-812b-d47956df2526",
+      "name": "MCP Server Trigger",
+      "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "path": "atlas"
+      },
+      "webhookId": "2916fead-5f14-4560-9463-b3149cb607b5"
+    },
+    {
+      "id": "e6f280da-1e7b-4a52-98de-039428118501",
+      "name": "consultar_estado_academico",
+      "type": "n8n-nodes-base.postgresTool",
+      "typeVersion": 2.5,
+      "position": [
+        -500,
+        260
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Devuelve el estado académico completo de un estudiante: programa, periodo, estado de matrícula, créditos aprobados y en curso, porcentaje de avance, promedio (PGA), materias en curso y pendientes con prerrequisitos faltantes. Parámetro: codigo del estudiante.",
+        "operation": "executeQuery",
+        "query": "SELECT fn_contexto_estudiante($1) AS resultado;",
+        "options": {
+          "queryReplacement": "={{ $fromAI('codigo', 'Codigo del estudiante por ejemplo 20221045', 'string') }}"
+        }
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS (Supabase)"
+        }
+      }
+    },
+    {
+      "id": "0b73fc6b-1eda-4779-a70e-aceed72180b9",
+      "name": "consultar_notas_semestre",
+      "type": "n8n-nodes-base.postgresTool",
+      "typeVersion": 2.5,
+      "position": [
+        -300,
+        260
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Devuelve las notas del semestre actual por materia (escala 0,0 a 5,0): evaluaciones con corte, peso y nota; nota actual; acumulado; nota necesaria para aprobar con 3,0 y estado (APROBANDO, EN RIESGO, APROBADA ASEGURADA, PERDIDA, APROBADA, REPROBADA). Parámetro: codigo del estudiante.",
+        "operation": "executeQuery",
+        "query": "SELECT fn_notas_semestre($1) AS resultado;",
+        "options": {
+          "queryReplacement": "={{ $fromAI('codigo', 'Codigo del estudiante', 'string') }}"
+        }
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS (Supabase)"
+        }
+      }
+    },
+    {
+      "id": "a5f84dcd-149e-4e1f-876c-fca63ede6dc1",
+      "name": "consultar_tareas",
+      "type": "n8n-nodes-base.postgresTool",
+      "typeVersion": 2.5,
+      "position": [
+        -100,
+        260
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Lista las tareas del estudiante con fecha de entrega, días restantes, estado y avance. Parámetros: codigo del estudiante y categoria opcional (vencida, incompleta, por hacer, entregada) o vacío para todas.",
+        "operation": "executeQuery",
+        "query": "SELECT fn_tareas($1, NULLIF($2, '')) AS resultado;",
+        "options": {
+          "queryReplacement": "={{ $fromAI('codigo', 'Codigo del estudiante', 'string') }},{{ $fromAI('categoria', 'vencida o incompleta o por hacer o entregada o vacio', 'string') }}"
+        }
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS (Supabase)"
+        }
+      }
+    },
+    {
+      "id": "972a9e95-824b-4364-8bd6-f465a80e362e",
+      "name": "consultar_prerrequisitos",
+      "type": "n8n-nodes-base.postgresTool",
+      "typeVersion": 2.5,
+      "position": [
+        100,
+        260
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Devuelve los prerrequisitos de una asignatura del plan de Ingeniería de Sistemas y las asignaturas que desbloquea. Parámetro: nombre o código de la asignatura.",
+        "operation": "executeQuery",
+        "query": "SELECT fn_prerrequisitos($1) AS resultado;",
+        "options": {
+          "queryReplacement": "={{ $fromAI('asignatura', 'Nombre o codigo de la asignatura', 'string') }}"
+        }
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS (Supabase)"
+        }
+      }
+    },
+    {
+      "id": "cccfdde7-dc44-4f97-81cc-9ff7b837a5dc",
+      "name": "noticias_del_dia",
+      "type": "n8n-nodes-base.postgresTool",
+      "typeVersion": 2.5,
+      "position": [
+        300,
+        260
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Devuelve las noticias de las últimas 48 horas sobre educación, tecnología e ingeniería de sistemas (título, fuente, fecha, enlace). Parámetro: categoria opcional (Educación, Tecnología, Ingeniería de sistemas) o vacío.",
+        "operation": "executeQuery",
+        "query": "SELECT COALESCE(json_agg(n), '[]') AS resultado FROM (SELECT titulo, fuente, categoria, fecha, url FROM v_noticias_hoy WHERE ($1 = '' OR categoria = $1) LIMIT 10) n;",
+        "options": {
+          "queryReplacement": "={{ $fromAI('categoria', 'Educacion Tecnologia Ingenieria de sistemas o vacio', 'string') }}"
+        }
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS (Supabase)"
+        }
+      }
+    },
+    {
+      "id": "a57d8273-2837-4b2a-9f28-257d92026fc2",
+      "name": "buscar_reglamento",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "typeVersion": 1.1,
+      "position": [
+        500,
+        260
+      ],
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolName": "buscar_reglamento",
+        "toolDescription": "Búsqueda semántica (RAG) en el reglamento estudiantil UNAB, el plan de estudios y la guía de éxito académico.",
+        "tableName": "n8n_vectors",
+        "topK": 4,
+        "options": {}
+      },
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR",
+          "name": "Postgres ATLAS (Supabase)"
+        }
+      }
+    },
+    {
+      "id": "187edb82-b80b-46d3-9668-4be8827bc86e",
+      "name": "Embeddings (OpenAI)",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        500,
+        460
+      ],
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "REEMPLAZAR",
+          "name": "OpenAI"
+        }
+      }
+    },
+    {
+      "id": "fc61a95a-1c7f-45a2-87d7-c929ca77a084",
+      "name": "Nota",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -520,
+        -260
+      ],
+      "parameters": {
+        "width": 760,
+        "height": 220,
+        "content": "## ATLAS · Servidor MCP\nExpone 6 herramientas que consultan PostgreSQL (consultas parametrizadas) y el RAG.\n**URL del servidor** (producción): `https://TU-INSTANCIA-N8N/mcp/atlas` (SSE: `/mcp/atlas/sse`).\nLo usan: el agente del flujo *Chat académico* (MCP Client Tool) y cualquier cliente MCP (Claude Desktop, MCP Inspector)."
+      }
+    }
+  ],
+  "connections": {
+    "consultar_estado_academico": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "consultar_notas_semestre": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "consultar_tareas": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "consultar_prerrequisitos": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "noticias_del_dia": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar_reglamento": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings (OpenAI)": {
+      "ai_embedding": [
+        [
+          {
+            "node": "buscar_reglamento",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}

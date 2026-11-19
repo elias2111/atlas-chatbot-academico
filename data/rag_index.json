@@ -1,0 +1,302 @@
+{
+ "generado": "2026-11-19T00:05:23",
+ "parametros": {
+  "chunk_size": 1000,
+  "chunk_overlap": 150,
+  "separadores": [
+   "\n\n",
+   "\n- ",
+   ". ",
+   " "
+  ],
+  "recuperador_app": "BM25 (k1=1.5, b=0.75)",
+  "recuperador_n8n": "pgvector coseno, text-embedding-3-small, top-k 4"
+ },
+ "documentos": [
+  "Guía de éxito académico para Ingeniería de Sistemas",
+  "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+  "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave"
+ ],
+ "chunks": [
+  {
+   "doc": "guia_exito_academico",
+   "titulo_doc": "Guía de éxito académico para Ingeniería de Sistemas",
+   "seccion": "Guía de éxito académico para Ingeniería de Sistemas",
+   "parte": 1,
+   "texto": "Base pedagógica de las recomendaciones de ATLAS en tres líneas: educación de precisión, autoaprendizaje e investigación. Cada recomendación se apoya en evidencia publicada (ver Referencias).",
+   "id": "c000"
+  },
+  {
+   "doc": "guia_exito_academico",
+   "titulo_doc": "Guía de éxito académico para Ingeniería de Sistemas",
+   "seccion": "Educación de precisión: qué es y cómo la aplica ATLAS",
+   "parte": 1,
+   "texto": "La educación de precisión adapta el apoyo a cada estudiante a partir de sus datos, de forma parecida a como la medicina de precisión adapta un tratamiento: diagnosticar, predecir, intervenir y prevenir (Yang, 2021). Una revisión de 40 estudios empíricos encontró que el aprendizaje automático es el medio principal para lograrla, sobre todo para predecir el rendimiento y detectar estudiantes en riesgo (Luan y Tsai, 2021). ATLAS la aplica así: diagnostica con las notas por área y por corte; predice con la nota necesaria en lo que falta del semestre y con la proyección de grado; interviene con un plan semanal de horas que da más tiempo a las materias de la ruta crítica y a las áreas con promedio bajo; y previene con alertas de requisitos, tareas vencidas y estado académico condicional.",
+   "id": "c001"
+  },
+  {
+   "doc": "guia_exito_academico",
+   "titulo_doc": "Guía de éxito académico para Ingeniería de Sistemas",
+   "seccion": "Cómo calcula ATLAS la nota necesaria para aprobar",
+   "parte": 1,
+   "texto": "Cada evaluación tiene un peso en porcentaje. El acumulado es la suma de nota × peso de las evaluaciones ya calificadas. La nota necesaria es (3,0 − acumulado) dividido entre el peso que falta por evaluar. Si el acumulado ya es 3,0 o más, la materia está aprobada aunque falten notas. Si ni sacando 5,0 en lo que falta se alcanza 3,0, la materia está perdida; si la definitiva queda entre 2,5 y 2,9 puede habilitarse según el reglamento (Art. 47). La definitiva se expresa sin aproximar (Art. 39).",
+   "id": "c002"
+  },
+  {
+   "doc": "guia_exito_academico",
+   "titulo_doc": "Guía de éxito académico para Ingeniería de Sistemas",
+   "seccion": "Técnicas de estudio con mayor evidencia",
+   "parte": 1,
+   "texto": "Una revisión de diez técnicas de estudio comunes calificó dos como de alta utilidad: la práctica de recuperación (autoevaluarse con preguntas, ejercicios o tarjetas) y la práctica distribuida (repartir el estudio en varias sesiones en lugar de concentrarlo antes del examen). La práctica intercalada, la autoexplicación y la interrogación elaborativa obtuvieron utilidad moderada. Releer, subrayar y resumir obtuvieron utilidad baja (Dunlosky et al., 2013). Además, presentar pruebas de práctica mejora la retención a largo plazo más que volver a estudiar el mismo material (Roediger y Karpicke, 2006).\n\nAplicación práctica para materias de matemáticas y física (por ejemplo Cálculo integral o Electromagnetismo): resolver ejercicios sin mirar la solución, mezclar tipos de problemas en la misma sesión, y programar repasos al día 1, 3 y 7 después de cada clase. Para materias de programación: escribir el código desde cero en lugar de releerlo y explicar en voz alta qué hace cada parte.",
+   "id": "c003"
+  },
+  {
+   "doc": "guia_exito_academico",
+   "titulo_doc": "Guía de éxito académico para Ingeniería de Sistemas",
+   "seccion": "Autoaprendizaje",
+   "parte": 1,
+   "texto": "El autoaprendizaje funciona mejor con metas concretas y retroalimentación frecuente. Recursos recomendados para Ingeniería de Sistemas: documentación oficial (PostgreSQL, n8n, Python), cursos abiertos como Khan Academy para matemáticas y Cisco Networking Academy para redes y ciberseguridad, y certificaciones de entrada en la nube. La lectura técnica diaria en inglés ayuda a la vez a la carrera y al requisito de inglés para el grado.",
+   "id": "c004"
+  },
+  {
+   "doc": "guia_exito_academico",
+   "titulo_doc": "Guía de éxito académico para Ingeniería de Sistemas",
+   "seccion": "Investigación",
+   "parte": 1,
+   "texto": "Para iniciarse en investigación: unirse a un semillero del programa, documentar los proyectos de curso con método y resultados, crear alertas en Google Scholar con dos o tres palabras clave, gestionar referencias con Zotero y publicar el código en GitHub con un README claro. Un proyecto de grado bien documentado puede convertirse en ponencia para un encuentro de semilleros o un congreso estudiantil.",
+   "id": "c005"
+  },
+  {
+   "doc": "guia_exito_academico",
+   "titulo_doc": "Guía de éxito académico para Ingeniería de Sistemas",
+   "seccion": "Gestión de la carga académica",
+   "parte": 1,
+   "texto": "Por cada crédito se recomiendan unas dos horas de trabajo independiente por semana además de la clase. Con cargas superiores a 18 créditos conviene bloquear las horas en el calendario y revisar cada semana qué asignatura se atrasó. Si una materia baja de 3,0 en el primer corte, se debe pedir tutoría de inmediato.",
+   "id": "c006"
+  },
+  {
+   "doc": "guia_exito_academico",
+   "titulo_doc": "Guía de éxito académico para Ingeniería de Sistemas",
+   "seccion": "Referencias",
+   "parte": 1,
+   "texto": "- Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J. y Willingham, D. T. (2013). Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. Psychological Science in the Public Interest, 14(1), 4–58. https://doi.org/10.1177/1529100612453266\n- Luan, H. y Tsai, C.-C. (2021). A review of using machine learning approaches for precision education. Educational Technology & Society, 24(1), 250–266.\n- Roediger, H. L. y Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249–255.\n- Yang, S. J. H. (2021). Precision education: A new challenge for AI in education. Educational Technology & Society, 24(1), 105–108.\n- Yang, S. J. H., Ogata, H., Matsui, T. y Chen, N.-S. (2021). Human-centered artificial intelligence in education: Seeing the invisible through the visible. Computers and Education: Artificial Intelligence, 2, 100008.",
+   "id": "c007"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "parte": 1,
+   "texto": "Fuente: plan de estudios oficial del programa (asignaturas y créditos por semestre). Los prerrequisitos no aparecen en el plan publicado; los que se indican aquí son la propuesta que usa ATLAS y deben confirmarse con la coordinación del programa.",
+   "id": "c008"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Primer semestre (16 créditos)",
+   "parte": 1,
+   "texto": "- Álgebra lineal (ALIN): 3 créditos, área Matemáticas. Prerrequisitos: ninguno. Desbloquea: Matemáticas computacionales, Investigación de operaciones I.\n- Cálculo diferencial (CDIF): 4 créditos, área Matemáticas. Prerrequisitos: ninguno. Desbloquea: Cálculo integral, Mecánica y laboratorio, Estadística general.\n- Expresión (EXPR): 4 créditos, área Humanidades. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Fundamentos de programación (FPRO): 3 créditos, área Sistemas. Prerrequisitos: ninguno. Desbloquea: Programación de computadores, Matemáticas computacionales.\n- Seminario de ingeniería I (SEM1): 2 créditos, área Seminarios. Prerrequisitos: ninguno. Desbloquea: Seminario de ingeniería II.",
+   "id": "c009"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Segundo semestre (18 créditos)",
+   "parte": 1,
+   "texto": "- Cálculo integral (CINT): 4 créditos, área Matemáticas. Prerrequisitos: Cálculo diferencial. Desbloquea: Cálculo en varias variables, Ecuaciones diferenciales.\n- Diseño de interfaces de usuario (DIUS): 3 créditos, área Sistemas. Prerrequisitos: ninguno. Desbloquea: Desarrollo multimedia.\n- Identidad (IDEN): 3 créditos, área Humanidades. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Laboratorio de mecánica (LMEC): 0 créditos, área Física. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Mecánica y laboratorio (MECL): 3 créditos, área Física. Prerrequisitos: Cálculo diferencial. Desbloquea: Electromagnetismo y laboratorio, Laboratorio de electromagnetismo.\n- Programación de computadores (PCOM): 3 créditos, área Sistemas. Prerrequisitos: Fundamentos de programación. Desbloquea: Estructura de datos y análisis de algoritmos, Tecnologías móviles.\n- Taller de deportes, recreación y cultura (TDRC): 1 créditos, área Bienestar. Prerrequisitos: ninguno. Desbloquea: ninguna.",
+   "id": "c010"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Segundo semestre (18 créditos)",
+   "parte": 2,
+   "texto": "Tecnologías móviles.\n- Taller de deportes, recreación y cultura (TDRC): 1 créditos, área Bienestar. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Taller de desarrollo humano (TDHU): 1 créditos, área Bienestar. Prerrequisitos: ninguno. Desbloquea: ninguna.",
+   "id": "c011"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Tercer semestre (17 créditos)",
+   "parte": 1,
+   "texto": "- Cálculo en varias variables (CVAR): 3 créditos, área Matemáticas. Prerrequisitos: Cálculo integral. Desbloquea: ninguna.\n- Creatividad (CREA): 3 créditos, área Humanidades. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Electromagnetismo y laboratorio (ELEC): 3 créditos, área Física. Prerrequisitos: Mecánica y laboratorio. Desbloquea: ninguna.\n- Estructura de datos y análisis de algoritmos (EDAA): 3 créditos, área Sistemas. Prerrequisitos: Programación de computadores. Desbloquea: Base de datos I, Inteligencia artificial, Arquitectura de software.\n- Laboratorio de electromagnetismo (LELE): 0 créditos, área Física. Prerrequisitos: Mecánica y laboratorio. Desbloquea: ninguna.\n- Matemáticas computacionales (MCOM): 3 créditos, área Matemáticas. Prerrequisitos: Álgebra lineal, Fundamentos de programación. Desbloquea: Inteligencia artificial.\n- Seminario de ingeniería II (SEM2): 2 créditos, área Seminarios. Prerrequisitos: Seminario de ingeniería I. Desbloquea: ninguna.",
+   "id": "c012"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Cuarto semestre (18 créditos)",
+   "parte": 1,
+   "texto": "- Base de datos I (BD1): 3 créditos, área Sistemas. Prerrequisitos: Estructura de datos y análisis de algoritmos. Desbloquea: Base de datos II, Ingeniería de software I, Ciencias de datos.\n- Desarrollo multimedia (DMUL): 3 créditos, área Sistemas. Prerrequisitos: Diseño de interfaces de usuario. Desbloquea: ninguna.\n- Ecuaciones diferenciales (EDIF): 3 créditos, área Matemáticas. Prerrequisitos: Cálculo integral. Desbloquea: Dinámica de sistemas.\n- Estadística general (ESTG): 3 créditos, área Matemáticas. Prerrequisitos: Cálculo diferencial. Desbloquea: Ciencias de datos, Investigación de operaciones I.\n- Inteligencia artificial (IART): 3 créditos, área Sistemas. Prerrequisitos: Estructura de datos y análisis de algoritmos, Matemáticas computacionales. Desbloquea: ninguna.\n- Tecnologías móviles (TMOV): 3 créditos, área Sistemas. Prerrequisitos: Programación de computadores. Desbloquea: ninguna.",
+   "id": "c013"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Quinto semestre (17 créditos)",
+   "parte": 1,
+   "texto": "- Actividades libres de recreación, deporte, cultura y desarrollo humano (ALRD): 2 créditos, área Bienestar. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Arquitectura de software (ASOF): 3 créditos, área Sistemas. Prerrequisitos: Estructura de datos y análisis de algoritmos. Desbloquea: ninguna.\n- Base de datos II (BD2): 3 créditos, área Sistemas. Prerrequisitos: Base de datos I. Desbloquea: ninguna.\n- Electiva de profundización I (EPR1): 3 créditos, área Electivas. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Infraestructura tecnológica (INFT): 3 créditos, área Sistemas. Prerrequisitos: ninguno. Desbloquea: Internet de las cosas, Ciberseguridad.\n- Ingeniería de software I (ISW1): 3 créditos, área Sistemas. Prerrequisitos: Base de datos I. Desbloquea: Ingeniería de software II.",
+   "id": "c014"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Sexto semestre (17 créditos)",
+   "parte": 1,
+   "texto": "- Ciencias de datos (CDAT): 3 créditos, área Sistemas. Prerrequisitos: Estadística general, Base de datos I. Desbloquea: ninguna.\n- Electiva de profundización II (EPR2): 3 créditos, área Electivas. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Ética de la ingeniería de sistemas (ETIC): 2 créditos, área Humanidades. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Ingeniería de software II (ISW2): 3 créditos, área Sistemas. Prerrequisitos: Ingeniería de software I. Desbloquea: Proyectos en ingeniería de sistemas I.\n- Internet de las cosas (IOT): 3 créditos, área Sistemas. Prerrequisitos: Infraestructura tecnológica. Desbloquea: ninguna.\n- Teoría de sistemas y organizaciones (TSOR): 3 créditos, área Sistemas. Prerrequisitos: ninguno. Desbloquea: Dinámica de sistemas.",
+   "id": "c015"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Séptimo semestre (17 créditos)",
+   "parte": 1,
+   "texto": "- Ciberseguridad (CIBS): 3 créditos, área Sistemas. Prerrequisitos: Infraestructura tecnológica. Desbloquea: ninguna.\n- Electiva sociohumanística I (ESH1): 3 créditos, área Electivas. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Electiva de contexto I (ECX1): 3 créditos, área Electivas. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Electiva de profundización III (EPR3): 3 créditos, área Electivas. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Investigación de operaciones I (IOP1): 3 créditos, área Optimización. Prerrequisitos: Álgebra lineal, Estadística general. Desbloquea: Investigación de operaciones II.\n- Proyectos en ingeniería de sistemas I (PIS1): 2 créditos, área Proyectos. Prerrequisitos: Ingeniería de software II. Desbloquea: Proyectos en ingeniería de sistemas II.",
+   "id": "c016"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Octavo semestre (16 créditos)",
+   "parte": 1,
+   "texto": "- Dinámica de sistemas (DSIS): 3 créditos, área Sistemas. Prerrequisitos: Teoría de sistemas y organizaciones, Ecuaciones diferenciales. Desbloquea: ninguna.\n- Electiva sociohumanística II (ESH2): 3 créditos, área Electivas. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Electiva de profundización IV (EPR4): 3 créditos, área Electivas. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Investigación de operaciones II (IOP2): 3 créditos, área Optimización. Prerrequisitos: Investigación de operaciones I. Desbloquea: ninguna.\n- Proyectos en ingeniería de sistemas II (PIS2): 4 créditos, área Proyectos. Prerrequisitos: Proyectos en ingeniería de sistemas I. Desbloquea: Práctica en ingeniería de sistemas.",
+   "id": "c017"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Noveno semestre (15 créditos)",
+   "parte": 1,
+   "texto": "- Electiva de contexto II (ECX2): 3 créditos, área Electivas. Prerrequisitos: ninguno. Desbloquea: ninguna.\n- Práctica en ingeniería de sistemas (PRAC): 12 créditos, área Proyectos. Prerrequisitos: Proyectos en ingeniería de sistemas II. Desbloquea: ninguna.",
+   "id": "c018"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Rutas críticas del plan",
+   "parte": 1,
+   "texto": "- Cálculo diferencial → Cálculo integral → Cálculo en varias variables y Ecuaciones diferenciales → Dinámica de sistemas. Atrasar Cálculo integral retrasa al menos tres asignaturas.\n- Fundamentos de programación → Programación de computadores → Estructura de datos y análisis de algoritmos → Base de datos I → Ingeniería de software I → Ingeniería de software II → Proyectos en ingeniería de sistemas I → Proyectos en ingeniería de sistemas II → Práctica en ingeniería de sistemas (12 créditos).\n- Infraestructura tecnológica → Internet de las cosas y Ciberseguridad.\n- Álgebra lineal y Estadística general → Investigación de operaciones I → Investigación de operaciones II.",
+   "id": "c019"
+  },
+  {
+   "doc": "plan_de_estudios_ingenieria_sistemas",
+   "titulo_doc": "Plan de estudios de Ingeniería de Sistemas (UNAB) · 9 semestres, 151 créditos",
+   "seccion": "Electivas",
+   "parte": 1,
+   "texto": "El plan incluye cuatro electivas de profundización (semestres 5 a 8), dos electivas sociohumanísticas (semestres 7 y 8) y dos electivas de contexto (semestres 7 y 9), de 3 créditos cada una. El estudiante elige el curso concreto (por ejemplo Sistemas Inteligentes como electiva de profundización).",
+   "id": "c020"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "parte": 1,
+   "texto": "Fuente oficial: Universidad Autónoma de Bucaramanga, Reglamento Estudiantil de Pregrado (Resolución 564 de 2019).\nDocumento completo: https://unab.edu.co/NewFolder/Reglamento-estudiantil-pregraod.pdf\nEste archivo resume, con el número de artículo, las normas que ATLAS consulta con más frecuencia. Para un caso particular prima siempre el texto oficial y lo que indique Registro Académico. Para el RAG completo se recomienda cargar también el PDF oficial con el flujo de ingesta.",
+   "id": "c021"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Escala de calificaciones y nota aprobatoria (Arts. 37 y 38)",
+   "parte": 1,
+   "texto": "Las pruebas cuantitativas se califican de 0,0 a 5,0 y la nota mínima aprobatoria es 3,0. Una prueba que no se presenta se califica con 0,0. Las pruebas cualitativas, los cursos instrumentales y los de Bienestar Universitario se califican como aprobado o reprobado, sin nota numérica.",
+   "id": "c022"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Cómo se evalúa un curso (Arts. 34, 35 y 44)",
+   "parte": 1,
+   "texto": "La evaluación tiene tres momentos: diagnóstico, proceso y resultados; solo el de resultados lleva calificación numérica. Al inicio del curso el profesor define en la guía de cátedra las pruebas, los criterios y el porcentaje de cada una. Los parciales o previos tienen el porcentaje fijado en esa guía y cada registro de notas debe corresponder como mínimo a dos pruebas.",
+   "id": "c023"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Redondeo de la nota definitiva (Arts. 39 y 40)",
+   "parte": 1,
+   "texto": "La nota final de un curso se expresa en unidades y décimas sin aproximar: las cifras decimales adicionales se eliminan. Por ejemplo, una definitiva calculada de 2,96 queda en 2,9 y no se sube a 3,0. Los promedios del período (PPA) y el promedio general acumulado (PGA) se expresan con unidades, décimas y centésimas, también sin aproximar.",
+   "id": "c024"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Promedio general acumulado PGA (Art. 40)",
+   "parte": 1,
+   "texto": "El PGA se calcula sumando cada calificación final multiplicada por los créditos del curso y dividiendo entre el total de créditos cursados. Es un promedio ponderado por créditos.",
+   "id": "c025"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Estado académico condicional, prueba académica y pérdida de cupo (Arts. 10, 11, 12, 84 y 85)",
+   "parte": 1,
+   "texto": "Un estudiante queda en estado académico condicional cuando su PGA está entre 3,00 y 3,20; en ese estado puede matricular como máximo tres cursos en el período siguiente (Art. 84). Entra en prueba académica si por segunda vez consecutiva su PGA queda entre 3,00 y 3,20, o si por primera vez es inferior a 3,00. Pierde el derecho a renovar matrícula, entre otras causas, cuando obtiene por segunda vez un PGA inferior a 3,00. En el Programa de Recuperación Académica el estudiante en prueba solo puede matricular dos de los cursos que reprobó, y si su PGA es inferior a 3,00 solo puede acogerse a ese programa una vez (Art. 85).",
+   "id": "c026"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Exámenes supletorios (Art. 45)",
+   "parte": 1,
+   "texto": "Quien no presenta una prueba por una justa causa puede pedir un examen supletorio una sola vez por prueba. La solicitud se hace dentro de los cinco días hábiles siguientes a la fecha en que estaba programada la prueba y debe llevar el soporte de la justa causa. El supletorio tiene costo (Art. 51).",
+   "id": "c027"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Habilitaciones (Arts. 47 y 48)",
+   "parte": 1,
+   "texto": "Un curso reprobado se puede habilitar una sola vez si la calificación final es de al menos 2,5 y el programa lo define como habilitable. Se pueden habilitar como máximo dos cursos por período. No se habilitan seminarios, talleres, prácticas, cursos instrumentales ni de Bienestar. En una habilitación la definitiva combina la nota final del curso (60 %) y la prueba de habilitación (40 %). Ejemplo: con una nota final de 2,6, para llegar a 3,0 se necesita en la habilitación (3,0 − 0,6 × 2,6) / 0,4 = 3,6. La habilitación tiene costo (Art. 51).",
+   "id": "c028"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Validaciones (Art. 50)",
+   "parte": 1,
+   "texto": "Para validar un curso se requiere un PGA igual o superior a 3,50, concepto favorable del Comité Curricular y no haber reprobado antes ese curso. Se concede una vez por curso; la prueba oral y la escrita pesan 50 % cada una y la nota mínima aprobatoria de una validación es 4,0.",
+   "id": "c029"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Repetición de cursos (Art. 53)",
+   "parte": 1,
+   "texto": "Si un curso se repite, el sistema registra la nota más alta, en el período en que se obtuvo.",
+   "id": "c030"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Cancelación de cursos y del período (Art. 13)",
+   "parte": 1,
+   "texto": "La cancelación ordinaria se solicita dentro de las fechas del cronograma del programa. La cancelación extraordinaria solo procede por fuerza mayor o caso fortuito comprobados, hasta el día hábil siguiente a la terminación de clases; el bajo rendimiento y el exceso de fallas no son causales. Un mismo curso se puede cancelar hasta dos veces: si se matricula por tercera vez, debe cursarse hasta el final. La devolución del valor pagado depende de las fechas del cronograma y de la política financiera.",
+   "id": "c031"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Asistencia y pérdida por fallas (Art. 46)",
+   "parte": 1,
+   "texto": "Si al terminar el curso la inasistencia es del 20 % o más de las horas exigidas, el último registro de notas se califica con 0,0 (no aplica a programas virtuales). Presentar una justa causa no cambia el conteo de inasistencias.",
+   "id": "c032"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Práctica académica (Arts. 56 y 60)",
+   "parte": 1,
+   "texto": "La práctica es un curso del plan de estudios. Para inscribirla se deben cumplir los prerrequisitos que fija el programa. El Art. 60 regula la cancelación de la práctica.",
+   "id": "c033"
+  },
+  {
+   "doc": "reglamento_unab_pregrado",
+   "titulo_doc": "Reglamento Estudiantil de Pregrado UNAB (2019) · Normas académicas clave",
+   "seccion": "Requisitos de grado (Arts. 7, 67 y 68)",
+   "parte": 1,
+   "texto": "Para obtener el título se debe, entre otros requisitos: acreditar el nivel de inglés exigido en el currículo, certificado por el Departamento de Lenguas o con una prueba internacional avalada por él; tener un PGA igual o superior a 3,20 en el programa; presentar el Examen de Calidad de la Educación Superior (Saber Pro); y cumplir los demás requisitos del programa. Para los programas profesionales de pregrado el nivel de inglés de referencia es B2 del Marco Común Europeo (Art. 7). El grado se puede solicitar hasta tres años después de terminar las actividades académicas exigidas (Art. 68).",
+   "id": "c034"
+  }
+ ]
+}

@@ -97,6 +97,21 @@
           "name": "OpenAI"
         }
       }
+    },
+    {
+      "id": "e462e677-9952-4b0d-91e6-f36105ce9722",
+      "name": "Parámetros RAG",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        -260
+      ],
+      "parameters": {
+        "width": 640,
+        "height": 200,
+        "content": "## Parámetros del RAG (ver docs/RAG.md)\n- **Divisor**: recursivo por párrafos → frases, **1.000 caracteres** (~250 tokens ≈ un artículo del reglamento) con **150 de solapamiento** (15 %) para no cortar una norma entre dos fragmentos.\n- **Embeddings**: `text-embedding-3-small` (1.536 dimensiones, multilingüe, bajo costo).\n- **Recuperación**: similitud coseno en pgvector, **top-k = 4**."
+      }
     }
   ],
   "connections": {

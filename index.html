@@ -318,6 +318,12 @@ button.cchip:active{background:rgba(62,230,255,.12)}
 .btn.danger{border-color:rgba(255,77,109,.5);color:var(--bad);background:none}
 .btns3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
 @media (max-width:420px){.clock{display:none}}
+.news{display:block;padding:10px 2px;border-bottom:1px dashed rgba(62,230,255,.1);text-decoration:none;color:var(--tx)}
+.news b{display:block;font-size:13.5px;font-weight:600;line-height:1.35;margin:4px 0 3px}.news small{font-family:var(--mono);font-size:10px;color:var(--mut)}
+.news .nc{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--cy)}
+.msg a{color:var(--cy)}.msg .src{margin-top:8px;font-family:var(--mono);font-size:10.5px;color:var(--mut)}
+.msg .pers{margin-top:8px;padding:8px 10px;border-radius:10px;background:rgba(255,138,31,.08);border:1px solid rgba(255,138,31,.35);font-size:13px}
+.rec .srcx{margin-top:6px;font-family:var(--mono);font-size:10px;color:var(--dim)}
 .msg .inl{margin-top:8px;font-size:12px;padding:6px 10px;border-radius:9px;border:1px solid var(--ln2);color:var(--cy)}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes blink{0%,100%{opacity:.35}50%{opacity:1}}
@@ -342,7 +348,7 @@ button.cchip:active{background:rgba(62,230,255,.12)}
   <header class="top">
     <div class="brand">
       <div class="logo"></div>
-      <div><b id="brandName">ATLAS</b><small>Apoyo académico · v3</small></div>
+      <div><b id="brandName">ATLAS</b><small>Apoyo académico · v4</small></div>
     </div>
     <div class="chips-top">
       <span class="pill demo" id="modePill"><i></i><span>Demo</span></span>
@@ -438,6 +444,9 @@ button.cchip:active{background:rgba(62,230,255,.12)}
     <!-- RUMBO -->
     <section class="view" id="v-rumbo">
       <h2 class="vt">Recomendaciones</h2>
+      <div class="card"><h3>Noticias del día <span class="tag" id="newsUpd" style="color:var(--mut);border-color:var(--ln)"></span></h3>
+        <div class="chips" id="newsChips"></div><div id="newsList"><p class="empty">Cargando noticias…</p></div>
+        <p class="empty" style="font-size:11px;margin-top:8px">Educación, tecnología e ingeniería de sistemas · scraper automático diario (GitHub Actions / n8n).</p></div>
       <div class="seg-tabs" id="recTabs">
         <button data-k="prec" class="on">Precisión</button>
         <button data-k="inv">Investigación</button>
@@ -545,6 +554,8 @@ const fmtG = n => (n==null || isNaN(n)) ? "—" : n.toFixed(1).replace(".", ",")
 const fmt = n => (n==null || isNaN(n)) ? "—" : n.toFixed(2).replace(".", ",");
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const sum = arr => arr.reduce((a,b)=>a+b,0);
+const trunc1 = x => Math.floor(x * 10 + 1e-9) / 10;    // Reglamento UNAB Art. 39: definitiva sin aproximar
+const trunc2 = x => Math.floor(x * 100 + 1e-9) / 100;  // Art. 40: promedios (PPA, PGA) sin aproximar
 function hash(s){ let h=2166136261; for(const ch of s){ h^=ch.charCodeAt(0); h=Math.imul(h,16777619);} return Math.abs(h); }
 
 const store = {
@@ -682,7 +693,7 @@ function analyze(){
   const enCr = sum([...enrolled].map(c=>C[c].cr));
   const graded = [...approved].filter(c => typeof cs(c).g === "number" && C[c].cr > 0);
   const gw = sum(graded.map(c=>C[c].cr));
-  const gpa = gw ? sum(graded.map(c=>cs(c).g*C[c].cr))/gw : null;
+  const gpa = gw ? trunc2(sum(graded.map(c=>cs(c).g*C[c].cr))/gw) : null;
   const byArea = {};
   graded.forEach(c => { const a = C[c].area; (byArea[a] = byArea[a] || {s:0,w:0}); byArea[a].s += cs(c).g*C[c].cr; byArea[a].w += C[c].cr; });
   const areaAvg = Object.fromEntries(Object.entries(byArea).map(([k,v])=>[k, v.s/v.w]));
@@ -727,6 +738,12 @@ function analyze(){
     if(!approved.has("PRAC")){ const ct = canTake("PRAC"); out.push({lvl:"info", t:"Práctica en ingeniería de sistemas (12 cr)", d: ct.ok ? "Ya cumples el prerrequisito: busca empresa y formaliza el convenio." : `Se habilita al aprobar ${ct.miss.map(nm).join(", ")}. Empieza a buscar empresa con un semestre de anticipación.`}); }
     graded.filter(c => cs(c).g < 3.3).forEach(code => { const u = pendingUnlocks(code);
       out.push({lvl:"info", t:`Bases débiles: ${nm(code)} (${fmtG(cs(code).g)})`, d: u.length ? `Repásala: es base de ${u.slice(0,3).map(nm).join(", ")}.` : "Nota cercana al mínimo; refuerza esos temas."}); });
+    if(gpa != null){
+      if(gpa < 3.0) out.push({lvl:"crit", t:`PGA ${fmt(gpa)}: prueba académica`, d:"Con un PGA inferior a 3,00 entras en prueba académica (Reglamento UNAB, Art. 11) y una segunda vez implica perder el derecho a renovar matrícula (Art. 12). Acude a Bienestar y a tu director de programa."});
+      else if(gpa < 3.2) out.push({lvl:"warn", t:`PGA ${fmt(gpa)}: estado académico condicional`, d:"Con PGA entre 3,00 y 3,20 quedas en estado condicional (Art. 10): máximo tres cursos el próximo período (Art. 84). Además el grado exige PGA ≥ 3,20 (Art. 67)."});
+      else out.push({lvl:"info", t:`PGA ${fmt(gpa)}: cumples el promedio para grado`, d:`El grado exige PGA ≥ 3,20 (Art. 67).${gpa >= 3.5 ? " Con PGA ≥ 3,50 también puedes solicitar validaciones (Art. 50)." : ""}`});
+    }
+    if(studentSem >= 7) out.push({lvl:"info", t:"Requisito de grado: Saber Pro", d:"Debes presentar el Examen de Calidad de la Educación Superior (Art. 67, literal j). Revisa las fechas de inscripción del ICFES."});
     const order = {crit:0, warn:1, info:2};
     return out.sort((a,b)=>order[a.lvl]-order[b.lvl]);
   }
@@ -750,21 +767,21 @@ function analyze(){
     const areas = Object.entries(areaAvg).sort((a,b)=>a[1]-b[1]);
     const weakest = areas[0], strongest = areas[areas.length-1];
     const prec = [];
-    if(wp.length) prec.push({t:`Prioridad #1: ${wp[0].name}`, d:`Dedícale unas ${wp[0].h} h por semana (${wp[0].why.join(", ") || "es la de más créditos"}). Es la que más pesa en tu proyección.`, g:"Ruta crítica"});
+    if(wp.length) prec.push({t:`Prioridad #1: ${wp[0].name}`, d:`Dedícale unas ${wp[0].h} h por semana (${wp[0].why.join(", ") || "es la de más créditos"}). Es la que más pesa en tu proyección.`, g:"Ruta crítica", src:"Educación de precisión: diagnóstico, predicción e intervención (Yang, 2021)"});
     else prec.push({t:"Registra tu matrícula", d:"No tienes asignaturas marcadas como «Cursando». Toca las materias en Avance o dime «estoy viendo…» para armar tu plan.", g:"Expediente"});
-    if(weakest && strongest && weakest[0] !== strongest[0]) prec.push({t:`Refuerza ${AREAS[weakest[0]].n}`, d:`Es tu área más baja (${fmt(weakest[1])}) frente a ${AREAS[strongest[0]].n} (${fmt(strongest[1])}). Haz 3 sesiones cortas de ejercicios por semana en vez de una larga antes del parcial.`, g:"Brecha detectada"});
+    if(weakest && strongest && weakest[0] !== strongest[0]) prec.push({t:`Refuerza ${AREAS[weakest[0]].n}`, d:`Es tu área más baja (${fmt(weakest[1])}) frente a ${AREAS[strongest[0]].n} (${fmt(strongest[1])}). Haz 3 sesiones cortas de ejercicios por semana en vez de una larga antes del parcial: la práctica distribuida y la autoevaluación son las técnicas con mayor evidencia.`, g:"Brecha detectada", src:"Dunlosky et al. (2013), Psychological Science in the Public Interest"});
     else if(!weakest) prec.push({t:"Registra tus notas", d:"Con tus notas calculo tu promedio por área y te digo exactamente dónde reforzar.", g:"Datos"});
     if(enCr > REC.maxCr) prec.push({t:"Cuida la carga del semestre", d:`Con ${enCr} créditos, bloquea en tu calendario las horas del plan semanal y revisa cada domingo qué asignatura se atrasó. Si una baja de 3,0 en el primer corte, pide tutoría de inmediato.`, g:"Gestión del tiempo"});
     if(proj[0]) prec.push({t:`Próximo periodo (${proj[0].term}): ${proj[0].cr} créditos`, d:`Inscribe primero ${proj[0].courses.slice(0,3).map(c=>nm(c.code)).join(", ")}. Así sostienes el grado en ${gradTerm}.`, g:"Matrícula"});
     const inv = [
       {t:"Convierte tu proyecto en ponencia", d:`Documenta método, pruebas y resultados de ${enrolled.has("PIS2")||approved.has("PIS1") ? "Proyectos en ingeniería de sistemas" : "tus proyectos de curso"}; con eso puedes enviar un resumen a un encuentro de semilleros o congreso estudiantil.`, g:"Proyectos"},
       {t:"Únete a un semillero de investigación", d:`Tu mejor área es ${strongest ? AREAS[strongest[0]].n : "la que más disfrutes"}: un semillero en IA, datos o ciberseguridad te da horas de investigación y una línea para tu práctica.`, g:"Semilleros"},
-      {t:"Monta tu radar bibliográfico", d:"Crea alertas en Google Scholar con 2 o 3 palabras clave de tu proyecto y guarda todo en Zotero. Lee un artículo por semana y anota una idea aplicable.", g:"Método"},
+      {t:"Monta tu radar bibliográfico", d:"Crea alertas en Google Scholar con 2 o 3 palabras clave de tu proyecto y guarda todo en Zotero. Lee un artículo por semana y anota una idea aplicable. Las noticias del día (arriba) también te dan temas de actualidad.", g:"Método", src:"Luan y Tsai (2021), Educational Technology & Society"},
       {t:"Publica tus resultados", d:"Sube código y datasets a GitHub con un README claro y enlázalos en tu perfil profesional.", g:"Visibilidad"}
     ];
     const auto = [
       {t:`Autoestudio en ${weakest ? AREAS[weakest[0]].n : "tu materia más difícil"}`, d:"Practica con problemas resueltos y videos cortos (Khan Academy; 3Blue1Brown para la intuición). Resuelve 5 ejercicios diarios antes de mirar la solución.", g:"Diario · 40 min"},
-      {t:"Pomodoro + repaso espaciado", d:"Bloques de 25 min con 5 de descanso. Repasa cada tema el día 1, 3 y 7 con tarjetas (Anki).", g:"Hábito"},
+      {t:"Repaso espaciado + autoevaluación", d:"Bloques de 25 min con 5 de descanso. Repasa cada tema el día 1, 3 y 7 con tarjetas (Anki) y resuelve preguntas sin mirar la respuesta: las pruebas de práctica mejoran la retención más que releer.", g:"Hábito", src:"Roediger y Karpicke (2006); Dunlosky et al. (2013)"},
       {t:"Certificaciones que suman", d:"Cisco Networking Academy (ciberseguridad), AWS Cloud Practitioner y la documentación oficial de n8n y PostgreSQL complementan tu perfil.", g:"Empleabilidad"},
       {t:`Inglés hacia ${eng.req}`, d:"15 minutos diarios de lectura técnica en inglés (documentación oficial) y un podcast de tecnología a la semana.", g: englishDone ? "Requisito cumplido" : "Requisito de grado"}
     ];
@@ -823,7 +840,7 @@ function renderAll(){
   $("#hrsTotal").textContent = sum(wp.map(r=>r.h)) + " h/sem";
   $("#hrs").innerHTML = wp.length ? wp.map(r => `<div class="hrs"><span>${esc(r.name)}</span><div class="tr"><i class="${r.hot?"hot":""}" style="width:${r.h/maxH*100}%"></i></div><b>${r.h} h</b></div>`).join("") : `<p class="empty">Marca tus materias en curso para generar el plan semanal.</p>`;
   const recs = A.recommendations();
-  ["prec","inv","auto"].forEach(k => $("#recList-"+k).innerHTML = recs[k].map((r,i)=>`<div class="rec"><div class="n">${String(i+1).padStart(2,"0")}</div><div><b>${esc(r.t)}</b><p>${esc(r.d)}</p><span class="tg2">${esc(r.g)}</span></div></div>`).join(""));
+  ["prec","inv","auto"].forEach(k => $("#recList-"+k).innerHTML = recs[k].map((r,i)=>`<div class="rec"><div class="n">${String(i+1).padStart(2,"0")}</div><div><b>${esc(r.t)}</b><p>${esc(r.d)}</p><span class="tg2">${esc(r.g)}</span>${r.src ? `<p class="srcx">📚 ${esc(r.src)}</p>` : ""}</div></div>`).join(""));
 
   $("#hudPct").textContent = Math.round(pct*100) + "%";
   $("#hudGpa").textContent = fmt(A.gpa);
@@ -1199,6 +1216,8 @@ function localBrain(raw){
             say:`Soy ${settings.aiName}, su asistente de trayectoria académica. Consulto su matrícula y avance, proyecto su fecha de grado, le alerto de requisitos pendientes y le doy recomendaciones. También puede actualizar su expediente por voz, por ejemplo: aprobé cálculo integral con cuatro punto dos.`};
   if(has(/(que hora|hora es|que dia es|fecha de hoy)/)){ const d = new Date(); return {show:`Son las ${d.toLocaleTimeString("es-CO",{hour:"numeric",minute:"2-digit"})} del ${d.toLocaleDateString("es-CO",{weekday:"long",day:"numeric",month:"long"})}, ${T()}.`}; }
 
+  if(typeof newsBrain === "function"){ const nb = newsBrain(q); if(nb) return nb; }
+  if(typeof ragBrain === "function"){ const rb = ragBrain(raw, q); if(rb) return rb; }
   if(typeof semBrain === "function" && !has(/(puedo (ver|inscribir|tomar|matricular)|prerrequisit|requisito|habilitad|desbloquea)/)){ const sb = semBrain(raw, q); if(sb) return sb; }
   const strong = findCourseStrong(q);
   if(strong && !has(/(cuando me graduo|semestres me faltan|cuantos semestres)/)) return courseInfo(strong, q);
@@ -1273,12 +1292,14 @@ function studentContext(){
     grado_estimado: A.gradTerm, alertas: A.alerts().map(a => `${a.t}: ${a.d}`),
     plan_semanal_horas: A.weeklyPlan().map(r => ({asignatura: r.name, horas: r.h})),
     promedio_por_area: Object.fromEntries(Object.entries(A.areaAvg).map(([k,v]) => [AREAS[k].n, +v.toFixed(2)])),
-    semestre_actual: typeof semContext === "function" ? semContext() : undefined
+    semestre_actual: typeof semContext === "function" ? semContext() : undefined,
+    noticias_del_dia: typeof NEWS !== "undefined" ? NEWS.items.slice(0, 8).map(n => ({titulo: n.titulo, fuente: n.fuente, categoria: n.categoria, fecha: n.fecha})) : undefined,
+    reglamento: "UNAB pregrado: aprueba con 3,0; definitiva sin aproximar (Art. 39); habilitación si definitiva ≥ 2,5 (Art. 47, 60 % definitiva + 40 % habilitación); PGA 3,00–3,20 condicional; < 3,00 prueba académica; grado con PGA ≥ 3,20, inglés B2 y Saber Pro (Art. 67)"
   };
 }
 function systemPrompt(){
   return `Eres ${settings.aiName}, el asistente académico por voz de un estudiante de Ingeniería de Sistemas, con el estilo de un mayordomo de IA elegante y eficiente (cortés, seguro, con humor sutil). Llama al estudiante "${settings.trato === "name" ? first() : settings.trato}".
-Reglas: responde en español, en 2 a 5 frases (máx. ~110 palabras), porque se lee en voz alta. La escala de notas es de 0,0 a 5,0 y se aprueba con 3,0: usa "semestre_actual" del CONTEXTO para notas por corte, nota necesaria, si aprobó o no, y tareas (por hacer, incompletas, vencidas, entregadas) con sus fechas. También eres tutor de sus materias: si pregunta un tema (por ejemplo integración por partes, ley de Faraday, método Simplex, MAGERIT o redes neuronales), explícalo claro y paso a paso con un ejemplo corto (puedes llegar a ~180 palabras en ese caso). Usa solo los datos del CONTEXTO; no inventes notas, créditos ni normas institucionales; si algo no está, dilo y sugiere consultar Registro Académico o la coordinación. Ya tienes calculadas la proyección, las alertas y el plan semanal: úsalos. Para recomendaciones, cubre investigación, autoaprendizaje y educación de precisión (basada en sus notas por área y la ruta crítica). Sin tablas ni markdown complejo; viñetas cortas con "- " si enumeras. Si el estudiante quiere registrar notas o cambiar el estado de una materia, dile que lo diga así: "aprobé <materia> con <nota>" o "estoy viendo <materia>".
+Reglas: responde en español, en 2 a 5 frases (máx. ~110 palabras), porque se lee en voz alta. La escala de notas es de 0,0 a 5,0 y se aprueba con 3,0: usa "semestre_actual" del CONTEXTO para notas por corte, nota necesaria, si aprobó o no, y tareas (por hacer, incompletas, vencidas, entregadas) con sus fechas. También eres tutor de sus materias: si pregunta un tema (por ejemplo integración por partes, ley de Faraday, método Simplex, MAGERIT o redes neuronales), explícalo claro y paso a paso con un ejemplo corto (puedes llegar a ~180 palabras en ese caso). Usa solo los datos del CONTEXTO; no inventes notas, créditos ni normas institucionales; si algo no está, dilo y sugiere consultar Registro Académico o la coordinación. Ya tienes calculadas la proyección, las alertas y el plan semanal: úsalos. Para recomendaciones, cubre investigación, autoaprendizaje y educación de precisión (basada en sus notas por área y la ruta crítica). Sin tablas ni markdown complejo; viñetas cortas con "- " si enumeras. Si recibes FRAGMENTOS RECUPERADOS (RAG), básate en ellos para normas y técnicas de estudio y cita la fuente. Si pregunta por noticias, usa "noticias_del_dia" con fuente y fecha. Si el estudiante quiere registrar notas o cambiar el estado de una materia, dile que lo diga así: "aprobé <materia> con <nota>" o "estoy viendo <materia>".
 Fecha: ${new Date().toLocaleDateString("es-CO",{dateStyle:"long"})}.
 CONTEXTO: ${JSON.stringify(studentContext())}`;
 }
@@ -1298,11 +1319,17 @@ async function askN8N(text){
   if(!reply) throw new Error("respuesta vacía");
   return String(reply);
 }
+// RAG: fragmentos recuperados para esta pregunta (reglamento, plan, guía de éxito académico)
+function ragMessages(text){
+  if(typeof ragSearch !== "function") return [];
+  const hits = ragSearch(text, 3); if(!hits.length) return [];
+  return [{role:"system", content:"FRAGMENTOS RECUPERADOS (RAG). Úsalos si son pertinentes y cita la fuente (documento › sección):\n" + hits.map((h,i) => `[${i+1}] ${h.c.titulo_doc} › ${h.c.seccion}:\n${h.c.texto}`).join("\n\n")}];
+}
 async function askOpenAI(text){
   const r = await fetchJSON("https://api.openai.com/v1/chat/completions", { method:"POST",
     headers:{"Content-Type":"application/json", "Authorization":"Bearer " + settings.openaiKey},
     body: JSON.stringify({ model: settings.model || "gpt-4o-mini", temperature:0.4, max_tokens:350,
-      messages:[{role:"system", content:systemPrompt()}, ...chatHist.slice(-8), {role:"user", content:text}] }) });
+      messages:[{role:"system", content:systemPrompt()}, ...ragMessages(text), ...chatHist.slice(-8), {role:"user", content:text}] }) });
   if(!r.ok){ let m = ""; try{ m = (await r.json()).error.message; }catch(e){} throw new Error("HTTP " + r.status + (m ? " · " + m.slice(0,80) : "")); }
   const d = await r.json(); return d.choices[0].message.content;
 }
@@ -1321,12 +1348,13 @@ let busy = false;
 async function handleUser(text){
   text = text.trim(); if(!text || busy) return;
   busy = true; addMsg("u", esc(text)); setState("thinking");
-  const cmd = localCommand(text);
+  const gr = typeof guardrail === "function" ? guardrail(text) : null;
+  const cmd = gr || localCommand(text);
   const remote = !cmd && (settings.webhook || settings.openaiKey);
   const pending = addMsg("a", `<span class="typing"><i></i><i></i><i></i></span>`, cmd ? "expediente" : settings.webhook ? "n8n · RAG" : settings.openaiKey ? "IA directa" : "motor local");
   let res, meta;
   try{
-    if(cmd){ await new Promise(r=>setTimeout(r, 300)); res = cmd; meta = "expediente"; }
+    if(cmd){ await new Promise(r=>setTimeout(r, 300)); res = cmd; meta = gr ? "guardrail · " + gr.id : "expediente"; }
     else {
       const asMsg = r => ({show:mdToHtml(r), say:r.replace(/\*\*/g,"").replace(/^\s*(?:[-•*]|\d+[.)])\s+/gm,"")});
       const fails = [];
@@ -1346,7 +1374,7 @@ async function handleUser(text){
   speak(res.say || strip(res.show), () => { if(voiceTurn && settings.convo) setTimeout(() => startListening(true), 400); });
 }
 
-const QUICK = ["Dame el informe del semestre","¿Cómo voy en Cálculo integral?","¿Qué tareas tengo pendientes?","¿Qué tengo para esta semana?","¿Tengo tareas vencidas?","¿Qué materias estoy viendo?","¿Cuándo me gradúo?","¿Qué requisitos tengo pendientes?","Dame recomendaciones","Saqué 3,5 en el examen final de Electromagnetismo"];
+const QUICK = ["Dame el informe del semestre","¿Puedo habilitar Cálculo integral?","¿Qué dice el reglamento sobre los supletorios?","Noticias de tecnología de hoy","¿Cómo voy en Cálculo integral?","¿Qué tareas tengo pendientes?","¿Qué tengo para esta semana?","¿Tengo tareas vencidas?","¿Qué materias estoy viendo?","¿Cuándo me gradúo?","¿Qué requisitos tengo pendientes?","Dame recomendaciones","Saqué 3,5 en el examen final de Electromagnetismo"];
 $("#quick").innerHTML = QUICK.map(q=>`<button>${q}</button>`).join("");
 $$("#quick button").forEach(b => b.onclick = () => { lastVoice = false; handleUser(b.textContent); });
 $("#form").onsubmit = e => { e.preventDefault(); const v = $("#input").value; $("#input").value = ""; $("#input").blur(); lastVoice = false; handleUser(v); };
@@ -1554,7 +1582,7 @@ function semInfo(code){
   const need = rest > 0 ? (PASS - acum) / (rest / 100) : null;          // nota mínima en lo que falta
   const maxPossible = acum + rest / 100 * 5;
   const final = pesoTot > 0 && rest === 0;
-  const def = final ? round1(acum * 100 / pesoTot) : null;
+  const def = final ? trunc1(acum * 100 / pesoTot) : null;     // Art. 39: sin aproximar
   let st;
   if(!evs.length) st = "sin";
   else if(final) st = def >= PASS ? "aprobada" : "reprobada";
@@ -1590,6 +1618,20 @@ function closeFinishedCourses(){
   return changed;
 }
 
+/* ---------------- Reglamento aplicado a las notas (Arts. 39, 47, 48) ---------------- */
+function habInfo(s){
+  const nec = d => Math.max(0, (PASS - 0.6 * d) / 0.4);
+  if(s.final && s.def < PASS){
+    if(s.def >= 2.5) return {puede:true, texto:`definitiva ${fmtG(s.def)}: puede habilitarla (Art. 47). Necesita ${fmt(nec(s.def))} en la habilitación (60 % definitiva + 40 % habilitación, Art. 48).`};
+    return {puede:false, texto:`definitiva ${fmtG(s.def)}: por debajo de 2,5, no es habilitable (Art. 47); debe repetirla.`};
+  }
+  if(s.final) return {puede:false, texto:`ya está aprobada con ${fmtG(s.def)}.`};
+  if(s.st === "perdida") return s.maxPossible >= 2.5
+    ? {puede:true, texto:`ya no alcanza 3,0, pero si cierra con al menos 2,5 podrá habilitarla (Art. 47). Con 2,5 necesitaría ${fmt(nec(2.5))} en la habilitación.`}
+    : {puede:false, texto:`ni con 5,0 llegaría a 2,5: no será habilitable y tendrá que repetirla.`};
+  return {puede:null, texto:`todavía puede aprobarla: necesita ${fmt(Math.max(0, s.need ?? 0))} en lo que falta. Solo si la definitiva queda entre 2,5 y 2,9 aplicaría la habilitación (Art. 47).`};
+}
+
 /* ---------------- tareas ---------------- */
 const tDone = t => t.estado === "entregada" || t.estado === "calificada";
 const tLate = t => !tDone(t) && daysUntil(t.fecha) < 0;
@@ -1603,9 +1645,9 @@ function taskLine(t, html = true){
 function semAlerts(){
   const out = [];
   semCodes().map(semInfo).forEach(s => {
-    if(s.st === "perdida") out.push({lvl:"crit", t:`${nm(s.code)}: perdida`, d:`Aunque saques 5,0 en lo que falta llegarías a ${fmt(s.maxPossible)}. Habla con el profesor sobre opciones (supletorio, habilitación).`});
+    if(s.st === "perdida") out.push({lvl:"crit", t:`${nm(s.code)}: perdida`, d:`Aunque saques 5,0 en lo que falta llegarías a ${fmt(s.maxPossible)}. ${habInfo(s).texto}`});
     else if(s.st === "riesgo") out.push({lvl:"crit", t:`${nm(s.code)}: en riesgo`, d:`Llevas ${fmt(s.avg)} con el ${s.pesoEv}% evaluado. Necesitas mínimo ${fmt(Math.max(0, s.need))} en el ${s.rest}% que falta.`});
-    else if(s.st === "reprobada") out.push({lvl:"crit", t:`${nm(s.code)}: reprobada (${fmtG(s.def)})`, d:"Definitiva por debajo de 3,0."});
+    else if(s.st === "reprobada") out.push({lvl:"crit", t:`${nm(s.code)}: reprobada (${fmtG(s.def)})`, d: habInfo(s).texto});
   });
   const late = DB.tk.filter(tLate);
   if(late.length) out.push({lvl:"warn", t:`${late.length} tarea${late.length > 1 ? "s" : ""} vencida${late.length > 1 ? "s" : ""}`, d: late.map(t => `${t.titulo} (${nm(t.c)})`).join(", ")});
@@ -1635,9 +1677,9 @@ function renderSemester(){
   $("#semNotas").innerHTML = infos.map(s => {
     const c = C[s.code], st = ST_SEM[s.st];
     const big = s.final ? fmtG(s.def) : fmt(s.avg);
-    const needTxt = s.final ? `Definitiva ${fmtG(s.def)} · ${s.def >= PASS ? "APROBADA" : "REPROBADA"}` :
+    const needTxt = s.final ? `Definitiva ${fmtG(s.def)} (sin aproximar) · ${s.def >= PASS ? "APROBADA" : s.def >= 2.5 ? "REPROBADA · habilitable, necesita " + fmt(Math.max(0, (PASS - 0.6 * s.def) / 0.4)) : "REPROBADA"}` :
       s.st === "asegurada" ? `Ya tienes ${fmt(s.acum)} acumulado: aprobada pase lo que pase` :
-      s.st === "perdida" ? `Máximo posible: ${fmt(s.maxPossible)}. No alcanza 3,0` :
+      s.st === "perdida" ? `Máximo posible: ${fmt(s.maxPossible)}. ${s.maxPossible >= 2.5 ? "Podrá habilitar si cierra ≥ 2,5 (Art. 47)" : "No será habilitable"}` :
       s.need != null ? `Necesitas <b>${fmt(Math.max(0, s.need))}</b> en el ${s.rest}% restante` : "Sin evaluaciones registradas";
     const rows = s.evs.map(e => `<button class="evrow" data-ev="${e.id}"><span class="ct">C${e.corte}</span><span class="en">${esc(e.nombre)}<small>${e.peso}% · ${fmtDate(e.fecha)}</small></span><b class="${e.nota === null ? "na" : e.nota < PASS ? "lo" : "hi"}">${e.nota === null ? "—" : fmtG(e.nota)}</b></button>`).join("");
     const warnPeso = s.pesoTot !== 100 && s.evs.length ? `<p class="wpeso">Los pesos suman ${s.pesoTot}% (deberían sumar 100%).</p>` : "";
@@ -1839,11 +1881,11 @@ function courseGradeReport(code, q){
     ? {show:`${esc(ev.nombre)} de ${esc(nm(code))} aún no tiene nota. Es el ${fmtDate(ev.fecha)} (${relDay(daysUntil(ev.fecha))}) y vale ${ev.peso}%.`}
     : {show:`En ${esc(ev.nombre)} de ${esc(nm(code))} sacó <b>${fmtG(ev.nota)}</b> (vale ${ev.peso}%, corte ${ev.corte}). ${ev.nota >= PASS ? "Aprobada." : "Por debajo de 3,0."} Su nota actual en la materia es ${(s.final ? fmtG(s.def) : fmt(s.avg))}.`};
   let head, say;
-  if(s.final){ head = `<b>${esc(nm(code))}</b>: definitiva <b>${fmtG(s.def)}</b>. ${s.def >= PASS ? "✔ APROBADA" : "✖ REPROBADA"}.`; say = `${nm(code)}: definitiva ${fmtG(s.def)}. ${s.def >= PASS ? "Aprobada." : "Reprobada."}`; }
+  if(s.final){ head = `<b>${esc(nm(code))}</b>: definitiva <b>${fmtG(s.def)}</b> (sin aproximar, Art. 39). ${s.def >= PASS ? "✔ APROBADA" : "✖ REPROBADA: " + esc(habInfo(s).texto)}`; say = `${nm(code)}: definitiva ${fmtG(s.def)}. ${s.def >= PASS ? "Aprobada." : "Reprobada. " + habInfo(s).texto}`; }
   else if(s.st === "sin"){ head = `${esc(nm(code))} todavía no tiene notas registradas.`; say = head; }
   else {
     const needTxt = s.st === "asegurada" ? `Ya tiene ${fmt(s.acum)} acumulado de 5,0: <b>la materia está aprobada</b> pase lo que pase.` :
-      s.st === "perdida" ? `Aunque saque 5,0 en lo que falta llegaría a ${fmt(s.maxPossible)}: <b>no alcanza el 3,0</b>.` :
+      s.st === "perdida" ? `Aunque saque 5,0 en lo que falta llegaría a ${fmt(s.maxPossible)}: <b>no alcanza el 3,0</b>. ${esc(habInfo(s).texto)}` :
       `Para aprobar necesita mínimo <b>${fmt(Math.max(0, s.need))}</b> en el ${s.rest}% que falta.`;
     head = `<b>${esc(nm(code))}</b>: ${st.l.toLowerCase()}. Lleva <b>${fmt(s.avg)}</b> con el ${s.pesoEv}% evaluado. ${needTxt}`;
     say = `${nm(code)}: ${st.l}. Lleva ${fmt(s.avg)} con el ${s.pesoEv} por ciento evaluado. ${needTxt.replace(/<[^>]+>/g, "")}`;
@@ -1968,6 +2010,113 @@ setSbStatus(settings.sbUrl && settings.sbKey ? "Conectando…" : "Modo local: lo
 closeFinishedCourses();
 refreshAll();
 if(settings.sbUrl && settings.sbKey) sbPull(true);
+
+</script>
+<script>
+"use strict";
+/* =====================================================================
+   RAG local (BM25 sobre data/rag_index.json) · Noticias del día · Guardrails
+   ===================================================================== */
+
+/* ---------------- RAG: mismo tokenizador y BM25 que rag/rag_local.py ---------------- */
+const RAG = { chunks: [], ready: false, docs: [], tf: [], idf: {}, avgdl: 0 };
+const RSTOP = new Set(("a al algo ante antes como con contra cual cuando de del desde donde dos el ella ellas ellos en entre era es esa ese eso esta este esto estos fue ha hay la las le les lo los mas me mi mis muy ni no nos o otra otro para pero por porque que quien se sea si sin sobre su sus tambien te tiene tu un una uno unos y ya yo puedo hago cuanto cuantos cuantas cual cuales debo tengo").split(" "));
+const RSUF = ["aciones","acion","amente","mente","idades","idad","ables","able","ando","iendo","ados","idas","ido","ada","ado","ar","er","ir","es","s"];
+const rroot = w => { for(const s of RSUF){ if(w.length > s.length + 3 && w.endsWith(s)) return w.slice(0, -s.length); } return w; };
+const rtok = t => (norm(t).match(/[a-z0-9]+/g) || []).filter(w => !RSTOP.has(w) && w.length > 1).map(rroot);
+async function loadRag(){
+  try{
+    const r = await fetch("data/rag_index.json", {cache:"no-cache"}); if(!r.ok) throw 0;
+    const idx = await r.json(); RAG.chunks = idx.chunks || []; RAG.params = idx.parametros;
+    RAG.docs = RAG.chunks.map(c => rtok(c.seccion + " " + c.seccion + " " + c.texto));
+    RAG.avgdl = sum(RAG.docs.map(d => d.length)) / Math.max(1, RAG.docs.length);
+    const df = {}; RAG.docs.forEach(d => new Set(d).forEach(t => df[t] = (df[t] || 0) + 1));
+    const n = RAG.docs.length; RAG.idf = Object.fromEntries(Object.entries(df).map(([t,f]) => [t, Math.log(1 + (n - f + 0.5) / (f + 0.5))]));
+    RAG.tf = RAG.docs.map(d => { const m = {}; d.forEach(t => m[t] = (m[t] || 0) + 1); return m; });
+    RAG.ready = true;
+  }catch(e){ RAG.ready = false; }
+}
+// expansión de consulta: sinónimos frecuentes del lenguaje estudiantil → términos del reglamento
+const RAG_SYN = [[/gradu/, "requisitos grado titulo"], [/falt|falla/, "inasistencia asistencia"], [/enferm|no pude presentar|calamidad/, "supletorio justa causa"],
+  [/perd(i|er) (la|una) materia|reprob/, "habilitacion repeticion"], [/redonde|aproxim/, "redondeo sin aproximar"], [/retir|cancel/, "cancelacion"], [/promedio/, "PGA promedio general acumulado"]];
+function ragSearch(q, k = 3){
+  if(!RAG.ready) return [];
+  const nq = norm(q); RAG_SYN.forEach(([re, add]) => { if(re.test(nq)) q += " " + add; });
+  const qt = rtok(q), K1 = 1.5, B = 0.75, out = [];
+  RAG.tf.forEach((tf, i) => { const dl = RAG.docs[i].length; let s = 0;
+    qt.forEach(t => { if(tf[t]) s += (RAG.idf[t] || 0) * tf[t] * (K1 + 1) / (tf[t] + K1 * (1 - B + B * dl / RAG.avgdl)); });
+    if(s > 0) out.push({s, c: RAG.chunks[i]}); });
+  return out.sort((a,b) => b.s - a.s).slice(0, k);
+}
+// respuesta extractiva: las frases del mejor fragmento que más se parecen a la pregunta
+function ragAnswer(raw){
+  const hits = ragSearch(raw, 3);
+  if(!hits.length || hits[0].s < 2.5) return null;
+  const best = hits[0].c, qt = new Set(rtok(raw));
+  const frases = best.texto.replace(/\n- /g, " ").split(/(?<=[.:])\s+(?=[A-ZÁÉÍÓÚÑ0-9(])/).filter(f => f.length > 25);
+  const top = frases.map((f, i) => ({f, i, s: rtok(f).filter(t => qt.has(t)).length})).sort((a,b) => b.s - a.s || a.i - b.i).slice(0, 3).sort((a,b) => a.i - b.i).map(x => x.f);
+  const fuente = `${best.titulo_doc.split("·")[0].trim()} › ${best.seccion}`;
+  return { show: `${top.map(esc).join(" ")}<div class="src">📚 Fuente: ${esc(fuente)}${hits[1] ? ` · también: ${esc(hits[1].c.seccion)}` : ""}</div>`,
+           say: top.join(" ") + ` Fuente: ${best.seccion.replace(/\(Arts?\.[^)]*\)/, m => m.replace("Arts.", "artículos").replace("Art.", "artículo"))}.`, hits };
+}
+const RAG_RE = /(reglamento|habilit|supletori|cancelar una|cancelacion|cancelo|cuantas veces puedo cancelar|fallas|faltas|asistencia|prueba academica|condicional|perder el cupo|pierdo el cupo|validar|validacion|redonde|aproxim|requisitos (de|para) (grado|graduarme)|para graduarme|para obtener el titulo|saber pro|articulo|repetir una materia|repito una|tecnicas de estudio|como estudiar|metodo de estudio|educacion de precision|que dice el|nota minima|con cuanto se (aprueba|pasa)|con que nota se (aprueba|pasa)|norma)/;
+function ragBrain(raw, q){
+  if(!RAG_RE.test(q)) return null;
+  const a = ragAnswer(raw); if(!a) return null;
+  // personalización: habilitación de una materia concreta
+  const code = findCourseStrong(q);
+  if(code && /habilit/.test(q) && typeof semInfo === "function" && hasEvals(code)){
+    const s = semInfo(code), h = habInfo(s);
+    a.show += `<div class="pers">🎯 <b>${esc(nm(code))}</b>: ${esc(h.texto)}</div>`; a.say += " " + h.texto;
+  }
+  return a;
+}
+
+/* ---------------- Noticias del día (data/noticias.json · scraper diario) ---------------- */
+const NEWS = { items: [], actualizado: null, ok: false };
+async function loadNews(){
+  const urls = ["data/noticias.json"];
+  for(const u of urls){
+    try{ const r = await fetch(u, {cache:"no-cache"}); if(!r.ok) continue; const d = await r.json();
+      NEWS.items = (d.noticias || []).filter(n => n.titulo && n.url); NEWS.actualizado = d.actualizado; NEWS.ok = true; break; }catch(e){}
+  }
+  renderNews();
+}
+const newsAgo = iso => { if(!iso) return ""; const h = Math.round((Date.now() - new Date(iso)) / 36e5); return h < 1 ? "hace minutos" : h < 24 ? `hace ${h} h` : `hace ${Math.round(h/24)} d`; };
+let newsCat = "";
+function renderNews(){
+  const box = $("#newsList"); if(!box) return;
+  const cats = ["", ...new Set(NEWS.items.map(n => n.categoria))];
+  $("#newsChips").innerHTML = cats.map(c => `<button data-c="${esc(c)}" class="${newsCat === c ? "on" : ""}">${c || "Todas"} <i>${c ? NEWS.items.filter(n => n.categoria === c).length : NEWS.items.length}</i></button>`).join("");
+  $$("#newsChips button").forEach(b => b.onclick = () => { newsCat = b.dataset.c; renderNews(); });
+  const list = NEWS.items.filter(n => !newsCat || n.categoria === newsCat).slice(0, 12);
+  box.innerHTML = list.length ? list.slice(0, 6).map(n => `<a class="news" href="${esc(n.url)}" target="_blank" rel="noopener"><span class="nc">${esc(n.categoria)}</span><b>${esc(n.titulo)}</b><small>${esc(n.fuente)} · ${newsAgo(n.fecha)}</small></a>`).join("")
+    : `<p class="empty">${NEWS.ok ? "No hay noticias en esta categoría." : "No se pudieron cargar las noticias (sin conexión)."}</p>`;
+  $("#newsUpd").textContent = NEWS.actualizado ? "Actualizado " + new Date(NEWS.actualizado).toLocaleString("es-CO", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"}) : "";
+}
+function newsBrain(q){
+  if(!/(noticia|noticias|novedades|que paso hoy|titulares|actualidad)/.test(q)) return null;
+  if(!NEWS.items.length) return {show:`Aún no tengo las noticias del día, ${T()}. Revise su conexión; el scraper las actualiza cada mañana.`};
+  const cat = /tecnolog|inteligencia artificial|\bia\b/.test(q) ? "Tecnología" : /educac|universidad|beca|icetex/.test(q) ? "Educación" : /ingenieria|sistemas|software|programa|ciber|datos/.test(q) ? "Ingeniería de sistemas" : "";
+  const list = NEWS.items.filter(n => !cat || n.categoria === cat).slice(0, 5);
+  return {show:`Noticias del día${cat ? ` · ${cat}` : ""}, ${T()}:` + ul(list.map(n => `<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.titulo)}</a> <small>(${esc(n.fuente)}, ${newsAgo(n.fecha)})</small>`)),
+          say:`Estas son las noticias${cat ? " de " + cat : ""}: ${list.slice(0,3).map(n => `${n.titulo}, según ${n.fuente}`).join(". ")}.`};
+}
+
+/* ---------------- Guardrails (los mismos del flujo de n8n) ---------------- */
+const GUARDS = [
+  {id:"inyeccion_prompt", re:/(ignora|olvida|omite|salta).{0,30}(instrucciones|reglas|indicaciones|restricciones)|system prompt|prompt del sistema|revela (tu|el|las) (prompt|instrucciones)|jailbreak|modo (desarrollador|dios)|\bDAN\b|ahora eres|act[uú]a como (si no|un hacker)/i,
+   msg:"No puedo cambiar mis reglas de funcionamiento. Pregúnteme sobre su matrícula, notas, proyección o recomendaciones."},
+  {id:"datos_sensibles", re:/\b(?:\d[ -]?){13,19}\b|(contrase[ñn]a|password|clave)\s*[:=]/i, msg:"Por su seguridad, no comparta contraseñas ni números de tarjeta en el chat."},
+  {id:"lenguaje_ofensivo", re:/\b(idiota|est[uú]pid[oa]|imb[eé]cil|malparid[oa]|gonorrea|hijueputa)\b/i, msg:"Mantengamos una conversación respetuosa. ¿En qué le ayudo con su carrera?"},
+  {id:"deshonestidad_academica", re:/(hazme|resu[eé]lveme|responde(me)?) (el|mi) (examen|parcial|quiz)|c[oó]mo (hago |hacer )?trampa|copiar(me)? en el (examen|parcial)|(cambiar|modificar|alterar) (mis|las) notas en el sistema/i,
+   msg:"No puedo ayudarle con trampa académica. Sí puedo explicarle el tema paso a paso para que lo prepare."},
+  {id:"longitud", re:/^[\s\S]{1501,}$/, msg:"Su mensaje es muy largo. Resúmalo en menos de 1.500 caracteres, por favor."}
+];
+function guardrail(text){ const g = GUARDS.find(x => x.re.test(text)); return g ? {id:g.id, show:`🛡️ ${g.msg}`, say:g.msg} : null; }
+
+/* ---------------- arranque ---------------- */
+loadRag(); loadNews();
 
 </script>
 </body>
