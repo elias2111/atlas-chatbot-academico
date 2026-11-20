@@ -73,6 +73,137 @@ Verificación en Supabase: `SELECT * FROM v_notas_semestre;` devuelve las 8 mate
 
 **Por qué Gemini y no OpenAI.** OpenAI exige saldo prepagado; Google AI Studio da la API key gratis. Se probaron los modelos que aceptaba la clave: `gemini-2.5-flash` y `gemini-2.5-flash-lite` ya no se ofrecen a cuentas nuevas, `gemini-flash-latest` tardaba unos 60 s y `gemini-3-flash-preview` permite solo 5 solicitudes por minuto. Se eligió **`gemini-flash-lite-latest`** (2–3 s por llamada). Si el modelo no responde, la app usa su motor local y nunca se queda sin contestar.
 
+### Diagramas de los flujos de n8n
+
+**Cómo leer un lienzo de n8n.** Cada cuadro es un **nodo** (un paso). Las **líneas continuas** son el orden de ejecución, de izquierda a derecha. Las **líneas punteadas** que cuelgan de un nodo son las capacidades que se le conectan: el modelo, la memoria y las herramientas del agente, o el cargador, el divisor de texto y los embeddings del almacén vectorial. Después de ejecutar, cada nodo muestra ✔ y las líneas dicen cuántos *items* pasaron. Los recuadros de color son notas que documentan el flujo dentro de n8n.
+
+#### ATLAS · Chat académico (publicado)
+
+```mermaid
+flowchart LR
+  WH["Webhook<br/>POST /atlas-chat"] --> GI["Guardrail de entrada<br/>(código)"]
+  GI --> IF{"¿Bloqueado?"}
+  IF -- sí --> RB["Responder bloqueo"]
+  IF -- no --> CTX["Contexto del estudiante<br/>fn_contexto_estudiante($1)"]
+  CTX --> AG["Agente ATLAS<br/>máx. 5 iteraciones · 60 s"]
+  AG --> GO["Guardrail de salida<br/>(código)"] --> RA["Responder a la app<br/>{ reply, guardrails }"]
+  LLM["Gemini<br/>gemini-flash-lite-latest"] -. Chat Model .-> AG
+  MEM["Memoria Postgres<br/>10 mensajes por sesión"] -. Memory .-> AG
+  RAG["Reglamento (RAG)<br/>pgvector · n8n_vectors"] -. Tool .-> AG
+  EMB["Embeddings Gemini<br/>gemini-embedding-001"] -. Embedding .-> RAG
+  MCPC["Cliente MCP<br/>/mcp/atlas/sse"] -. Tool .-> AG
+```
+
+La pregunta entra por el webhook. Si el guardrail de entrada la bloquea, se responde sin llamar a la IA. Si no, se lee el expediente en PostgreSQL y el agente decide si consulta el reglamento (RAG) o los datos del estudiante (MCP). El guardrail de salida revisa la respuesta antes de enviarla.
+
+#### ATLAS · Servidor MCP (publicado)
+
+```mermaid
+flowchart TB
+  T["MCP Server Trigger<br/>/mcp/atlas/sse"]
+  T -.- H1["consultar_estado_academico<br/>fn_contexto_estudiante($1)"]
+  T -.- H2["consultar_notas_semestre<br/>fn_notas_semestre($1)"]
+  T -.- H3["consultar_tareas<br/>fn_tareas($1, $2)"]
+  T -.- H4["consultar_prerrequisitos<br/>fn_prerrequisitos($1)"]
+  T -.- H5["noticias_del_dia<br/>v_noticias_hoy"]
+  T -.- H6["buscar_reglamento<br/>pgvector"]
+  H6 -.- E["Embeddings Gemini"]
+  H1 & H2 & H3 & H4 & H5 & H6 --> DB[("Supabase<br/>PostgreSQL")]
+```
+
+No es una secuencia, es un menú: el agente llama la herramienta que necesita por JSON-RPC (`initialize` → `tools/list` → `tools/call`). Los parámetros van como `$1`, `$2`, así que no hay inyección SQL.
+
+#### ATLAS · Carga del RAG desde GitHub (ejecución manual)
+
+```mermaid
+flowchart LR
+  M["Ejecutar carga"] --> D["Documentos del RAG<br/>3 URLs de rag/docs/"] --> H["Descargar documento<br/>HTTP · texto"] --> PG["Guardar en PGVector<br/>tabla n8n_vectors"]
+  L["Cargador de documentos<br/>metadata: source"] -. Document .-> PG
+  S["Divisor de texto<br/>1000 / 150"] -. Text Splitter .-> L
+  E["Embeddings Gemini<br/>gemini-embedding-001"] -. Embedding .-> PG
+```
+
+Al ejecutarlo, las líneas muestran **3 items** (documentos) que se convierten en **27 items** (fragmentos guardados).
+
+#### ATLAS · Ingesta RAG (formulario)
+
+```mermaid
+flowchart LR
+  F["Formulario<br/>subir documento"] --> PG["Guardar en PGVector"]
+  L["Cargador de documentos"] -. Document .-> PG
+  S["Divisor de texto 1000 / 150"] -. Text Splitter .-> L
+  E["Embeddings Gemini"] -. Embedding .-> PG
+```
+
+Sirve para añadir un documento nuevo (por ejemplo, una actualización del reglamento) sin tocar código.
+
+#### ATLAS · Scraper de noticias
+
+```mermaid
+flowchart LR
+  C["Cada día<br/>6:00 y 13:00"] --> F["Fuentes RSS"] --> R["Leer RSS"] --> K["Filtrar y clasificar<br/>Educación · Tecnología · Ing. de sistemas"] --> P[("Guardar en PostgreSQL<br/>upsert por url")]
+  W["GET /webhook/atlas-noticias"] --> Q["Noticias de hoy<br/>v_noticias_hoy"] --> A["Responder noticias"]
+```
+
+Dos ramas independientes: la de arriba se ejecuta sola por horario y guarda sin duplicados; la de abajo entrega las noticias del día a quien las pida. GitHub Actions corre una copia del scraper como respaldo y publica `data/noticias.json` para la app.
+
+### RAG paso a paso
+
+El RAG (*Retrieval-Augmented Generation*) hace que ATLAS responda las normas **citando el artículo del reglamento** en lugar de inventarlas.
+
+```mermaid
+flowchart LR
+  subgraph Carga["1 · Carga (una vez)"]
+    direction LR
+    DOC["3 documentos<br/>rag/docs/"] --> SPL["Fragmentos<br/>1.000 car. · 150 de solapamiento"] --> EMB["Embeddings<br/>gemini-embedding-001"] --> VEC[("pgvector<br/>n8n_vectors · 27 fragmentos")]
+  end
+  subgraph Consulta["2 · Consulta (cada pregunta)"]
+    direction LR
+    Q["Pregunta<br/>¿Cuántas veces puedo cancelar?"] --> QE["Embedding<br/>de la pregunta"] --> SIM["Búsqueda por similitud<br/>fragmentos más cercanos"] --> AG["Agente + Gemini<br/>responde con la fuente"]
+  end
+  VEC --> SIM
+```
+
+| Parte | Decisión | Por qué |
+|---|---|---|
+| Corpus | Reglamento Estudiantil de Pregrado UNAB (2019), plan de estudios de Ingeniería de Sistemas, guía de éxito académico | Cubren normas, requisitos y recomendaciones de estudio |
+| Fragmentación | `RecursiveCharacterTextSplitter`, 1.000 caracteres, 150 de solapamiento | Un fragmento cabe un artículo completo; el solapamiento evita partir una norma |
+| Metadatos | `source` = nombre del documento | El agente puede decir de dónde sacó la respuesta |
+| Embeddings | `gemini-embedding-001` (Google AI Studio, gratis) | Multilingüe, buen desempeño en español |
+| Almacén | PostgreSQL + pgvector en Supabase, tabla `n8n_vectors` | La misma base de datos del resto del sistema; con 27 vectores la búsqueda exacta responde en milisegundos |
+| Uso | Herramienta `reglamento_academico` del agente y `buscar_reglamento` del servidor MCP | El agente decide cuándo consultarla |
+| Evaluación | precisión@1 83 %, recall@3 100 % ([evidencia](rag/EVIDENCIA_RECUPERACION.md)) | Mide si el fragmento correcto aparece entre los primeros resultados |
+| Respaldo | La app tiene un RAG propio con BM25 (35 fragmentos en `data/rag_index.json`) | Si n8n no responde, la app sigue citando el reglamento |
+
+**Ejemplo real:** *"¿Cuántas veces puedo cancelar una misma materia?"* → *"Hasta dos veces; si la matricula por tercera vez debe cursarla hasta el final"* (Art. 13, recuperado del reglamento).
+
+### Recorrido de una pregunta
+
+```mermaid
+sequenceDiagram
+  participant E as Estudiante (voz)
+  participant A as App ATLAS
+  participant N as n8n · Chat académico
+  participant G as Gemini
+  participant M as Servidor MCP
+  participant D as Supabase
+  E->>A: "¿Cómo voy en Cálculo integral?"
+  A->>N: POST /webhook/atlas-chat
+  N->>N: Guardrail de entrada
+  N->>D: fn_contexto_estudiante('20221045')
+  N->>G: pregunta + contexto + herramientas
+  G-->>N: usar consultar_notas_semestre
+  N->>M: tools/call consultar_notas_semestre
+  M->>D: SELECT fn_notas_semestre($1)
+  D-->>M: 2,97 acumulado · 60 % evaluado
+  M-->>N: resultado
+  N->>G: resultado de la herramienta
+  G-->>N: "En riesgo: necesita 3,05 en el 40 % restante"
+  N->>N: Guardrail de salida
+  N-->>A: { reply, guardrails }
+  A-->>E: respuesta en voz alta
+```
+
 ### 3. Pruebas del sistema desplegado (20 de noviembre de 2026)
 
 | Pregunta a `POST /webhook/atlas-chat` | Camino | Respuesta | Tiempo |
