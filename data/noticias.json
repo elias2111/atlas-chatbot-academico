@@ -1,7 +1,7 @@
 {
-  "actualizado": "2026-11-19T14:19:06-05:00",
+  "actualizado": "2026-11-19T19:31:14-05:00",
   "ventana_horas": 48,
-  "total": 24,
+  "total": 22,
   "categorias": [
     "Educación",
     "Ingeniería de sistemas",
@@ -11,20 +11,20 @@
     {
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
-      "ok": true,
-      "items": 8
+      "ok": false,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 8
+      "items": 11
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Tecnología",
-      "ok": true,
-      "items": 44
+      "ok": false,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "fuente": "Xataka",
@@ -36,7 +36,7 @@
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 25
+      "items": 27
     },
     {
       "fuente": "Google Noticias",
@@ -46,6 +46,51 @@
     }
   ],
   "noticias": [
+    {
+      "titulo": "'En ningún caso': Ministerio de Educación, de Ilva Myriam Hoyos, reacciona a exigencia de Fecode por nuevo cambio en colegios",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPUEJoR1JNYzVwekt4MXdad2h4UnloTXR6QXhrX3V3dVpqY0lnUHRQMXduRmN0M2oyY3BycnR2YnJEbmVDS1FRTW9ycTRJY1dOOFhKclVWN3Y0SDFsdUp5dWhsWlNaZ2Z0YmlpQTB6aVc4c09fcE95dk1QQWdGSi11VHNQZ3JCV2dOSnRQTGwtSjhnUGpmZGlWMWVkNFB6ZjZqdW5KNlNKNnJUVDlvNDJoV0NYZUdZSV93VU5CaGo0X2NsWlpjeEJJQnIteUY1U3BTd25hd1ZJR3NSb2dzUGtpbXVXX1BzOVJMRkZDOFlJdDVabUs0aXZoQktlRzdmdVE?oc=5",
+      "fuente": "RED+ Noticias",
+      "categoria": "Educación",
+      "fecha": "2026-11-19T23:19:43+00:00",
+      "resumen": "",
+      "id": "9b280e0909b660a2"
+    },
+    {
+      "titulo": "Neiva destaca en Colombia por transformar su educación",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNQzhUX0UtOS0yNjNIYy1SZ0otQkp0T0VKTE83ZHJZRWx6Y0d4MzZvdHB1Q1c0d0E5X1Rsd0FtMnY5MF85RG5COFRPcnIxbm44a25GWk9iV05sYW9NZXBkUlRfMXRXcDE4T0F6ZnQxdm1HUDlvUFVWeFBLbEVKNUtoMS1sU09YbEROQUF4M1FB?oc=5",
+      "fuente": "Opanoticias",
+      "categoria": "Educación",
+      "fecha": "2026-11-19T22:51:03+00:00",
+      "resumen": "",
+      "id": "05f9dbb65e7a07ed"
+    },
+    {
+      "titulo": "Ministerio de Educación abre inscripciones para el Foro Educativo Nacional 2026",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVExalZoTTlVcVNYajZUMHFRbXlIbV9jQ0xPa2IzUUdHenRIMnNTbnVCWVlkbGhoc0Y5Y0txVzk3bE4tY3FOZ3RFaW91NjgzUV8yNU4yNzRWclJacVBSbHdWa2pvNEJQSnBfNVhqVTRxMHRoMEhHQl9pUWhxclpLUWR4bzdYUUlwOXRBSzMydVRhNVZTWkFzNi1JeEhpRF9GZlNjUjhvQVhqVmUzYXBmMVVn?oc=5",
+      "fuente": "HSB Noticias",
+      "categoria": "Educación",
+      "fecha": "2026-11-19T21:32:33+00:00",
+      "resumen": "",
+      "id": "f5f577c23f18188d"
+    },
+    {
+      "titulo": "GFT abre cerca de 200 vacantes en Colombia para ingenieros de sistemas, desarrolladores y expertos en DevOps",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQYnliR0pOenNwOHR1djVmQmZPVUxseVBpZ25wU25mUmJYLWN0YllhaTY0cXBUbk5SMko2T3pMNjRwLUk3b0RlRmVaVE91ZmducmRXZjFucHRGeENYMEhIcHdRZGVubTU5MWJBNXNaSU14UnY2QzZCaFZraHFYbmV4YXZxT19tTVhZdlduVVhWRjFhSVZwVTVJYWVqMHNVZVBvZ3R6SlNneXdZbUZoWDV6eEZXc3JEbjhGOVQ4ci1OXzYwbzA3V1U0c1g3Sk9NejJ3TmlyRDlkTF9lMzFo?oc=5",
+      "fuente": "ENTER.CO",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-19T19:58:53+00:00",
+      "resumen": "",
+      "id": "d6aba1a826d72ea7"
+    },
+    {
+      "titulo": "Cobre confirma incidente de ciberseguridad y asegura que trabaja en su contención",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNcmxCLTc5S3d5Z2poZk1fVWJ3Uk1oQUY1dXI3TV9wb280V2F2ajQtQWloT19ZRFotQnpGQU9oYjRzRTZidDlVZ3B3Wm02eVpYdWphTHdGdEg5NmJnNWtPYVd5bFlFN3E5NFAwTEI4UDZfeGdic1RJVXVlcUg1MDRJQ3VBYkE1a3pNMVh0OFBfb3V4WVFsTDR6cjl3bHN4YzlCeC1LLTB1dXlTRDdxNzYwQXE5V2R5d3dQLUZCWk5zR3FiQVJCRWpTMTZubm5oX19sS0RuaXN3UngxRlZ6VmNR0gHkAUFVX3lxTE1pb05BQ2JUTVRyUjBreGZKM0dqdjluelVSSEUxc3VFWUtha2I2VDFtcFF5VjRDNzI0SVFteXlBa0hjS29JZmVJSVBzNy1KX1pKY24tRGIxanhFb1l1RHYtUmVJS3lpZGl2MnhiR0J4Sks1ZGNGeENzR1dxUkVfLXg5TGlHN3N1MlVKRGlSUnNreXhzVnZteERGb01pWlVOQjBjQjdRNHdMdElQZ3Q4TGVydjlOR2Q3UVEwWE5OUkRPLUZ3MU1yNk5RQnROOUlHZlFHclBBWlJ2emJycnhGcGtJSHFFdA?oc=5",
+      "fuente": "Portafolio.co",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-19T19:47:56+00:00",
+      "resumen": "",
+      "id": "98a8dd6039fbefd6"
+    },
     {
       "titulo": "Unos científicos de la Universidad de Pensilvania quieren usar mantas de emergencia para construir edificaciones lunares",
       "url": "https://www.xataka.com/espacio/mantas-emergencia-tienen-aplicacion-inesperada-luna-estos-cientificos-quieren-construir-edificios-ellas",
@@ -65,13 +110,13 @@
       "id": "6dd8878dd3d16a09"
     },
     {
-      "titulo": "Museos inmersivos en Colombia: cómo la tecnología transforma la experiencia de visitar el patrimonio cultural",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNaV9qVXhDV1pYVHZHWGRmOTIwVEczcTJoNThudngyM1BCQzM1RElHVWNTVnVJa2lfOTd2MDlzSUJGanlhSVNXUHVSZ0hMQ3BXM3REc0duS3YwdDYzV1VIc0FoVS1faHkySTdIcUdlWTVucEllZlJqVzk2alY5OWdGU2pja3JqM1UtY2RWa0hFT3hVSzlpSXluOU01cGxKUG8yV1hnY0JidEZITjlPQWhmaHlWRUdTZXRQcERza0k4WGtGMEtVYzk3NkJmNEIxS3BaRWVOdVRzZWJZRENyWVJsVWVINnJ1Y3JIVlE?oc=5",
-      "fuente": "Publimetro Colombia",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-19T17:15:45+00:00",
+      "titulo": "Becas Jóvenes Pa’ Lante abre una nueva convocatoria con tres mil cupos para acceder a educación superior en Antioquia; así puede aplicar",
+      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNdlBOQy1fT3BNVWhZcWs5VHYyal81bzhsaWFDVzkxMUc0MkZNTTRtdVpldy00VWpNRDNaOTM5bUx1OHNnZ2RONHdxR1lvZzgyQTlObXFmMVpxeFhPS0JjbkxGQ2NxdUZiTFIwWGg2dldqaXZhOTYydllUcmNUZTFRNGNmdkZUVlVYQnVTT2JEZXdxdUowUkFsYmN5dFljbGotQXlqTC1kTEw2X1F4VmR0SE5FdGpQWVJlLXFSVS1jNjNwVE1VWlJBaWRVd25kblo2UlduUGxhTkpTTm5xMXp5Q1VjenM1TjF2WGE0OUIzNXdMLUxMR0dZalVLbmFTSXp1UTdZVWlVUFEybUU?oc=5",
+      "fuente": "Teleantioquia",
+      "categoria": "Educación",
+      "fecha": "2026-11-19T17:43:24+00:00",
       "resumen": "",
-      "id": "bc42202f9619aaf3"
+      "id": "ec482203d31ed907"
     },
     {
       "titulo": "Los ordenadores de Apple también bajan de precio en durante el Black Friday: el Mac mini M6 ya está de oferta",
@@ -83,40 +128,13 @@
       "id": "31642193cf836074"
     },
     {
-      "titulo": "Ingeniería en inteligencia artificial, diseño finanzas y alimentos: estas son las 12 nuevas carreras que llegan a la oferta de la IUB en Barranquilla",
-      "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxPeW1kdkpEeXdUanBCUjhwdTJNM0hxYjFuLS0xR1htSk12ckFyZEF1Znp3RnR1eE1JSU54U3JOd2E5MmNzcXdHQTRyT2lSVmRId3dIRk5saEFlTW0weEhVcnBxamdPUkN5SzhwTVdkLWlNcmhOeG1kb19tT2lxQ1V3ZWI1SWpwZUVoSzJGSm5tYkkyckNjaDdMSUJ0Y1J4OE9ONnNyLTNoNG1WYTY5Q2lqcm1LLUJwZ2RJajg4c2VLU3RXdkg2aU80VElYenBMTVdxVkRRTW5KSjFzT0tUdWxDZkhQTTJSWnlvUGRXb2U4aU1FQzBKcS1VbHktTTlJNXVEME1FSnJxUC1HSW9iaEpuN3Vjc0MwcmxzODhsVDlhVlBWWlAtbmtKTnZ3?oc=5",
-      "fuente": "El Tiempo",
+      "titulo": "Amazon y Google son accionistas, proveedores y canal de venta de Anthropic. Todo a la vez",
+      "url": "https://www.xataka.com/empresas-y-economia/amazon-google-accionistas-proveedores-canal-venta-anthropic-todo-a-vez",
+      "fuente": "Xataka",
       "categoria": "Tecnología",
-      "fecha": "2026-11-19T17:01:00+00:00",
-      "resumen": "",
-      "id": "e53fe17702c156fd"
-    },
-    {
-      "titulo": "Colombia | La CRC abre el diálogo sobre inteligencia artificial, piratería audiovisual y ciberseguridad",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSEJQTmdkWkljRUFuRUdQM0xIQW04M3JZcXF5ODVTQXRIZlhfY2RGTlN0QjV0QkVGOW82VHJGMjRsZnJYbkpaYXBONU9leVVBTUtyMnlDYktoajdEaXIwVVNwTGxRUi1HYUxzYTdPMHk3QWhwZ1FxWGNjd1ZmUHBwS1NPVnVLNThYNmNZQmNJUVZtVjFjQWNEeHlyWXlVdEpIVTZHX2tnc0NGbWp6VEpPU1NvRWZfcjVGR3pBQkN3?oc=5",
-      "fuente": "DPL News",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-19T16:45:30+00:00",
-      "resumen": "",
-      "id": "e485a2fe043b0424"
-    },
-    {
-      "titulo": "Colombia | Invías Inteligente: tecnología para modernizar las vías y fortalecer la seguridad de los viajeros con el MinTIC",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNa2Roajc4a1RIdUR4WGtsMzRIbFhzRkpJNWxLZUg5Sk1vRjA0dEJBU2NPUE1kSWgyRFU1YXpPeFk0bWpxMERJTDFXNEJrVFhFVjZVR0paZUZsU3RDaWdUTnZLMG5FR1A1WmQwU05WcEhwTk53cWgwVG9XekJ2TFd5Z2lGa0NiNjVYcGNDWE9NVzNtTzFQQVhEdm82dHFydzZtMC12ZERwbURNZ1V0cUFyZTM3VVhSQ3Q3OFFkUVhVc24xREdLSTlaYU1DdUxhWVV5N2VQR01FSQ?oc=5",
-      "fuente": "DPL News",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-19T16:42:45+00:00",
-      "resumen": "",
-      "id": "a110c2add25ae037"
-    },
-    {
-      "titulo": "Colombia | Bogotá tendrá un nuevo Centro de Ciencias para impulsar la participación ciudadana en ciencia, tecnología e innovación",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQLVpqZGJVaHZMT3RNTlVUWXFiVHVtbE9ZM2pld0hIWUh3SGlSZENXZWVqSm85LTJwVjZrdmJEZEhzRndFeWg3THhveXJVdEhSNW02R040TkVXSHluWm1iWWhrN2ItVlR4R1hGYXA1T3RHd2dnSks4VklXdEdPZ2s2SmFYRzVndXQ3RjZON3lUUHc1Tk9oTWRybm5MZnd1RERGWHFmeXNLb25FYVRsV1ZiODNKTW53Mml0RFBDd005cUFEU0dyeEY3bVZPdEN2eXF1MGdxV2VrdlNOVERvVDI2ZQ?oc=5",
-      "fuente": "DPL News",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-19T16:31:22+00:00",
-      "resumen": "",
-      "id": "afd0d61eec64f261"
+      "fecha": "2026-11-19T16:01:18+00:00",
+      "resumen": "Anthropic sale por fin a bolsa en el Nasdaq, y su folleto de salida a bolsa, el S-1, ha puesto cifras a una relación muy peculiar. Amazon y Google... Son sus accionistas. También le venden la computación. Y también gestionan la tienda por la que pasa casi la mitad de lo que factu",
+      "id": "ae010e30c69c08c9"
     },
     {
       "titulo": "Histórico para la educación en Colombia: aprueban el primer Doctorado en Administración Pública y así funcionará",
@@ -146,49 +164,49 @@
       "id": "b1a947139e110aa2"
     },
     {
-      "titulo": "Requisitos, universidades y más datos de Jóvenes a la E-6 en Bogotá",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQc1FYVEhCV3RBZDJKaFd5LWNIanVJbENUZTNZZ1ppNHN2RzNIckswQ216YUNJWFpodVV3YWZIQnBIUmNTR2VDN3F1UUYxYnhDYXVrVnVfcUl6dmkwRG8wdm03QWRPd0hPeVdiNkdTcVVsanVpWEtHdHk5WFRuVUpnT3h1RmREY0xUNElLNG5uelhDQ2k2QjJlWkRySDlrQnpnOW5EN0oxNms2cklVemJoRm5DY2M?oc=5",
-      "fuente": "Bogota.gov.co",
+      "titulo": "Derecho, Inteligencia Artificial e Ingeniería de Datos: la apuesta académica de la Universidad Metropolitana",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOQWJ1UF9lTEgtQUd3STR5Wk91NURLMHlQVGp6YS1XS3hLNGFzV2RoUEh5WFNuRFJBTzNKMExma3pfYmdhNDhqTVhqQmdiMlowbnEzWElUU1k4eUVjNHJRTGs1cDlJZERkcHkzMTRCVThwNld2YkF1ak9wMGNKWURhX2NUUkU1NGcyYjhCeEJjelZsVDl0ZlJsNmZSbGFKeFdSZlQwQVBoMURXMlR3dmhDSElzcTdZX2VYcEI1cjU5bU1jUTI3d2tlMDZyMjlDNkN4YnpKRXMyRGZxLXZ6Y3huelhpSdIB6wFBVV95cUxPaGtZa0R1bk9mLVY2VFF2UXZPOFhNYmw2MkZsYm9iOXdGdDFBdXZEY3NBdnVldDhVSHlfdFZ6cjM4WWFFU0lRSmxsVEpOQTl0MUVPUEw5NThMbzRsVndTbklyWU42YUlvTk5JTjdvRzh3MlVpWDFIWEpxZEpTOFhYTVNtaGl1S0U2RU0tenNiNW5heGE3QjViaDlEbmdTQm45NHFBNUtKaDRrSV9lTElMV0JoTHpBX3VYZGRubm0zcXp1QjliaUphSG54WWZEQlUzTGx6Smh5UU5YeGpNTVREdUtCSG9CVE9KdkZv?oc=5",
+      "fuente": "Emisora Atlántico 1070 AM",
       "categoria": "Educación",
-      "fecha": "2026-11-19T10:34:25+00:00",
+      "fecha": "2026-11-19T14:05:36+00:00",
       "resumen": "",
-      "id": "0666a186624a6de7"
+      "id": "5bd09d633184eeb5"
     },
     {
-      "titulo": "Becas online de la Universidad Alfonso X el Sabio abren a jóvenes colombianos una vía para cerrar la brecha de talento digital",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPZnhxOXI3QUl4cVpnS3E2cDdyakRZWURUdUk5Wms4eWZpcmNlVW1pUWFFSGtKWFZ2RTFRc29wa0xrTUlGM1R0SWppNGNIbzd0WWpsTWpBSmg1WXJLQ28yNHpxdFNsM1JPbHl5cS1JeldJc05rMW5ZMDQ3dVJFWjUtME9tV19KMElraXVSSW9sdk1talpmYVBpNkxkNWQtWGx4dWtqTXhEcjc4dzJTOG01QlA3SDY5WGlHbGthYVl0cnZiLWp3RElWNVBsMUNod2tKNTJwNzUwdHBZVkFaSmllbWFsYjB3ekRl0gHuAUFVX3lxTE9qejJWWFplak9wQkY2VEdmRjBsUDBYekk2ZDJqMXJmVGM1MENFR3NVSi1VN0Q3ejdoVXhuM1ZEbm4xeUl3dDg3VGV4X0g5SWlPejV2UTd5M1dOYWZ4ZEJ3YjVwank3WTRHZjNVM3IyR0FiUURDY2dIanJCYXRUaFkwMmNCQ2NTU3FfRjRuVkN1UU4wRW12VWdlT0hnYXBwLTEtcDF5a3M4MlZCUGZKaDlWeEV5TEExb0NNbEV6V1k5SXM0ZWR2RGVHdUYxU2ZqRDZsbWdIQmtMWHQwODQtOWFuRGx2U2NMVHF3eXp5OGc?oc=5",
-      "fuente": "Technocio",
-      "categoria": "Educación",
-      "fecha": "2026-11-19T04:45:04+00:00",
-      "resumen": "",
-      "id": "d87aae68a82f0c0c"
+      "titulo": "EEUU busca desesperadamente tarjetas de memoria de los años 90 para su caza furtivo más sofisticado. El problema es que ya nadie las hace",
+      "url": "https://www.xataka.com/magnet/eeuu-busca-desesperadamente-tarjetas-memoria-anos-90-para-su-caza-furtivo-sofisticado-problema-que-nadie-hace",
+      "fuente": "Xataka",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-19T14:01:17+00:00",
+      "resumen": "Hay máquinas tan avanzadas que parecen adelantadas a su tiempo. Pero mantenerlas funcionando durante décadas puede convertirse en una batalla contra la obsolescencia, especialmente cuando sus componentes dejan de fabricarse y la tecnología que utilizan desaparece del mercado. Est",
+      "id": "bc2d9bd610137ffd"
     },
     {
-      "titulo": "Unicórdoba nuevamente se destaca entre las universidades del país por su reputación académica y reconocimiento de empleadores en el QS 2027",
-      "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNbGpUZWtBcW9FS0NwejNFemZWY2lESE0wT2RYWExRX214UWd3N0NrTWhzcWgtQ2RBZlFZeGZLU1dzVVFCVEZPZ3F5TEprQ3VFVGc2aFN3c0dUR0MzeUNJNnk1eUVveVFad1FucVVxZk1HRllFRnFSR3lPeVM1cUFQNEJmMDJYTldoZ0RGTzlRUlMyVmRITm1Lank4V0hjYWozZjhqc1VkUGduN3lhUEFIWXctb09ZbDlHV2UtNEZqc0NrdDlZNnhISjZQcURuZ1BLTkRfbUVEWjFNeWZyaUpLTVZ1TFJGcG4xODhBTXdibEVucWNkMThlTFlXbWtVU1R3OUpOT1FncXVUT09QRUNvNWRzRQ?oc=5",
-      "fuente": "ELHERALDO.CO",
-      "categoria": "Educación",
-      "fecha": "2026-11-18T21:40:03+00:00",
-      "resumen": "",
-      "id": "86dacefbab762879"
+      "titulo": "Los expertos en longevidad lo tienen claro: \"vivir más tiempo no es cuestión de hacer ejercicio, sino de en zonas donde todos los desplazamientos al trabajo se realizan caminando\"",
+      "url": "https://www.xataka.com/medicina-y-salud/expertos-longevidad-tienen-claro-vivir-tiempo-no-cuestion-hacer-ejercicio-sino-zonas-donde-todos-desplazamientos-al-trabajo-se-realizan-caminando",
+      "fuente": "Xataka",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-19T13:31:14+00:00",
+      "resumen": "Entre 2013 y 2016, casi 200 personas con la misma app de contar pasos hicieron las maletas y se fueron a vivir a Nueva York. No se mudaban por salud, ni nada de eso. Unos lo hicieron por trabajo, otros por amor… Lo único que tenían en común era que venían de ciudades con un \"walk",
+      "id": "4daf10bea8b2a440"
     },
     {
-      "titulo": "¡Oportunidad de oro! El ICETEX lanza becas para hacer una maestría o un doctorado en China: Requisitos y Fechas.",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxObjVmekhXQU9BRm96YVpndU9CbzRMWUJZY29wandZVmVGU3AtT193alVlYmdtWVFXdVd5VHFDeG1UMFJkOHNoX1pHQkRjREFxQV9nS21NeGFrbTlfZnVCNmRZMC1qekhha2hCV29Ib2lrZ2JKMUloaGpUVjdKbE1SNy13TjdFdTNpUzdrTFlhZ1hnR1I2VXhJZF9YOHR2UmJWU2RneFlTTU9EWmJqQmd1TmRKWEhDN1IxQVZMV2Zfd1YzaHROV1hGMVNCRENsbjlwR0tN?oc=5",
-      "fuente": "Nos Cogió la Noche",
-      "categoria": "Educación",
-      "fecha": "2026-11-18T21:37:26+00:00",
-      "resumen": "",
-      "id": "8db186daafb2b1ab"
+      "titulo": "El nuevo robot aspirador de Lefant está a mitad de precio en Black Friday. Y su versión económica, por 180 euros durante unos días",
+      "url": "https://www.xataka.com/seleccion/lefant-tiene-robot-aspirador-que-friega-siempre-agua-limpia-este-black-friday-tenemos-a-mitad-precio",
+      "fuente": "Xataka",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-19T12:45:00+00:00",
+      "resumen": "A la hora de ayudarnos a limpiar en casa, pocas cosas hay más útiles que un robot aspirador . Son dispositivos que se encargan de mantener el suelo limpio, todo con apenas esfuerzo de nuestra parte. Aunque bueno, también depende del modelo que elijamos : lo ideal es que también f",
+      "id": "f65e5b6a6e4e4e2c"
     },
     {
-      "titulo": "China y Colombia abren convocatoria de 30 becas completas para maestría y doctorado presencial en universidades chinas",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOOTZoZHhxR3dVcW9sYmt2ejZpVmVtSm9HZXUzaFNuS1FVMGlRalJVXzlkdWpfZVNSbDIyNWMtMWNhOXVxblpMRnBhMVp1bmllaTJkWDVpTEFXZXpYQTVYYnZCN25nYkFYX29hTndYNURfc3JFN1AweGxSbzBPZmhJSHdzZVU5RzV1RFpzWXBkQnlNeVZEVmhtWlMzcldEWDF4TlV2WTA4Vi0xNmtrYTZ5Uml5Y2RsUm9nSWxuYlBjUHhtRnpuNEthVGVwX1VwVDBp0gHWAUFVX3lxTE9qd1ZySnlTcDNVdHo1U0pHck95NVNnc2t6OE9IQUc5QXU1Yk55THJVaTFjYWR0MVFsbktRa3A5dmc0N2NaUXU5MnpzSGl3eFVXaTQzTnkteWRFa1VUUFQtazFCUk1DRXp4dFVzVVNta3YtNzJ3LS1MZnduS2hWZkMyYnpLbE9iT2FQOHppd2M2NDJuV1FNTklSV3d6dnVDd0hFRi1TVExlamJneklCVUtEeHFDUF9iX2ZQRzVpbXNlTXR3OFNPdGlZcXpRenNFZG1tSFkyc3c?oc=5",
-      "fuente": "Pulzo",
-      "categoria": "Educación",
-      "fecha": "2026-11-18T20:31:34+00:00",
+      "titulo": "¿Busca empleo en tecnología? Abren cerca de 200 vacantes para profesionales con experiencia en Colombia",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUndhTnEtdmVodTB5NlVWeXNjamt4MHlOTDhOS1hDREprWEdadDNRZG1HSWdiMHVld0lKVWNnLXp3T0h2T2QzMTFpaXhJSGhYNXRNMWRUaXoyVHpHZThDc1pYN3JNeWt3MURDVGZlaVQxNFZoQ0FFa3R4OE4yMmtDNnNoV19jdW01cmE0RENZci1VQkRRNzI1TGJpeHhia0xZdUU0TUFUck9xcGFBVFB5dUNkLUVVbkVldkpMZk9BMV8?oc=5",
+      "fuente": "guapacho.com",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-19T11:57:38+00:00",
       "resumen": "",
-      "id": "5b9370b96e235078"
+      "id": "180acd102cef1acd"
     },
     {
       "titulo": "¿Qué universidades en Colombia tienen la carrera de Ciencia de Datos? Tiempo que dura y más",
@@ -200,15 +218,6 @@
       "id": "ff6565c449c54154"
     },
     {
-      "titulo": "Programa de Ingeniería de Sistemas de la UCC de Ibagué logra acreditación de alta calidad",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNV1lsV2VVck44SkYzc2tWNkFxa0NRSUh3b3NRekxHcjJKUEpSZVo4UGk1cmRMVGc1am90Z05QT3RyUEU3aXBraEkzdjJ1WG5UNzIzcHhrTVktLVBVbDBhLUlLNkNET3dER1RvdTVyVmhKeVlLZjJsS0NfWm1JU2dTOE41c25DZVFCR3M5eS1UQ0Y3bzVuNk5OSXFJQ2xZenktSEpxU1Q1ZGxOT3dtZDQ2RDRUUzhsX0ticVBqY1FPenNGRldoN19RS1l2UEtfRVdiNE5v?oc=5",
-      "fuente": "Emisora Ondas de Ibagué",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-18T18:37:19+00:00",
-      "resumen": "",
-      "id": "90fcdb99dfa05f57"
-    },
-    {
       "titulo": "La IA transforma a las empresas y a la carrera de la Ciberseguridad: detectar rápido es necesario, pero no suficiente.",
       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPYzltTVFjb3hvQkwtSFNlelgwTU5LOGxndUdxbXl4dVU0U3BMc0NKLW9QSjlCQ2hfRjZuV2RUQjlMZUpjNlRFNHhFYzhXQ1BFQW1XZXc1S2JUZG1fdXh0TE0tQnhaTGU5TmRaWUVad212MHB3dkFrenQtUHhOem9DSzRyX21yX0lZNkxlSTllRmVpUjFvRkF1Mk9sSHo5TXV4U3BiekZLNTJNb1RIM25WVUFXNlc2R09CRzQ3S0dqMjlqRHluaDc5YzEyQ3JwZVpLMUdURUdrOFlJU0RkdDdBbnF4MGMxUlNwMkJ1WXRXdGhUY3BZ?oc=5",
       "fuente": "ITSitio",
@@ -216,15 +225,6 @@
       "fecha": "2026-11-18T17:18:56+00:00",
       "resumen": "",
       "id": "bd29ac44281fbfad"
-    },
-    {
-      "titulo": "Estudiante de Ingeniería de Sistemas de Unilibre Barranquilla se destaca por su excelencia académica y experiencia internacional",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQWWxIZktLOWdNSjEyT2hzTTJTNFpqbTFaeEwzNUR3bm51R1FSUWJQUW1vT1JHS1A4Y0U5b2Flc0FDSU1BR0NBQVVoSUpOUWlOTjU0a0F1cjkwRk94dTYybWI5dHE3d203bFdrNnZTdlR2UVk1VHVORXRTRF9ONFk3bDFCSlZEandZV3ZGOXNCY0pUcF9HNHVxTVhoRThlUWlIdXJfaDVYelVkbS1vY3V3UnVXVHp5M2JtaER1RVR2STFLZjdEdFVPa3otR1pCQ3ltOHZBUnZjT0ZIc19hRnpjRWRxSU5QWnc?oc=5",
-      "fuente": "impactonews.co",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-18T17:00:38+00:00",
-      "resumen": "",
-      "id": "8b8d18d52234bc3c"
     },
     {
       "titulo": "¿Cuánto dura el Tecnólogo en Análisis y Desarrollo de Software del SENA? Requisitos y convocatorias abiertas",
@@ -243,24 +243,6 @@
       "fecha": "2026-11-18T10:43:58+00:00",
       "resumen": "",
       "id": "736797bdf1b36ce0"
-    },
-    {
-      "titulo": "Morgan Willis, desarrolladora de AWS: \"Los programadores están acabados, todos deberíamos convertirnos en fontaneros o electricistas... Todavía no, pero quizás sí\"",
-      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxQN1piQi1PM2ZtMnYycE5GQTFjY0YtN0FKMHNzYUMwMEFaWkwzdGRmWng1blZrYzFTeC1GZHZvM3hqY0JiUUpPMnl1OTJaZF9RdFlIVTNLTThtd18xNkdkdE9tZUNaelk5ZzNsMXkwRWNuVEZGblA1QjI5NGpqNldxdW1ucmswUWo5ZVlMQk9ieVY4aXo3N2ZYNHBQXzlrRXpqbF8tMGtySmprOHVJa1NzVVdOYTVKaXF2Z1ltNGQ3cTJnU1AyeEI3cVR6ejVOQVZBUTJwZmJ5Q1dVeGxHRTEtQ2M1di0xQVJJbDE3ckJsdElwVDV1MGxzdUNnQXRyd2dPLXFIWVNRcURJXzkza3ZzbTBPMjVYZlc0ZGhLb2N3?oc=5",
-      "fuente": "Prensa Mercosur",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-18T08:31:35+00:00",
-      "resumen": "",
-      "id": "e2242c0bf10350ed"
-    },
-    {
-      "titulo": "X Concurso Nacional de Programación: Cuatro equipos ganaron con proyectos de innovación tecnológica",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPOFQyM3dQdm00ZjZ4REVvRkVyZWFsQUlDbVMyVlUzdGF0YlI5RUxsTTY1TFA0Uy1TZ2lwc2I1QzNxY0VxejAwRjVMajF0MGVYd2pKTWxXUGFZSkoxOGswNjBKTlN1YVozMVo2WEpuajVvN0NLZUREd05PMEV1TlBBdW8xeDdwWXdPc0pnQ0NfMHc1VjBEUDhxdnBKUHNVTEJKUGV0ME1lV19LUVRDUE1Ienpha0Y1b1U0NVltbko2dnp2Q0tzbFV2LXdqT0xQQdIB4gFBVV95cUxPWFZQLTUzdGp2TExjSXBkUWRWUlVwdXQtVURYLXkzbHVINVRTNnBWUnhlSGRDdW93MmJjV3B0OEo0bUxmNHdpa3FEY0RXbkUzZjNtZThwYXBIM18yakRVVWhWSG5xbmd2amZkRjZaaEpkbG9XajBfMHVUcVpFY3dvdmhBd2RackhtMVo3QkhOb3FtSmQ3VVdyWjktd2VOTDZMalJMTmFFbno4MlVOMHBmaEdKN2t3aldxNWhkX0VPOVE3eHpMbnE5VWdXbGtieFZkNTk1NTFZel9vMzJsY2dva2hn?oc=5",
-      "fuente": "Caracol Radio",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-17T20:26:22+00:00",
-      "resumen": "",
-      "id": "1e12986ccec9205b"
     }
   ]
 }
