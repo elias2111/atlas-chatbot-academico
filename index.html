@@ -572,6 +572,10 @@ const saveSettings = () => store.set("settings", settings);
 /* Backend desplegado (n8n Cloud). Se aplica una sola vez; si el usuario lo borra en Ajustes, se respeta. */
 const DEFAULT_WEBHOOK = "https://atlas-elias.app.n8n.cloud/webhook/atlas-chat";
 if(!settings.webhookDefaulted){ if(!settings.webhook) settings.webhook = DEFAULT_WEBHOOK; if(!settings.studentId) settings.studentId = "20221045"; settings.webhookDefaulted = true; saveSettings(); }
+/* Supabase desplegado: URL y clave publishable (pública por diseño; los datos los protege RLS). Se aplica una vez. */
+const DEFAULT_SB_URL = "https://ztbyvyfdgqtapultjrvh.supabase.co";
+const DEFAULT_SB_KEY = "sb_publishable_18RWJgzA0Ws4BsuzxKWLew_DcDPNg1y";
+if(!settings.sbDefaulted){ settings.sbUrl = DEFAULT_SB_URL; settings.sbKey = DEFAULT_SB_KEY; settings.sbDefaulted = true; saveSettings(); }
 
 /* ---------------- PLAN DE ESTUDIOS · Ingeniería de Sistemas (151 créditos) ----------------
    Asignaturas y créditos tomados del plan oficial. Los prerrequisitos son una
@@ -2001,8 +2005,8 @@ async function sbPush(silent){
     return true;
   }catch(e){ setSbStatus("✖ " + (e.name === "AbortError" ? "tiempo agotado" : e.message), false); if(!silent) toast("No pude guardar en la base de datos: " + e.message, 5000); return false; }
 }
-$("#sbPull").onclick = async () => { settings.sbUrl = $("#sbUrl").value.trim(); settings.sbKey = $("#sbKey").value.trim(); saveSettings(); if(!settings.sbUrl || !settings.sbKey){ toast("Escribe la URL y la anon key de Supabase."); return; } setSbStatus("Conectando…"); await sbPull(false); };
-$("#sbPush").onclick = async () => { settings.sbUrl = $("#sbUrl").value.trim(); settings.sbKey = $("#sbKey").value.trim(); saveSettings(); if(!settings.sbUrl || !settings.sbKey){ toast("Escribe la URL y la anon key de Supabase."); return; } setSbStatus("Subiendo…"); await sbPush(false); };
+$("#sbPull").onclick = async () => { settings.sbUrl = $("#sbUrl").value.trim().replace(/\/+$/,"").replace(/\/rest\/v1$/,""); settings.sbKey = $("#sbKey").value.replace(/\s+/g,""); saveSettings(); if(!settings.sbUrl || !settings.sbKey){ toast("Escribe la URL y la anon key de Supabase."); return; } setSbStatus("Conectando…"); await sbPull(false); };
+$("#sbPush").onclick = async () => { settings.sbUrl = $("#sbUrl").value.trim().replace(/\/+$/,"").replace(/\/rest\/v1$/,""); settings.sbKey = $("#sbKey").value.replace(/\s+/g,""); saveSettings(); if(!settings.sbUrl || !settings.sbKey){ toast("Escribe la URL y la anon key de Supabase."); return; } setSbStatus("Subiendo…"); await sbPush(false); };
 $("#sbOff").onclick = () => { settings.sbUrl = ""; settings.sbKey = ""; saveSettings(); $("#sbUrl").value = ""; $("#sbKey").value = ""; setSbStatus("Modo local: los datos viven solo en este teléfono."); toast("Base de datos en la nube desconectada."); };
 $("#dbDemo").onclick = e => confirmBtn(e.target, "Recargar datos de ejemplo", () => { const old = DB; DB = demoDB(); DB.deleted = old.ev.map(x => ({t:"evaluacion", id:x.id})).concat(old.tk.map(x => ({t:"tarea", id:x.id}))); saveDB(); refreshAll(); toast("Datos de ejemplo del semestre recargados."); });
 $("#dbEmpty").onclick = e => confirmBtn(e.target, "Vaciar semestre", () => { DB.deleted = DB.ev.map(x => ({t:"evaluacion", id:x.id})).concat(DB.tk.map(x => ({t:"tarea", id:x.id}))); DB.ev = []; DB.tk = []; DB.demo = false; saveDB(); refreshAll(); toast("Semestre vacío. Agrega tus evaluaciones y tareas."); });
