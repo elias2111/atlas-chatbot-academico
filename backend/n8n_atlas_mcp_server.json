@@ -78,9 +78,9 @@
         "descriptionType": "manual",
         "toolDescription": "Lista las tareas del estudiante con fecha de entrega, días restantes, estado y avance. Parámetros: codigo del estudiante y categoria opcional (vencida, incompleta, por hacer, entregada) o vacío para todas.",
         "operation": "executeQuery",
-        "query": "SELECT fn_tareas($1, NULLIF($2, '')) AS resultado;",
+        "query": "SELECT fn_tareas($1, NULLIF($2, 'todas')) AS resultado;",
         "options": {
-          "queryReplacement": "={{ $fromAI('codigo', 'Codigo del estudiante', 'string') }},{{ $fromAI('categoria', 'vencida o incompleta o por hacer o entregada o vacio', 'string') }}"
+          "queryReplacement": "={{ $fromAI('codigo', 'Codigo del estudiante', 'string') }},{{ $fromAI('categoria', 'vencida, incompleta, por hacer, entregada o todas', 'string') || 'todas' }}"
         }
       },
       "credentials": {
@@ -128,9 +128,9 @@
         "descriptionType": "manual",
         "toolDescription": "Devuelve las noticias de las últimas 48 horas sobre educación, tecnología e ingeniería de sistemas (título, fuente, fecha, enlace). Parámetro: categoria opcional (Educación, Tecnología, Ingeniería de sistemas) o vacío.",
         "operation": "executeQuery",
-        "query": "SELECT COALESCE(json_agg(n), '[]') AS resultado FROM (SELECT titulo, fuente, categoria, fecha, url FROM v_noticias_hoy WHERE ($1 = '' OR categoria = $1) LIMIT 10) n;",
+        "query": "SELECT COALESCE(json_agg(n), '[]') AS resultado FROM (SELECT titulo, fuente, categoria, fecha, url FROM v_noticias_hoy WHERE ($1 = 'todas' OR unaccent_lower(categoria) = unaccent_lower($1)) LIMIT 10) n;",
         "options": {
-          "queryReplacement": "={{ $fromAI('categoria', 'Educacion Tecnologia Ingenieria de sistemas o vacio', 'string') }}"
+          "queryReplacement": "={{ $fromAI('categoria', 'Educacion, Tecnologia, Ingenieria de sistemas o todas', 'string') || 'todas' }}"
         }
       },
       "credentials": {
@@ -166,21 +166,20 @@
     },
     {
       "id": "187edb82-b80b-46d3-9668-4be8827bc86e",
-      "name": "Embeddings (OpenAI)",
-      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
-      "typeVersion": 1.2,
+      "name": "Embeddings (Gemini)",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "typeVersion": 1,
       "position": [
         500,
         460
       ],
       "parameters": {
-        "model": "text-embedding-3-small",
-        "options": {}
+        "modelName": "models/gemini-embedding-001"
       },
       "credentials": {
-        "openAiApi": {
+        "googlePalmApi": {
           "id": "REEMPLAZAR",
-          "name": "OpenAI"
+          "name": "Google Gemini(PaLM) Api account"
         }
       }
     },
@@ -267,7 +266,7 @@
         ]
       ]
     },
-    "Embeddings (OpenAI)": {
+    "Embeddings (Gemini)": {
       "ai_embedding": [
         [
           {

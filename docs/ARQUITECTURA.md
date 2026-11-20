@@ -6,7 +6,7 @@ ATLAS es un modelo en n8n que apoya al estudiante de Ingeniería de Sistemas en 
 |---|---|---|---|
 | 1 | Orquestador | **n8n** (4 flujos) | [`backend/n8n_*.json`](../backend) |
 | 2 | Base de datos | **PostgreSQL** (Supabase) + pgvector | [`backend/schema.sql`](../backend/schema.sql) |
-| 3 | Agente / LLM | Agente de n8n + **OpenAI gpt-4o-mini** + memoria en PostgreSQL | `n8n_atlas_chat.json` |
+| 3 | Agente / LLM | Agente de n8n + **Google Gemini (gemini-flash-lite-latest)** + memoria en PostgreSQL | `n8n_atlas_chat.json` |
 | 4 | RAG | Embeddings `text-embedding-3-small` + **pgvector**; corpus en [`rag/docs`](../rag/docs) | `n8n_atlas_ingesta_rag.json`, [`docs/RAG.md`](RAG.md) |
 | 5 | Servidor MCP | **MCP Server Trigger** de n8n + servidor MCP en Python | `n8n_atlas_mcp_server.json`, [`mcp-server/`](../mcp-server) |
 | 6 | App móvil | **PWA** instalable en Android e iPhone (voz, notas, tareas, noticias) | [`index.html`](../index.html), [`docs/ANDROID.md`](ANDROID.md) |
@@ -42,7 +42,7 @@ flowchart LR
   end
 
   subgraph EXT["🌐 Externos"]
-    OAI["OpenAI<br/>LLM + embeddings"]
+    OAI["Google Gemini<br/>LLM + embeddings"]
     RSS["Fuentes RSS<br/>Google Noticias · Xataka"]
     GHA["GitHub Actions<br/>scraper_noticias.py"]
     GHP["GitHub Pages<br/>app + data/noticias.json"]

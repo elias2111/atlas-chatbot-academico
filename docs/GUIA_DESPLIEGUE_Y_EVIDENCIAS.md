@@ -28,7 +28,7 @@ Esta guía deja ATLAS funcionando de punta a punta (app → n8n → PostgreSQL +
 1. Crea una instancia de n8n: **n8n Cloud** (https://n8n.io, prueba gratuita) o con Docker (`docker run -it --rm -p 5678:5678 n8nio/n8n`). Para que el celular llegue al webhook, la instancia debe tener una URL pública: n8n Cloud ya la trae.
 2. Ve a **Credentials** y crea:
    - **Postgres**: Host `db.xxxx.supabase.co`, Database `postgres`, User `postgres`, la contraseña del paso 1, Port `5432` y **SSL: require**.
-   - **OpenAI**: tu API key de https://platform.openai.com.
+   - **Google Gemini (PaLM) API**: API key gratuita de https://aistudio.google.com (Get API key). No requiere tarjeta.
 3. Ve a **Workflows → Import from file** e importa, en este orden:
    1. `backend/n8n_atlas_mcp_server.json`: asigna las credenciales, actívalo y copia la **Production URL** del *MCP Server Trigger*.
    2. `backend/n8n_atlas_ingesta_rag.json`: actívalo, abre la URL del formulario y sube los 3 archivos de `rag/docs/` y el [PDF del reglamento](https://unab.edu.co/NewFolder/Reglamento-estudiantil-pregraod.pdf).

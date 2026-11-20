@@ -87,7 +87,7 @@
           "mappingMode": "autoMapInputData",
           "value": {},
           "matchingColumns": [
-            "id"
+            "url"
           ],
           "schema": []
         },

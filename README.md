@@ -91,7 +91,7 @@ Diagrama completo, secuencia de una consulta y **justificación de cada decisió
 
 1. **App**: ya está publicada. Para tu propia copia, haz un *fork* y activa GitHub Pages (Settings → Pages → `main` / root).
 2. **Base de datos**: crea un proyecto en Supabase y ejecuta `backend/schema.sql` en el SQL Editor ([detalle](docs/BASE_DE_DATOS.md)).
-3. **n8n**: importa los 4 JSON de `backend/`, crea las credenciales de Postgres y OpenAI, sube los documentos del RAG y activa los flujos ([detalle](docs/WORKFLOWS_N8N.md)).
+3. **n8n**: importa los 5 JSON de `backend/`, crea las credenciales de Postgres y Google Gemini (gratis), sube los documentos del RAG y activa los flujos ([detalle](docs/WORKFLOWS_N8N.md)).
 4. **Conecta la app**: en Ajustes pega la URL del webhook de n8n (Conexión n8n) y la URL y *anon key* de Supabase (Base de datos académica).
 5. **Scraper**: ya corre en GitHub Actions. Si agregas los secretos `SUPABASE_URL` y `SUPABASE_KEY`, también guarda las noticias en PostgreSQL.
 6. **Pruebas**: `bash tests/probar_webhook.sh`, `python mcp-server/probar_mcp.py`, `python rag/rag_local.py eval`.

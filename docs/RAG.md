@@ -9,7 +9,7 @@ flowchart LR
   D["📄 Documentos<br/>rag/docs/*.md<br/>+ PDF oficial del reglamento"] --> F["Formulario n8n<br/>ATLAS · Ingesta RAG"]
   F --> L["Default Data Loader<br/>(binario → texto)"]
   L --> S["Recursive Character<br/>Text Splitter<br/>1000 / 150"]
-  S --> E["Embeddings OpenAI<br/>text-embedding-3-small<br/>1.536 dim"]
+  S --> E["Embeddings Gemini<br/>gemini-embedding-001<br/>3.072 dim"]
   E --> V[("PostgreSQL + pgvector<br/>tabla n8n_vectors")]
   Q["❓ Pregunta del estudiante"] --> QE["Embedding de la pregunta"] --> V
   V -->|"top-k = 4 · coseno"| A["Agente ATLAS<br/>herramienta reglamento_academico"]
@@ -33,7 +33,7 @@ Para la versión completa también se recomienda cargar el **PDF oficial del reg
 | Divisor | `RecursiveCharacterTextSplitter` (párrafo → viñeta → frase → palabra) | Respeta la estructura del documento: primero intenta cortar entre párrafos y solo si no alcanza, entre frases. Así no parte una norma a la mitad. |
 | `chunk_size` | **1.000 caracteres** (~250 tokens) | Un artículo del reglamento ocupa entre 400 y 1.200 caracteres y una sección de la guía entre 600 y 1.000. Con 1.000, cada fragmento suele contener **una norma completa con su contexto**. Con fragmentos más pequeños (500) la regla queda separada de sus condiciones (por ejemplo, "habilitar" separado de "mínimo 2,5"). Con fragmentos más grandes (2.000) se mezclan temas y baja la precisión de la búsqueda. |
 | `chunk_overlap` | **150 caracteres** (15 %) | Si una regla queda justo en el borde, sus primeras palabras aparecen en los dos fragmentos. El 10–20 % es el rango usual: menos pierde continuidad y más duplica contenido e infla el índice. |
-| Modelo de embeddings | **`text-embedding-3-small`** (OpenAI, 1.536 dimensiones) | Es multilingüe y funciona muy bien en español. 1.536 dimensiones caben en pgvector con índice, y el costo es mínimo (el corpus completo cuesta menos de un centavo de dólar). `-large` (3.072 dimensiones) no aporta para un corpus de este tamaño. |
+| Modelo de embeddings | **`gemini-embedding-001`** (Google Gemini, 3.072 dimensiones, gratis en AI Studio) | Es multilingüe y funciona muy bien en español, y el plan gratuito de Google AI Studio cubre de sobra el corpus (27 fragmentos). Con 27 vectores la búsqueda exacta de pgvector responde en milisegundos, así que no hace falta índice aproximado. |
 | Almacén | **pgvector** en la misma base de datos PostgreSQL | No hace falta un servicio más (Pinecone, etc.): las notas, el plan y los vectores quedan juntos y se respaldan juntos. |
 | Recuperación | **similitud coseno, top-k = 4** | Cuatro fragmentos (~1.000 tokens) dan contexto suficiente sin saturar el prompt ni subir el costo por consulta. |
 | Recuperador sin conexión (app) | **BM25** (k1 = 1,5; b = 0,75) con stemming ligero y expansión de sinónimos | Permite que la app responda preguntas del reglamento sin internet ni API key, con los **mismos fragmentos** que usa n8n. |
@@ -60,7 +60,7 @@ Ejemplo dentro de la app ("¿Qué dice el reglamento sobre los supletorios?"):
 
 ## Cómo cargar los documentos en n8n
 
-1. Importa y activa el flujo **ATLAS · Ingesta RAG** con las credenciales de Postgres y OpenAI.
+1. Importa y activa el flujo **ATLAS · Ingesta RAG** con las credenciales de Postgres y Gemini (o ejecuta **ATLAS · Carga del RAG desde GitHub**, que descarga los 3 documentos del repo y los carga sin subir archivos).
 2. Abre la URL del formulario (*Production URL* del nodo "Subir documento").
 3. Sube, uno por uno, los tres `.md` de `rag/docs/` y el PDF oficial del reglamento.
 4. Comprueba en Supabase: `SELECT count(*), metadata->>'source' FROM n8n_vectors GROUP BY 2;`

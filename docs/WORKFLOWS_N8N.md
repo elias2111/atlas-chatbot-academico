@@ -31,7 +31,7 @@ flowchart LR
 | ¿Bloqueado? (IF) | Si se bloquea, responde de inmediato sin gastar tokens del LLM |
 | Contexto del estudiante | `SELECT fn_contexto_estudiante($1)`: expediente institucional (consulta parametrizada) |
 | **Agente ATLAS** | Agente de herramientas con el prompt de sistema de [PROMPTS.md](PROMPTS.md), máximo 6 iteraciones |
-| Modelo de chat | OpenAI `gpt-4o-mini`, temperatura 0,3, máximo 500 tokens |
+| Modelo de chat | Google Gemini `gemini-flash-lite-latest`, temperatura 0,3, máximo 1.024 tokens, máx. 5 iteraciones del agente y tiempo límite de 60 s por ejecución |
 | Memoria | `Postgres Chat Memory` en `n8n_chat_histories`, ventana de 10 mensajes por sesión |
 | Reglamento (RAG) | Herramienta `reglamento_academico` sobre pgvector |
 | MCP Client Tool | Conecta el agente al servidor MCP (estado académico, notas, tareas, prerrequisitos, noticias) |
@@ -70,8 +70,20 @@ Las mismas reglas de entrada corren también **en la app** antes de enviar nada.
 
 1. Ve a **Credentials → New**:
    - **Postgres**: con los datos de Supabase (Project Settings → Database, SSL activado);
-   - **OpenAI**: con tu API key.
+   - **Google Gemini (PaLM) API**: con tu API key gratuita de AI Studio.
 2. Importa los 4 JSON y, en cada nodo con el aviso ⚠️, elige la credencial.
 3. En el flujo de chat, en el nodo **Servidor MCP ATLAS**, cambia `TU-INSTANCIA-N8N` por tu dominio (la *Production URL* del MCP Server Trigger, terminada en `/sse`).
 4. Activa en este orden: Servidor MCP → Ingesta RAG (y sube los documentos) → Scraper (ejecútalo una vez a mano con *Test workflow*) → Chat académico.
 5. Prueba con `tests/probar_webhook.sh` y revisa **Executions**: ahí queda la evidencia de cada nodo, incluidas las herramientas que llamó el agente.
+
+## Despliegue real (n8n Cloud, noviembre 2026)
+
+| Flujo | Estado | Evidencia |
+|---|---|---|
+| ATLAS · Chat académico | Publicado · `POST https://atlas-elias.app.n8n.cloud/webhook/atlas-chat` | Responde notas, tareas y prerrequisitos (MCP), reglamento (RAG) y noticias en 6–12 s |
+| ATLAS · Servidor MCP | Publicado · `https://atlas-elias.app.n8n.cloud/mcp/atlas/sse` | `initialize`, `tools/list` y `tools/call` probados por JSON-RPC |
+| ATLAS · Scraper de noticias | Publicado · cron 6:00 y 13:00 | 121 noticias leídas, 30 guardadas con *upsert* por `url` |
+| ATLAS · Carga del RAG desde GitHub | Ejecución manual | 3 documentos → 27 fragmentos con `gemini-embedding-001` en `n8n_vectors` |
+| ATLAS · Ingesta RAG | Formulario para subir documentos nuevos | — |
+
+**Por qué Gemini.** OpenAI exige saldo prepagado; Google AI Studio da una API key gratis. Se probó qué modelos aceptaba la clave: `gemini-2.5-flash` y `gemini-2.5-flash-lite` ya no se ofrecen a cuentas nuevas (404), `gemini-flash-latest` tardaba ~60 s y `gemini-3-flash-preview` tiene solo 5 solicitudes por minuto en el plan gratuito. Se eligió **`gemini-flash-lite-latest`**: responde en 2–3 s y tiene más cuota. Si el modelo no responde o se agota la cuota, la app cae a su motor local y nunca se queda sin contestar.

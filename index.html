@@ -569,6 +569,9 @@ const settings = Object.assign({
   voiceURI:"", rate:1.0, pitch:0.85, speak:true, convo:true
 }, store.get("settings", {}));
 const saveSettings = () => store.set("settings", settings);
+/* Backend desplegado (n8n Cloud). Se aplica una sola vez; si el usuario lo borra en Ajustes, se respeta. */
+const DEFAULT_WEBHOOK = "https://atlas-elias.app.n8n.cloud/webhook/atlas-chat";
+if(!settings.webhookDefaulted){ if(!settings.webhook) settings.webhook = DEFAULT_WEBHOOK; if(!settings.studentId) settings.studentId = "20221045"; settings.webhookDefaulted = true; saveSettings(); }
 
 /* ---------------- PLAN DE ESTUDIOS · Ingeniería de Sistemas (151 créditos) ----------------
    Asignaturas y créditos tomados del plan oficial. Los prerrequisitos son una

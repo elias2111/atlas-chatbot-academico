@@ -80,21 +80,20 @@
     },
     {
       "id": "f0bd1517-1eaf-4763-b5e4-9ae5db6a0f70",
-      "name": "Embeddings",
-      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
-      "typeVersion": 1.2,
+      "name": "Embeddings (Gemini)",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "typeVersion": 1,
       "position": [
         -220,
         220
       ],
       "parameters": {
-        "model": "text-embedding-3-small",
-        "options": {}
+        "modelName": "models/gemini-embedding-001"
       },
       "credentials": {
-        "openAiApi": {
+        "googlePalmApi": {
           "id": "REEMPLAZAR",
-          "name": "OpenAI"
+          "name": "Google Gemini(PaLM) Api account"
         }
       }
     },
@@ -110,7 +109,7 @@
       "parameters": {
         "width": 640,
         "height": 200,
-        "content": "## Parámetros del RAG (ver docs/RAG.md)\n- **Divisor**: recursivo por párrafos → frases, **1.000 caracteres** (~250 tokens ≈ un artículo del reglamento) con **150 de solapamiento** (15 %) para no cortar una norma entre dos fragmentos.\n- **Embeddings**: `text-embedding-3-small` (1.536 dimensiones, multilingüe, bajo costo).\n- **Recuperación**: similitud coseno en pgvector, **top-k = 4**."
+        "content": "## Parámetros del RAG (ver docs/RAG.md)\n- **Divisor**: recursivo por párrafos → frases, **1.000 caracteres** (~250 tokens ≈ un artículo del reglamento) con **150 de solapamiento** (15 %) para no cortar una norma entre dos fragmentos.\n- **Embeddings**: `gemini-embedding-001` (1.536 dimensiones, multilingüe, bajo costo).\n- **Recuperación**: similitud coseno en pgvector, **top-k = 4**."
       }
     }
   ],
@@ -148,7 +147,7 @@
         ]
       ]
     },
-    "Embeddings": {
+    "Embeddings (Gemini)": {
       "ai_embedding": [
         [
           {
