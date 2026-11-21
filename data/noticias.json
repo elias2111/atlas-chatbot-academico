@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-21T12:51:16-05:00",
+  "actualizado": "2026-11-21T17:58:49-05:00",
   "ventana_horas": 48,
   "total": 24,
   "categorias": [
@@ -12,19 +12,19 @@
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 7
+      "items": 6
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 10
+      "items": 8
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Tecnología",
       "ok": true,
-      "items": 66
+      "items": 31
     },
     {
       "fuente": "Xataka",
@@ -36,7 +36,7 @@
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 24
+      "items": 25
     },
     {
       "fuente": "Google Noticias",
@@ -47,6 +47,33 @@
   ],
   "noticias": [
     {
+      "titulo": "Viceministro de Educación Superior: Diego Fernando Hernández, rector de la Autónoma de Occidente, llega al cargo",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNU0FnWWdCenZqcXlDM014MmRkdTJOUENzbXRPZTdfX0VkWm5mSmx6MVc5UnpMUm1xOWFVSXkyWVJHaTF1QlJIbk50bGdWa0oycGFHcV9adDRzX2V6a1ZfeGFaWkVBREZiNXVwRmtJNi1FMkx4Ui1OWWFoaEdJcXFDYUlkU2pXSlFjYlN0dHBzRVRvcXUxOXQwR2JlWXBSOVE2bjBGbzZaN3EyaGw0QmswRXg3cDJaUWl0d2swMHlmNzltaG1SdXdoRDIzMG42NUNzZzlOREl1RExsNlM0VTI3akp6aGRsVnhvd0ZVOWJtMnZKQm8?oc=5",
+      "fuente": "CAMBIO Colombia",
+      "categoria": "Educación",
+      "fecha": "2026-11-21T19:15:14+00:00",
+      "resumen": "",
+      "id": "e7d4be7fc80ee38f"
+    },
+    {
+      "titulo": "Qurable llega a Colombia con agentes de IA que fidelizan clientes en tiempo real: invertirá US$5 millones",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNdmVYWmVjWEVhVkl6cDJyQzdRaVFpS05DQXJjcE4wTmRMaXR0emFBWV9GZmwwVnBGQTRUTTdrVUVaMVhxR1VOZUJlcUlKbm8wajVxZmZJUmtGcTFCa0U2WTB1dVVQc0VHS0lkdGctZ2pmd1k0bG5wTGlWWjdoNWlNOTlJSVFYZjQwVktBUVg5N3VaZHRVNFFCaUVOb1RhRjRCeHBmT1A3RHhibThJeVBDSmFxTm92dGJxRmtNcUJ4M0JJT0s3VDBnRkNoUmRNbi1MUHhWWWE4QmN5YkpMeWpFVzFSaTZab3dLSWR3OFFJR2jSAfYBQVVfeXFMTXRQdUpGSm5ScVdLM2x3OUl4WDdUQ1o3V3dyNmZzZVdtN0FGb3ZybUJjSlllX0VWTVhEYTlzZlhzRXdMc3N2cmxpOTNHUTJubHAzQVY4dFF5TkNVcWh4RnROMW1HS2huZnhwWXhOWFZLUW83VVl1cEM2ZnVXU3daVUUzSHA1SmE3UFdTMEN3dXZpSTZLWHVuOUdhT19lTm1vSU5Xb2hzVXF1Y1lLc0dSbTgyUWlYcTBsOG9JakYxaUpISkdOUlhueWV2QktCRHhzWUNHTnUyTDJGWW1PaUphVGRPNmZMVjdTOHlRYVlzellyMWFIUl9B?oc=5",
+      "fuente": "Valora Analitik",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-21T17:40:00+00:00",
+      "resumen": "",
+      "id": "b22f2b3d1a83c96c"
+    },
+    {
+      "titulo": "Terremoto del 10 de agosto: ICETEX financiará proyectos para evitar deserción y recuperar negocios",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUGxCSVhjVXl0RkhVS09aT2pDa3FPWXFxeGxmX3BHSFBhTklmb3U2ckR3X2pIZkVUMmpaZWpSaTR2MkZSbjNCUTluZXB4V3hCczVIZWh3d2JjRTZMcU1GYVB4NTFUNDU4Y21kQXV1bGtmc3hRbTNnREVBR1VYaDR0b2lvd0l1SEpJc2FFdVdKMkIyZWlZMmgzQ04wNU05b3RCdE9zSFkzbzVlSEdfNEY4RTJZWEc0Smtxczk4dGVoakVNUWVDdGNnRmlaaVDSAeABQVVfeXFMT2ZfNHhOMWJCWWlJdmZfQmowbUFzX3BjTzNpSlgzVm91UmNrYThkWHE5UDVKUlJlZUdiVkpyTHBqQ0RXSUlNeV82ZXRHWmVobExGc1p5OVJqMWZPN3pJdWVTRG5SOXBVNTRJZ3o0R19ia3ZYUzRUSGlERGItWFRpR1M2bFB6QkcxOGdQVkZRRTFMcnc3V3VDbzFEb2IyUEZiZGtRVFJHN2p1emlNYmwtbzlrSTJQMmc2bTFraHFzTnhqTTNfeXZSd0EtWmI4aTktN2VCSEQzMmdUWUtRSm5tQ3c?oc=5",
+      "fuente": "Caracol Radio",
+      "categoria": "Educación",
+      "fecha": "2026-11-21T17:05:00+00:00",
+      "resumen": "",
+      "id": "45078feebc5f5104"
+    },
+    {
       "titulo": "Las viejas centrales cerradas de Europa han encontrado una segunda vida: los centros de datos",
       "url": "https://www.xataka.com/energia/viejas-centrales-cerradas-europa-han-encontrado-segunda-vida-centros-datos",
       "fuente": "Xataka",
@@ -54,6 +81,15 @@
       "fecha": "2026-11-21T17:02:21+00:00",
       "resumen": "La empresa energética alemana Uniper está a punto de cerrar un acuerdo que puede dar un auténtico empujón a los centros de datos en Europa: quiere reconvertir sus centrales en desuso en la infraestructura de moda, como recoge el Financial Times . Y es que esas viejas centrales ti",
       "id": "94b0d473876f9a35"
+    },
+    {
+      "titulo": "Diego Fernando Hernández Losada fue nombrado nuevo viceministro de Educación Superior",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWVltNTJCcXBDbUVSUU9Dd3hoM2tUdTN3bUk0enZRYTJVUGU1aWJTZkdRZWFab0UyNHNHb1Q2LXBKcGpTTG84VFZjNkw2NmgzbktZeDZPYWZSdnk0LTZUa1JaT2RTU2t5SFlvZjNEZEg4SnhqQlF1dU5iVTdtUXVDd3JsQXdOQ3dEZ1Z6N3FncTRjemJHdmNnZ3UxWDFZMDh2Y05kNm1vdnYtLU1CN2NrWXZxaGxHT1kxMXdxZk5vazF5R2PSAdcBQVVfeXFMTzZKZlRMa2pvTG5qZzlRM1MxTTFEdXNYYVBIeTBlQmd6RUdkWVdtZ3N6Rmc0Q3JsSU1qejdsdWktRk1Ub0tSMlBjZ2ZHbUVQb2JORVp1T3lHSFNPdTJHeFZKcXZvLUVzUEpmU3hMNjdxWm9JX05PbDFJNXJxNmUwM2VQSzhlT2F3ck5ZbklhelNTeFNaMnBKRW9Sd0pZNUZsX05kc1hzV09reE1uX05uWGpTeGlqZFVDTXlkRGZTS0hxd1lKeGNkRS1hUkZCcEdFTWVDaW9vVmM?oc=5",
+      "fuente": "El Espectador",
+      "categoria": "Educación",
+      "fecha": "2026-11-21T16:02:14+00:00",
+      "resumen": "",
+      "id": "a8213c56ca63f5cb"
     },
     {
       "titulo": "Qué estudiar en 2027: factores que pesan en la decisión de los jóvenes en Colombia antes de entrar a la universidad",
@@ -74,22 +110,40 @@
       "id": "db7807c758c1f311"
     },
     {
-      "titulo": "Icetex extiende plazo para créditos educativos a estudiantes afectados por terremoto en Colombia",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxORExVZmliOUVkaW53UDN3cWNQY2NhS2pld2RrRXB1MGl6eVY4dUxGWWpkV3NrMFJYR1NLV1psbHBtWUNRUWhTcmpuTUJRQ0VTSEZ3QWdXWW9BdmFkVU42ZkRYYWNPc2RNdlBQbFB5OXp1bUNUVEZuWG15eDB0WldFYkp1a3ctUnlsMHg3RGVMZVhWVXpjd2EyOUUtV0h1XzB6dzNZQldwZWRvbEUyaW1WbWFwVGlJRnFKV1E4bEZKemh3dFRibmw5aQ?oc=5",
-      "fuente": "CRprensa.com",
-      "categoria": "Educación",
-      "fecha": "2026-11-21T14:56:05+00:00",
+      "titulo": "Inteligencia artificial podría reducir hasta 90 % los costos de atención bancaria",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcWszbmdiU0hlbEtUT0VRcjhXSDBjYnNfYVNhRUpwTzNiRTBuMXNSNmI5cU94RmpIeTlObFdJMnJOOWZiam9mamlqZXZ1VVd5bG1WUUt3elRnX2JRLUZqYloydFVSSnBXbWV0RFlGSUhoaHh0Ymk2bWkwaURRUVZpOUtxcTYyWHRZMHdDZFRhTkRZSHNXcDRRZkE5clI4TERMRlM0QUg4VGUxU25RTUhzNThLR19nZHdoeFFrZU9wV0TSAcYBQVVfeXFMTTZ6WERENDU5ZTZqZlF1b3pXS082aldzR3VROVZNaXBjemRPd3BRc1dQb3pkVnlLZjd4NHlOU2JqREQwQkdoZnIzUzNzR19MTWh3QUhSNkVWY1FkUXA1QmNfam9JMFc4dmc2LWdKaU5xWFdHRk4yV3RqWWZTeDhRT1BTTHl1MDUwWlpacmJqNEZzMlFjNDRhZ3dyZWtyZHdFQkVld3VucUVweWNocjEtcGpqbndYYXVFcmlUSUo4RU5PVE5hWDV3?oc=5",
+      "fuente": "Portafolio.co",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-21T14:37:59+00:00",
       "resumen": "",
-      "id": "d41e26217c3b65b3"
+      "id": "ba6663d199c10511"
+    },
+    {
+      "titulo": "Universidades colombianas ingresan al top 20 de sostenibilidad",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYVU1Y2RMVHBqdDhYZGU4V1NEcXBreHVvSkJYVTVkYlBsTkphWWtKVlhuRlItMC1xdmdfOFA3UWhEd1dnNk1rb1hyR3JxR1NiRE9JY082ems0NFZTbUp6U05FU2lSc3lFNmJIdzYzSV9LTWtMVEQtdnhpTWJMWWJBNjY3M3pmUVQ0dUxLMlRoUFJTbWx1X1BTWjRmUQ?oc=5",
+      "fuente": "HSB Noticias",
+      "categoria": "Educación",
+      "fecha": "2026-11-21T14:03:12+00:00",
+      "resumen": "",
+      "id": "f2a34f2bdbad7491"
+    },
+    {
+      "titulo": "De La Espriella ordena revisar matrículas de estudiantes en universidades públicas",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMTJYb3dXZ1FZSExPNTFVNGFhMlMyWm9Xdm4zc2gwMUZfN3dPb0ZUT2ctN0huOG9iQVJfZHIxbVNnTkR2T1RZVmhoZjc5WVlDcWo5aUNNc0IybVp3dzRCZnRvWWdleDh3elltV1VBZGx4Z2c5NENNb2pWUnZvNmduSUJxVEFRVjRKdjY5Y2FpZWU4a2dDTTdCeTZ4QTNaOHpiT3Y0RWVNQzQ2QdIBrwFBVV95cUxNR0luNGlPNlUxV0phWkdZalhub1YweEJQUEFPb2FtV3d3bV9ib0pzQUFLWXY3ei12VGYtRWlUVlFDTWM2b0pqNHN5UFZlVW5NcWIyVVV5WTlJVzZUVi1WYXN3aDduMWJ3TkM1YVcyX3dndFBNOWVaaVNRWHFSelFRNmJxcFFLeW9DZzVlaWw0QkwyTkdBNXE2NGx1aU1TRk5RU0V6aHlydWg2ZGpXQUFJ?oc=5",
+      "fuente": "NotiPress",
+      "categoria": "Educación",
+      "fecha": "2026-11-21T13:38:41+00:00",
+      "resumen": "",
+      "id": "970deff76a1f0bd3"
     },
     {
       "titulo": "Claro llega con 5G a más de 100 municipios y prepara expansión de fibra e IA en Colombia para 2027",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQQnEwQ1NyVk1rTERhd3hyWGtEWkp4ejE5Sm5jTDhSWmN6ay1YNGlUSEoyeHJucUd3NTdqM09iSzhxVFlxMXZqQ2sza19MLVl3SUVRUnd0UUxjWFU2QS1qQkdvVG1iNDVwckdoNkdXYjNCQjlCdkhoOGFFMzR4dFVHOTRIUjE4djY2NG5VdkhzbzhsQVh2RHlYMk5UVEhFZklITE8wVFZmc1FndUozQjN0aFFHWFVTU2U4SndKaXJuSzhyaE9ocV9pcktCNksxQktObTBqZGotb0F5VEV2Z1RDclIzUHd6M0pkbC10VnFicHE5QdIB8gFBVV95cUxQQnEwQ1NyVk1rTERhd3hyWGtEWkp4ejE5Sm5jTDhSWmN6ay1YNGlUSEoyeHJucUd3NTdqM09iSzhxVFlxMXZqQ2sza19MLVl3SUVRUnd0UUxjWFU2QS1qQkdvVG1iNDVwckdoNkdXYjNCQjlCdkhoOGFFMzR4dFVHOTRIUjE4djY2NG5VdkhzbzhsQVh2RHlYMk5UVEhFZklITE8wVFZmc1FndUozQjN0aFFHWFVTU2U4SndKaXJuSzhyaE9ocV9pcktCNksxQktObTBqZGotb0F5VEV2Z1RDclIzUHd6M0pkbC10VnFicHE5QQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQclVPMmVNVzNCb2FRdk1NQ3ZPNnpuM19obm1GdlE0cG02ODJtZUVJSUlYZ3pMOW9nVk50WXhuUlltVnZ6M0dlMXM2WTV5N0RIMXBJZXF1aHJLVlp2OUVpX00xRVJwODQtMmFxbU1PQWVhdXpyRklPengtMzByZUJyWWZ3cGY5WDlsckZIUE9vbnRRdUxvUXV1a1hfQWtMemZIWEYzbVpXdjFIa3FzbWQ2UnBQTlVLcUF3TGZTd0E4M29GM1o1OHhWU2NGTWpfVjBQX3V6azh4U0JDVW9ZRUxxVnVNdG5uUms4V3VpSdIB8gFBVV95cUxQQnEwQ1NyVk1rTERhd3hyWGtEWkp4ejE5Sm5jTDhSWmN6ay1YNGlUSEoyeHJucUd3NTdqM09iSzhxVFlxMXZqQ2sza19MLVl3SUVRUnd0UUxjWFU2QS1qQkdvVG1iNDVwckdoNkdXYjNCQjlCdkhoOGFFMzR4dFVHOTRIUjE4djY2NG5VdkhzbzhsQVh2RHlYMk5UVEhFZklITE8wVFZmc1FndUozQjN0aFFHWFVTU2U4SndKaXJuSzhyaE9ocV9pcktCNksxQktObTBqZGotb0F5VEV2Z1RDclIzUHd6M0pkbC10VnFicHE5QQ?oc=5",
       "fuente": "Revista Semana",
       "categoria": "Tecnología",
-      "fecha": "2026-11-21T13:09:33+00:00",
+      "fecha": "2026-11-21T13:05:31+00:00",
       "resumen": "",
-      "id": "8c3c6f9eb8481002"
+      "id": "f684d3339d620042"
     },
     {
       "titulo": "Escribir un libro con IA es más fácil que nunca. Por eso las editoriales están tomando medidas antes de publicar",
@@ -146,60 +200,6 @@
       "id": "c16973db4ceb816c"
     },
     {
-      "titulo": "Universidad de los Andes y Universidad Nacional ingresaron a",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNYjV1Z0xBMkhuQ0RHQ2wxY1BqRmNjajltY2RBaEpwYWJXc2NGQm15b1Bib1dWM2JXOFB3YURPSTdMcldBUjNsdk00SjIwTnREcFFoTVFfamF3MmdkOE9fUG85SThET0pIVXpfR0pjTmJUampJXy1xNVJGZDhyYW04Q0FDZ2kyekJVMGpQaUJhZzFDSHZJdEU5d3BkQjdRbi1GZ0VvWlJNTWlyMFQ2RnJBZ08tRHdORG9zSWRlSHJHaTlwdw?oc=5",
-      "fuente": "Diario del Cauca",
-      "categoria": "Educación",
-      "fecha": "2026-11-21T05:02:21+00:00",
-      "resumen": "",
-      "id": "e30114f2c846c9ec"
-    },
-    {
-      "titulo": "Ministerio de Educación y CNA acuerdan agenda para fortalecer la calidad de la educación superior",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPenpUckhPcE5idWRDWDFtR2JmSFZ1ZE1PR3BGdXdPTHlaYmtFUFVfazNGRHFEMFRoQXQtclQ3eDlVOWdjMjlGN0hSbUJoNi1KajY3SDJhVDNibmZqRkRqUXFjOW53QUduX0VsdExLX19JZEtBSm1TZVZCSzR0V1lZc2RiR1RhZVMtMWR3OGpoaklIUXpGTkllOGotT19adU1hRUhXQ2RDaVcwYWJSSXhPYmpIR25BMzhuS3BxWjg2OVpndS1CSTJuT2E1alJ2aHc0NV9zUW8xOUZOQXpOQkJwMjFtdDZDQkFuU1VxS1JsdHcydUctNGh6WThB?oc=5",
-      "fuente": "Ministerio de Educación Nacional",
-      "categoria": "Educación",
-      "fecha": "2026-11-21T01:27:38+00:00",
-      "resumen": "",
-      "id": "3026a6b8e20c9b9e"
-    },
-    {
-      "titulo": "COMO SERA LA TECNOLOGIA EN EL FUTURO EN COLOMBIA",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbGdNUU5SU3pxZ2VYeHJvQ0RXdTJ2NmFWZm5kalhmMC1IMVM0bDdWVFQtOW5hVjJ0dkRIdkFZWnhrdlVGWWhxNllnQWVEMXJBcVhnbEc2U2NuYU41RFYzMGdGaldFaHFXNkx5ZW1fanIwTGQwWVNNbHVIbUdrOFBTWUZyemZrdFpE?oc=5",
-      "fuente": "HSB Noticias",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-21T00:04:11+00:00",
-      "resumen": "",
-      "id": "e1eed4ae0e1cf1e2"
-    },
-    {
-      "titulo": "Samsung Health en Colombia crece 28 % e impulsa el monitoreo biométrico con inteligencia artificial",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVXplNkJsR1loUHFWT0VWdGtEUG5OTVZkSGItbGtZbm5nTDk1ZDFMLVBWcVNwVGh4aUtxc19Ial9vNkRReWlCZmplYnFGYzBzN1NqaVhtcEswNmE1QktEUkNXZjU1b1pVSlk3WU5iSlE2ckpJbXItdENHdTEwSEZJblhXUEFaWThHdjhfM1Fibm8?oc=5",
-      "fuente": "ABC Economía",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-20T23:48:51+00:00",
-      "resumen": "",
-      "id": "b82f253e66f06aad"
-    },
-    {
-      "titulo": "Comienzan inscripciones para el concurso docente: CNSC habilita más de 2 mil vacantes de empleo para profesores en este 2026",
-      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPWkcwRVNkM2RTd2RyX3IzY1JSY2xLZFI1cFBZc0tmMVJDa2pENklPV3MtclE3Smo1MVB1bm1tYWpnSy15N2t6azNRWm5uNDhCUWU1elFRcWlXWnV4OTg5VWstTzV4WUZqNDRMWEtwVzlBN2RVUWxxLVNta2JxcklkQUVmTk1jYUNhTUx2ZEJLd00zZFl2MmREekNhbUFjZnFKTmJvSWlrc09CWG4zejVSTDQ2TDlZM1VaSDVmMGtDMjF0SkViNjZFaEpOSWt0cWxkTFFIa2EzV3c3Z2tlemdxZkNqcGxueEN1X0ZqMUloNFZjWDI3dWdXZkF6RkVHbldrYVVZ?oc=5",
-      "fuente": "RED+ Noticias",
-      "categoria": "Educación",
-      "fecha": "2026-11-20T23:28:26+00:00",
-      "resumen": "",
-      "id": "4c50ec3502a32c7d"
-    },
-    {
-      "titulo": "Bogotá otorga becas-crédito para que jóvenes de estratos 1 a 4 estudien en la universidad",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSkxiSW0zZy1DR1JkTkV5TkktdEhpTV9wSDQ1UUROOHhJOExteVFTbHBlSjNlNVNidVBDX2JpWTRrSWxEMGNkR1ctOGJqdmNta2VpM29fVDNMQVdwZUMxcW5vMGxETkw3YzBVR0ZwTGFrR29zb1hyNE5EOGxScjI3OFltcGx3TnhpYjUteU5JNXlSbnBxTVM0amVZM2s5QU1OSURtdXdXSVBBb1JpQjY5b3NPRGJwZ00?oc=5",
-      "fuente": "Bogota.gov.co",
-      "categoria": "Educación",
-      "fecha": "2026-11-20T23:00:00+00:00",
-      "resumen": "",
-      "id": "9873d87453287893"
-    },
-    {
       "titulo": "Ingeniería de Sistemas, seis años más con alta calidad",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQY0cwRVNDbV81SG1oVmxCdTVuTmtGdnR3c1pjTkk5NXdHQ0tDVG9wNG14aDlTXzJrQVRBanhkZTNkdDRWbW9MamdkZnh3TEJMNkFTZGpVQlF5aXJhODRIR1dfcnZJcnAxWnFMdjJDLThMdEJ3YU1BcngyX3g4NEJnR1hGeWdsRGlCOTIxN3Zwd3Bod1Fzamp0a1A1NlF2S05oT0VwWTUydjZ0TkZ4X2JtTQ?oc=5",
       "fuente": "Universidad de Ibagué",
@@ -207,15 +207,6 @@
       "fecha": "2026-11-20T22:03:56+00:00",
       "resumen": "",
       "id": "5bc877a65640a962"
-    },
-    {
-      "titulo": "Colombia tendrá una millonaria expansión de data centers hasta 2030",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNV1lDXzlJRTdOZ21nWjVnYmZTaEZnc1dYWktnaTRudUxXY1ItbVFFcGkxQ1VZZVNmd2pyMnM1bEMxa1ZPYnVBY0JlaEZuSU5fd1M3V1YtWFpYQ1ZKTzNwZ1hUVDhQMHNRSDM5WHNqYWl6R2g5ei12UVljeGx3VHNjem05QVZuNUhlSmRnU3l6dGhLUEpBbndpYlBHUEJLZWs?oc=5",
-      "fuente": "ENTER.CO",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-20T16:40:56+00:00",
-      "resumen": "",
-      "id": "f67ed36663c78a79"
     },
     {
       "titulo": "Abren curso gratis de ciencia de datos para 10.000 colombianos: cómo inscribirse",
@@ -261,6 +252,15 @@
       "fecha": "2026-11-20T13:00:38+00:00",
       "resumen": "",
       "id": "76ab77ea8c18717c"
+    },
+    {
+      "titulo": "Amazon abre en Bogotá el primer centro de datos propio de un gigante de la nube en Colombia",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQMkV6M3lQVVRQX3puT1NVNkhxNFJKS3RQUWVPbUFnV0d4cnpLOXh4bHdldjNoZHVzN2VObUZwa01oSmY1TXRtV0dRNTJtR1RQNTBVdGZWUXpGZ1E4VU5EVFBoelpIOHBtS2o3ck1mWVBpX2xFNGNpYk4tNW10VTZPN0IwTkNKMy1BWnZJcktpM1pneGZVRTJfdDRRbGZwUkhmdGhhQWxrcUJSM09JNkZfN0tDemJSVHpyN0VsZlVQM1IyM20yRkJ3bHAxbmpoVDhzLU41R3pIQjNBd9IB3wFBVV95cUxQcnBab1Q2NWRYYzhURHJIWXVvbG9pdW9iSlA0Tm1LV1NuaFhoWHBaOXVic2dmdEk2eFp1R2JGdy1ZbEJRR2NrRnJuMFAyZVJkM0JlRUxLY2N3R0thclM2blZjekV2NngzVnJEbThvRE1HSWdmc3JyMDVBVDl6Wm5pa3hCSjdGRXFITkl3X0JUbkhVZUo1enBpalptOUZqOHhWOVFXTWt4TVV3U1hVQmVRQV9JaUNqSGp3T0xhX0pFdHhzRTZQUXA5RzdkbWdIRmxNdEZXaUhRaVZhMVFVdDJn?oc=5",
+      "fuente": "Portafolio.co",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-20T08:50:00+00:00",
+      "resumen": "",
+      "id": "90f9139e9bce4eff"
     }
   ]
 }
