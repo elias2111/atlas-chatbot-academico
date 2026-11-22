@@ -1,7 +1,7 @@
 {
-  "actualizado": "2026-11-22T13:11:43-05:00",
+  "actualizado": "2026-11-22T18:29:26-05:00",
   "ventana_horas": 48,
-  "total": 19,
+  "total": 20,
   "categorias": [
     "Educación",
     "Ingeniería de sistemas",
@@ -36,16 +36,124 @@
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 27
+      "items": 46
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 5
+      "items": 7
     }
   ],
   "noticias": [
+    {
+      "titulo": "Anuncia Rector de la UdeC 33 becas de apoyo a la movilidad nacional e internacional",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9vdmEzSjlNRHdZTDRQRzhGd1ZxUVRvSHN3SU1FSFl1Q2djN2VKY2NEbkpyaGF4cTBvWjl5eHlFd20wcUZRWHJGS3lxWVoyWkE?oc=5",
+      "fuente": "El Comentario",
+      "categoria": "Educación",
+      "fecha": "2026-11-22T22:23:24+00:00",
+      "resumen": "",
+      "id": "852faf6044a84d16"
+    },
+    {
+      "titulo": "Bogotá abrió 180 becas-crédito para estudios superiores en la ciudad hasta el 24 de noviembre de 2026: paso a paso para postularse",
+      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOcm50Wk9fd3pOWWstMzV2RHAzYlg5RVNHT0NPbGNGeXgyVF9mWERYYTczNDlRbDRKa0FQLXQtbnpyX205V1p1dHA1YnRLenNRX1d2NURDZTV6TFFjUzRXX0pReC1YbFAtaTlzV29ZZ3hvV0dHVEF1MnRmM3hzckhpSGtkSlIxT19aNkJJUnFZMmxVbTZFZ1YwUlpGTkZtTlBMOGhTY2gxb1Q5MlNocnc4R0N3ZkxORzItcThuZmtqWlVaVG96U0FPNi1tbmlHdHF1TnBNMHdSN1d3MzN2YVVtaE5wWFQtbUItSGlma0R5cEozWm1jTDZ6aGNndFR4SVAwUllNSNIBnwJBVV95cUxNdFJnWWV2alJtSkRVTzJwQjQ4U240cUxLNW1NN3BRdDJBTlFaWUhyNHNsdVg4aFh3b1ZvenRxLWVydTNSS0lZRDc0RkdkaVkwTkhsai15VUdsU1NZeERHcFJoYjdDdWdSMHl1T1RKR1NEWXppa0MtUnJ0b05xTG1ld1Y4VEF6Vk9NajRFUnZ0RzU0ejN5STRscUJnVGROUmxwVHQ0bkxlOGVHLUpubldOVEE2Rm15SzB1TVk0ZWpsbERibm5mTTRQN2FmOEl4VWh3N1ZHbW1DTHg0TEVFSmQwWVM3WHVVU2lOQkVaQjZBUHpPWExmLTFIV2dUR1I4V3pQRHhuVGdnRlhPdktfRXUxRFNFSXNkdmZ6SkRTOGF6aw?oc=5",
+      "fuente": "Infobae",
+      "categoria": "Educación",
+      "fecha": "2026-11-22T22:11:00+00:00",
+      "resumen": "",
+      "id": "e2603a57729df05d"
+    },
+    {
+      "titulo": "Colombianos recurrirán a la inteligencia artificial para elegir regalos de Navidad: estas son las tendencias de compra",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNY0ZBcGNBb2szeklXeTgyeElQZHMyYmRreDFJTGFvV1N6bFVVc1dMT1MzRzVRZ2RpN0ZMQ01kZDViZE4taVo4SS1uNzVuY1hWVkl5WDlrM0llaXZqNmRZZmNQY3RIRUo0dEdTeVRhb19wVkpDM3NxVWhJX0pFdmJTX0lFU09iZE1rX1JkUElzUHVUTXpwQU1PWnZsMjNSaFlZdE5iNVI3Szl5Vm4zaGFxdnBfNVZBWU1kMG1lazNISVBXbGZOS0daQTB4M25GQlpCRzRtY1Y4NlZrcU1VemlwcWJqaklWN1lFZnRMYkNYb0Z2WHM40gGPAkFVX3lxTE5GbVVFOGJmT2RXM3M5cGNZb3BaTUQyVXdEX2xPanhUWE1venozTDRKdkF6dktVVGp0Z2lxaldzX1pLaHYxNUdVRmZ2T2NMd1NOYk4tTGdvLU5RNHc3N2lTdkdTYjdKemNZYllZR0IwSWQwMWZtcW9IVjRqMy1VeVl5LVpzZnlWd0VKNVNtTkhySmRiMWNjOEJMZkJpOW9tSjNCYk9tRllwOHlOaE9Rc01OWVUwdnNOWXJpVlFDdHc2X0lJdkt2b3c3VkFObTBVLV9MSGhTTDNYOVdZa1U0NDBVdlJZSVlHVlJocE51dl9WbkVnVlI5Tkx5WnRCZXNmNGNyaUU3NG1OYV82MTR1REE?oc=5",
+      "fuente": "Infobae",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-22T21:46:00+00:00",
+      "resumen": "",
+      "id": "096af23c62196a80"
+    },
+    {
+      "titulo": "Abren 100 nuevas becas para estudiar en Bogotá: Requisitos y cómo aplicar a la convocatoria",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMUpPR2VveGhEQW96MUFRZ2w1aTF5dTNVQ0h1Z3BqVFNkTTdiQmd0bDdmSlpoUGxNZ29uUmM2M3gzcnZPWFAtc1gweFNwakJVU1lHUGFkTTNaLU1nVVhITHRLV0NIRXRVeFE2eWt5TmpPSlVETEN5dkhXWnlmUDAxaThjbS16NUx5c2xBLUJkR201Z19uN25hM3pBZkwtZzhUT0xwUE1MWmR6aXJNWWZSZTZXbUdZZkJ3U0pqUm9rYnRHRkpZTXlBTQ?oc=5",
+      "fuente": "Newsroom RCN Radio",
+      "categoria": "Educación",
+      "fecha": "2026-11-22T21:23:19+00:00",
+      "resumen": "",
+      "id": "766dc569c841996f"
+    },
+    {
+      "titulo": "Brugada entrega 30 mil becas de transporte a universitarios; apoyo aumentará a 2 mil pesos en 2027",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOOVU1QlVnUDFzV0RsdUtQYV82bzlpMk92b3REb29keFp3WU9vNVFCTWx6dVR5WVotUy0wLTY5ZFhqTW04NUtMUXZSYjJNdkJaLVVBak81XzJHWXh4SFZpSWszRU1CRGlLZHJnZF92SE42RWduS1VKZnlDMFl3Y1NnbG1VeVNaUUdLRUthLUdrOXhiU1o2anBIYzVDMzR1cVAxZUt1bzhCQ01jaWM1YWg1eGF3WkEtVEZHb3hhUHJlWGgzaUlfQmFERVoyZHZrVk8xb29Od2VXV1RVZ3M?oc=5",
+      "fuente": "ContraRéplica",
+      "categoria": "Educación",
+      "fecha": "2026-11-22T20:49:46+00:00",
+      "resumen": "",
+      "id": "8db2836ccdb93461"
+    },
+    {
+      "titulo": "Mineducación pide recortar 386.173 millones a su presupuesto de inversión para 2026",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNbWlqVWE4cUo3cjFJZ1h6NzQzVlh4RTlWanpLZkk2bk43a01pNDI1UXgyQTFEb1Exc21aMEFPX09Ba0kzQmtHYUxKZW1oakRLMjNVVHZYMjZOY1VLN1lhR1FzSElQRUNxZHpTOHFMQnZmWmVNODJ6WlFnUVJYQlhjc0w1Z0VSN2M?oc=5",
+      "fuente": "Emisora Nueva Época",
+      "categoria": "Educación",
+      "fecha": "2026-11-22T20:03:55+00:00",
+      "resumen": "",
+      "id": "c9bb1f857248d96b"
+    },
+    {
+      "titulo": "Colombia ocupa el puesto 62 entre 70 países en preparación para la inteligencia artificial",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOQkh4b0JqcjdZYkZacVNYbXoyRDBweFFHdU1NLWNzX2txb0lza2kwblJOZjBOZmdwdERNeF9leWttc2VpblNaSmc4bk1NTkpVMjZma3VXLXN5NHlFTmxCbEgxU1VCclU3QWRxRzFEZ1pkV1J1RXRZcDRUS3JFTkR2WDVzQjVLcF8xbF9Dam5tMlZ2TGN2OTloSzV2LUd1Qml0RDJzMkxMX3RjQTZZNC1hVg?oc=5",
+      "fuente": "Aldia.co",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-22T20:00:00+00:00",
+      "resumen": "",
+      "id": "66cb3caf4a9ab453"
+    },
+    {
+      "titulo": "Colombia ocupa el puesto 62 entre 70 economías en preparación para la inteligencia artificial: ¿dónde están las fallas?",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPWTAyUFlfZlM3UFlXYmx6SkZXVGtVNXBSbmlCcFRlZTZpblBPLVJ4d2p1Yi1NUm1SMGREV3dWTFVaV0N5Z0stSnBCa2Y3dVVGTkFpRHdBT3cxQjBjS3lVSEZCOWVuUDJJTEFLeVQ5RldQQ2RFbTc0U2prRTJhalpqcXRkMHlaTUJPWEtTSDVOREM4bDdYclQyR3MzaTJuUnRzMmREX3BYR3FNUkp0OERKblBrSXBtT1Q4OG1EZlRqZThoNmdsWHY1aW14dDBVczBvM1VyNDdwZ3hRbVptN3dabVFWaUtSenpqaGp1aTVvd9IB9AFBVV95cUxNWkotaExzR3ROQmwxQ256a0FZdEpSbTMtQkU5ZExEZWNjRHFrb1QtNWxyck5IdVpTcVJaZ3FiQjQtemNETjV3VklNRzZhc2VKYkxBWDJqV3ZpdFlQQTRfdWYwcmJIcURTZUNneHN0RFRpNTRFTTJMRVRQMzhvenN1M1dGSXJIOFoyX01aYzMxZ3B3UjlzLVd0cW9Yb1dTQmRiQmRobWNuanI4OHBkWTNYSDdBRkdhY0Q4SFFTUnVva3Q5MWJaeVNfM0VhUWticHR6RDdBZ2ZLa1RRU1NHVFNhVXZTV3Q3VG91Ym9WcFQ1eFNqNWhy?oc=5",
+      "fuente": "El Tiempo",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-22T19:46:38+00:00",
+      "resumen": "",
+      "id": "ba355e99a02d5d33"
+    },
+    {
+      "titulo": "Colombia: Puesto 62 en preparación para la Inteligencia Artificial",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNC1jTk43VmFUUE5NUlZZTUlJZ0JUdDV4MXZPSXJ6a3NYbURnMS0tZTFINUpLclBxdldoWkZOU1JQOGV1T0czX05ka2R0NmRSZ1NGYjFyd3NvVFRMS2NZWXRJS21fNW9jLXVwaDF6ZzFLNFA5WWJBOXFBVHNjcm5jYVI0M1FNa0R2SEhTWVNB?oc=5",
+      "fuente": "Estrella Digital Colombia",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-22T19:46:38+00:00",
+      "resumen": "",
+      "id": "9dfc570cc76db930"
+    },
+    {
+      "titulo": "La nueva guerra fría entre Estados Unidos y China no es por los chips: es por los monos de laboratorio",
+      "url": "https://www.xataka.com/investigacion/nueva-guerra-fria-estados-unidos-china-no-chips-monos-laboratorio",
+      "fuente": "Xataka",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-22T19:30:28+00:00",
+      "resumen": "En el campo de la investigación biomédica, los monos son fundamentales para poder realizar experimentación y probar, por ejemplo, medicamentos antes de pasar al testeo con humanos. Hasta hace unos años, China era uno de los mayores exportadores de los macacos cangrejeros que comp",
+      "id": "bde0549d13770745"
+    },
+    {
+      "titulo": "Vuelve a tiendas Lidl el sábado 28 (por 100 euros menos) el robot de cocina superventas Monsieur Cuisine con pantalla táctil, báscula y más",
+      "url": "https://www.xataka.com/seleccion/vuelve-a-tiendas-lidl-sabado-28-100-euros-robot-cocina-superventas-monsieur-cuisine-pantalla-tactil-bascula",
+      "fuente": "Xataka",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-22T19:16:24+00:00",
+      "resumen": "Aún no ha llegado el Black Friday como tal, que tendrá lugar el próximo viernes 27 de noviembre, pero muchas tiendas están ya inmersas en sus campañas de rebajas desde hace días. Una de ellas es Lidl, que en su último folleto (centrado en el Black Friday) ha anunciado las rebajas",
+      "id": "528de58322b6407a"
+    },
+    {
+      "titulo": "ICETEX amplía plazo para créditos a estudiantes afectados por el terremoto",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxObUVZYnJDMU1ybzhJUDg5bWRRRHdtUnB1ci1ReU1hRElJRnV3NWt6Y190eURRVWRVdW5xTkt2MFVaMU84Y1dnbmZaWUJXMnZFX19sT3NwX20tWUJjcG8zU2dEZUNQQmF3RDRXMWJjY09XNm83Si1Wb0hBcGR5cEtsWEpJR3pQZw?oc=5",
+      "fuente": "TuBarco",
+      "categoria": "Educación",
+      "fecha": "2026-11-22T18:32:40+00:00",
+      "resumen": "",
+      "id": "42943c17cdef95ba"
+    },
     {
       "titulo": "La inteligencia artificial ya corre en el WorldTour: ¿Está Colombia preparada para dar el salto?",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPTktBME11WnRGVWdlb3Nwbm1lV2lGTjdadi16Y3FPbDVGZ3d0VUdJYnBSb3FQRHhwZXVwSHpwbWsxdUFOdFVaajlZQzRDU1owU1FkdFhKMGVQMURJVjMwd2ZqUWREbkdYczA2UTdHZ2VBdjF1Y0sxOFM1ZmU5a1NoaUMxLU1fSUlhbHN6bUl0NjEwSTd2MGJEeF9iYmNkM3lxaUVCdFhVY1BnYmEyZERCOHR6dGVUM1BVYWV0bGo0NENTbW9xamVyM2hSMmpLRnpsMFdDTNIB2gFBVV95cUxNdDdRTzQzb3U4M3pVV2xOS2FUQ1NtMTlFeFN3djdzNUQ2OV9Dd0RCdzdBbDYzcTh2enBTSlMtNVR0c2t5OVZJRmNRZWtsb092UDlFMHdRMTdoOWxiZE1fbTJGWkg5clRabnJVejVoZmxmTV9KUTc2akIyTWxLMW81RWhYMGktbGlDOHd1NXlsQlk0XzZmYmRVUDVqdVFCUl91MmZZeHV1SHc2SUlsaUpEWDFrWmhLQWlTQ2J5WV9PakxydzBPRzRaNElGZ0VGajRNaUhSazVCcTh0UQ?oc=5",
@@ -74,15 +182,6 @@
       "id": "51df59fd8e1e6b10"
     },
     {
-      "titulo": "EU-LAC Digital Accelerator 2026: hasta 10.500 euros para startups de Bogotá",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRHJSQ0lNb0VMTW5TU3F5RUFIZFZxZ1RUMHBmU19TOUM5dlZDVWswU00tT0Z0T01HNXU3NWQ3QlVkX09OYUZsVEZkc0FCTF8zVmVoVUZMTnM4bUI3MEJrMVZHdHYyemRtQlRwUzVQZ0k3MkdYVkZiNzUzd0QxTEF6N0tUelZJWFhRYm9aTUJsM0M3M2FCNm40UkxCN0VKVkJMVWp0MENSYXNqREcxUmc?oc=5",
-      "fuente": "Bogota.gov.co",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-22T16:38:55+00:00",
-      "resumen": "",
-      "id": "253831cac22cf3bb"
-    },
-    {
       "titulo": "Desapareció en Bogotá un estudiante de 17 años de Los Andes: su familia busca desesperadamente a Gabriel Cárdenas",
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOSnE2bnluU1JDbEgzYVFjdDJHeDZoLTZoVV9ZalJGQ0VLamJEaDd1S19TTHQzQ3JGb2c4R2s0THBEVUdHVzlaRnctYXRCWW1IR0JDVUk2cXM3RWpyaXZ0ck5pZ1ZHZ0Fuanl4Qm5wWF9NS0RKZlhIdXppYUJrR1VvencwcnBnWU85TzFwUkxpWk14aTZ1dDJLSkZEWDdDcG50ZzdxalhUYmdGVjJMN1l2d2Fkd1lVdm1nb3daOG9oazAyUTBjalBrNkxaNnFLWWJkMVhqcmFGME9XcTNZTVMzQzBKUWRROExVWUQwRzdR0gHzAUFVX3lxTFBIeXNjcDBEMXJjSF9SX1pyQ1BIaFcyWEhGUTV4ak9IX0h3SmlHNjJFUHhBVi0tYW9iWDBTYjd1QzR3OE5obDc5dXAybkRQcXk3Vk9fU2thYS16MUlvSWlOLUE3SDZMWWZSdmhTbjJ0cUVrVkx6WHQwa0hTSmpXSGFNbFpvaWF0RVpybTdlSHo1OGZILTFGNDA4NDM3VkdaRjU0Y0lIZFhRME1SR1k5QS1XQS1PNExwLUhwYXJmcm9pR2RJWlQ1S2VLQkMxYmxYV3pmMWhWcHExeFY0cHR4dHY4aWNodEp2bk5KS0R2ZmFWelppdw?oc=5",
       "fuente": "El País",
@@ -90,24 +189,6 @@
       "fecha": "2026-11-22T16:24:10+00:00",
       "resumen": "",
       "id": "525890ba6bb76021"
-    },
-    {
-      "titulo": "En 1961, unos niños imitaron a un adulto que pegaba a un muñeco. Unos ratones de Princeton han empezado a explicar por qué",
-      "url": "https://www.xataka.com/investigacion/1961-unos-ninos-imitaron-a-adulto-que-pegaba-a-muneco-unos-ratones-princeton-han-empezado-a-explicar-que",
-      "fuente": "Xataka",
-      "categoria": "Educación",
-      "fecha": "2026-11-22T16:00:00+00:00",
-      "resumen": "En 1961, en la guardería de la Universidad de Stanford, Albert Bandura reunió a 72 niños de tres a cinco años y los sentó delante de un adulto. Acto seguido, el adulto la tomó con un muñeco hinchable: lo tumbó, le pegó con un mazo en la cabeza e, incluso, lo lanzó por los aires. ",
-      "id": "e7e7437ad65a3380"
-    },
-    {
-      "titulo": "Estudiantes de colegios públicos de 52 municipios desarrollan soluciones con inteligencia artificial",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPbWhSYVVZQ0hTVXNxX2YwcXU3UExJOWV2R1dKMGo1LW1LUHFhd1pqVUwtRHBZN2NaUzhiZ3MyNmNOblowc1NWcEJZNy13MmEyaWdESjdpZ28zdGtBd2wwR2ZDaVFoQloxcEg3TjFWcTF5MHZqLUlNLXc3NUt0bmJTdEMzSmE2SHprWFRTQUFhc0c1LUV4UlZrTDhnejNWT3JfdXdlR3FWMmRZSnNvckNkUC1iTWJvY1ZpTV9mTThWTW9jS1BMMEpaQ0s0Q05yUlNE0gHkAUFVX3lxTE9YLVBDX0ZobUxSUVF1dkQtYVE5ajB4a1BpZjdmalpfdXdMLW4yMVBzTTF0WFBSYUpqQzVEQWhrSlZfNUQzQU45emxhUE14WEROMk5vY19qNEZkVWRscnJiNVRROWlpV2VDWmxwdE1DendWVU05NW9SN1FwNmNTR1JidjM5OERYSkJDcmc1ZnBBQkpLTDJMbzVIMFlQTWRqa0xpcHotQlJzTFdTclVFSTRFTENrclUxZi1aYU9NMURST1lpNjE0QXBkMzdVVVNwcVRwWE9MYV9Gd0QwcDdBblcxY2lpYg?oc=5",
-      "fuente": "Caracol Radio",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-22T15:09:27+00:00",
-      "resumen": "",
-      "id": "390591281acbaa83"
     },
     {
       "titulo": "Colombia tendrá una millonaria expansión de data centers hasta 2030",
@@ -119,49 +200,13 @@
       "id": "f67ed36663c78a79"
     },
     {
-      "titulo": "Mova E50 Ultra, análisis: este es el robot aspirador que más voy a recomendar",
-      "url": "https://www.xataka.com/analisis/mova-e50-ultra-analisis-caracteristicas-precio-especificaciones",
-      "fuente": "Xataka",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-22T15:00:24+00:00",
-      "resumen": "Lo digo sin tapujos: el robot aspirador que más me ha sorprendido este año fue el Mova E40 Ultra y lo hizo por su elevadísima relación prestaciones coste. No tiene la navegación más avanzada ni un fregado con reconocimiento, pero sí que tengo claro que dejaría satisfecha a la may",
-      "id": "2f7cb9d95e542e7e"
-    },
-    {
-      "titulo": "UNAB, primer lugar como universidad de Santander en medición internacional de sostenibilidad",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZlNVazl1VGU1TUNGZEVCU2JXaVVXX2YwWF9wenBOa1dMbUhNSEphZi1ObjNERS04OFNaY29lOUhaeThIRkFWLXhMV3RmVFRKc0RUbDhvcUcxRVpKWjd4b0lfOElWZEFiUEkwUkdoeUhyc3N3Snk5Ti1palczQUVJZmludEhDdHlUMUhseGdYdW53YVltWEJOVG5GeGJqMzBHNU4xU2RBcy1Db2haeGZqZUFDR1ZzaTJ4Vnd4ZDMzZGk1WkdY0gHYAUFVX3lxTE5sUG5CRXJQYjFJeUstMUNTcS1JWHBtWkI3cWhjMDBxYWxMdXlfaHpOc2pYakdDNVg4UjcyVUhCZlZwMl9vejRmNzBxTG5Jel9hbzJnX29maktVeHNKQkZUaVNyaWE0ZE5YdGdLdnRwdEtibVJpUHRoT1NwWnpBWUhPT0RNUHVxR0MyWUpheUJ4UWM5cjU5SW9Fc0ZGLTdPczJ1ajh4THNFRUNsYUNZTmh2RFdDNUpHdEJkWk5SLUxoUFhtWkNLVEhkSjVfWTEzUXBsdTFCRHczRg?oc=5",
-      "fuente": "Caracol Radio",
-      "categoria": "Educación",
-      "fecha": "2026-11-22T14:30:00+00:00",
+      "titulo": "La Universidad Distrital admitió a 113 de 1.887 aspirantes en lista para Ingeniería de Sistemas: legalizan",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5FeDlqeFFlb0JkM3J0aVE2dVoxWXJoaUs0WklEbmJtOE95U0llbDNXdF93aVRUaEc3WkdMUUNlY3AyZjh1emJuRzh1TUZoSVdNVnctNjhJeU1ld3ZpcF9RbVdCcVdPTTVzWDZ6X3RR0gFuQVVfeXFMTkV4OWp4UWVvQmQzcnRpUTZ1WjFZcmhpSzRaSURuYm04T3lTSWVsM1d0X3dpVFRoRzdaR0xRQ2VjcDJmOHV6Ym5HOHVNRmhJV01Wdy02OEl5TWV3dmlwX1FtV0JxV09NNXNYNnpfdFE?oc=5",
+      "fuente": "Más Colombia",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-22T13:14:23+00:00",
       "resumen": "",
-      "id": "735e625471c6d82e"
-    },
-    {
-      "titulo": "Google ha convertido Gemini en una tabla periódica. El problema es que ahora hay dos modelos de programación y ninguna pista de cuál elegir",
-      "url": "https://www.xataka.com/robotica-e-ia/google-ha-convertido-gemini-tabla-periodica-problema-que-ahora-hay-dos-modelos-programacion-ninguna-pista-cual-elegir",
-      "fuente": "Xataka",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-22T13:00:29+00:00",
-      "resumen": "Seguirle la pista a los modelos de IA, sus diferentes versiones y las compañías que están detrás es prácticamente imposible. Salimos a LLM casi semanal. No solo eso, después viene Google y renueva por completo su catálogo con incorporaciones que no se esperaban: cuatro modelos Ge",
-      "id": "b836d6d9e102f9d3"
-    },
-    {
-      "titulo": "¿Es GTA VI el último juego a gran escala desarrollado sin usar IA?",
-      "url": "https://www.xataka.com/videojuegos/gta-vi-ultimo-gran-juego-desarrollado-usar-ia",
-      "fuente": "Xataka",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-22T12:30:27+00:00",
-      "resumen": "GTA VI, el nuevo mastodóntico título de Rockstar Games, ya está disponible para PS5 y Xbox Series X|S en tiendas, y llega para convertirse en la producción más cara y ambiciosa que la industria haya visto jamás. También aterriza en un momento muy particular, pues la IA generativa",
-      "id": "1a3d3651c9149e6e"
-    },
-    {
-      "titulo": "\"Notamos una caída de pacientes\": cómo están viviendo los psicólogos el auge de la IA entre la población",
-      "url": "https://www.xataka.com/medicina-y-salud/notamos-caida-pacientes-como-estan-viviendo-psicologos-auge-ia-poblacion",
-      "fuente": "Xataka",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-22T12:20:26+00:00",
-      "resumen": "La llegada de la inteligencia artificial ha supuesto (casi) el final del SEO y de la búsqueda en internet tal y como la conocíamos. Una víctima inesperada de este cambio son los psicólogos. “Notamos una caída de pacientes porque ya no entran en nuestros blogs”, explica Aurora Góm",
-      "id": "d2cf0c12191ecb76"
+      "id": "75e82d5aa4e01a27"
     },
     {
       "titulo": "Begoña Villacís: \"Es una prohibición de facto\". La patronal de los centros de datos, en pie de guerra contra el Gobierno",
@@ -173,49 +218,13 @@
       "id": "e8fc0317af52be15"
     },
     {
-      "titulo": "Universidades eligen a nuevo representante en el Consejo Na",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQWk5WSDBRZ0ZMb1d6NUh1aEFvakRYS01mRFBOZnl2UHdwdlNGcW1IVm1BbkhwdTQ3dGRMT1ZsNUppZ2p5THp2M2lEMldiTjhTYmFYendWY3AyNTJRczF3RktDVUFyQk5aLUNGbVZDS0lRMXF2N3VfRi1vOVR4Ti12Ni1lcm4ydWRiN0gzb25sUjZ4QU9ubDNIaDVBUFNudkRST3lQbDJDS0FXQUt1cGJJNGk1R3ZBNFZEVV9QNXlNaDJMUQ?oc=5",
-      "fuente": "Diario del Sur",
-      "categoria": "Educación",
-      "fecha": "2026-11-22T03:05:42+00:00",
-      "resumen": "",
-      "id": "18ed2ffdb4745ac6"
-    },
-    {
-      "titulo": "Histórico colegio de Bogotá cierra capítulo: estudiantes y profesores empiezan nueva etapa por orden de la Alcaldía",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQYy1jc3FRMzE4NmdPYWtVSnFrQ0tTdDIxdDFjX29qMHpna1BDUS1nTzd6TmdOQ2tJeTdCc1dxbURVNEVjVURyMEVGOUNFQU5tdVVnS0dYNGdPMG9XdnFYd0VtOVFjQXVvTkNSb2RqelhMaDR3eVpEZERCYWlvMGg1WUZRdmE4NzJwVjBFNGZyT2gzaDNuOExGX19jUGNTaU05cnFoM2JuUnB2cUxXTnBWQXBPLUt2NHVsd3JUWS1rb29BRTlZMFB6T0ZXamZ1TElyM2JCUzMxVU1LdDBJVTA5RF9haWVhVjdFMFdGR3FhM1NnX2czREV3?oc=5",
-      "fuente": "RED+ Noticias",
-      "categoria": "Educación",
-      "fecha": "2026-11-22T00:26:43+00:00",
-      "resumen": "",
-      "id": "aa055bebc3d0d564"
-    },
-    {
-      "titulo": "Profesores celebran en Colombia: confirman fechas de nuevo pago en diciembre por su trabajo en colegios y universidades",
-      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQWE9RVG1YaV9yVldybFpHM052OEpmb0RUcnlqeHlWakJja3lwb3otdEZhMTV6U1k0aTh1R2FwbVR0UjR0MjNKa3N2empWYVFSRmpVSUZjX1dEckNyUGN0RHZMNFJDVzR5NkdiTlJFcXVqel8yUXZiajBpMERkcmVNQmp0OTgyNnBrRlpuWjlvNTJQRXJBd1JuMUU1S3YtZGZlcTBBRVBmZ0dvdVNOVzVMN05uUm5Bb09GWWI4OXBoMWJ3Sm9ZOWZheXdlZ2ZQS0FZb2o3V3NfVmNLUVBMMEQyTFpRc3d3ekpjUmQw?oc=5",
-      "fuente": "RED+ Noticias",
-      "categoria": "Educación",
-      "fecha": "2026-11-21T23:07:54+00:00",
-      "resumen": "",
-      "id": "1d3ef84d8a31b844"
-    },
-    {
-      "titulo": "Gobierno entregará autobuses para rutas estudiantiles y optimizará becas universitarias en Venezuela",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOclJJN3VqRnMwN3VfaVVMUlQ4eXU1Vk9qdTczdGpseUJDa0hEV2FZTG9MUFpzOERPVU92b3pzNWI3V0NGTl9jYTZWbFhQQzVJM0xlYlRnbnRHaEVpSzhiZzY2dUNRZ21RZllJQjNyM08wcF9odHZxanY5X2haSC1UdWh2MkRKeFJiQkw1ZkNKWGJuaFlHYlYyNTZlNklTalg1ZDBoX1BMVmxYQWJUSUtvVERhR3dzT205a05tSkUwUEp3elVBNk1FN0xaYw?oc=5",
-      "fuente": "La Prensa de Monagas",
-      "categoria": "Educación",
-      "fecha": "2026-11-21T20:03:38+00:00",
-      "resumen": "",
-      "id": "6961c7786c63da32"
-    },
-    {
-      "titulo": "Ingeniería de Sistemas, seis años más con alta calidad",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQY0cwRVNDbV81SG1oVmxCdTVuTmtGdnR3c1pjTkk5NXdHQ0tDVG9wNG14aDlTXzJrQVRBanhkZTNkdDRWbW9MamdkZnh3TEJMNkFTZGpVQlF5aXJhODRIR1dfcnZJcnAxWnFMdjJDLThMdEJ3YU1BcngyX3g4NEJnR1hGeWdsRGlCOTIxN3Zwd3Bod1Fzamp0a1A1NlF2S05oT0VwWTUydjZ0TkZ4X2JtTQ?oc=5",
-      "fuente": "Universidad de Ibagué",
+      "titulo": "Pacto Histórico exige renuncia de Verónica Estrada por títulos falsos y anuncia revisión de diplomas de candidatos",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOUFZaT3NaTDNqeDEzNmpFLVNfbjFVTFQ0SDRrdld4Y3hmM0NpbExlLURQbEdaanpyQnk0d3FYWVFfZmpqYXNXSDV1LWRQRmk2aDBZRFM1VGRoSFBPcWwzUDJ4QV9YeGpiSnE4N2V5ZGNfMnVuSTNmRWFSdlRvcENpR081b3h0QnNLWjduQmFCUVF2UnZzb0RmMFU4eVpvcHo3WHVrWWtaLUZVM2pmV19XUVNrd3lNLXZkVzhES3BOUUlZSF9uRlVNWDcyekJKRGw2eDN5czNidElkR3Q1aDduOUJLYlVOa0VaVGZ3cA?oc=5",
+      "fuente": "Agencia de Periodismo Investigativo",
       "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-20T22:03:56+00:00",
+      "fecha": "2026-11-21T02:49:06+00:00",
       "resumen": "",
-      "id": "5bc877a65640a962"
+      "id": "4f92d9888e3eff17"
     }
   ]
 }
