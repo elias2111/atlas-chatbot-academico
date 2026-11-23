@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-22T18:29:26-05:00",
+  "actualizado": "2026-11-23T17:25:19-05:00",
   "ventana_horas": 48,
   "total": 20,
   "categorias": [
@@ -12,19 +12,19 @@
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 3
+      "items": 11
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 0
+      "items": 5
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Tecnología",
       "ok": true,
-      "items": 27
+      "items": 49
     },
     {
       "fuente": "Xataka",
@@ -36,159 +36,177 @@
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 46
+      "items": 25
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 7
+      "items": 9
     }
   ],
   "noticias": [
     {
-      "titulo": "Anuncia Rector de la UdeC 33 becas de apoyo a la movilidad nacional e internacional",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9vdmEzSjlNRHdZTDRQRzhGd1ZxUVRvSHN3SU1FSFl1Q2djN2VKY2NEbkpyaGF4cTBvWjl5eHlFd20wcUZRWHJGS3lxWVoyWkE?oc=5",
-      "fuente": "El Comentario",
-      "categoria": "Educación",
-      "fecha": "2026-11-22T22:23:24+00:00",
-      "resumen": "",
-      "id": "852faf6044a84d16"
-    },
-    {
-      "titulo": "Bogotá abrió 180 becas-crédito para estudios superiores en la ciudad hasta el 24 de noviembre de 2026: paso a paso para postularse",
-      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOcm50Wk9fd3pOWWstMzV2RHAzYlg5RVNHT0NPbGNGeXgyVF9mWERYYTczNDlRbDRKa0FQLXQtbnpyX205V1p1dHA1YnRLenNRX1d2NURDZTV6TFFjUzRXX0pReC1YbFAtaTlzV29ZZ3hvV0dHVEF1MnRmM3hzckhpSGtkSlIxT19aNkJJUnFZMmxVbTZFZ1YwUlpGTkZtTlBMOGhTY2gxb1Q5MlNocnc4R0N3ZkxORzItcThuZmtqWlVaVG96U0FPNi1tbmlHdHF1TnBNMHdSN1d3MzN2YVVtaE5wWFQtbUItSGlma0R5cEozWm1jTDZ6aGNndFR4SVAwUllNSNIBnwJBVV95cUxNdFJnWWV2alJtSkRVTzJwQjQ4U240cUxLNW1NN3BRdDJBTlFaWUhyNHNsdVg4aFh3b1ZvenRxLWVydTNSS0lZRDc0RkdkaVkwTkhsai15VUdsU1NZeERHcFJoYjdDdWdSMHl1T1RKR1NEWXppa0MtUnJ0b05xTG1ld1Y4VEF6Vk9NajRFUnZ0RzU0ejN5STRscUJnVGROUmxwVHQ0bkxlOGVHLUpubldOVEE2Rm15SzB1TVk0ZWpsbERibm5mTTRQN2FmOEl4VWh3N1ZHbW1DTHg0TEVFSmQwWVM3WHVVU2lOQkVaQjZBUHpPWExmLTFIV2dUR1I4V3pQRHhuVGdnRlhPdktfRXUxRFNFSXNkdmZ6SkRTOGF6aw?oc=5",
-      "fuente": "Infobae",
-      "categoria": "Educación",
-      "fecha": "2026-11-22T22:11:00+00:00",
-      "resumen": "",
-      "id": "e2603a57729df05d"
-    },
-    {
-      "titulo": "Colombianos recurrirán a la inteligencia artificial para elegir regalos de Navidad: estas son las tendencias de compra",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNY0ZBcGNBb2szeklXeTgyeElQZHMyYmRreDFJTGFvV1N6bFVVc1dMT1MzRzVRZ2RpN0ZMQ01kZDViZE4taVo4SS1uNzVuY1hWVkl5WDlrM0llaXZqNmRZZmNQY3RIRUo0dEdTeVRhb19wVkpDM3NxVWhJX0pFdmJTX0lFU09iZE1rX1JkUElzUHVUTXpwQU1PWnZsMjNSaFlZdE5iNVI3Szl5Vm4zaGFxdnBfNVZBWU1kMG1lazNISVBXbGZOS0daQTB4M25GQlpCRzRtY1Y4NlZrcU1VemlwcWJqaklWN1lFZnRMYkNYb0Z2WHM40gGPAkFVX3lxTE5GbVVFOGJmT2RXM3M5cGNZb3BaTUQyVXdEX2xPanhUWE1venozTDRKdkF6dktVVGp0Z2lxaldzX1pLaHYxNUdVRmZ2T2NMd1NOYk4tTGdvLU5RNHc3N2lTdkdTYjdKemNZYllZR0IwSWQwMWZtcW9IVjRqMy1VeVl5LVpzZnlWd0VKNVNtTkhySmRiMWNjOEJMZkJpOW9tSjNCYk9tRllwOHlOaE9Rc01OWVUwdnNOWXJpVlFDdHc2X0lJdkt2b3c3VkFObTBVLV9MSGhTTDNYOVdZa1U0NDBVdlJZSVlHVlJocE51dl9WbkVnVlI5Tkx5WnRCZXNmNGNyaUU3NG1OYV82MTR1REE?oc=5",
-      "fuente": "Infobae",
+      "titulo": "Colombia busca usar inteligencia artificial sin perder el control de sus datos",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1ueC0xeFhRcS1MbnZEeXA5WXloNzh1amJDXzQyanNnRklSMDd1S3dQWUNkdF9uUXhMNTh3aXJDck1jV2FQcVl0Nk1GVWUwOTB2dnduU1k0SDROMGxlT05yN210TGpNUmJyV052Y0Y1Sy1oWlRzVmc?oc=5",
+      "fuente": "Q´hubo Bogotá",
       "categoria": "Tecnología",
-      "fecha": "2026-11-22T21:46:00+00:00",
+      "fecha": "2026-11-23T22:02:18+00:00",
       "resumen": "",
-      "id": "096af23c62196a80"
+      "id": "2217f127438dc686"
     },
     {
-      "titulo": "Abren 100 nuevas becas para estudiar en Bogotá: Requisitos y cómo aplicar a la convocatoria",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMUpPR2VveGhEQW96MUFRZ2w1aTF5dTNVQ0h1Z3BqVFNkTTdiQmd0bDdmSlpoUGxNZ29uUmM2M3gzcnZPWFAtc1gweFNwakJVU1lHUGFkTTNaLU1nVVhITHRLV0NIRXRVeFE2eWt5TmpPSlVETEN5dkhXWnlmUDAxaThjbS16NUx5c2xBLUJkR201Z19uN25hM3pBZkwtZzhUT0xwUE1MWmR6aXJNWWZSZTZXbUdZZkJ3U0pqUm9rYnRHRkpZTXlBTQ?oc=5",
-      "fuente": "Newsroom RCN Radio",
+      "titulo": "Foro Educativo Nacional 2026 reunirá en Bogotá las experiencias y propuestas de las regiones para fortalecer la educación en Colombia",
+      "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxOc3AzVWJkbG1QOVA4a1dZWEd4UGVlRkdCeUs5bmhfQllFeFNlb21KNkFGb3R0UWVXOFlsRG95N09DakNOUFhCQUs0MDdGdzdIZjNUNlVDcmd3bm9ELVBfcXpWam91dWRVSWZYZFVMX3Z4VUpqQmRRbER6blBnVkZrd1JOQzBsUjMxeXB1SHJ1dE8yb1BUNEJETTR1SGJRaE83RV84ZHdZRmFMR1JHWVZCYU1kRzJlUXR6M1ltU1VzVTdoTkxEMmNWMnN5ekNwcUctVERQNURjNHBVOWRwRFR0SHNNWXd4STB2NHE2YU1kQkxueVNhR1N1cGpHX3VJTy1ma0FOemsybEROb1BNUkFRRW8zZjdiY2JDdHpHSEp6ZUo4SzV1NW9rTkt3?oc=5",
+      "fuente": "Ministerio de Educación Nacional",
       "categoria": "Educación",
-      "fecha": "2026-11-22T21:23:19+00:00",
+      "fecha": "2026-11-23T21:55:09+00:00",
       "resumen": "",
-      "id": "766dc569c841996f"
+      "id": "1d79530104d6c94c"
     },
     {
-      "titulo": "Brugada entrega 30 mil becas de transporte a universitarios; apoyo aumentará a 2 mil pesos en 2027",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOOVU1QlVnUDFzV0RsdUtQYV82bzlpMk92b3REb29keFp3WU9vNVFCTWx6dVR5WVotUy0wLTY5ZFhqTW04NUtMUXZSYjJNdkJaLVVBak81XzJHWXh4SFZpSWszRU1CRGlLZHJnZF92SE42RWduS1VKZnlDMFl3Y1NnbG1VeVNaUUdLRUthLUdrOXhiU1o2anBIYzVDMzR1cVAxZUt1bzhCQ01jaWM1YWg1eGF3WkEtVEZHb3hhUHJlWGgzaUlfQmFERVoyZHZrVk8xb29Od2VXV1RVZ3M?oc=5",
-      "fuente": "ContraRéplica",
+      "titulo": "Estas son las cuatro universidades colombianas mejor ubicadas en el ranking QS 2027",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVzdSVE4xd05tZkJ3cHFpellYcm1ZRkpleXhpWkIwT2xHc004RTVsczRpSjlTNlF6MS1nZ1ZJTHlPRE9FZHhwRjhXYlJZVVpDSTdqcG1zRU5nM1BLS0NPQ1hwbmVUYXoybTNXMjJqWDN6bUt4am1FWFRiZmRJUzY2UlpyckxpaE5MRURJeEFESEQzN1JXTnRpVmNGbHZ1WC15RGo1UGRpNmFSWl80NVlFUEUyWVAwTXFCOTBtZjNnTDdtVzRR?oc=5",
+      "fuente": "Diario del Cauca",
       "categoria": "Educación",
-      "fecha": "2026-11-22T20:49:46+00:00",
+      "fecha": "2026-11-23T21:52:11+00:00",
       "resumen": "",
-      "id": "8db2836ccdb93461"
+      "id": "dc2d8e96584d1ee3"
     },
     {
-      "titulo": "Mineducación pide recortar 386.173 millones a su presupuesto de inversión para 2026",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNbWlqVWE4cUo3cjFJZ1h6NzQzVlh4RTlWanpLZkk2bk43a01pNDI1UXgyQTFEb1Exc21aMEFPX09Ba0kzQmtHYUxKZW1oakRLMjNVVHZYMjZOY1VLN1lhR1FzSElQRUNxZHpTOHFMQnZmWmVNODJ6WlFnUVJYQlhjc0w1Z0VSN2M?oc=5",
-      "fuente": "Emisora Nueva Época",
-      "categoria": "Educación",
-      "fecha": "2026-11-22T20:03:55+00:00",
-      "resumen": "",
-      "id": "c9bb1f857248d96b"
-    },
-    {
-      "titulo": "Colombia ocupa el puesto 62 entre 70 países en preparación para la inteligencia artificial",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOQkh4b0JqcjdZYkZacVNYbXoyRDBweFFHdU1NLWNzX2txb0lza2kwblJOZjBOZmdwdERNeF9leWttc2VpblNaSmc4bk1NTkpVMjZma3VXLXN5NHlFTmxCbEgxU1VCclU3QWRxRzFEZ1pkV1J1RXRZcDRUS3JFTkR2WDVzQjVLcF8xbF9Dam5tMlZ2TGN2OTloSzV2LUd1Qml0RDJzMkxMX3RjQTZZNC1hVg?oc=5",
-      "fuente": "Aldia.co",
+      "titulo": "Estudiantes de colegios públicos de Colombia desarrollaron soluciones con inteligencia artificial para enfrentar desafíos ambientales",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxObkpzanZlSEM2TVJreTFQVzlSeVl5SGo5V2czMGc3VllNQW9TcUs1ckZQMTUtNW1LWExLV0FXTEwzdkJOVm1kVWllMHNfczVVNm9FRElDR2gtdkNsQ001VnRoQWZaWGhSeHE3bmh3NDNHaVVZLS1RT3BPS2tyVG44RHlWMzVwdEI4Q1ZuRlR2U3FMM3hhYUdRUGo3eWlrb21PczZoVy0xTW42MUNWTGM0REVsZ0tJa2FocHpmaVBnUUN4amZlSUFJbnEydWc4ajk3T0dlZmN5TmVQNk5JOGZFZlBwclZXYnUzSTFUWWNJS1dSWktLQjJzMkZxRQ?oc=5",
+      "fuente": "PrimerTiempo.CO",
       "categoria": "Tecnología",
-      "fecha": "2026-11-22T20:00:00+00:00",
+      "fecha": "2026-11-23T21:19:43+00:00",
       "resumen": "",
-      "id": "66cb3caf4a9ab453"
+      "id": "d9862bb256c5e328"
     },
     {
-      "titulo": "Colombia ocupa el puesto 62 entre 70 economías en preparación para la inteligencia artificial: ¿dónde están las fallas?",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPWTAyUFlfZlM3UFlXYmx6SkZXVGtVNXBSbmlCcFRlZTZpblBPLVJ4d2p1Yi1NUm1SMGREV3dWTFVaV0N5Z0stSnBCa2Y3dVVGTkFpRHdBT3cxQjBjS3lVSEZCOWVuUDJJTEFLeVQ5RldQQ2RFbTc0U2prRTJhalpqcXRkMHlaTUJPWEtTSDVOREM4bDdYclQyR3MzaTJuUnRzMmREX3BYR3FNUkp0OERKblBrSXBtT1Q4OG1EZlRqZThoNmdsWHY1aW14dDBVczBvM1VyNDdwZ3hRbVptN3dabVFWaUtSenpqaGp1aTVvd9IB9AFBVV95cUxNWkotaExzR3ROQmwxQ256a0FZdEpSbTMtQkU5ZExEZWNjRHFrb1QtNWxyck5IdVpTcVJaZ3FiQjQtemNETjV3VklNRzZhc2VKYkxBWDJqV3ZpdFlQQTRfdWYwcmJIcURTZUNneHN0RFRpNTRFTTJMRVRQMzhvenN1M1dGSXJIOFoyX01aYzMxZ3B3UjlzLVd0cW9Yb1dTQmRiQmRobWNuanI4OHBkWTNYSDdBRkdhY0Q4SFFTUnVva3Q5MWJaeVNfM0VhUWticHR6RDdBZ2ZLa1RRU1NHVFNhVXZTV3Q3VG91Ym9WcFQ1eFNqNWhy?oc=5",
-      "fuente": "El Tiempo",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-22T19:46:38+00:00",
-      "resumen": "",
-      "id": "ba355e99a02d5d33"
-    },
-    {
-      "titulo": "Colombia: Puesto 62 en preparación para la Inteligencia Artificial",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNC1jTk43VmFUUE5NUlZZTUlJZ0JUdDV4MXZPSXJ6a3NYbURnMS0tZTFINUpLclBxdldoWkZOU1JQOGV1T0czX05ka2R0NmRSZ1NGYjFyd3NvVFRMS2NZWXRJS21fNW9jLXVwaDF6ZzFLNFA5WWJBOXFBVHNjcm5jYVI0M1FNa0R2SEhTWVNB?oc=5",
-      "fuente": "Estrella Digital Colombia",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-22T19:46:38+00:00",
-      "resumen": "",
-      "id": "9dfc570cc76db930"
-    },
-    {
-      "titulo": "La nueva guerra fría entre Estados Unidos y China no es por los chips: es por los monos de laboratorio",
-      "url": "https://www.xataka.com/investigacion/nueva-guerra-fria-estados-unidos-china-no-chips-monos-laboratorio",
+      "titulo": "Las plataformas de streaming también se apuntan al Black Friday: ofertas y promociones de Apple TV, Disney+, Movistar Plus y más",
+      "url": "https://www.xataka.com/seleccion/plataformas-streaming-tambien-se-apuntan-al-black-friday-ofertas-promociones-apple-tv-disney-movistar-plus",
       "fuente": "Xataka",
       "categoria": "Tecnología",
-      "fecha": "2026-11-22T19:30:28+00:00",
-      "resumen": "En el campo de la investigación biomédica, los monos son fundamentales para poder realizar experimentación y probar, por ejemplo, medicamentos antes de pasar al testeo con humanos. Hasta hace unos años, China era uno de los mayores exportadores de los macacos cangrejeros que comp",
-      "id": "bde0549d13770745"
+      "fecha": "2026-11-23T21:16:46+00:00",
+      "resumen": "El Black Friday se ha ido asentando en España con el paso de los años y hoy en día no son pocas las tiendas o marcas que lo celebran. También lo hacen las plataformas de streaming ofreciendo promociones en la que podemos suscribirnos durante varios meses por un precio más rebajad",
+      "id": "f72c6b7ebf0ebab4"
     },
     {
-      "titulo": "Vuelve a tiendas Lidl el sábado 28 (por 100 euros menos) el robot de cocina superventas Monsieur Cuisine con pantalla táctil, báscula y más",
-      "url": "https://www.xataka.com/seleccion/vuelve-a-tiendas-lidl-sabado-28-100-euros-robot-cocina-superventas-monsieur-cuisine-pantalla-tactil-bascula",
-      "fuente": "Xataka",
+      "titulo": "La NASA impulsa nuevas tecnologías para explorar la Luna y M",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxON0I0djFKdVY5RXlKTHNfRFBsVExjaDE3bzdnN3hKc2RYb1diMTJLUnpIMXk1cWJkY0czVFFtQVk2ZWR2Q0J2d0NoekxOd3JDUmZyVmhKV3BKLXNISWRpTzBWZUpkN1liQXhOa01vOHlZazU0NmVnM3FobW9iWl9WN2RFRlMwakVrcGpoV3ZRQkpHSmhMX1g0WFhENHBPaWlQc3Uwak1yUmxGU1E?oc=5",
+      "fuente": "Diario del Cauca",
       "categoria": "Tecnología",
-      "fecha": "2026-11-22T19:16:24+00:00",
-      "resumen": "Aún no ha llegado el Black Friday como tal, que tendrá lugar el próximo viernes 27 de noviembre, pero muchas tiendas están ya inmersas en sus campañas de rebajas desde hace días. Una de ellas es Lidl, que en su último folleto (centrado en el Black Friday) ha anunciado las rebajas",
-      "id": "528de58322b6407a"
+      "fecha": "2026-11-23T21:16:06+00:00",
+      "resumen": "",
+      "id": "c6761bbc0bcc092b"
     },
     {
-      "titulo": "ICETEX amplía plazo para créditos a estudiantes afectados por el terremoto",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxObUVZYnJDMU1ybzhJUDg5bWRRRHdtUnB1ci1ReU1hRElJRnV3NWt6Y190eURRVWRVdW5xTkt2MFVaMU84Y1dnbmZaWUJXMnZFX19sT3NwX20tWUJjcG8zU2dEZUNQQmF3RDRXMWJjY09XNm83Si1Wb0hBcGR5cEtsWEpJR3pQZw?oc=5",
-      "fuente": "TuBarco",
+      "titulo": "Ministerio de Educación cambia el destino de miles de estudiantes: cuatro nuevas tecnologías ahora son realidad",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOWVl4NjlSTlBRekFYalpXZVFmMlNaUHE2ZFg3Nl9ZZ0JIOEx3Ym4wOWRLVEVBZUxxcm43cktWMVRuUjlIVHY2bEV5Q1FZM1FQaURkOS03ZUhXaWFpRm5jNkEyX1kxTk5jVU9mZmF5bVJidWM1c1poWC16dEU2ZE1sTmE5MHNfN1JsYlktODRYZThVUnA5ZmlxcVNSd29odnVRNS13S1FwaDZKcU4yWF9WcXZRQnE5M0hqeXlCaVE5SnVCUjZsV28welVqT1lQRE9vQWV5OEhBUzlTOGp4ZEZBZ0VuS0U3U0ZiMWdPYnVaVWR2dw?oc=5",
+      "fuente": "RED+ Noticias",
       "categoria": "Educación",
-      "fecha": "2026-11-22T18:32:40+00:00",
+      "fecha": "2026-11-23T21:10:04+00:00",
       "resumen": "",
-      "id": "42943c17cdef95ba"
+      "id": "c7f5c2b76d0af6c9"
     },
     {
-      "titulo": "La inteligencia artificial ya corre en el WorldTour: ¿Está Colombia preparada para dar el salto?",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPTktBME11WnRGVWdlb3Nwbm1lV2lGTjdadi16Y3FPbDVGZ3d0VUdJYnBSb3FQRHhwZXVwSHpwbWsxdUFOdFVaajlZQzRDU1owU1FkdFhKMGVQMURJVjMwd2ZqUWREbkdYczA2UTdHZ2VBdjF1Y0sxOFM1ZmU5a1NoaUMxLU1fSUlhbHN6bUl0NjEwSTd2MGJEeF9iYmNkM3lxaUVCdFhVY1BnYmEyZERCOHR6dGVUM1BVYWV0bGo0NENTbW9xamVyM2hSMmpLRnpsMFdDTNIB2gFBVV95cUxNdDdRTzQzb3U4M3pVV2xOS2FUQ1NtMTlFeFN3djdzNUQ2OV9Dd0RCdzdBbDYzcTh2enBTSlMtNVR0c2t5OVZJRmNRZWtsb092UDlFMHdRMTdoOWxiZE1fbTJGWkg5clRabnJVejVoZmxmTV9KUTc2akIyTWxLMW81RWhYMGktbGlDOHd1NXlsQlk0XzZmYmRVUDVqdVFCUl91MmZZeHV1SHc2SUlsaUpEWDFrWmhLQWlTQ2J5WV9PakxydzBPRzRaNElGZ0VGajRNaUhSazVCcTh0UQ?oc=5",
-      "fuente": "Revista Mundo Ciclístico",
+      "titulo": "Cascos balísticos: tecnología, ligereza y comodidad para ope",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVHhCR3RjVjhISUNNWFQ1S3RJczN4RUxhd0twWEE5MzRhclppVUpSTHF1MzdRV2VHd0ZCNkJibHFYVk9aUVJDUmNkLUVPX3BleWtMUDBMTlhZVWVoUHJkRWNxVUZsa1BZOXowdmdGaGVrUHViYzUxZmZrR3BfSzBqVmliVW92QUVKQVhjVVBwV0MzSDVQaEhQXzEwa25NNnB2QnM3MndWamdVcFlOT3piLW1CR2E3Y0xq?oc=5",
+      "fuente": "Diario del Cauca",
       "categoria": "Tecnología",
-      "fecha": "2026-11-22T17:12:02+00:00",
+      "fecha": "2026-11-23T20:59:46+00:00",
       "resumen": "",
-      "id": "5c275f1f639cc601"
+      "id": "d700e5af600d55c6"
     },
     {
-      "titulo": "Joven de 17 años desapareció en Bogotá luego de pedir una moto de aplicación para llegar a su universidad: esto se sabe",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNcHRoNlFoeExtOUI3ZWl5eHBDUVB4NndMcXRKRTFpQmJZTmZCZU5TbUFnRkNPVXNJbEJZQjNuTE83djdydlE4M2pGSWtwSjlwczFOeUFwYXJBSWVpSlVCZFQtb19UTWd0XzRmMzdCbE9wVmtfTmVnWnlRRG5RVk1Gb0JEaVNvMkdQVVpjenp1SC1seHBpS0REWGlYX0UyRWY3WkgwN1ROLUlGbkxRMGJMelRid2g4SWhXWE1ya3FSRWgtNExZVFVTV3BBMGhJdlhVV1pDdFhOdk42MUFMa2NhNEczb1dtR0d5Qm1SYnN4bF92YXNzbUHSAZACQVVfeXFMUDdiV2cySXpDMkhVTGtuM01ZSzc2MjNJcGYtYkpUNXI2TnZlN2NUZXdjU1p0WGlXY1ZaVzNMM3hiZ0ZxQzFTSnh0TExpb29MLXVwckFocGR3MEdvX3gxVE1FTkRWQWdOVlhCTDNRMFZROFJ6cTZldmpmME5HSzdnOXRMZnRhSUdfQTZJdWd6UFpZcmlNQkI3MUMtRE5GZXNIczE5ZzlxNHZYeHpzaFhpdFhoMmMwTVp1Y2JvN1h3RjFyRmZ5SndNa2JYZS1Nekt6eV83RTFFN20ySnZNS200QlRVNWNaUDRleWFFTkNkUmp1b3AtTlN3MUtxUDk1MlNFYVpnODF2akcwQlBodWVCcXY?oc=5",
+      "titulo": "Desapareció estudiante de Los Andes en Bogotá: tomó un vehículo por aplicación y no llegó a clase",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQaDJtREFORzBlbWZWSUpXV1otcDZ2MlpESWE2cWhlc2JQbnFPdGx5MV91ZnJ5LU5kSmVvYVZaa01Kc21GaEFEc3R3N1hhNVJabXVucGhSemZnakhSazlVR3RfbzkwM0VLaHFZVWsxUHVnY290cGVUcHVNTjVpWmxRWlF2OXVJZkF1YXJsTHFwa00zX2hjalNyeWpYWURPcXBMQ3FLdGRxVjBHSHV3M3RTM1ZkNzN5QW5lRmlFT0h0bEdzaDZmZl9pUTFsNVMydDNRMmZRbmJYYlRseWo1?oc=5",
+      "fuente": "Vanguardia",
+      "categoria": "Educación",
+      "fecha": "2026-11-23T19:51:00+00:00",
+      "resumen": "",
+      "id": "e8939501cbd178b5"
+    },
+    {
+      "titulo": "El pack de Black Friday con PS5 y tele OLED para jugar a ‘GTA VI’: consola más televisor de 55 pulgadas, con 1.000 euros de descuento",
+      "url": "https://www.xataka.com/seleccion/pack-black-friday-ps5-tele-oled-para-jugar-a-gta-vi-consola-televisor-55-pulgadas-1-000-euros-descuento",
+      "fuente": "Xataka",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-23T19:46:50+00:00",
+      "resumen": "Este mes de noviembre es el del Black Friday , pero también el del lanzamiento de ' GTA VI '. Como el juego no ha salido de momento en PC, salvo que queramos jugar en la nube, solo podemos disfrutar de él en PlayStation 5 o Xbox Series X|S . Si estás buscando una de estas consola",
+      "id": "4928bd259872da33"
+    },
+    {
+      "titulo": "Diego Hernández fue nombrado como nuevo viceministro de Educación Superior",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUzBqNEhRenlRR0RuZGdwZW1fRktqM2Z4ZzRraXpTa3RndlVIc0V5SlZNN25NRWZacUFtemp0dHhZZW9YSFlQQ01iTUg3WnRPRWZrNTVlb3dFYjY4NVNhVjZPNjRnUmkyNlUxTXlrLXN5NFJ1ODc1V1lad0h0REpsTWIxbmJiYzlSTUF1SVVnZVVkd29BTUJ3WHJZNlR0TzV20gGgAUFVX3lxTE5TMGo0SFF6eVFHRG5kZ3BlbV9GS2ozZnhnNGtpelNrdGd2VUhzRXlKVk03bk1FZlpxQW16anR0eFllb1hIWVBDTWJNSDdadE9FZms1NWVvd0ViNjg1U2FWNk82NGdSaTI2VTFNeWstc3k0UnU4NzVXWVp3SHRESmxNYjFuYmJjOVJNQXVJVWdlVWR3b0FNQndYclk2VHRPNXY?oc=5",
+      "fuente": "Noticiero 90 Minutos",
+      "categoria": "Educación",
+      "fecha": "2026-11-23T19:31:36+00:00",
+      "resumen": "",
+      "id": "7d526d9b8e696167"
+    },
+    {
+      "titulo": "Ejército fortalece tecnología para detectar minas antiperson",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQkg5a1poTmJ5OC02QThrc3Z1dVpFUENPZEQ5dE01UXBQbkZ6U19OdlRkTTc0TGhwV1NVczVkSEFmTWVHYkVsdXJHSjVGTl9hMVZEWnVUY1NZcEpjelJPQjkyT1c3TlQ2QnB0QjdOcjJpcF9QVk1JUWFMekEwd2tjTDEyN1lBMmRmbkR3U2d5WUgzMXh3cXE2Z240RGxJMFNzaFNmQmRpc1hfMUt5bHIxSmJn?oc=5",
+      "fuente": "Diario del Cauca",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-23T19:15:45+00:00",
+      "resumen": "",
+      "id": "ba05bda461bc0352"
+    },
+    {
+      "titulo": "Leapmotor llega a Colombia: tecnología REEV, ingeniería avan",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQazdlX0NCTXBXSy0tSWRpWlhtT1ZYbWc5ajdHMzFZWmhKVjJJcjduYkZYSThvdUlxclB5eUZVMzNtU1UzOXNtcldzRW50TWxZZ3VhV1B0QWsyV2dWUTRtV2wwMjU4UnBsTVBkTXBNRGM3dDdUeW1iN1IwbFVUamNORnhVaXlOUDU2NGRpX0h5bFVSdWZMS2tGN0xOVnVVSmVLdGxyTUNRVWNSSVJxS0J4S3gtUnBMZDVwcUpfWmtOU3I3QVU?oc=5",
+      "fuente": "Diario del Cauca",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-23T19:06:13+00:00",
+      "resumen": "",
+      "id": "9b3e58aaa758f66c"
+    },
+    {
+      "titulo": "Especialización en Ciberseguridad en Colombia: protege la información y lidera la seguridad digital",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNekFTS2VYLUcwV1BQalUzTmNGc3dJcjlfOGNCeENSTndVWHFEWlBWM3ZqZFlkNUhfaVpYQ1BQdGdza2pmVDN2NjZ2bm1vckg5M2JxcV8tRmZ3X0NUNWhYQm04dk5ac2x3dWxZUC1BVk5iWUF0WjBVem50RkstYlBhX2NFTnAySzZkRUFPeXhWX2lSQ0MwMUFrUHFQa2RFSDFBT1AxRHgyLU5RZi1Ja2JLZE5TTFNKZ0c1M3VUb0hYbVE1Y3RubC1hRXp3dFk0MWVT?oc=5",
+      "fuente": "Universidad Católica De Colombia",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-23T18:25:29+00:00",
+      "resumen": "",
+      "id": "7c1c1b7b30629a39"
+    },
+    {
+      "titulo": "Revelan el misterioso mensaje de Gabriel Cárdenas antes de desaparecer: madre del estudiante de Los Andes hace grave denuncia",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNQUw0VFpfNDBBcmxsRnFSTGRVc01TTmJ1eVJlcmpSSGlrMTNXcERrc0VvZURuN0JWcHdjZ092RUtVTm5vQzJUajlmQ2RTWUliN2JRVnhtbHA0dUVEZDFOZnB4STQzRUdlemtxcGhDNExZZzl5WW5iUGFDM3ItRDVyV0ZzaXZLZmg3X1IwRDg0eC03eVp5LXBsSWZTaXk5d1lWVVdyUi1UMTR1aXNCbU5HLTluRC1fNTJqb1RkSmlSZEdwNXE2ZlNEcjRnbTJNSm1MYzJaZG5zTWFKdGk0UUFDblp1cG5zSFNpeWQ1SDhWRXc4Y0pKOU1wN19XREx5eG1hMnA1emlB?oc=5",
+      "fuente": "RED+ Noticias",
+      "categoria": "Educación",
+      "fecha": "2026-11-23T17:58:18+00:00",
+      "resumen": "",
+      "id": "48322ad497955ee3"
+    },
+    {
+      "titulo": "Hasta 100 becas completas para estudiar una carrera: convocatoria cubre costos académicos, graduación y titulación",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQ29vRzMwU293Ynd6di1Zcl9fN0lkaGZCUWp0ejdPN3B5eVo3ZHJQc0RkVDJMbUNwRUJrQVI5X014SDJGdjQ3emY1QmplNnVwY0x0ZTZiY0F5TDBnNDVXMDA3eEpRSkQ1VTdvcTNEVjE0cHE5dDhzX2lTTXpiVVRIRWpmeFRSUUNhcmY0Q3FfdGJISUxNSGtGV3NzcEduV3REOFZ2S2dzYzg5ZjJvb2dxZXp5YzlOVzloTkdZNTdjX3lDQlNsVlA4R28wOUJYbThhcjNCVXNMcDZKay1rMkJaV0RRMTVOYldaYmZjX0NFbFlMUWtIcGZv0gGSAkFVX3lxTFBicWFVTlFXVy0yd3A3OXo3LTVsWm03bnJMRFVpUWRuYVN0eWhxY0dWWWVocDVRXzhINjdxVjRQTnBqSTV6UnpDb0p4cXozMGxmNDR5YXNvVEd5cmQyRkxpck9hNmM3c0s3dzF0bGxIcTladkxYRnU3ZEFxUFhiVlVVRmUzQk1lbFlHSFJzbHg3eWZpSlJucUFoNUFyc0V2ZzlGc3hRRW1MZWp6NFVVT2V0bU1GSDRPbm9hUVUwWjdsVU9aYmlLWGNnczZSQ3ZFMl9FU3RFb0R4UXZzUmloa09Wd1Q0UnRXYUpnWnlNeE1iS2FPWTZNaF82cTVVZDgxZjZ5eVBhd2ZHaTgzcThqMEdsWnc?oc=5",
       "fuente": "Infobae",
       "categoria": "Educación",
-      "fecha": "2026-11-22T17:10:00+00:00",
+      "fecha": "2026-11-23T17:32:00+00:00",
       "resumen": "",
-      "id": "74efa2f76b51c6d1"
+      "id": "db4f0e11fd30f0c6"
     },
     {
-      "titulo": "China tiene la energía, pero no los chips: lo que revelan los satélites sobre el centro de IA de Huawei",
-      "url": "https://www.xataka.com/robotica-e-ia/china-tiene-energia-no-chips-que-revelan-satelites-centro-ia-huawei",
-      "fuente": "Xataka",
+      "titulo": "Clevercel busca recaudar $3.000 millones para impulsar su negocio de tecnología reacondicionada",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNSEJVNzdRU0R5TFE1VDg2M0tYeU9teEZWQ1NfVnRWS2YwZFZXOVhrNUdHY1VYQUlKb0tVc0lrWkdhYV9Kd0x3X1R6Q1VieXFsYTVidkpwamJ4YjVCZS1KazMxaTlpMVR6WmVnRU9mN1BEdUI3a19vWUFoSEpteW5pZTA3U09FdlBBUGtHSlIwczc1S0p2aWk3eGJwSjdmOTVFRUhXakZwRmJKOEFQMEV6a25UeGtNbk13QUJmNmdZSDZ0ekdjTHUtQjNiazNYRG9ic2U4UVl5TGdBWUVKejJTZ3prUU9TUdIB6wFBVV95cUxPbUlVMENFSFpDU244V0RHcEQwVzhoZnlZQmwteVI3endrbjNxbE5rdEFnNzBwMTdsNXhjUnhrUXZBRkRtWmctTFdsZDVEdWlpMHNzQ1phMjhsZ1BjOEpqVDM2RmQ3NndZcnE0aHI1RGNUTV80QUJlR2paclI3SWUwOEdld3dESEdHV2stOWhTbHZtV3hIMlUwS2hLb0ZOWXNwQmtlaW1vN3JSNTljZlNSQzNYRzFjbHNld1NiM1V0SGd4cGZ3OXl3ZllQZHlOQ0xzRVdfU0Jpc2RkeXo0emVDeXB1SDNmYTU3dWhV?oc=5",
+      "fuente": "Revista Semana",
       "categoria": "Tecnología",
-      "fecha": "2026-11-22T17:00:26+00:00",
-      "resumen": "Huawei está montando uno de los mayores centros de datos de China en Horinger, en la región autónoma de Mongolia Interior. Lo sabemos porque la propia Huawei lo anunció y también porque lo hemos visto desde el cielo gracias a los satélites Copernicus Sentinel de la UE y el estado",
-      "id": "51df59fd8e1e6b10"
+      "fecha": "2026-11-23T17:28:12+00:00",
+      "resumen": "",
+      "id": "805620e0c4897b38"
     },
     {
-      "titulo": "Desapareció en Bogotá un estudiante de 17 años de Los Andes: su familia busca desesperadamente a Gabriel Cárdenas",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOSnE2bnluU1JDbEgzYVFjdDJHeDZoLTZoVV9ZalJGQ0VLamJEaDd1S19TTHQzQ3JGb2c4R2s0THBEVUdHVzlaRnctYXRCWW1IR0JDVUk2cXM3RWpyaXZ0ck5pZ1ZHZ0Fuanl4Qm5wWF9NS0RKZlhIdXppYUJrR1VvencwcnBnWU85TzFwUkxpWk14aTZ1dDJLSkZEWDdDcG50ZzdxalhUYmdGVjJMN1l2d2Fkd1lVdm1nb3daOG9oazAyUTBjalBrNkxaNnFLWWJkMVhqcmFGME9XcTNZTVMzQzBKUWRROExVWUQwRzdR0gHzAUFVX3lxTFBIeXNjcDBEMXJjSF9SX1pyQ1BIaFcyWEhGUTV4ak9IX0h3SmlHNjJFUHhBVi0tYW9iWDBTYjd1QzR3OE5obDc5dXAybkRQcXk3Vk9fU2thYS16MUlvSWlOLUE3SDZMWWZSdmhTbjJ0cUVrVkx6WHQwa0hTSmpXSGFNbFpvaWF0RVpybTdlSHo1OGZILTFGNDA4NDM3VkdaRjU0Y0lIZFhRME1SR1k5QS1XQS1PNExwLUhwYXJmcm9pR2RJWlQ1S2VLQkMxYmxYV3pmMWhWcHExeFY0cHR4dHY4aWNodEp2bk5KS0R2ZmFWelppdw?oc=5",
-      "fuente": "El País",
+      "titulo": "Diego Hernández dejó de ser el rector de la UAO y asumió como viceministro de Educación",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTnZ0WF9PdDNTdWtDQV9Zd0ZmQlpwemRsT2FuRGVhWXE4M01YRmx3MHVFalphVm9BN1dCYnRPNmhqTjBBNkprWVFOb0otTVl0aEQ0bUdFenRIRWk3VnNTUlNOaW9lZVlsNjA1WktsWEFtRUFITHZBRjBGX194SEgzYUx0OXNlT2xZcjR2Q1dMRnTSAZYBQVVfeXFMUFZGZHQ5akFBZ29Ld2ZjRDRZeXNVb3g5X3dQMk1zMW5VSDgxMk1sQnBqb1Jlc2FjTU1aWWFuRGtta3pZYWFtZW0tQUZpc0R5SDNkNWphWlk4OHFaWXNxdXJzTzBEX004NDlhVF8tbGRTMUJvWkU4N3M0Qm1VdTZEUnhQMUt6TkhiM2Y0bkFxUUNSd09fek9n?oc=5",
+      "fuente": "Noticiero 90 Minutos",
       "categoria": "Educación",
-      "fecha": "2026-11-22T16:24:10+00:00",
+      "fecha": "2026-11-23T17:05:16+00:00",
       "resumen": "",
-      "id": "525890ba6bb76021"
+      "id": "3ca736b9ebf92c94"
     },
     {
       "titulo": "Colombia tendrá una millonaria expansión de data centers hasta 2030",
@@ -207,24 +225,6 @@
       "fecha": "2026-11-22T13:14:23+00:00",
       "resumen": "",
       "id": "75e82d5aa4e01a27"
-    },
-    {
-      "titulo": "Begoña Villacís: \"Es una prohibición de facto\". La patronal de los centros de datos, en pie de guerra contra el Gobierno",
-      "url": "https://www.xataka.com/empresas-y-economia/begona-villacis-prohibicion-facto-patronal-centros-datos-pie-guerra-gobierno",
-      "fuente": "Xataka",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-22T08:30:00+00:00",
-      "resumen": "El pasado 20 noviembre, a nueve días de las elecciones generales y tras una tramitación por urgencia con más de 600 alegaciones , el Consejo de Ministros de España aprobaba el Real Decreto 1032/2026 que regula la sostenibilidad y la soberanía digital de los centros de datos. La p",
-      "id": "e8fc0317af52be15"
-    },
-    {
-      "titulo": "Pacto Histórico exige renuncia de Verónica Estrada por títulos falsos y anuncia revisión de diplomas de candidatos",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOUFZaT3NaTDNqeDEzNmpFLVNfbjFVTFQ0SDRrdld4Y3hmM0NpbExlLURQbEdaanpyQnk0d3FYWVFfZmpqYXNXSDV1LWRQRmk2aDBZRFM1VGRoSFBPcWwzUDJ4QV9YeGpiSnE4N2V5ZGNfMnVuSTNmRWFSdlRvcENpR081b3h0QnNLWjduQmFCUVF2UnZzb0RmMFU4eVpvcHo3WHVrWWtaLUZVM2pmV19XUVNrd3lNLXZkVzhES3BOUUlZSF9uRlVNWDcyekJKRGw2eDN5czNidElkR3Q1aDduOUJLYlVOa0VaVGZ3cA?oc=5",
-      "fuente": "Agencia de Periodismo Investigativo",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-21T02:49:06+00:00",
-      "resumen": "",
-      "id": "4f92d9888e3eff17"
     }
   ]
 }
