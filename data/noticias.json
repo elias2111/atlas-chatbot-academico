@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-23T17:25:19-05:00",
+  "actualizado": "2026-11-23T22:55:46-05:00",
   "ventana_horas": 48,
   "total": 20,
   "categorias": [
@@ -12,19 +12,19 @@
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 11
+      "items": 16
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 5
+      "items": 7
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Tecnología",
       "ok": true,
-      "items": 49
+      "items": 31
     },
     {
       "fuente": "Xataka",
@@ -36,16 +36,79 @@
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 25
+      "items": 47
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 9
+      "items": 13
     }
   ],
   "noticias": [
+    {
+      "titulo": "India plantea nuevas oportunidades de negocios con Colombia en inteligencia artificial y tecnología",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQSEgzWENKLW5icEtRZWxBa2c3bmxOM0NSRVFQVmlhMDZBTk9DMHRuaHNXRWFKTlp2c0hYQjNSQmVXR1k5VFdrcXpYcm9QUnJJVFRQNnVvd09UamV6MlYtcjVWbXFncS1CdTIzNnF1M0lFaDR2TXdnS0tET01JSk5MWGdvS1pjX3BlWV9BSUxTaS1pcF9Yd1VNTUVqLUhIQVk1aGxjZWpYbjJkdXZ3NzhqTnRTSVZlaWpNb1p4dUR3ZTZjOGdpb0xLcXB1RWttbEhtZGtqd1BocHh4WENfc1R0X2plTzE?oc=5",
+      "fuente": "Revista Semana",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-24T02:03:59+00:00",
+      "resumen": "",
+      "id": "bc9721e0d2ba81dd"
+    },
+    {
+      "titulo": "Icfes publica el calendario oficial de pruebas Saber 11, Pre Saber, Validación, Saber Pro y Saber TyT para 2027 en Colombia",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOMmowYVRwUlBQYVZHVndkUTVldHdyaGtyeWoxNVp2WFlXb0VuMVROY01KbWNhSkEzV1lVSGY0cVJMenNudktSSFRPSTZRNDlvY2h4UTJpTnlUdTVESHRNbnFPMTNLVzliRExXTXFHa2twNmU1Q0dqd3NQYzdFMmRIb0EyeHdqSFNRd1UxTDhzdGhHWEEzdWpiSkkzN0pleDM1N0N0YWN0WmJ6VlNyYUhGUzJpcUdfeXphbUJhVlhrYkZsUzRmU0syWWtLMTFocTNibUdfenhB0gHbAUFVX3lxTE9hSWlJM1cxand3N2lNVllpdTRzNVJVTG9aV0l6VWRhb2FreGNFNEdYeVJsVXlSVVB5bjk5d1NSbGJBVU1tclh2RzBoWTYxRk1PQXFQcTVFdU8wY2FDWXVoZXF2MFcxUVFSNG8tdWYyYUtKenpsUkcyX1JTeXphck1laXR1OFRkTzlkTGFqVnU5MlB4R1JONzMxUWhqc0RfSlB5WVZZSWRtN1VtMmN5cXNWSXdiU2tQbTZIMHcxMFdud3I4VE9KdV9mTEVxZzBxSm1BR1RLcjhEOFNFNA?oc=5",
+      "fuente": "Pulzo",
+      "categoria": "Educación",
+      "fecha": "2026-11-24T01:36:14+00:00",
+      "resumen": "",
+      "id": "fd7f3816b87b9175"
+    },
+    {
+      "titulo": "USC se une a universidades por la paz",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1CNmdBSHVqcWpRbE5ialV0WDM1VFNZOXNXTXVQeExPT1J5LUJfZFRmWnIwRUVIN24wZmJZOVhGa0N6alZWb3pRR09SMVFici1aWXdaMmFpYUFYX01lMzRhSVVJZVJub2c0aU10MkJkVWFqdTlac1VlQVpR?oc=5",
+      "fuente": "Proclama del Pacifico",
+      "categoria": "Educación",
+      "fecha": "2026-11-24T00:25:12+00:00",
+      "resumen": "",
+      "id": "19115f0c8dbc88b6"
+    },
+    {
+      "titulo": "Hallan sin vida a estudiante de 17 años de la Universidad de los Andes que estaba desaparecido",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQaF9QN05NRjUtdHpKZ3NwekFHNFg0Ml9NemxEY2JVOVdnMHFoY0ZNNXAweEM5U3ZBbEgtVWIxaUFYOWY4dWtLdzRvblpEcnFhYnlRMjZlVnczYnZOd0tUY3JNOTJ0U2kyeG8tTHl1UWp6VjNGZ0VPSzNaNGZVMWV3elBBT1BKNmIteEdIaHpaVFhIZW1YcURfdnZudkhMaVhYZVlRSHBZVm5ISDFaaU1wTk1md1N4dTFCZTZrdVhJTEJqeFdjRE5SYVpHd0NvaXdWV1hReWlUaGhvRHNyWS1YblFDcWtCNG5sTWRjZ3dscEFBQQ?oc=5",
+      "fuente": "ELHERALDO.CO",
+      "categoria": "Educación",
+      "fecha": "2026-11-24T00:06:12+00:00",
+      "resumen": "",
+      "id": "ea59bf87aff955f8"
+    },
+    {
+      "titulo": "Se supo la verdad: Revelan el último video con vida del estudiante de Los Andes Gabriel Cárdenas Morales antes de desaparecer",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNVjBFeTJNcHRaYjEtTXgtREVTcWJ0WERsWDdnQ0V5Z1ZQQ3FxVGR0ZUhFU2FfczRrLTY0eEhpeUxidUFwdWhsbDFmQTQ5bTF4Z0pHRGxPYjZhXzJyU3VhSURsbXpJLURTWm1TUG94Wm5BdHU5S2dXRG9zbi11NGJ4N2RJakJTNS1CdTNWV1IxNTNhY0diZFlpa2ZacFdaWk5qSWtMSUluTTZoTXVnS3ZNZktiWUhfVjQyZ1FlZTRhekdMV2RoUnZSNllwRlZsZkkyeXZCaGM1OXZhU3ZhcWpZQ1UzcEJrSFdwXzB1Zy1wODl6cmcyTGRmYUxLa3U0LWV4?oc=5",
+      "fuente": "RED+ Noticias",
+      "categoria": "Educación",
+      "fecha": "2026-11-23T23:19:41+00:00",
+      "resumen": "",
+      "id": "5309013fdcc98c36"
+    },
+    {
+      "titulo": "Atención: encuentran sin vida a Gabriel Alberto Cárdenas, estudiante de 17 años desaparecido en Bogotá | El Colombiano",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPLU9JVnlqNXgzWXFZTEZlN1lFUGNGUW9nckdTNXhWSUZjVVFsNDRCcWdUaTBsNkNtejAtQlhYSGRvajVfN3hqX2pkU0FQUEkyZ1Q1TkUwbGhNN0RrZTM3TzhFaEhJSFM4UllnS0JrQTFjNlFuTkVQMG9ZNmJKbklnMllZRmd5dllNSGJpY0dEUWtLU2d5MmhiVldhcmlJQdIBngFBVV95cUxPLU9JVnlqNXgzWXFZTEZlN1lFUGNGUW9nckdTNXhWSUZjVVFsNDRCcWdUaTBsNkNtejAtQlhYSGRvajVfN3hqX2pkU0FQUEkyZ1Q1TkUwbGhNN0RrZTM3TzhFaEhJSFM4UllnS0JrQTFjNlFuTkVQMG9ZNmJKbklnMllZRmd5dllNSGJpY0dEUWtLU2d5MmhiVldhcmlJQQ?oc=5",
+      "fuente": "El Colombiano",
+      "categoria": "Educación",
+      "fecha": "2026-11-23T23:16:01+00:00",
+      "resumen": "",
+      "id": "8ecffbf00d161b11"
+    },
+    {
+      "titulo": "Consejo Superior de la Universidad del Atlántico aprueba histórico presupuesto de $556.765 millones para 2027",
+      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE5aU1ZxTVdyYmtaRjI0MmFrT1NUMWhSRXEtb0lLUDU1ODdQeWhGMl9QblFlcktvTTJnNHBv?oc=5",
+      "fuente": "Howl.Link",
+      "categoria": "Educación",
+      "fecha": "2026-11-23T22:41:02+00:00",
+      "resumen": "",
+      "id": "62fa530ff0f775b4"
+    },
     {
       "titulo": "Colombia busca usar inteligencia artificial sin perder el control de sus datos",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1ueC0xeFhRcS1MbnZEeXA5WXloNzh1amJDXzQyanNnRklSMDd1S3dQWUNkdF9uUXhMNTh3aXJDck1jV2FQcVl0Nk1GVWUwOTB2dnduU1k0SDROMGxlT05yN210TGpNUmJyV052Y0Y1Sy1oWlRzVmc?oc=5",
@@ -74,6 +137,15 @@
       "id": "dc2d8e96584d1ee3"
     },
     {
+      "titulo": "Egresado de Ingeniería de Sistemas recibe reconocimiento de la Embajada de Colombia en Australia por su trayectoria internacional",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPQVdfa0U2eGtFVk55bjFGMm1KdFJsakxTNDdzTGRGTEgxQllzNW9mVC1zT2NvQVA0WHMyYUY0bmd4dTV6eDFHVGFyUXV3U0hkRC1WX0sycExTZGRnczRNX0lIU2hySHIycVhDYzVMNEFTVDFkVWh3SF84UGU2Qnd1UUtodkdhRDdYQUpfR2t5aVE3eGRwNHo1X1RiZjNOVUpHWkxVa1VDeGhUSzl0eGlBdW5XbjFoSFJrb0ZSYmZ3RlBDNlBSWVhqUll0d0d5b3hTbm5sM1hYOHljV2NkNkhsaDlnTHBJbThLaGdwdGQzQ1l1Ti1BRWw0d3R3?oc=5",
+      "fuente": "Universidad Católica De Colombia",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-23T21:34:31+00:00",
+      "resumen": "",
+      "id": "e73ffa667e9639f3"
+    },
+    {
       "titulo": "Estudiantes de colegios públicos de Colombia desarrollaron soluciones con inteligencia artificial para enfrentar desafíos ambientales",
       "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxObkpzanZlSEM2TVJreTFQVzlSeVl5SGo5V2czMGc3VllNQW9TcUs1ckZQMTUtNW1LWExLV0FXTEwzdkJOVm1kVWllMHNfczVVNm9FRElDR2gtdkNsQ001VnRoQWZaWGhSeHE3bmh3NDNHaVVZLS1RT3BPS2tyVG44RHlWMzVwdEI4Q1ZuRlR2U3FMM3hhYUdRUGo3eWlrb21PczZoVy0xTW42MUNWTGM0REVsZ0tJa2FocHpmaVBnUUN4amZlSUFJbnEydWc4ajk3T0dlZmN5TmVQNk5JOGZFZlBwclZXYnUzSTFUWWNJS1dSWktLQjJzMkZxRQ?oc=5",
       "fuente": "PrimerTiempo.CO",
@@ -92,42 +164,6 @@
       "id": "f72c6b7ebf0ebab4"
     },
     {
-      "titulo": "La NASA impulsa nuevas tecnologías para explorar la Luna y M",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxON0I0djFKdVY5RXlKTHNfRFBsVExjaDE3bzdnN3hKc2RYb1diMTJLUnpIMXk1cWJkY0czVFFtQVk2ZWR2Q0J2d0NoekxOd3JDUmZyVmhKV3BKLXNISWRpTzBWZUpkN1liQXhOa01vOHlZazU0NmVnM3FobW9iWl9WN2RFRlMwakVrcGpoV3ZRQkpHSmhMX1g0WFhENHBPaWlQc3Uwak1yUmxGU1E?oc=5",
-      "fuente": "Diario del Cauca",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-23T21:16:06+00:00",
-      "resumen": "",
-      "id": "c6761bbc0bcc092b"
-    },
-    {
-      "titulo": "Ministerio de Educación cambia el destino de miles de estudiantes: cuatro nuevas tecnologías ahora son realidad",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOWVl4NjlSTlBRekFYalpXZVFmMlNaUHE2ZFg3Nl9ZZ0JIOEx3Ym4wOWRLVEVBZUxxcm43cktWMVRuUjlIVHY2bEV5Q1FZM1FQaURkOS03ZUhXaWFpRm5jNkEyX1kxTk5jVU9mZmF5bVJidWM1c1poWC16dEU2ZE1sTmE5MHNfN1JsYlktODRYZThVUnA5ZmlxcVNSd29odnVRNS13S1FwaDZKcU4yWF9WcXZRQnE5M0hqeXlCaVE5SnVCUjZsV28welVqT1lQRE9vQWV5OEhBUzlTOGp4ZEZBZ0VuS0U3U0ZiMWdPYnVaVWR2dw?oc=5",
-      "fuente": "RED+ Noticias",
-      "categoria": "Educación",
-      "fecha": "2026-11-23T21:10:04+00:00",
-      "resumen": "",
-      "id": "c7f5c2b76d0af6c9"
-    },
-    {
-      "titulo": "Cascos balísticos: tecnología, ligereza y comodidad para ope",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVHhCR3RjVjhISUNNWFQ1S3RJczN4RUxhd0twWEE5MzRhclppVUpSTHF1MzdRV2VHd0ZCNkJibHFYVk9aUVJDUmNkLUVPX3BleWtMUDBMTlhZVWVoUHJkRWNxVUZsa1BZOXowdmdGaGVrUHViYzUxZmZrR3BfSzBqVmliVW92QUVKQVhjVVBwV0MzSDVQaEhQXzEwa25NNnB2QnM3MndWamdVcFlOT3piLW1CR2E3Y0xq?oc=5",
-      "fuente": "Diario del Cauca",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-23T20:59:46+00:00",
-      "resumen": "",
-      "id": "d700e5af600d55c6"
-    },
-    {
-      "titulo": "Desapareció estudiante de Los Andes en Bogotá: tomó un vehículo por aplicación y no llegó a clase",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQaDJtREFORzBlbWZWSUpXV1otcDZ2MlpESWE2cWhlc2JQbnFPdGx5MV91ZnJ5LU5kSmVvYVZaa01Kc21GaEFEc3R3N1hhNVJabXVucGhSemZnakhSazlVR3RfbzkwM0VLaHFZVWsxUHVnY290cGVUcHVNTjVpWmxRWlF2OXVJZkF1YXJsTHFwa00zX2hjalNyeWpYWURPcXBMQ3FLdGRxVjBHSHV3M3RTM1ZkNzN5QW5lRmlFT0h0bEdzaDZmZl9pUTFsNVMydDNRMmZRbmJYYlRseWo1?oc=5",
-      "fuente": "Vanguardia",
-      "categoria": "Educación",
-      "fecha": "2026-11-23T19:51:00+00:00",
-      "resumen": "",
-      "id": "e8939501cbd178b5"
-    },
-    {
       "titulo": "El pack de Black Friday con PS5 y tele OLED para jugar a ‘GTA VI’: consola más televisor de 55 pulgadas, con 1.000 euros de descuento",
       "url": "https://www.xataka.com/seleccion/pack-black-friday-ps5-tele-oled-para-jugar-a-gta-vi-consola-televisor-55-pulgadas-1-000-euros-descuento",
       "fuente": "Xataka",
@@ -135,15 +171,6 @@
       "fecha": "2026-11-23T19:46:50+00:00",
       "resumen": "Este mes de noviembre es el del Black Friday , pero también el del lanzamiento de ' GTA VI '. Como el juego no ha salido de momento en PC, salvo que queramos jugar en la nube, solo podemos disfrutar de él en PlayStation 5 o Xbox Series X|S . Si estás buscando una de estas consola",
       "id": "4928bd259872da33"
-    },
-    {
-      "titulo": "Diego Hernández fue nombrado como nuevo viceministro de Educación Superior",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUzBqNEhRenlRR0RuZGdwZW1fRktqM2Z4ZzRraXpTa3RndlVIc0V5SlZNN25NRWZacUFtemp0dHhZZW9YSFlQQ01iTUg3WnRPRWZrNTVlb3dFYjY4NVNhVjZPNjRnUmkyNlUxTXlrLXN5NFJ1ODc1V1lad0h0REpsTWIxbmJiYzlSTUF1SVVnZVVkd29BTUJ3WHJZNlR0TzV20gGgAUFVX3lxTE5TMGo0SFF6eVFHRG5kZ3BlbV9GS2ozZnhnNGtpelNrdGd2VUhzRXlKVk03bk1FZlpxQW16anR0eFllb1hIWVBDTWJNSDdadE9FZms1NWVvd0ViNjg1U2FWNk82NGdSaTI2VTFNeWstc3k0UnU4NzVXWVp3SHRESmxNYjFuYmJjOVJNQXVJVWdlVWR3b0FNQndYclk2VHRPNXY?oc=5",
-      "fuente": "Noticiero 90 Minutos",
-      "categoria": "Educación",
-      "fecha": "2026-11-23T19:31:36+00:00",
-      "resumen": "",
-      "id": "7d526d9b8e696167"
     },
     {
       "titulo": "Ejército fortalece tecnología para detectar minas antiperson",
@@ -155,7 +182,7 @@
       "id": "ba05bda461bc0352"
     },
     {
-      "titulo": "Leapmotor llega a Colombia: tecnología REEV, ingeniería avan",
+      "titulo": "Leapmotor llega a Colombia: tecnología REEV, ingeniería avanzada y la meta de 2.000 autos",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQazdlX0NCTXBXSy0tSWRpWlhtT1ZYbWc5ajdHMzFZWmhKVjJJcjduYkZYSThvdUlxclB5eUZVMzNtU1UzOXNtcldzRW50TWxZZ3VhV1B0QWsyV2dWUTRtV2wwMjU4UnBsTVBkTXBNRGM3dDdUeW1iN1IwbFVUamNORnhVaXlOUDU2NGRpX0h5bFVSdWZMS2tGN0xOVnVVSmVLdGxyTUNRVWNSSVJxS0J4S3gtUnBMZDVwcUpfWmtOU3I3QVU?oc=5",
       "fuente": "Diario del Cauca",
       "categoria": "Tecnología",
@@ -173,49 +200,22 @@
       "id": "7c1c1b7b30629a39"
     },
     {
-      "titulo": "Revelan el misterioso mensaje de Gabriel Cárdenas antes de desaparecer: madre del estudiante de Los Andes hace grave denuncia",
-      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNQUw0VFpfNDBBcmxsRnFSTGRVc01TTmJ1eVJlcmpSSGlrMTNXcERrc0VvZURuN0JWcHdjZ092RUtVTm5vQzJUajlmQ2RTWUliN2JRVnhtbHA0dUVEZDFOZnB4STQzRUdlemtxcGhDNExZZzl5WW5iUGFDM3ItRDVyV0ZzaXZLZmg3X1IwRDg0eC03eVp5LXBsSWZTaXk5d1lWVVdyUi1UMTR1aXNCbU5HLTluRC1fNTJqb1RkSmlSZEdwNXE2ZlNEcjRnbTJNSm1MYzJaZG5zTWFKdGk0UUFDblp1cG5zSFNpeWQ1SDhWRXc4Y0pKOU1wN19XREx5eG1hMnA1emlB?oc=5",
-      "fuente": "RED+ Noticias",
-      "categoria": "Educación",
-      "fecha": "2026-11-23T17:58:18+00:00",
-      "resumen": "",
-      "id": "48322ad497955ee3"
-    },
-    {
-      "titulo": "Hasta 100 becas completas para estudiar una carrera: convocatoria cubre costos académicos, graduación y titulación",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQ29vRzMwU293Ynd6di1Zcl9fN0lkaGZCUWp0ejdPN3B5eVo3ZHJQc0RkVDJMbUNwRUJrQVI5X014SDJGdjQ3emY1QmplNnVwY0x0ZTZiY0F5TDBnNDVXMDA3eEpRSkQ1VTdvcTNEVjE0cHE5dDhzX2lTTXpiVVRIRWpmeFRSUUNhcmY0Q3FfdGJISUxNSGtGV3NzcEduV3REOFZ2S2dzYzg5ZjJvb2dxZXp5YzlOVzloTkdZNTdjX3lDQlNsVlA4R28wOUJYbThhcjNCVXNMcDZKay1rMkJaV0RRMTVOYldaYmZjX0NFbFlMUWtIcGZv0gGSAkFVX3lxTFBicWFVTlFXVy0yd3A3OXo3LTVsWm03bnJMRFVpUWRuYVN0eWhxY0dWWWVocDVRXzhINjdxVjRQTnBqSTV6UnpDb0p4cXozMGxmNDR5YXNvVEd5cmQyRkxpck9hNmM3c0s3dzF0bGxIcTladkxYRnU3ZEFxUFhiVlVVRmUzQk1lbFlHSFJzbHg3eWZpSlJucUFoNUFyc0V2ZzlGc3hRRW1MZWp6NFVVT2V0bU1GSDRPbm9hUVUwWjdsVU9aYmlLWGNnczZSQ3ZFMl9FU3RFb0R4UXZzUmloa09Wd1Q0UnRXYUpnWnlNeE1iS2FPWTZNaF82cTVVZDgxZjZ5eVBhd2ZHaTgzcThqMEdsWnc?oc=5",
+      "titulo": "Tigo fortalece su red en Colombia: más cobertura 5G, fibra óptica y beneficios para sus usuarios",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOOS10MHI0RjR0UHEyX2ZvYTNDN3pXaUZWT2FMN2tWXy12Mmo1eDVDclF1RXpHVnUyWk9uZTFoUGFRTGNZdGdRekRpVkViU1lkRU0zdlNMX1ZJSWt1YkttWFVOSGtseGM4amhub3Y4akdQYjhabGozVmxEOFJNM09OSVlzNURzYlFWTTRYQ182MjFlUnBXdkVjNTM1MVRiM095bjNUaklkSV9kd0MxcHlUUy01dG84WXJuVGIyUVc3eDhtcFNwYkZmWndqNG9ELUJRazNiaHZtSjlHUlREc2FF0gH6AUFVX3lxTFBZTWpPOHkydmM4U3NacHJ0aEQ4eXE2eURQUW5QOU1SQVRvWWF5dndwSGNzckNqdmdweGI0QVZ0b0o3M3JIcm5fdmhsVWVoZWhqdlF1MEJTQl91UkZkY2NGZTl4aUlxejdMTzByYjRWNkJuYnlhTzNMOWRCQWpEQmdITUczMk9kR0Uzd0otT3JpZDhqOFBXejFYeVRUWXNUSUwtQ1BCYUFNSkd0TEhLQ0N2M2RsWWVYb2ZsbFFjdU1xN2VyTFZnUmRRcExneHNUZEI5V0w4THZDSDNaTEY5SFBUZExERFRlaTZhOXg0ZEdocHBIYmNDMk1Kd2c?oc=5",
       "fuente": "Infobae",
-      "categoria": "Educación",
-      "fecha": "2026-11-23T17:32:00+00:00",
-      "resumen": "",
-      "id": "db4f0e11fd30f0c6"
-    },
-    {
-      "titulo": "Clevercel busca recaudar $3.000 millones para impulsar su negocio de tecnología reacondicionada",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNSEJVNzdRU0R5TFE1VDg2M0tYeU9teEZWQ1NfVnRWS2YwZFZXOVhrNUdHY1VYQUlKb0tVc0lrWkdhYV9Kd0x3X1R6Q1VieXFsYTVidkpwamJ4YjVCZS1KazMxaTlpMVR6WmVnRU9mN1BEdUI3a19vWUFoSEpteW5pZTA3U09FdlBBUGtHSlIwczc1S0p2aWk3eGJwSjdmOTVFRUhXakZwRmJKOEFQMEV6a25UeGtNbk13QUJmNmdZSDZ0ekdjTHUtQjNiazNYRG9ic2U4UVl5TGdBWUVKejJTZ3prUU9TUdIB6wFBVV95cUxPbUlVMENFSFpDU244V0RHcEQwVzhoZnlZQmwteVI3endrbjNxbE5rdEFnNzBwMTdsNXhjUnhrUXZBRkRtWmctTFdsZDVEdWlpMHNzQ1phMjhsZ1BjOEpqVDM2RmQ3NndZcnE0aHI1RGNUTV80QUJlR2paclI3SWUwOEdld3dESEdHV2stOWhTbHZtV3hIMlUwS2hLb0ZOWXNwQmtlaW1vN3JSNTljZlNSQzNYRzFjbHNld1NiM1V0SGd4cGZ3OXl3ZllQZHlOQ0xzRVdfU0Jpc2RkeXo0emVDeXB1SDNmYTU3dWhV?oc=5",
-      "fuente": "Revista Semana",
       "categoria": "Tecnología",
-      "fecha": "2026-11-23T17:28:12+00:00",
+      "fecha": "2026-11-23T17:17:00+00:00",
       "resumen": "",
-      "id": "805620e0c4897b38"
+      "id": "d85588101a6058d3"
     },
     {
-      "titulo": "Diego Hernández dejó de ser el rector de la UAO y asumió como viceministro de Educación",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTnZ0WF9PdDNTdWtDQV9Zd0ZmQlpwemRsT2FuRGVhWXE4M01YRmx3MHVFalphVm9BN1dCYnRPNmhqTjBBNkprWVFOb0otTVl0aEQ0bUdFenRIRWk3VnNTUlNOaW9lZVlsNjA1WktsWEFtRUFITHZBRjBGX194SEgzYUx0OXNlT2xZcjR2Q1dMRnTSAZYBQVVfeXFMUFZGZHQ5akFBZ29Ld2ZjRDRZeXNVb3g5X3dQMk1zMW5VSDgxMk1sQnBqb1Jlc2FjTU1aWWFuRGtta3pZYWFtZW0tQUZpc0R5SDNkNWphWlk4OHFaWXNxdXJzTzBEX004NDlhVF8tbGRTMUJvWkU4N3M0Qm1VdTZEUnhQMUt6TkhiM2Y0bkFxUUNSd09fek9n?oc=5",
-      "fuente": "Noticiero 90 Minutos",
-      "categoria": "Educación",
-      "fecha": "2026-11-23T17:05:16+00:00",
-      "resumen": "",
-      "id": "3ca736b9ebf92c94"
-    },
-    {
-      "titulo": "Colombia tendrá una millonaria expansión de data centers hasta 2030",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNV1lDXzlJRTdOZ21nWjVnYmZTaEZnc1dYWktnaTRudUxXY1ItbVFFcGkxQ1VZZVNmd2pyMnM1bEMxa1ZPYnVBY0JlaEZuSU5fd1M3V1YtWFpYQ1ZKTzNwZ1hUVDhQMHNRSDM5WHNqYWl6R2g5ei12UVljeGx3VHNjem05QVZuNUhlSmRnU3l6dGhLUEpBbndpYlBHUEJLZWs?oc=5",
-      "fuente": "ENTER.CO",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-22T15:09:21+00:00",
-      "resumen": "",
-      "id": "f67ed36663c78a79"
+      "titulo": "Nuevo golpe de EEUU a China: también perseguirá los chips más básicos utilizados en televisores o teléfonos móviles",
+      "url": "https://www.xataka.com/empresas-y-economia/nuevo-golpe-eeuu-a-china-no-perseguira-solo-sus-chips-avanzados-tambien-basicos-que-usan-moviles-televisores-coches",
+      "fuente": "Xataka",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-23T17:00:51+00:00",
+      "resumen": "El Departamento de Comercio de EEUU acaba de asestar un golpe más a China. Su nueva regulación endurece los mecanismos de control sobre los circuitos integrados de 16 y 14 nm, así como sobre algunos nodos avanzados. Estas tecnologías de integración son relativamente antiguas, per",
+      "id": "0bc9aacb17408d4d"
     },
     {
       "titulo": "La Universidad Distrital admitió a 113 de 1.887 aspirantes en lista para Ingeniería de Sistemas: legalizan",
