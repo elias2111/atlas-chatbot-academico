@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-26T20:38:20-05:00",
+  "actualizado": "2026-11-27T14:46:26-05:00",
   "ventana_horas": 48,
   "total": 21,
   "categorias": [
@@ -12,19 +12,19 @@
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 5
+      "items": 4
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 8
+      "items": 6
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Tecnología",
       "ok": true,
-      "items": 31
+      "items": 70
     },
     {
       "fuente": "Xataka",
@@ -36,114 +36,186 @@
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 39
+      "items": 24
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 9
+      "items": 6
     }
   ],
   "noticias": [
     {
-      "titulo": "Unicartagena ubicada cuarta en la Clasificación Mundial de Universidades 2027",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQjgtQ2k1YWtoR21CUDB0REVVMjM1Yk1CeXR6TGt5ZmJqbFQ0NHFZWFRWeURmVy1XWXVEbF9MWGxvWGpwWlpfSFZKMHktdlc5RkhDN3VlOHkyTTAtRnhPOXphbFVzM3dwNDNkbU9LRjFxZV9EaXYzdnZ0OVpGN2dueWQ5bEZ3UHlyQmFaMzBrXzhQdzhDMHVUTlVzNmphUHQtRGN3?oc=5",
-      "fuente": "Noticias 625",
-      "categoria": "Educación",
-      "fecha": "2026-11-27T00:52:27+00:00",
-      "resumen": "",
-      "id": "79073435025eaf53"
-    },
-    {
-      "titulo": "Ante la bancada provida, Ministra de Educación presentó prioridades para la agenda educativa en Colombia",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPODVIOE5CbjNyS2hoWHQ1d2Z5NExHZGhmRndjcF9kZGp6TF9oZ28yMWJIUEdheUkzZlYxUUM3MWtlQzZwMGNiT0t6ZEdpQXlRWXpEN0E3T2VNN2ZYemVVYmwwaVVUaG1fZ2haYTB4bjFtMHBiaUs3U3pSanc2bnk3SXVJTkh1c2tPTVl6b2ZWM2VTUXM4V1A3TVZkWUZ3R2toMFlORGRJa3oweDVaWk9aUjl6b0RQT3g5SGY5SHJkYTQteW5wREdES2J3Y09NV2FuZm9OTFRtWGJKYldPd3hmR2ZxNjRyakxHUWgyMGZuUU5iUmxVM0FhQVA2NG9jaC1FVXc?oc=5",
-      "fuente": "Ministerio de Educación Nacional",
-      "categoria": "Educación",
-      "fecha": "2026-11-27T00:31:17+00:00",
-      "resumen": "",
-      "id": "354fb24d9243e185"
-    },
-    {
-      "titulo": "Nuevos asistentes de inteligencia artificial optimizan el tr",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPaUV2Mjk4bFBheEJMRGJtLTJQSkNBc0xjM09CVmgwWlZvRW9IMnVIaFlvRmhpc0tHVVhiRldJQU1Qa1dWTDFVMmpoVHA4VXNveGh2cEZLRnNkVlpmQmQyemNWLVp2R0VzRlBMdFRUem1YZ3U1TERTT2U3bFhpaDBsZHBpaVBWVGZBYWRBZzdKZTVRWXVpbjVQN1YzLTJqdnMwNi1z?oc=5",
-      "fuente": "Diario del Sur",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-26T22:29:51+00:00",
-      "resumen": "",
-      "id": "11a6cac904ffe418"
-    },
-    {
-      "titulo": "Ministerio de Educación y Universidad de La Sabana acuerdan sumar esfuerzos en favor de la educación en Colombia",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxNZzc4aXRHRFF1VDZlWWlMckU0ZzJhLVQ2d0pCQnRxR3VjbnJwb1JDa01qV2gxVW9vUUw0S1NsR2R2SERHbGFuY250SUpieGVwR3JpTmxDbFVaT0tVX0I4SWpJRktBa3BFczlqZUd4b1BCU0dxR2dIenFhbUhRMmRXU3F0eVYyOEFRQjJwbGxqQW4wNE94eEZ6a19OYTVUa0poVkllSi0tYnUwV1lzNkhCSG1JUWpqZ2RscWY5Ung0TEpRUDZpTXNkSTFiN0cyV1I1UXJrb1p2bzQ3aUs5ZjZ6TndsTmpZcXNaRlZadWJ6MlJMU2N1MEV4eUVYdzNxQkplU1FGb2VkYjR3YTZVSkE?oc=5",
-      "fuente": "Ministerio de Educación Nacional",
-      "categoria": "Educación",
-      "fecha": "2026-11-26T22:15:52+00:00",
-      "resumen": "",
-      "id": "91a303ccaa4da8d3"
-    },
-    {
-      "titulo": "Seguridad Valle del Cauca: 581 cámaras de alta tecnología",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcGZRQTcxNEF3emIwSkVCcVZrMnVONUxWMlM4X3hWcU5UaEpoMUJ1TXVrNVZROEN5QnZhQURTM19oTm9GZC1vUEFaR2dhUHR3eFdjb3EybE5JQy1ob3FERUgwVzZOb0ZFWnlBSWJvOU9xbVotM2U2cVNrQnlURlVZbG9QR2lfNnhD?oc=5",
-      "fuente": "Estrella Digital Colombia",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-26T22:12:59+00:00",
-      "resumen": "",
-      "id": "7af606dfc24057c0"
-    },
-    {
-      "titulo": "Gobierno de De la Espriella alista límites al uso de inteligencia artificial en la contratación pública",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQdFF3bW8zcG4xWlIwd21fbjRnamp6eWlNaEFoajlWUDRQdF9VWFA1M2hmRENiaUhqUDg0c002RXJtQ3dPTkdmS3A3dVBfdkI3ZDJzT2tTRHV6MktUcW5fS2FubDVnWXFfdVpXWkhrUDVPazh0clRFVnhNempVajNWSEY2YWstOFhCQl94anZ4eDM3Wmprdno3a1RjLTRCNnpIa0xKVUNENjV4WHJBRWRfY1daWThpOFNxX1NST0VVeFE5d1ctZlBLN09kZTRYYlZxXzMw?oc=5",
-      "fuente": "CAMBIO Colombia",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-26T21:40:20+00:00",
-      "resumen": "",
-      "id": "dcf1f856fd61afc8"
-    },
-    {
-      "titulo": "Países Bajos se planta ante EEUU por las restricciones a las máquinas de ASML",
-      "url": "https://www.xataka.com/empresas-y-economia/paises-bajos-se-planta-eeuu-restricciones-a-maquinas-asml",
+      "titulo": "Los AirPods 5 no se pierden las últimas horas del Black Friday con una nueva oferta histórica",
+      "url": "https://www.xataka.com/seleccion/airpods-5-no-se-pierden-ultimas-horas-black-friday-nueva-oferta-historica",
       "fuente": "Xataka",
       "categoria": "Tecnología",
-      "fecha": "2026-11-26T21:30:26+00:00",
-      "resumen": "Durante los últimos años hemos visto cómo Estados Unidos ha intentado limitar el acceso de China a determinadas tecnologías de fabricación de semiconductores. Es una estrategia en la que ha necesitado la colaboración de otros países, porque no todo el conocimiento ni todos los eq",
-      "id": "22e1e260a36f7539"
+      "fecha": "2026-11-27T19:00:30+00:00",
+      "resumen": "El último día del Black Friday ha traído nuevas ofertas en dispositivos que habían bajado de precio estos días, como es el caso de los AirPods 5 . Los recientes auriculares de Apple han vuelto a bajar de precio con la última oleada de ofertas de MediaMarkt, y lo bueno es que es e",
+      "id": "2d3b8898be91eca7"
     },
     {
-      "titulo": "\"Tenemos que prepararnos para los próximos meses\": el presidente de Microsoft alerta del riesgo de más caídas ligado a la IA",
-      "url": "https://www.xataka.com/seguridad/tenemos-que-prepararnos-para-proximos-meses-presidente-microsoft-alerta-riesgo-caidas-ligado-a-ia",
+      "titulo": "Estas son las cinco universidades líderes en investigación en Colombia, según Ranking U-Sapiens",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRUQxZ0JWdXpVdldQRDFiR200MVhKVml3MVVmaXphTXZZWFhNSGhOa09hQW5YdmkzYVlqUmstYWcxOVVKdXlWVDh2T2hrcjV5UzFfMk1yYV9sbzFFbVhNSUliQ1Y1RlZjWWw5akxoWTYzN2RpNW93M1k5R2NwZ1dIUWk4dmVwYTBzSHRxNk5sZ0JSSms3d18zOHg3QWVzeHZEUnlJWnVOR0tlcDlfUWZfTlI1dmJXd25FRUdHUVRHQTU2eDBfbnFBTNIByAFBVV95cUxPWFV3dkRIU2l0cll1LThvQXpoWDNLVnRKTkR1aUpDYlcybnFZQUItY3pOLXR2QWZvbDB6NHViUUN0UEpXU01Na21kc2Z2bkQtNFdfb3pSaEFKNE95c1JTVnJaSjhvTTVWR1U0TGE0WDZWRlc4aTFZcEEzREhyUk1lZG1Cdm1CU0FCVEZGd1gxbVUzbEtvbmdQOHNhYnIxU05iV2UtMV9Ic0UyNzN2ZnNVQUZ2d1lMcEZwekRzZWx1bmw0eGFoYUdtUA?oc=5",
+      "fuente": "La FM",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T18:55:46+00:00",
+      "resumen": "",
+      "id": "71c244ee4a9f5085"
+    },
+    {
+      "titulo": "China cambia el destino del ICETEX: Ministerio de Educación confirma nuevo beneficio, con pago mensual, para estos profesionales",
+      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQNnhOUTJfdUZXRVUzWTU1SEc3Z0JWcDdBNjdxQ0NmWEpLMF8yeGxiTzMwMmFUUTVXdHJNb1A2bnF2QlBzaHdCaDlRMDFMNHNtVDBxN3A4V0p2clN6OS1yY1MzYXZZUEhYWDFHRGliYTBvZWdYby1tY2xLWHY5M05CZk9IbTRINDM2S2JpT1RvOTF5V29SU196S0NsN04yV0tfOVBFMkVha09MdzBZSThES3NtbHFfU1dRdjlSUU5heUEyMEpLcU12VWN3bWRod041aGUxZkw4dHpSYkpmYjVKM1pIdEMxVjhUbGRBTWJkUlNiMTcyVzdYNUFicVVjSExsdUhveHZMQ1o?oc=5",
+      "fuente": "RED+ Noticias",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T18:54:43+00:00",
+      "resumen": "",
+      "id": "84682fec56c9888d"
+    },
+    {
+      "titulo": "La cooperación entre universidades de Colombia y España puede ayudar a cerrar la brecha entre educación y empleo",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPeU5nWi1adWR6dXRJNkdvbHg1WV9GV0QtbTBEbEdtMzBHaXJFSGIwVXRxU2lSNmt2SlFjVGYyaFVQd2psRFB6QTllaFdHWDFBd0FtRjJfaS1XLV9VbUJoaExsUUoxRzMteUtoZjYwd0VWZ3oxVnhOeHVSTGxTQjBWV0RjSkpXYnJIYkhwcVZXb09jbmJBeEJKNXJBMzNmRXBYMmk3ZnBVOVpEQmR2NGJ2UW5JNjc0REhLa3BPRGJmQ0t4M2VaV2FQeG96V0JkS3dCbHJ3?oc=5",
+      "fuente": "TSM Noticias",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T18:53:45+00:00",
+      "resumen": "",
+      "id": "cac511b621f99688"
+    },
+    {
+      "titulo": "Lefant nos deja sin excusas en su Black Friday: su robot aspirador compacto M210 Omni baja de 599 euros a menos de 180 euros",
+      "url": "https://www.xataka.com/seleccion/lefant-nos-deja-excusas-su-black-friday-su-robot-aspirador-compacto-m210-omni-baja-599-euros-a-180-euros",
       "fuente": "Xataka",
       "categoria": "Tecnología",
-      "fecha": "2026-11-26T21:00:29+00:00",
-      "resumen": "Mantener en funcionamiento los servicios digitales que utilizamos a diario exige encontrar un equilibrio entre dos necesidades: proteger los sistemas frente a posibles ataques y garantizar que las intervenciones destinadas a mejorar su seguridad no comprometan su funcionamiento. ",
-      "id": "30476ead8ad5686c"
+      "fecha": "2026-11-27T18:46:20+00:00",
+      "resumen": "El Black Friday siempre es una opción perfecta para comprar cualquier tipo de producto. No solo nos sirve para ahorrarnos dinero de cara a Navidad, sino que también puede servirnos de ayuda para cambiar algún imprescindible en casa, como los robots aspiradores. Lefant es un claro",
+      "id": "40fd1e90a767b2d9"
     },
     {
-      "titulo": "Google cumple 15 anos en Colombia y destina mas de USD 1 millon a educacion en IA",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPZ3RzdmJOaFBzbjlEdlpYU0VweVF6N0dwYlZvX21mSmhQYXBWVUFUUnJIV1V1UGFQZTdWZlVHS2tyOUV1V1g1RkhaQ1Z0QlhuN0p6Q0xuRlRjT293ak4xQkd3azRjSE95WDRmekJqWnhhanN0ekNXM2todHdROHdxdlVRS0ZrcEVvX3V0VFRwSVdsZHlwWWRNWkZSQndQMnRMa21fU2lmSEVVWlJRV3VhYUV2cW9IX0RsT2ZEMWNaREFxWVNVdzI2SEhQMXZCTGZQeXhZNmpxcVItTGdaQWR0WmZ4OG1ldGtaRlBSaEhHRUM1elRNeEVOMw?oc=5",
-      "fuente": "areacucuta.com",
+      "titulo": "EEUU se va a poner dura para evitar que las GPU de Nvidia lleguen a China. Y esta vez parece que van en serio",
+      "url": "https://www.xataka.com/robotica-e-ia/eeuu-se-va-a-poner-dura-para-evitar-que-gpu-nvidia-lleguen-a-china-esta-vez-parece-que-van-serio",
+      "fuente": "Xataka",
       "categoria": "Tecnología",
-      "fecha": "2026-11-26T20:21:36+00:00",
-      "resumen": "",
-      "id": "5a78e01644bd98a0"
+      "fecha": "2026-11-27T18:32:22+00:00",
+      "resumen": "Estados Unidos lleva varios años de guerra comercial y tecnológica con China, y los chips de Nvidia estaban en el ojo del conflicto. No podían vender sus chips más avanzados para inteligencia artificial a empresas chinas y, aunque se levantó algo la mano a finales del año pasado,",
+      "id": "359b169557fc9edf"
     },
     {
-      "titulo": "Cartagena invierte más de $2.200 millones en tecnología de última generación para combatir el delito; así funciona la estrategia",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNUWotZUpIdkFwQjlhRFpsRDZfLTNQTkk0bzRJN2QwUXFZWTQ2TGVxY3h1YWNyYl9HcDAwOXRqdmQwM0NQRi1JRzFIay1YdTJpVVUtdURzZTFGV0VuZWllWDVYbWFud0g1eG1xbUZ0S0lmcHpEdVJsOFBib2JfQkhiWHlkdUF2MlpNbGR3ME1oY3ZUb0RFWXdvMlRheXdoelRZM2xtSUphWlFRUS1NcE1zZWx1VzRNbnhpanh6RWZyeDRHYXVvWGJRME9yV3hJZXd6NHVxZ1VMSUZ1S3I1d0dKa0xmWll3OEM5YndVWmE5MmFDZFUyVmE2R3lraWZBMmVYQ1NwVGdUMlQ0LWww0gGSAkFVX3lxTFBBTVF2aWV4SGVwVGd2d3BRY1BfTi0yRkV4MDRMWGZET01QZy1SV1JQNjBtYWd6X3RMQ1h4UXlDSWhKTlJtdnRmT2U0TnZha1NGTzFpYjVDU3dUNzc2TmZfRTJvWnRtMWxYZlJaVlNxMF9KcmV6X3hZMThMeU1VMlVFUEdGRHVnMk5BWkNUUWZUWF93ZU9EM1VIRGFCblMySkhkZ08zYnRkLXU3WFhyNnFaU3Jzcms1NTZHUWN0YkdjOXFENlVfdDlvSFozQzg5NUVWOFpoNkY1aU9OX05Pb3BsZW9vRUxmRlYzTGxhSzc5OTlkVTZPZWZ2SGluVXdPUWJxbTlGQXFyN1M2cHZxanVNOGc?oc=5",
+      "titulo": "Aragón pierde otro centro de datos: Capital Energy se retira de Épila y vende su conexión eléctrica a Blackstone",
+      "url": "https://www.xataka.com/energia/capital-energy-abandona-su-tercer-centro-datos-aragon-vende-150-mw-a-blackstone-para-su-proyecto-rhodes",
+      "fuente": "Xataka",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-27T18:02:20+00:00",
+      "resumen": "Aragón se ha convertido en uno de los territorios más atractivos para la industria de los centros de datos. Pero no todos los proyectos anunciados llegan a construirse. De hecho, la región ha perdido recientemente otro megacampus de centros de datos. En este caso, se trataba de E",
+      "id": "7d12918fe6b5a59a"
+    },
+    {
+      "titulo": "Se está agotando: Amazon revienta el precio del Google Pixel 11 a unas horas de que termine el Black Friday (y con 512 GB)",
+      "url": "https://www.xataka.com/seleccion/amazon-revienta-precio-google-pixel-11-a-unas-horas-que-termine-black-friday-512-gb-almacenamiento",
+      "fuente": "Xataka",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-27T17:46:20+00:00",
+      "resumen": "¿Merece la pena esperar a última hora de Black Friday para renovar móvil? Normalmente, te diríamos que las mejores ofertas no suelen durar hasta los últimos días de noviembre, pero de vez en cuando encontramos algún chollo flash el último viernes del mes. Y en esta ocasión, dicho",
+      "id": "cf8cea5da380f6e9"
+    },
+    {
+      "titulo": "Colombia | Regulación de IA y concesiones flexibles para atraer inversión a centros de datos: Indra",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOT0NNaTN6Z2g1LVdhRXBnMm5wZGgyUXVLT0RjVUxYSURFaG9xMkgwSGdkYnVkSkNBck5WenRIa3F0QWJSQ1VsWjFQVkhvZGE5MXh3WGZ3ZGFSRHVGei1ObEJRS1IzeERlN0stN181TGJ0UWxjYW9HLWVPVlEyXzNLckgxYVlLbWhvME11Mkg3dDlpU1RRX2ZGVnY1eUZRMk9YYmlGZlFLNHNSUjM3WGNlRWE2ZmVUekh0?oc=5",
+      "fuente": "DPL News",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-27T17:42:52+00:00",
+      "resumen": "",
+      "id": "c59361d7bf55770c"
+    },
+    {
+      "titulo": "Colombia retrocedió en el escalafón mundial de preparación para la Inteligencia Artificial: se ubicó en el puesto 62",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNV9GV1hTdWZySVZTQTB5bkkweW9FMVVRZ1VDZldRZ2VsYTRycUI5QWR4bUdMNnJYdnlmMW1KUmh0WEduZElod3hfeU9kZ1FzdnNOUEQ0b3B0RGFOYlN4VHdFSncwcjhTbkp0cUlNdXdmemxlM1FZU1I3RktDQ1dsUmRJVmRDeFJyTGJHcXpSRURwNEpwcVB0LVh5anFxeFZzTUtyYUQ3eVpyY3BZQnEyOGxYYTBVWDA?oc=5",
+      "fuente": "IFM Noticias",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-27T17:24:48+00:00",
+      "resumen": "",
+      "id": "18d5a02ba1831a40"
+    },
+    {
+      "titulo": "Últimas horas de Black Friday: estos son algunos de los mejores chollos que aún puedes conseguir en Lenovo, Dyson, Apple, Pixel y más",
+      "url": "https://www.xataka.com/seleccion/ultimas-horas-black-friday-estos-algunos-mejores-chollos-que-puedes-conseguir-lenovo-dyson-apple-pixel",
+      "fuente": "Xataka",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-27T17:18:20+00:00",
+      "resumen": "En la medianoche de hoy finalizará el Black Friday de 2026. Una edición bastante larga que ha tenido lugar a lo largo de varias semanas en tiendas como PcComponentes, Amazon o MediaMarkt . Y aunque todavía queda el próximo lunes para aprovechar descuentazos, con la llegada del Cy",
+      "id": "5bb0d454e8744f80"
+    },
+    {
+      "titulo": "La IA de Oracle ya está en Colombia: de la Fórmula 1 al corazón de las empresas",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOdU1ETzUtbDlPR1F2cTI4U2gyb0F1TVRXTFRNZVFSbU1XNWVoZ0tfRFM3bGJ5eUZSaXVyREd1Rkk3ZEtSRmkwdWFySmhHRUh3OHVCdmRUWnhXUlhBSk4tOW5OWHBiUHhfbzl4M1BDSWgtckFzRjdzVXdDWHFKNzlrcDdNT0xKb2g2bTlLNFFzdlRkX243RDJ6VlQ5al9wWG90blp4djVIT3lUM0ZFMEt1TElQU0pVcjB2LTVCZU5Lbk9CZmNBX2JHUzlRd0RWbFBKeWxWblVOd9IB1wFBVV95cUxOdU1ETzUtbDlPR1F2cTI4U2gyb0F1TVRXTFRNZVFSbU1XNWVoZ0tfRFM3bGJ5eUZSaXVyREd1Rkk3ZEtSRmkwdWFySmhHRUh3OHVCdmRUWnhXUlhBSk4tOW5OWHBiUHhfbzl4M1BDSWgtckFzRjdzVXdDWHFKNzlrcDdNT0xKb2g2bTlLNFFzdlRkX243RDJ6VlQ5al9wWG90blp4djVIT3lUM0ZFMEt1TElQU0pVcjB2LTVCZU5Lbk9CZmNBX2JHUzlRd0RWbFBKeWxWblVOdw?oc=5",
       "fuente": "Revista Semana",
       "categoria": "Tecnología",
-      "fecha": "2026-11-26T20:21:29+00:00",
+      "fecha": "2026-11-27T17:03:40+00:00",
       "resumen": "",
-      "id": "240489b1758bff9d"
+      "id": "7338a9455acb9783"
     },
     {
-      "titulo": "Confianza en pagos digitales en Colombia alcanza 75,8 puntos, pero usuarios frenan pagos autónomos con IA",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNTjA2SGpXd29LNDdvTHZZa2ZubzR2UUhza3RPTF82R2hFb1NmZGExdHRCM2Z4QmpnWUVGdV9Fd01iMjFJMnhuZU53a1hJQWhnRU9leDI1R2dDbmNiTk9DbFd3cHl2V0dFSi1iVkdiUlE1bW40RWdGTERUdkFlOGpTclJKcDBGaWdoNzdDOUh2aS1zb1Njb0ptWTlGVWxCTUlHSnhsamdxVzUtbk1VTWpYVk5MeGdRVENkaUt6REJFYUhqWVlXcWRQby1jZzdyY3JUQ3JWM3l4dDBfczdDaUI0NEFWclV1akdu?oc=5",
-      "fuente": "Forbes Colombia",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-26T20:12:39+00:00",
+      "titulo": "Jóvenes pastusos accedieron a educación superior gratuita",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUTRnWnpPSzlKTEdKYzNfQklUbnJ1QktfNkluR1lpR3pQV3BCQ3FMVk1UeHJqQWpNUGhMRVc2Y3ZBT3U4YktIa1ZSTDhmdENhcUl3MW1va2Y1ZjExWGZOVXBjOThqNS1kUzJBQ1phUU1sUXRwLTk5NWRoNDM4YnhESkFmaVUxSTcyQ1hMb3hTd05yeDZ3?oc=5",
+      "fuente": "HSB Noticias",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T17:03:06+00:00",
       "resumen": "",
-      "id": "c939a27aef6dacf2"
+      "id": "bed4e0631bf78208"
+    },
+    {
+      "titulo": "ICETEX tendrá 15.000 nuevos cupos de crédito educativo y subsidios a las tasas de interés",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMGpoRFdZdkdSVzNFbTBuaFpfbFFyWUJUMU1qUEhOOUJFSkNtekw3OWVUM1o4UEpSZzVFSmt5WGFYMjVhTGdJTzgySks0OGJKTFhfdXNaeHl1ZVh6bEdNbnA5aUtZUHZsNHlBSmZ6ZzdEeXhkVVV6NXBTMjhFaW9ibmRSYmU1UjNNZlNoeHh1UjFSdUR0WmJIZHlpd1RrZ1o1X08yb2R3TVpBYmphMHRBN0JiMVk3dWZKMDNIczJLNWVPeGZHaGdwcHd3?oc=5",
+      "fuente": "Forbes Colombia",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T16:38:04+00:00",
+      "resumen": "",
+      "id": "71079643442c32f8"
+    },
+    {
+      "titulo": "Gobernación del Valle del Cauca abre convocatoria Digicampus con cien becas completas y descuentos para posgrados",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTVJIekJNWGIxQlVZSnU5MElzNlZxZjJxRkt5MURrM2N5SzE2dEs4R2NsZWJCWFFDQnJ6Q1EzOHZmNktFWE9rVkFqcjJKc2ZJcGhSckYyT1BMWW9fNVlGZWdDVzBmY204RmVXckR6eU4xV19XdjVXRk9TcVdwMnVXbmYtQTN5UmtuUUpZYy1sZkNaRVRpWXU4ZXU4VHRYenVjZmNDd3pYcGZQY2dvNF9kVEkyZU52UXJQeHZaOGxVY2NKcU12bkJDWkhkZm1nd9IB0wFBVV95cUxOZnk3LWxEcGdCQTIxNUhGWUpkN05nZEdVam1aLWNiRW1Xeko0dDFZN3RwUHQ3enJVU0VydXVyai1TeUJEb2hBLWZfeHJvQkhiUkxvVnl4dlFCVG1lNHlrSkE1RC1EZTRmeGF1RTdrVm1id2lzVXZGRndmbWt2Q0tEakh1eWFaQ3lHanZxM0FVWS15eHlSSGxfaTJPbGNTdF9TOG15N2NPcU0yWFplRDIxUkM0TUNPbVRRZkhFSWVuZ2RRZGdzQWlGT3Y5WGZRN3VnN244?oc=5",
+      "fuente": "Pulzo",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T16:36:21+00:00",
+      "resumen": "",
+      "id": "d5763c3190e7ec45"
+    },
+    {
+      "titulo": "¿Quieres trabajar en ciberseguridad? Estos son los roles y conocimientos que debes aprender",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMWFZcl9TUmdkb0xxWEItWDhCcm11ZmhLcnl2dkRubGtvLXcySjRwSkhGNWlvb3hUMVVmNlJTRnNnWWdfY1V5eXIxaHdJbnp3cU1CVU5JQXpVRXF5Ml8tVEI3UHJLWGhuTHZibWhIb2xUNGZfcjRZeTNPOFhnT1o1RVNRTXdKNTJVVkZ1ZnQtUFN4OThOYmxLYTZBb2xST0RsRE1sLUlDN0NDRzI4Nl9FdEYxd25jeTBURWR2UzZpRHVyV2xt?oc=5",
+      "fuente": "ENTER.CO",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-27T15:51:57+00:00",
+      "resumen": "",
+      "id": "2df46c1d3294078b"
+    },
+    {
+      "titulo": "Ministra de Educación participó de la convención provida del Congreso: insistió en revisar la política de educación sexual y 'no temer invocar a Dios'",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPRUNpWkxjX1RGMWZjSTlFdkkydkdDZUVRWnFJekFtS0JLa1hKYXVtZ2VlWFFOX0UtUnRQZW12eXdKSXJqY29EQlNwUDVrNUdPZlB2YmFlU3VqT01rZXJjLVFnLVdKbUFMTUxYdlN0ZnVBRHVLNVhaWDhhS0RFZHdlTXJqdWpYNFFuWUZERGExdGF5MldXQnFLZ3hVR2ZLOXJRb3FmUXZDQXdUY21IV3QyN19Nc0RFVXcwODg1SEFkdUVYLXJudlJ6cFFPMGx4MzBsY3o0eEoxcGdIVEdFcFlJZC1CQ0pKbEFfSU1wSmtNTF9NMWhsOS1zYXRqUGdDTWFmcHBibkJVallXaWxnX0cxcXkzQ0dFbkFRRWxKY09JbGLSAaYCQVVfeXFMT0hJVEptSG9EQUNVUEJRUFBEVTFyWDQ3MGlObTk0QjNXZHZlWEZwMUtNN2JaWDZpRUtjN3pKUXFhSG9YMmpWOGhoVUNRRzBQTjdpQUVKX1lFX1p0d2pTLThJQ2txRFRKa2JFTzVTQVZ3TUNoZkd6N2txSDduRHJoeVlDY1JOUE1mOGtlVjRRTWxXYkpEeFdxVXY1TlFYRTRPZ1hMUktsd0pGd295ek5ZMVl6ZEx0d3dfTEpyWEI2c3pTRzh4OEFKZW4weTBmRlVVcWF1Qm8zT2dtNS01ekdGSnZFYUIteWpjbEh5eldsQW1JaVotMWt4eGVZSXBmOGNRV0ozM3dOWE1nOTVCZlpHLXdPdWVyMllzQktsckp1eVN0dEhKRHRR?oc=5",
+      "fuente": "El Tiempo",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T15:37:43+00:00",
+      "resumen": "",
+      "id": "d55d93e73ddfc8cc"
+    },
+    {
+      "titulo": "Internxt es la nube europea que garantiza el cifrado de conocimiento cero, y ahora cuesta un 90% menos en su Black Friday",
+      "url": "https://www.xataka.com/seleccion/internxt-nube-europea-que-garantiza-cifrado-conocimiento-cero-ahora-cuesta-90-su-black-friday",
+      "fuente": "Xataka",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-27T14:11:00+00:00",
+      "resumen": "En un mundo donde las suscripciones se han vuelto el pan de cada día, hay algunas que merecen la pena y otras que podríamos considerar como \"gastos hormiga\". Sin duda alguna, tener un buen sistema de almacenamiento en la nube es de los primeros, especialmente con la cantidad de e",
+      "id": "75775baf06d58238"
+    },
+    {
+      "titulo": "Retos de gestión de las universidades ante la IA: Cosimo Lorenzo Guerriero",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPV0NPTDR5WWp6T2FfT1hFS2JoVFBSbDJTMWRmaU5NZGhPV2l5WVZDRW9CTUVkYlIwY1dDR19RbkQtTEJfcDJyRGtZNnhVOFJJaVlINzVYWl8xUkE5WG9DQm5xWW9ueWh4N24zRGhfSWdCQTVvMUFYdm1EWGR2XzRfbWZHbTZpMW1YNU9aeEl4RERkM1BUTi10REhaRThzdWIyMUdjSVV5Tkg?oc=5",
+      "fuente": "El Observatorio de la Universidad Colombiana",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T01:13:12+00:00",
+      "resumen": "",
+      "id": "bad72afbb96fcdca"
     },
     {
       "titulo": "De hacker a vicepresidencia de Meta: quién es el español Chema Alonso y su trayectoria en empresas tecnológicas",
@@ -162,78 +234,6 @@
       "fecha": "2026-11-26T16:17:50+00:00",
       "resumen": "",
       "id": "1fdc2d7fa303af60"
-    },
-    {
-      "titulo": "El SENA abrió en Medellín 134 grupos gratis de 59 programas para nuevos estudiantes: 37 tienen clases hasta las 10 de la noche",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBCcFpDYm55TGlVbVlhOWpMZU4wYmMxQlhCNDU4b3ZodWJZVnBQLWRtV0RfWkdfM0hCb2hCQXVxS3BaOGtxSTB0bkNRYlRYZWE2X0RYSHNYMS03V1czTHJrdEJIcnVmcWJO?oc=5",
-      "fuente": "Mas Colombia",
-      "categoria": "Educación",
-      "fecha": "2026-11-26T16:17:34+00:00",
-      "resumen": "",
-      "id": "6087992b4e082792"
-    },
-    {
-      "titulo": "Diego Fernando Hernández Losada asumió como nuevo viceministro de Educación Superior",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9Vb2h2bERuaGRUSFBtb3pfdlRVdVVGRFpUN0ROaW1VX2JKYzRnYlZaLUgzQXdWS0ZjbE1fdWtkLURzRlBvNXJucmVoVmhYNGlzY2RCR0haYlh5WXdC?oc=5",
-      "fuente": "Boyaca Radio",
-      "categoria": "Educación",
-      "fecha": "2026-11-26T15:01:08+00:00",
-      "resumen": "",
-      "id": "fb3ad6f370d31050"
-    },
-    {
-      "titulo": "Universidades privadas pierden terreno hoy en Colombia.",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQb08ybzlyeG5yWmtBMVVwcmNqYmpwcmFIS0hyWDRQalZ0R0pxM3d5LWFqV0VGdURXQXRwbmNObXVZanlBSTM2bWNmZkY0TFE0VDdpU3BNLVE0V1otUkNRSjJVdUxRQkt3UHFhdEg4dWhqZkRqTGVTR3g0alVTdURJc3RuOGNfNWlUTENtRUNtbjNKU3M?oc=5",
-      "fuente": "HSB Noticias",
-      "categoria": "Educación",
-      "fecha": "2026-11-26T14:08:07+00:00",
-      "resumen": "",
-      "id": "f1cabb6929b79b26"
-    },
-    {
-      "titulo": "¡Estudia un posgrado en China! El ICETEX anuncia 30 becas para maestrías y doctorados con financiación del Gobierno chino",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPUGZBd3FFYW1oQTVfN0wyQVgybTV4LU5UZ2NCSkxhZjA0RTlvbmtLVGNoZTNZRHdQUmxlamRCa1FPSUVHdHlYYjczU0ZnN3l6c1E4WnMta1dEQ29UQUpNak1BVHBhZWJVVURPWWtaSVUwa1JscnpXc05ITk5ZcFRlUHN2SkE1WVR3eTNwaDV1Tlpabm5qZzZKMEt6OFRSMGUzUW5ScFVKOUJ2Z3c4MXl1TWFkTjRCcWJKTUZUc2l1a0hjbjkwenhCWkRlUnJFdw?oc=5",
-      "fuente": "ICETEX",
-      "categoria": "Educación",
-      "fecha": "2026-11-26T13:28:25+00:00",
-      "resumen": "",
-      "id": "d6868610820904aa"
-    },
-    {
-      "titulo": "Santander de Quilichao amplía becas universitarias para jóvenes rurales",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVG81di1BTm9xTm5oSGY3Sy1KQXpreV9aRENwNFdUdG1iNGpFZUNEbHdldk04SDlGeTlyTE5RZ19aMFM0UmJlTzBNM3JXWmdzOGxITlI5VGtad0NzVUlYLV8zYndZSFZGTDRMTkRPaXRRMW5iSHEyVVI2UVp3Ylh2M0dhd3JuYXA2QW01dmY3NmVCclFhdi1UOV9XT0JMbzZJZC01SktlVVhZU2FhNmdjUHQzOWY?oc=5",
-      "fuente": "Diario del Cauca",
-      "categoria": "Educación",
-      "fecha": "2026-11-26T12:21:38+00:00",
-      "resumen": "",
-      "id": "df5a73bf17dbe9d0"
-    },
-    {
-      "titulo": "Javeriana fortalece la cooperación entre Colombia e Italia en ciberseguridad y confianza digital",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTzZxUUpKSjdJazJET0VpNzgweEdmM0VCRGQ2bDB5T3h5UWM2YThTZUpDa3ZyTk96aGZobTJMODJhNU1DZ1lGS0x3VWdFLXE3UUxySzNvLTkzWlVFV1VXUVdpTDJ1YVN6c1JQQW0xdlM1NEx5VUNBaWpQOWltNW5OU0puSTdsbWVWOE05azRuNUo2eUVuZ0Q4S1ExdFRLelZYeGFjQnZTQVRwMUpWTnZfekFtbjN3Ny0t?oc=5",
-      "fuente": "Portal Pontificia Universidad Javeriana",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-25T14:23:31+00:00",
-      "resumen": "",
-      "id": "2667cdc7b9cb44f0"
-    },
-    {
-      "titulo": "FlamencoEñe reúne en Almería a programadores internacionales en busca del flamenco del futuro",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPVGFRQkxCbXZHTTNIYTVlRENYZlF1SmY3MW51XzV0LTZiZlFKV1dFMEtYMGNfSzNYcDVwMnNmTDFiaU1sU2cxRHhzOE01ZVhKX1YwUVdjeHdocm1fYUNFRUNkaUkwUGwzdENYeS1yLVctWU1LLW1IdzJyS0FSSEZGV0V2dzZ4V1YzZFY2cXdKaTByanNqRkFpS1FyLVlIZzlsclQ1Q1RsaEk2N29ROThXOUItZlg1MUx2WV83NTAtYTZienFzUjAydG1nRUdGNzFfYkd6SHFnRk5TUdIB3wFBVV95cUxQUnVHWFVVbGVEcjlINFdXY3RRNEJjUi0yOXBlWUtyN2dIMUFJRzl3ZUpqRkFINXVmd085STBrT3kzV0hXdmRjTWZKa0M1NEUzTzFqa0FfVU5CWmpsU3VwcTkzOURmZGFvVGhncndYZm44TWZsdWYxQnFWVlZyNGNLWDljM2lMTDdpS3VMUmg1NVRROThybzd5ZnlhUzN4bko0dnFSRW1sSS1VVkhseTFUeklPcUlLQTMwU0VBdHIzTlpuanB3MXE1OGluV1BfVENPekl6RzFtR0N0c3pJUU5r?oc=5",
-      "fuente": "Revista DeFlamenco.com",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-25T11:12:40+00:00",
-      "resumen": "",
-      "id": "e2d8d00dc7126b4e"
-    },
-    {
-      "titulo": "Anthropic lanza Claude Ship para desarrollo de software: así funciona la herramienta de inteligencia artificial que revisa, corrige y aprueba códigos",
-      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNVG9YOVZLOFVZZm9ObVA1QU9YNzNxWUY3R3JWVlE2VmhJU3dwUlF5bW9RdFUwVVQ1bHdMSDFwNmJURnA1MHVoRmdwRHpHVlN3dXdYd2xldU01U05UMHk1YS0zYWNLSzlUUGltMG83ak1abUlmTHlfLUs0clMwVmd1UFgtYmxMMENzY0pMdXBpUXMwOFB2ajNNRl9nbklQc0NJRkFELUpaNnIxSFowS2pEZDdETlpOU3dEeExSd2diYTR0aWgyc096ZmJ3YVVXY0NGbUpzdHRGeW9oa0QzMWU3eUVndHEzTk5qRm5wdG9Jb2xYSU1vTmo1MUZ2bzZGaTF3ZEtNNG96RmRnWmE3WHpZQzJnRW5BcEdKUzM2cERLa21fdmZGbExvdlE0ZE4wSXVNMTdMNDlpWnFVRVXSAcACQVVfeXFMTnlDMVJBN2NVd0NLdUs5c2g1dmM0VF9Hc29WNE5pSEdBNGx0aG8yQmpzejdIeGU3TVZkU0JsZ0dTRmxFSWxFVDBDOHREc0czVXpXemY0YjZiZElBY3FveXpLbnQwdHRDb2xNUklDRGI4TjVvNXZITWIxcW5CR1RXaGVuSEdwMnM3cklyaXNMdWQyQ1cwRDJTZTgyTmtidS1Ec2ZxTXdlM2JZcUczd1dfU2JPWklmdVlTRmZGSVV2NThHYVdkUl9FX2NhdkI2V1h6a3I2RXdfdnBEOE92LWdPdkZmcXR0V1FtUFNqMF84X1NYWXltZ3pBMzNVblo1MFM3OGY3a1k5T3FaRllRNDRxNWxUQ0o3dnV1YU1CcWQ4dWtiWmc4UHNWQmx0bkNfT1J0Vjc2bUJ5ZFJhajlhSHJlaFY?oc=5",
-      "fuente": "El Tiempo",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-25T04:01:11+00:00",
-      "resumen": "",
-      "id": "0060deb7d28f6943"
     }
   ]
 }
