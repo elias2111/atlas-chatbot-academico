@@ -1,7 +1,7 @@
 {
-  "actualizado": "2026-11-26T14:57:21-05:00",
+  "actualizado": "2026-11-26T20:38:20-05:00",
   "ventana_horas": 48,
-  "total": 23,
+  "total": 21,
   "categorias": [
     "Educación",
     "Ingeniería de sistemas",
@@ -12,7 +12,7 @@
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 6
+      "items": 5
     },
     {
       "fuente": "Google Noticias",
@@ -24,7 +24,7 @@
       "fuente": "Google Noticias",
       "categoria": "Tecnología",
       "ok": true,
-      "items": 33
+      "items": 31
     },
     {
       "fuente": "Xataka",
@@ -36,7 +36,7 @@
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 21
+      "items": 39
     },
     {
       "fuente": "Google Noticias",
@@ -47,67 +47,112 @@
   ],
   "noticias": [
     {
-      "titulo": "Ciberataques en Colombia: la banca enfrenta nuevos riesgos por la inteligencia artificial",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSlFHU0NwVkxYX1lESzZKa3EzRVF2aVhKWVItZzhTVHlTX0FQZW1KdHlUT0ZXN1hUM0NxWDNHVTMyempBREszWEhZYl8zU1J3OHYtZEZYNUloQy1vU0h6YnBNa1BXZlZpLUpadGdyZ3gycWFpNFNUVmlWMDJnclBuN0psLWc3Umc3d08xREhiZ0E5aFN4amhSbDNhbTVyY082LXJSd1p6d3lnWGpiNHBacjVDWE9EbEs0VE9TWjNB?oc=5",
-      "fuente": "HSB Noticias",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-26T19:50:51+00:00",
+      "titulo": "Unicartagena ubicada cuarta en la Clasificación Mundial de Universidades 2027",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQjgtQ2k1YWtoR21CUDB0REVVMjM1Yk1CeXR6TGt5ZmJqbFQ0NHFZWFRWeURmVy1XWXVEbF9MWGxvWGpwWlpfSFZKMHktdlc5RkhDN3VlOHkyTTAtRnhPOXphbFVzM3dwNDNkbU9LRjFxZV9EaXYzdnZ0OVpGN2dueWQ5bEZ3UHlyQmFaMzBrXzhQdzhDMHVUTlVzNmphUHQtRGN3?oc=5",
+      "fuente": "Noticias 625",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T00:52:27+00:00",
       "resumen": "",
-      "id": "5aa575b1be14dec6"
+      "id": "79073435025eaf53"
     },
     {
-      "titulo": "El 70% de los colombianos que estudia con Google ha mejorado su salario: Edgardo Frías, Google Colombia",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQdk8zZWJIMnNTSzlPR0E3cUFmTk1pczUwdzVBNmUtODE0U2V5ZmFtdmJDVmt2MTR6bnlHYXNiZFpXSm5UV2J3ZU9UbnRKY0hIVDMycE1ucmNQQ19SZWoxSUkxV1M3NnNoTmhYR3FEVUFMSFhqWGlfMG05Y0tFNVd1MUp2Q3lGcHBvUzBtR3BfbGRxWlAteG16bWFRSzhlM05qUFBXS2hMY2NjWjRpYnFMSlpRQWJMS2lEbkY0SFZGLVEyY2lpSXFwUWdOa055bk4xYUNxaURXVjZSQdIB9AFBVV95cUxPY1dza3hUUEpENUZPR1loUzFjTHg0WnNkZG1nb3hUQzFkVGtkNGFwWUxFQXNlSXZINnJhWDZsMGxzOEN6WS1DUkEyOE45N1dya1B0anNQdlNiUnJEVTk0MzRYZlNCTGNxUXBXaVRkMXRENDdPMnp5cUQ1ZDllVmhienRKeDZrX0hCd3V0WG9GdnBGdXdOM3VseC1WYk9CY0tRNnBsZXlrOFlsbDRaSUpONmNqMi1vWl82Q1dPRndBeUp4WV9KSjZYUXF5azlVa1JYOTJ3UmNIMVhzdXVac19wWWlNSXZMcjdRdEZRVFEzczBTQW1X?oc=5",
-      "fuente": "Infobae",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-26T18:56:00+00:00",
+      "titulo": "Ante la bancada provida, Ministra de Educación presentó prioridades para la agenda educativa en Colombia",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPODVIOE5CbjNyS2hoWHQ1d2Z5NExHZGhmRndjcF9kZGp6TF9oZ28yMWJIUEdheUkzZlYxUUM3MWtlQzZwMGNiT0t6ZEdpQXlRWXpEN0E3T2VNN2ZYemVVYmwwaVVUaG1fZ2haYTB4bjFtMHBiaUs3U3pSanc2bnk3SXVJTkh1c2tPTVl6b2ZWM2VTUXM4V1A3TVZkWUZ3R2toMFlORGRJa3oweDVaWk9aUjl6b0RQT3g5SGY5SHJkYTQteW5wREdES2J3Y09NV2FuZm9OTFRtWGJKYldPd3hmR2ZxNjRyakxHUWgyMGZuUU5iUmxVM0FhQVA2NG9jaC1FVXc?oc=5",
+      "fuente": "Ministerio de Educación Nacional",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T00:31:17+00:00",
       "resumen": "",
-      "id": "4d83553ba6eef17a"
+      "id": "354fb24d9243e185"
     },
     {
-      "titulo": "Google cumple 15 años en Colombia y anuncia apoyos para la formación en inteligencia artificial | Señal Colombia",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5UOHI2dWFZVjB0UHQtX3hjOXBLUlgwX283NVJWRlRQMGl0WHpvXzZTZWNHUnczaXU3dFJyU1hqeVFLT1ZRQ1RVY3k0QWY0c2VCOFNfclBEbGt5dk5IOFhGYUlTV1FCdFVaOEZLYUpRTHV4cjhXUjVZNNIBfkFVX3lxTE1EZTl5OVZTb2xmamZ5TXVqNGRlTzNmLVZlWkp5U2VYMWp5a1BoTXp1S0VLYnZjNkdFMFVKcFE2MEFma21XdUd1bmI3OXJHNGNXaWstTm9ILWZlYkM2ZDVQLXNJZXNuYnMycVM5dXV2dHJsamF5MWVQNjMzMy0yZw?oc=5",
-      "fuente": "Señal Colombia",
+      "titulo": "Nuevos asistentes de inteligencia artificial optimizan el tr",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPaUV2Mjk4bFBheEJMRGJtLTJQSkNBc0xjM09CVmgwWlZvRW9IMnVIaFlvRmhpc0tHVVhiRldJQU1Qa1dWTDFVMmpoVHA4VXNveGh2cEZLRnNkVlpmQmQyemNWLVp2R0VzRlBMdFRUem1YZ3U1TERTT2U3bFhpaDBsZHBpaVBWVGZBYWRBZzdKZTVRWXVpbjVQN1YzLTJqdnMwNi1z?oc=5",
+      "fuente": "Diario del Sur",
       "categoria": "Tecnología",
-      "fecha": "2026-11-26T18:39:17+00:00",
+      "fecha": "2026-11-26T22:29:51+00:00",
       "resumen": "",
-      "id": "7802a18669c2b0bf"
+      "id": "11a6cac904ffe418"
     },
     {
-      "titulo": "Colombia necesita regulación de IA y concesiones flexibles para atraer inversión a centros de datos: Indra",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQdDdQSDNSSFktVTVscFV6QlRWN3UtVi1hT3pZOTNqQmJjREJWSkZNd1Fxbm9td3lESkRyaktfMGtKQnRhVFgybndJeUJ5amhYNW5uVEdlcFNiZlhUU1dQTWN3UzF0MGNneWkwSjFNR2RIYkVsY0dhM3F1c3k0emlJbnVwMV9oR3BZZFJsOHhfSURnU290UlhKZFdtaThmNFVaTDFjU0hIZ0VWNlhBUDdZSUlyZ19RR3hjdURqTVNabWhRY2JQTmp5Z3BQWXd5b3JzeUxWeG16bFFtS1pua2MwenhUTzhuYzlBTHZFS9IB8gFBVV95cUxNVnkzNFVWdkMtYTAxWHhwZjIxMEFBMkhCNmRfQnlWNTRNbXlsRW1YRWw1NHRjZ2lsd0c1R1M0VjN4V1JzYTN2bE9rZEZoVjlpOGwzNVZHS3ZTamdWaEpYbjlEQUdVVUZKM1NfQ0VFdk1BOVJ1RkhBYkJXanhjd0w1eFBuanQ5RFpuckJtZ2lWVVh1dERyS280cUVJR0FyUVZyNEtnWXZrOV81Q21NclU4UUlpSExJb0t2QlFPVXZFUFlycWg2eW9YeXEtdW9LS3pPTjdkbTl6V3VIYjlwTUVEbUhielhISjRscVJfSVZncWotdw?oc=5",
-      "fuente": "El Tiempo",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-26T18:31:55+00:00",
+      "titulo": "Ministerio de Educación y Universidad de La Sabana acuerdan sumar esfuerzos en favor de la educación en Colombia",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxNZzc4aXRHRFF1VDZlWWlMckU0ZzJhLVQ2d0pCQnRxR3VjbnJwb1JDa01qV2gxVW9vUUw0S1NsR2R2SERHbGFuY250SUpieGVwR3JpTmxDbFVaT0tVX0I4SWpJRktBa3BFczlqZUd4b1BCU0dxR2dIenFhbUhRMmRXU3F0eVYyOEFRQjJwbGxqQW4wNE94eEZ6a19OYTVUa0poVkllSi0tYnUwV1lzNkhCSG1JUWpqZ2RscWY5Ung0TEpRUDZpTXNkSTFiN0cyV1I1UXJrb1p2bzQ3aUs5ZjZ6TndsTmpZcXNaRlZadWJ6MlJMU2N1MEV4eUVYdzNxQkplU1FGb2VkYjR3YTZVSkE?oc=5",
+      "fuente": "Ministerio de Educación Nacional",
+      "categoria": "Educación",
+      "fecha": "2026-11-26T22:15:52+00:00",
       "resumen": "",
-      "id": "c29dabb78c8a5622"
+      "id": "91a303ccaa4da8d3"
     },
     {
-      "titulo": "SpaceX tiene luz verde para desplegar un millón de satélites con centros de datos: no es por la IA es por la energía",
-      "url": "https://www.xataka.com/espacio/spacex-tiene-luz-verde-para-desplegar-millon-satelites-centros-datos-no-ia-energia",
+      "titulo": "Seguridad Valle del Cauca: 581 cámaras de alta tecnología",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcGZRQTcxNEF3emIwSkVCcVZrMnVONUxWMlM4X3hWcU5UaEpoMUJ1TXVrNVZROEN5QnZhQURTM19oTm9GZC1vUEFaR2dhUHR3eFdjb3EybE5JQy1ob3FERUgwVzZOb0ZFWnlBSWJvOU9xbVotM2U2cVNrQnlURlVZbG9QR2lfNnhD?oc=5",
+      "fuente": "Estrella Digital Colombia",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-26T22:12:59+00:00",
+      "resumen": "",
+      "id": "7af606dfc24057c0"
+    },
+    {
+      "titulo": "Gobierno de De la Espriella alista límites al uso de inteligencia artificial en la contratación pública",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQdFF3bW8zcG4xWlIwd21fbjRnamp6eWlNaEFoajlWUDRQdF9VWFA1M2hmRENiaUhqUDg0c002RXJtQ3dPTkdmS3A3dVBfdkI3ZDJzT2tTRHV6MktUcW5fS2FubDVnWXFfdVpXWkhrUDVPazh0clRFVnhNempVajNWSEY2YWstOFhCQl94anZ4eDM3Wmprdno3a1RjLTRCNnpIa0xKVUNENjV4WHJBRWRfY1daWThpOFNxX1NST0VVeFE5d1ctZlBLN09kZTRYYlZxXzMw?oc=5",
+      "fuente": "CAMBIO Colombia",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-26T21:40:20+00:00",
+      "resumen": "",
+      "id": "dcf1f856fd61afc8"
+    },
+    {
+      "titulo": "Países Bajos se planta ante EEUU por las restricciones a las máquinas de ASML",
+      "url": "https://www.xataka.com/empresas-y-economia/paises-bajos-se-planta-eeuu-restricciones-a-maquinas-asml",
       "fuente": "Xataka",
       "categoria": "Tecnología",
-      "fecha": "2026-11-26T17:33:44+00:00",
-      "resumen": "La Comisión Federal de Comunicaciones (FCC) concedió a SpaceX un permiso sin precedentes: puede lanzar hasta un millón de satélites para construir una constelación de pequeños centros de datos en órbita conectados entre sí. El proyecto se llama Starmind y el regulador lo presentó",
-      "id": "633de0ec1ddcefcb"
+      "fecha": "2026-11-26T21:30:26+00:00",
+      "resumen": "Durante los últimos años hemos visto cómo Estados Unidos ha intentado limitar el acceso de China a determinadas tecnologías de fabricación de semiconductores. Es una estrategia en la que ha necesitado la colaboración de otros países, porque no todo el conocimiento ni todos los eq",
+      "id": "22e1e260a36f7539"
     },
     {
-      "titulo": "La inseguridad se ha convertido en una condición estructural de Internet",
-      "url": "https://www.xataka.com/opinion/inseguridad-se-ha-convertido-condicion-estructural-internet",
+      "titulo": "\"Tenemos que prepararnos para los próximos meses\": el presidente de Microsoft alerta del riesgo de más caídas ligado a la IA",
+      "url": "https://www.xataka.com/seguridad/tenemos-que-prepararnos-para-proximos-meses-presidente-microsoft-alerta-riesgo-caidas-ligado-a-ia",
       "fuente": "Xataka",
       "categoria": "Tecnología",
-      "fecha": "2026-11-26T17:00:25+00:00",
-      "resumen": "Llevo años escuchando la cantinela de que la ciberseguridad es, sobre todo, un problema técnico. Lo primero que nos dicen los expertos es instalar actualizaciones, usar contraseñas complejas y distintas, activar la verificación en dos pasos, y, en el caso de negocios, contratar a",
-      "id": "ab8d1c19a291127e"
+      "fecha": "2026-11-26T21:00:29+00:00",
+      "resumen": "Mantener en funcionamiento los servicios digitales que utilizamos a diario exige encontrar un equilibrio entre dos necesidades: proteger los sistemas frente a posibles ataques y garantizar que las intervenciones destinadas a mejorar su seguridad no comprometan su funcionamiento. ",
+      "id": "30476ead8ad5686c"
     },
     {
-      "titulo": "Fashion Crew AI: la plataforma colombiana que conecta la industria de la moda a través de inteligencia artificial",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE41NGRadnFiYmt3ZlkzRDV1NWIzeWFoMTdJTmNnVWZNbHZhVTFuSEZhenlkOHlucDFOck9sNTRNallzak9wcmRaUWJHLXVkdkNCcklIMHNwNFJjZHAxT0JDSmZRaDJISlZ4Z09jZi12MlJuUG80V0hj?oc=5",
-      "fuente": "Mercado Negro",
+      "titulo": "Google cumple 15 anos en Colombia y destina mas de USD 1 millon a educacion en IA",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPZ3RzdmJOaFBzbjlEdlpYU0VweVF6N0dwYlZvX21mSmhQYXBWVUFUUnJIV1V1UGFQZTdWZlVHS2tyOUV1V1g1RkhaQ1Z0QlhuN0p6Q0xuRlRjT293ak4xQkd3azRjSE95WDRmekJqWnhhanN0ekNXM2todHdROHdxdlVRS0ZrcEVvX3V0VFRwSVdsZHlwWWRNWkZSQndQMnRMa21fU2lmSEVVWlJRV3VhYUV2cW9IX0RsT2ZEMWNaREFxWVNVdzI2SEhQMXZCTGZQeXhZNmpxcVItTGdaQWR0WmZ4OG1ldGtaRlBSaEhHRUM1elRNeEVOMw?oc=5",
+      "fuente": "areacucuta.com",
       "categoria": "Tecnología",
-      "fecha": "2026-11-26T16:30:21+00:00",
+      "fecha": "2026-11-26T20:21:36+00:00",
       "resumen": "",
-      "id": "c48835e0fa0724bd"
+      "id": "5a78e01644bd98a0"
+    },
+    {
+      "titulo": "Cartagena invierte más de $2.200 millones en tecnología de última generación para combatir el delito; así funciona la estrategia",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNUWotZUpIdkFwQjlhRFpsRDZfLTNQTkk0bzRJN2QwUXFZWTQ2TGVxY3h1YWNyYl9HcDAwOXRqdmQwM0NQRi1JRzFIay1YdTJpVVUtdURzZTFGV0VuZWllWDVYbWFud0g1eG1xbUZ0S0lmcHpEdVJsOFBib2JfQkhiWHlkdUF2MlpNbGR3ME1oY3ZUb0RFWXdvMlRheXdoelRZM2xtSUphWlFRUS1NcE1zZWx1VzRNbnhpanh6RWZyeDRHYXVvWGJRME9yV3hJZXd6NHVxZ1VMSUZ1S3I1d0dKa0xmWll3OEM5YndVWmE5MmFDZFUyVmE2R3lraWZBMmVYQ1NwVGdUMlQ0LWww0gGSAkFVX3lxTFBBTVF2aWV4SGVwVGd2d3BRY1BfTi0yRkV4MDRMWGZET01QZy1SV1JQNjBtYWd6X3RMQ1h4UXlDSWhKTlJtdnRmT2U0TnZha1NGTzFpYjVDU3dUNzc2TmZfRTJvWnRtMWxYZlJaVlNxMF9KcmV6X3hZMThMeU1VMlVFUEdGRHVnMk5BWkNUUWZUWF93ZU9EM1VIRGFCblMySkhkZ08zYnRkLXU3WFhyNnFaU3Jzcms1NTZHUWN0YkdjOXFENlVfdDlvSFozQzg5NUVWOFpoNkY1aU9OX05Pb3BsZW9vRUxmRlYzTGxhSzc5OTlkVTZPZWZ2SGluVXdPUWJxbTlGQXFyN1M2cHZxanVNOGc?oc=5",
+      "fuente": "Revista Semana",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-26T20:21:29+00:00",
+      "resumen": "",
+      "id": "240489b1758bff9d"
+    },
+    {
+      "titulo": "Confianza en pagos digitales en Colombia alcanza 75,8 puntos, pero usuarios frenan pagos autónomos con IA",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNTjA2SGpXd29LNDdvTHZZa2ZubzR2UUhza3RPTF82R2hFb1NmZGExdHRCM2Z4QmpnWUVGdV9Fd01iMjFJMnhuZU53a1hJQWhnRU9leDI1R2dDbmNiTk9DbFd3cHl2V0dFSi1iVkdiUlE1bW40RWdGTERUdkFlOGpTclJKcDBGaWdoNzdDOUh2aS1zb1Njb0ptWTlGVWxCTUlHSnhsamdxVzUtbk1VTWpYVk5MeGdRVENkaUt6REJFYUhqWVlXcWRQby1jZzdyY3JUQ3JWM3l4dDBfczdDaUI0NEFWclV1akdu?oc=5",
+      "fuente": "Forbes Colombia",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-26T20:12:39+00:00",
+      "resumen": "",
+      "id": "c939a27aef6dacf2"
+    },
+    {
+      "titulo": "De hacker a vicepresidencia de Meta: quién es el español Chema Alonso y su trayectoria en empresas tecnológicas",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQdzB5ZUhKREx0OG42UkFyRUVzT1BPOUJKU3dFaTd2OThUYkd3ZHZVbXdlVE5xSXBrUWo3TlJTYmZ3Rm9UZFNJaDA3bTZ3MUwydHR3Mk1tLWo2dFdPX2R2bXl1UlZrdzMtaE9lajgzcE1IaThmRjBLb2NZZ0t0RjZrTjEtNEVvU3NadUgzd29jdEJ4U0FHNi1JZF85X0c1NEJNLTJyemFOU2FzU2xRWFZhVExKcXotR0hiUVVUcktsUVB5ckNVaUc0NGJ4YTFYYjN3ME1LTGJWbnVMbW5IX09MMFA1d2ktMjNhRzBjSkRyYV8ta0XSAfMBQVVfeXFMUHcweWVISkRMdDhuNlJBckVFc09QTzlCSlN3RWk3djk4VGJHd2R2VW13ZVROcUlwa1FqN05SU2Jmd0ZvVGRTSWgwN202dzFMMnR0dzJNbS1qNnRXT19kdm15dVJWa3czLWhPZWo4M3BNSGk4ZkYwS29jWWdLdEY2a04xLTRFb1NzWnVIM3dvY3RCeFNBRzYtSWRfOV9HNTRCTS0ycnphTlNhc1NsUVhWYVRMSnF6LUdIYlFVVHJLbFFQeXJDVWlHNDRieGExWGIzdzBNS0xiVm51TG1uSF9PTDBQNXdpLTIzYUcwY0pEcmFfLWtF?oc=5",
+      "fuente": "Portafolio.co",
+      "categoria": "Ingeniería de sistemas",
+      "fecha": "2026-11-26T17:44:36+00:00",
+      "resumen": "",
+      "id": "87d32eda996317c2"
     },
     {
       "titulo": "Ministra TIC propone que ColCERT coordine la ciberseguridad en Colombia",
@@ -128,20 +173,11 @@
       "id": "6087992b4e082792"
     },
     {
-      "titulo": "Google cumple 15 años en Colombia y anuncia inversión en inteligencia artificial",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNaGRoTmk3dm43MUZ4SHMyV21pLU5fSmJUZU5mMkx4TTFkbm9DYkhzMnBObVVYMXAycUZ3WTZlSGRoRHNkVHpQT0p4VzdUQUtfYnRrNnNkczZQVDltaHFIczZ0dzViZERpWlhpZXZpVmZpZ1drcTc0MUUyekpLS3QwYUFQWnA0Z05LeEpGdjRXaENNWjNQUEZPNHFvdktDVldWeUY3Q09vemNNTEhRbFBVazdrVlF2b29qbjN0SDV6UGJOY0g0Ymh4QnlDS2w?oc=5",
-      "fuente": "Eluniversal.com.co",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-26T15:59:00+00:00",
-      "resumen": "",
-      "id": "3e1334c91eb133ec"
-    },
-    {
       "titulo": "Diego Fernando Hernández Losada asumió como nuevo viceministro de Educación Superior",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9Vb2h2bERuaGRUSFBtb3pfdlRVdVVGRFpUN0ROaW1VX2JKYzRnYlZaLUgzQXdWS0ZjbE1fdWtkLURzRlBvNXJucmVoVmhYNGlzY2RCR0haYlh5WXdC?oc=5",
       "fuente": "Boyaca Radio",
       "categoria": "Educación",
-      "fecha": "2026-11-26T14:48:18+00:00",
+      "fecha": "2026-11-26T15:01:08+00:00",
       "resumen": "",
       "id": "fb3ad6f370d31050"
     },
@@ -173,49 +209,13 @@
       "id": "df5a73bf17dbe9d0"
     },
     {
-      "titulo": "Diego Fernando Hernández asume como viceministro de Educación Superior: estos son sus retos",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOYnhxSk1KNkxaU1JwOXVLLXVaR3A1ZHQ4Yzk5OFJLUGszWVFkdmJYdEtrT0R2QUNwRE12MG55cWh5WGNlcmNlQ05nZzFQTFRhSFBXLTBhYWRXc2h2M202alJFeFczaDdhcmxqZ3dKbXdEWnpFVFBRQmhBaDNOUTh4cTNiNFRUbUpBMHRJUEExOEtXc0tETS1rNEVBNDlUbFpsVmE0RmdNNEdQUXhKTHhqazBwaExpeUJYN2dSdkRQX1drX2d0NHNwaTJ0UXN2MjNjdTg1btIB2gFBVV95cUxQOUw5R1JnemltT204ZmV6djdIQ2pBLXBfaGctdXlRMWRHaDE1VXJKcmhjc2N5OE9lOElYSUhXZVl2NmM4VG5qaFkzcnZyb1ZaVVBwMnNVMGxGOFg5RC1pZ3RIQm4yLVlJM05FM3dMa01OZUlUQk9mNDJXNmd4QjEyREF3d2lVSHowaE02RUpILVRRTnUxSC1TRGJwMmFUOFpqb1V5bnc3dzdfYll4Z3NFTUFIS2dKRTh5Y1FabWlQWmgyT0c5UVZqZ1ZLaGhjeldTMUdEcGttRUZZUQ?oc=5",
-      "fuente": "El Tiempo",
-      "categoria": "Educación",
-      "fecha": "2026-11-26T12:09:27+00:00",
-      "resumen": "",
-      "id": "04de257969017b37"
-    },
-    {
-      "titulo": "Universidades privadas pierden terreno en Colombia, incluso entre las familias más acomodadas",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQQkdGOC1FYkJ1NFd1cFhzOXFIWXdZVkduUW91MlJBNmlyejdaUlF6dGg3T1p0MGV4TDgtSEZqdXFnWWlnQnpWMXRrb3RyUERkaF91R2dZMTVuRHBTSER0OW41SEtYUnBHRjBjRkNjVFY5US12LUtVM2FZQzVnUU53ZFpxRXMtX2dyV1h5Y0NCR2ZycjZxd05VYWluWGZYeVJvOHVfaUVULTZVV0tuRmtHTHBfNmNIaWpIWnpSWHMtb1FiVG9JdTRlbms5a2xjQ3ZyZV9vcWZsMGtTaW5VbFN0ckVuV25kQzVRZW1NUDVqZmPSAfABQVVfeXFMUEJHRjgtRWJCdTRXdXBYczlxSFl3WVZHblFvdTJSQTZpcno3WlJRenRoN09adDBleEw4LUhGanVxZ1lpZ0J6VjF0a290clBEZGhfdUdnWTE1bkRwU0hEdDluNUhLWFJwR0YwY0ZDY1RWOVEtdi1LVTNhWUM1Z1FOd2RacUVzLV9ncldYeWNDQkdmcnI2cXdOVWFpblhmWHlSbzh1X2lFVC02VVdLbkZrR0xwXzZjSGlqSFp6UlhzLW9RYlRvSXU0ZW5rOWtsY0N2cmVfb3FmbDBrU2luVWxTdHJFblduZEM1UWVtTVA1amZj?oc=5",
-      "fuente": "Revista Semana",
-      "categoria": "Educación",
-      "fecha": "2026-11-26T10:38:33+00:00",
-      "resumen": "",
-      "id": "63c7546d4569540b"
-    },
-    {
-      "titulo": "Ministra Ilva Myriam Hoyos posesiona a Diego Fernando Hernández Losada como viceministro de Educación Superior",
-      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQT2cxZjdOcVl3VFQyTVE4QU9aQU5xb0ZiMFV4ZXJUUDhVRW9lZk1mWHFkRzhPd0tmVmQ4TXhxdVNZZGJXR3FCMi1JLWdjRjlmeV8tMG5NNFJEZUl0d3hXSnBOcFJ6UjF4Smc0dkxQZ20tZGVhZDdSU3dRenhTWGdHVVJ1Zy1iel9VNzN5Q3lVbEZpRmFmc1dGcFJUcnFRVWpYNXJJYndyMFJBVVk2eTVjMUVwTV9qLXRlOGx2MzNFQ2N2N3E3NU5EQlRVWEFEX0Z3YlZQaFJCYXJycEQ4WFZSdnlmb2xtRGJpMEVOWGxnQ1BGWm5iU2p5Yi10WXR2clpnTVNHUGhnUk43eUU?oc=5",
-      "fuente": "Ministerio de Educación Nacional",
-      "categoria": "Educación",
-      "fecha": "2026-11-26T00:41:27+00:00",
-      "resumen": "",
-      "id": "7ff43a3eb94f032b"
-    },
-    {
-      "titulo": "Colombia tendrá una millonaria expansión de data centers hasta 2030",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNV1lDXzlJRTdOZ21nWjVnYmZTaEZnc1dYWktnaTRudUxXY1ItbVFFcGkxQ1VZZVNmd2pyMnM1bEMxa1ZPYnVBY0JlaEZuSU5fd1M3V1YtWFpYQ1ZKTzNwZ1hUVDhQMHNRSDM5WHNqYWl6R2g5ei12UVljeGx3VHNjem05QVZuNUhlSmRnU3l6dGhLUEpBbndpYlBHUEJLZWs?oc=5",
-      "fuente": "ENTER.CO",
+      "titulo": "Javeriana fortalece la cooperación entre Colombia e Italia en ciberseguridad y confianza digital",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTzZxUUpKSjdJazJET0VpNzgweEdmM0VCRGQ2bDB5T3h5UWM2YThTZUpDa3ZyTk96aGZobTJMODJhNU1DZ1lGS0x3VWdFLXE3UUxySzNvLTkzWlVFV1VXUVdpTDJ1YVN6c1JQQW0xdlM1NEx5VUNBaWpQOWltNW5OU0puSTdsbWVWOE05azRuNUo2eUVuZ0Q4S1ExdFRLelZYeGFjQnZTQVRwMUpWTnZfekFtbjN3Ny0t?oc=5",
+      "fuente": "Portal Pontificia Universidad Javeriana",
       "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-25T18:30:29+00:00",
+      "fecha": "2026-11-25T14:23:31+00:00",
       "resumen": "",
-      "id": "f67ed36663c78a79"
-    },
-    {
-      "titulo": "Abren curso gratis de ciencia de datos para 10.000 colombianos: cómo inscribirse",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcTRIR3pWbC1lbU1ST0tSbmVCWlI5clFwa0NiaHFOQWh1ekVmOHZDSllXZnQ2VGpEbU00LTFETnRDSWlza1BSbjFacEswdno5bG10Q0RPQnJoTkt0UkV3VUcxYjFwLW9qTDc1VFBZVndfQ0tWUC1YMEJ2dG5GTGVHb1pncHVQMlloVmtCd2g0eVhRWmdYM2l1Wm9CWE9IQWFNNFQ1bXkxWE5SUXJQbkxoRG1sU3FIS2M?oc=5",
-      "fuente": "ENTER.CO",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-25T16:12:45+00:00",
-      "resumen": "",
-      "id": "5b4fcc020141ec3d"
+      "id": "2667cdc7b9cb44f0"
     },
     {
       "titulo": "FlamencoEñe reúne en Almería a programadores internacionales en busca del flamenco del futuro",
@@ -227,15 +227,6 @@
       "id": "e2d8d00dc7126b4e"
     },
     {
-      "titulo": "Ciencia de Datos e IA en Escobar: abrió la preinscripción a la carrera del futuro",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQR0p3MG52Z0hVSkJ2SGJNdGZUSkp5bzhWbDNPbjZBcDZQd252bzhUZXlld0lnUnIzTk9tY2VLRzJqb0JXQm5KZzhBcENpa2U4WFlfbDNOWFNIYVJ3QWhZbDJyWVhDbUluclJ5R2ZpNkRCY3h4Q0xyNUozV2N5bEVSWmQydlhoWkVpSFBKU195X1FlS2o0dWluNVhkaFU4UFNnSEYwN2tURzhnNU0wVXdza2d5dURDTkdyckhCXzUzZnlEajkxUWp1VzM5ZUVQQQ?oc=5",
-      "fuente": "Nuevo Norte Digital",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-25T10:00:00+00:00",
-      "resumen": "",
-      "id": "7082233816dbdcd3"
-    },
-    {
       "titulo": "Anthropic lanza Claude Ship para desarrollo de software: así funciona la herramienta de inteligencia artificial que revisa, corrige y aprueba códigos",
       "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNVG9YOVZLOFVZZm9ObVA1QU9YNzNxWUY3R3JWVlE2VmhJU3dwUlF5bW9RdFUwVVQ1bHdMSDFwNmJURnA1MHVoRmdwRHpHVlN3dXdYd2xldU01U05UMHk1YS0zYWNLSzlUUGltMG83ak1abUlmTHlfLUs0clMwVmd1UFgtYmxMMENzY0pMdXBpUXMwOFB2ajNNRl9nbklQc0NJRkFELUpaNnIxSFowS2pEZDdETlpOU3dEeExSd2diYTR0aWgyc096ZmJ3YVVXY0NGbUpzdHRGeW9oa0QzMWU3eUVndHEzTk5qRm5wdG9Jb2xYSU1vTmo1MUZ2bzZGaTF3ZEtNNG96RmRnWmE3WHpZQzJnRW5BcEdKUzM2cERLa21fdmZGbExvdlE0ZE4wSXVNMTdMNDlpWnFVRVXSAcACQVVfeXFMTnlDMVJBN2NVd0NLdUs5c2g1dmM0VF9Hc29WNE5pSEdBNGx0aG8yQmpzejdIeGU3TVZkU0JsZ0dTRmxFSWxFVDBDOHREc0czVXpXemY0YjZiZElBY3FveXpLbnQwdHRDb2xNUklDRGI4TjVvNXZITWIxcW5CR1RXaGVuSEdwMnM3cklyaXNMdWQyQ1cwRDJTZTgyTmtidS1Ec2ZxTXdlM2JZcUczd1dfU2JPWklmdVlTRmZGSVV2NThHYVdkUl9FX2NhdkI2V1h6a3I2RXdfdnBEOE92LWdPdkZmcXR0V1FtUFNqMF84X1NYWXltZ3pBMzNVblo1MFM3OGY3a1k5T3FaRllRNDRxNWxUQ0o3dnV1YU1CcWQ4dWtiWmc4UHNWQmx0bkNfT1J0Vjc2bUJ5ZFJhajlhSHJlaFY?oc=5",
       "fuente": "El Tiempo",
@@ -243,15 +234,6 @@
       "fecha": "2026-11-25T04:01:11+00:00",
       "resumen": "",
       "id": "0060deb7d28f6943"
-    },
-    {
-      "titulo": "Programadores internacionales ojean el futuro del flamenco en Almería",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQYUsxdHdOSnRsNTJWT0FKQWx2cHQ5MzNXNGs3eGJVR1JVSXRfU1Bma2pTQkZ1Z2plUzRtTkZNT1h6dWQySzVvMFczTDBHWk5qLWRWT2p0U29XdmtrUlNoeDRmdEo1S1NBdzBneXVEMmxqUVhzdGg5c3o5SFNmUTBEeWhWaE50S0ZJeHg4dHZ5Uno4dlNOZzEzM1hDbVZ2MGdHMmg4S2NySmlCem9CRGfSAa4BQVVfeXFMUGFLMXR3Tkp0bDUyVk9BSkFsdnB0OTMzVzRrN3hiVUdSVUl0X1NQZmtqU0JGdWdqZVM0bU5GTU9YenVkMks1bzBXM0wwR1pOai1kVk9qdFNvV3Zra1JTaHg0ZnRKNUtTQXcwZ3l1RDJsalFYc3RoOXN6OUhTZlEwRHloVmhOdEtGSXh4OHR2eVJ6OHZTTmcxMzNYQ21WdjBnRzJoOEtjckppQnpvQkRn?oc=5",
-      "fuente": "Diario de Almería",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-24T20:08:21+00:00",
-      "resumen": "",
-      "id": "40e706720d5faf5c"
     }
   ]
 }
