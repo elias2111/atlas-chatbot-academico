@@ -1,7 +1,7 @@
 {
-  "actualizado": "2026-11-27T14:46:26-05:00",
+  "actualizado": "2026-11-27T20:18:45-05:00",
   "ventana_horas": 48,
-  "total": 21,
+  "total": 20,
   "categorias": [
     "Educación",
     "Ingeniería de sistemas",
@@ -18,13 +18,13 @@
       "fuente": "Google Noticias",
       "categoria": "Ingeniería de sistemas",
       "ok": true,
-      "items": 6
+      "items": 5
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Tecnología",
       "ok": true,
-      "items": 70
+      "items": 45
     },
     {
       "fuente": "Xataka",
@@ -36,16 +36,79 @@
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 24
+      "items": 26
     },
     {
       "fuente": "Google Noticias",
       "categoria": "Educación",
       "ok": true,
-      "items": 6
+      "items": 9
     }
   ],
   "noticias": [
+    {
+      "titulo": "Así trabaja Uniguajira para que el acceso a la educación superior no dependa del lugar donde viven los estudiantes",
+      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPQTZscDlwT3pBbjBtYTd5NmpXWlNpamlaWVZBOG1XYlRqUEhTQ3JqTWZDVlpRVEZXYlZuNVBfdWpHeUc4d1k0YTVDZ00xNE5uZWk1UnZfZmNHZlZBdnlVUWl0RkZubnlxekR6emF0NHpYX0JwbGNqV0QzbUJSZnZaaERRMjd6aTZNX3ozWmpwazdCQTdXbDY1Zmx2dFA2YW1XNVFYQ0xhcEhJNVFLZ2dJbkpMV1BjNjJBM2FHMl9TZ0JjUk9OVDR5eGJ2WkVIMDkzSm9hbnU0clRzakhPS3MyNk5GengxWDJoNENHYkRlR2xjOVNhQTFaN2hfTndVUdIBgwJBVV95cUxQU3R5eFZIOEk3S0JuMHdVLXVGaW11cUVtTUxoZUVHb3dQTzE3VWRtTmgxT1N4cXpIQTkzMDFfUE5JSU4tajF2dVl4TGdPNmN5UGNiTi1RQ0hmcjJmWkctNHo5Uy1aYjVLS1BzSHlLTnlfck5OX1lBQWs3aW0tUUlLYkRCZHdKMjJfLVhXVGtjbVZaRGN0WExSeVNsVlp0YzhuVkJpWEc2RTZTYzcxdmFYbXRoR19YcmpkWWhYd0Q2RTBQT3NFZ3pPUnB6M0lsOU80ektJMnlZSXY2bG84Y1BtdEh5NmZQbU90cDN1UTQ1d0d0Vk1MNkphdkRfd3NsM2l5Ym5Z?oc=5",
+      "fuente": "Revista Semana",
+      "categoria": "Educación",
+      "fecha": "2026-11-28T00:33:55+00:00",
+      "resumen": "",
+      "id": "c00d19f754962919"
+    },
+    {
+      "titulo": "Abelardo de la Espriella anunció alivios y medidas para beneficiarios del Icetex: “Espero que las decisiones anunciadas se ejecuten oportunamente”",
+      "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOWUc0R3pqY2lsX3h5dWJobDhBUXg4RE80TUl2WFFWanM3S0NDR1l6MW5TUkdzMEZJZXdmV2xKVWJmbjZWWVlyU3hENUhoWm9JTjU3dG1HbXBLM2VqcmhNX1dBaXBiWXM1TlRwTGZVNEstLUlDTVFfb0pXRFJjbDU1LXJQQWJ3Uk9yVzZ0dV9Xb2RkVDUwLWlVN2ZyYlIwNE40Qmpvak1pUTJxbDh4UUFVck80SnFYQ0RFSTZOTF9WOHF3TmcwSEFMMS01ODdmckpoc3Zsc0NROXV4YnhWTkdfTG8zWi1zU3ZNeG5GT0xTOTczNmZpMjYySFdjNzFzN0VqZ3JmbjAzRVVRLUE4TE43RnVybmJRZnPSAbICQVVfeXFMTVRqcERoMHB4b2RHTHUtM1E2ZWxaWHdyajlkdDBRZU5lZGhJSzZiQk9pclZkelNFVTdJa2V6LTRDam9qdkNRZVJnOG9uQi1DZ3ExbEFIMGp5Ym9zS3M3WmdrRHVFSDVCOFdXV0p4YUMtc3BCUnJGdFNVdUsyVG84QnZ4YjFnakR3VHdmSmV4SFBxMlZkWlJmOEtMWEZHN1Q4SUlyS0RyaDJzcnludXd1WkZrY1hqUk1pRXBJNWVtTGZYdWJpcXVHQVZWdVd3V296VXFyTTVNam9XeHFHTklXVUk1Z2ItMVVZQ3J4Z2NyeWVsdHhoNHkwTWd0NE8tNWk5dVdCcW0wdE1vM3FVOXgwbUZpdHZLdndDWDRaWnRrUmlvT3hiS01Id3p0Mk9BYXRBdm5R?oc=5",
+      "fuente": "Infobae",
+      "categoria": "Educación",
+      "fecha": "2026-11-28T00:30:00+00:00",
+      "resumen": "",
+      "id": "ac8c2376d1b96bf2"
+    },
+    {
+      "titulo": "¿Colombia está lista para la nueva revolución farmacéutica? Los retos para aprovechar la IA y la biotecnología",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNQ19BLVYwQVo4aURheENBNl9iWmVWOWUyMnBQTHk4cnNJcDBQa1VSdnN0SU1VTzlwR005VmVkTlRQaG1ibzFMd1lkWVliT211Nmk3VW1vUU9ZUUQ5WEdEdGo5T2xqVVRhVG9Ic3hWZ0Z3OFVVTkRVZklUT3Fzd3VMYV9nWXVVdjFQVEJOTEx1MXp0TzM1VEtNVDYyQTdFVGVKZ003eG0tS3lBWFMtbHhIMlVINTRBWEFNcUc3a204OXdrZlBIdGFEaXRSQVRVOUVNbXF1TTdhajRLdV9ac3F6YkdLb3pLX3JWX3VES0JmYlRZOXlHY3dHbjJaNNIB-wFBVV95cUxNQ19BLVYwQVo4aURheENBNl9iWmVWOWUyMnBQTHk4cnNJcDBQa1VSdnN0SU1VTzlwR005VmVkTlRQaG1ibzFMd1lkWVliT211Nmk3VW1vUU9ZUUQ5WEdEdGo5T2xqVVRhVG9Ic3hWZ0Z3OFVVTkRVZklUT3Fzd3VMYV9nWXVVdjFQVEJOTEx1MXp0TzM1VEtNVDYyQTdFVGVKZ003eG0tS3lBWFMtbHhIMlVINTRBWEFNcUc3a204OXdrZlBIdGFEaXRSQVRVOUVNbXF1TTdhajRLdV9ac3F6YkdLb3pLX3JWX3VES0JmYlRZOXlHY3dHbjJaNA?oc=5",
+      "fuente": "Revista Semana",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-27T23:03:22+00:00",
+      "resumen": "",
+      "id": "3d41e2594c03502d"
+    },
+    {
+      "titulo": "Gobierno impulsa al ICETEX para apoyar a estudiantes con dificultades económicas",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNQWlQUHFaLU9wQmJjMERYbWxVT3lMbkVETVItRW9PdGliaGZHZ3RnWFp5R2t3RUh0dFk5S043Wm1YVGFDaGppWURmTE9JRUVjSHQ4d01heHE1RTFsdUl6U2xWUUh1RFBjc2FoSlV3NWpTMGZTTENOVWllRV8wbWRMMGVCN3FZUFBOYUtGZFRLSWdQalpkOHF6VzdjTGlxMjA3N01UUGExOUlFdklRZmc?oc=5",
+      "fuente": "BusinessCol.com",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T21:37:42+00:00",
+      "resumen": "",
+      "id": "d16a6cde705ce97e"
+    },
+    {
+      "titulo": "Presidente De La Espriella reafirma la libertad educativa y fortalece el ICETEX para ampliar el acceso a la educación superior",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPVWVOTWtGUDR1VERxekNXT1AwXzV1NFNSQUN6eFRXUjNIVlRUY21XR3NKQk1qT25qRk01WDdSS0dwbTlhYVVWbkppWHByaWY2a3VJNC1Yei1NS2xtYVEtV1JNNmJFS2JQTFAxenZ4V25Bc2NBYkNMdXhJQ1Vld3RpcTdMcGpXWGRmYTFIWVNuZ1BBZmxMRDJiaHd0Z0Y4blJwOUZGZVdMcllHN2Z6QURMOFVkMU9uc3RBSUZ2OTBrQXprTXVldUNrQnZva05IMHFzM1EwbXFTcmRkS2tqczhyVmluaDVEMi1GelNB?oc=5",
+      "fuente": "BusinessCol.com",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T21:37:13+00:00",
+      "resumen": "",
+      "id": "420407ed2d404cfe"
+    },
+    {
+      "titulo": "Presidente anunció nuevos alivios del Icetex: habrá condonaciones de hasta el 80% del capital",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUnpwN05KdV9kLXpRT1BFWXI1U3hmeXRBTlNQWWI4Y0pqdXFKbDRNZG52akY3SEpJd19sLTYxc2lKV2FBb3F6dmxWZENaa0ljdFl0ZEZIbENSX3pjRUZFZnRiTU5LbXVzdE5QbFpETGx2ZzRlbDBDckdiYmpxZzk5ZjkzTFVLbGdsZ19pM1lPZVBxd9IBkgFBVV95cUxQUnpwN05KdV9kLXpRT1BFWXI1U3hmeXRBTlNQWWI4Y0pqdXFKbDRNZG52akY3SEpJd19sLTYxc2lKV2FBb3F6dmxWZENaa0ljdFl0ZEZIbENSX3pjRUZFZnRiTU5LbXVzdE5QbFpETGx2ZzRlbDBDckdiYmpxZzk5ZjkzTFVLbGdsZ19pM1lPZVBxdw?oc=5",
+      "fuente": "Noticias RCN",
+      "categoria": "Educación",
+      "fecha": "2026-11-27T19:55:03+00:00",
+      "resumen": "",
+      "id": "d2e13653b2f3d531"
+    },
+    {
+      "titulo": "Inspirados en la inteligencia artificial, padres registran a su hija como ‘Chat Yipiti´ en Colombia",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPbmFtdG04dWtPa1NjeXFJQ0ZPTWFLX3Bva2IyRW85Qi1IcDc4TThvdnN2RWJ0clNnNXVESzZNWmJkdERLT0FTOFgyTVkwVUJMUDMzdDZ1MWZBcWtiRWdnMTJPbjkzWGE1cHhlQzY3RWcwR044dVlLaDRmb2pDRjY1UEhRdVlWck9GWHphMG1GbHpJRHdhVXY3dzhXMDJhRDNncThOMUowU0dJeFFtd3kzY0R0YkpSeFhGaTlTdzBoa0RnaEtMVnhWTERzMXBjSmhyUlgwM3ZvaGJaRVBkTjlQTXpXSnRoLVZxRldZQQ?oc=5",
+      "fuente": "Azteca Chiapas",
+      "categoria": "Tecnología",
+      "fecha": "2026-11-27T19:54:54+00:00",
+      "resumen": "",
+      "id": "86b87c850404b8df"
+    },
     {
       "titulo": "Los AirPods 5 no se pierden las últimas horas del Black Friday con una nueva oferta histórica",
       "url": "https://www.xataka.com/seleccion/airpods-5-no-se-pierden-ultimas-horas-black-friday-nueva-oferta-historica",
@@ -119,13 +182,13 @@
       "id": "cf8cea5da380f6e9"
     },
     {
-      "titulo": "Colombia | Regulación de IA y concesiones flexibles para atraer inversión a centros de datos: Indra",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOT0NNaTN6Z2g1LVdhRXBnMm5wZGgyUXVLT0RjVUxYSURFaG9xMkgwSGdkYnVkSkNBck5WenRIa3F0QWJSQ1VsWjFQVkhvZGE5MXh3WGZ3ZGFSRHVGei1ObEJRS1IzeERlN0stN181TGJ0UWxjYW9HLWVPVlEyXzNLckgxYVlLbWhvME11Mkg3dDlpU1RRX2ZGVnY1eUZRMk9YYmlGZlFLNHNSUjM3WGNlRWE2ZmVUekh0?oc=5",
-      "fuente": "DPL News",
+      "titulo": "La huella de Google en Colombia: 15 años de tecnología al servicio del país | El Colombiano",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQSngwdFpHUjQyMldoN1ZFVEZ4Rjd1cjRwZVhhQTRXN2JBVEdfNDR6RDdrR0FLU0QyM1VQSzNidEVtZnBNV0gyN1JBcmpqMFBzcVZLQWtqTHVycm9NSmtqOGNrZERTZlVJZmRtS18tdk4yUGVXNlNBOEhMeXJoTzBvcHJtM01YQ0gzbWt30gGQAUFVX3lxTFB3WFo2YUdsTlpwbnZIbVA1SFJOb0dTaFNhLXJfUXNfVmhCczlRal9lZnFQWkJveEg0V2RScEloT0JVNnZCR09OdmhOTkdiNTluZmxMN09lYWNKZkJIX2VKcnJyb1V4ZW5iZjBIa2RxcEt4UzR1YWtXWXA2aWo5NDF3cGJpNjk4eEdLY0xWQi03bg?oc=5",
+      "fuente": "El Colombiano",
       "categoria": "Tecnología",
-      "fecha": "2026-11-27T17:42:52+00:00",
+      "fecha": "2026-11-27T17:34:15+00:00",
       "resumen": "",
-      "id": "c59361d7bf55770c"
+      "id": "26409c3327faef89"
     },
     {
       "titulo": "Colombia retrocedió en el escalafón mundial de preparación para la Inteligencia Artificial: se ubicó en el puesto 62",
@@ -137,85 +200,13 @@
       "id": "18d5a02ba1831a40"
     },
     {
-      "titulo": "Últimas horas de Black Friday: estos son algunos de los mejores chollos que aún puedes conseguir en Lenovo, Dyson, Apple, Pixel y más",
-      "url": "https://www.xataka.com/seleccion/ultimas-horas-black-friday-estos-algunos-mejores-chollos-que-puedes-conseguir-lenovo-dyson-apple-pixel",
-      "fuente": "Xataka",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-27T17:18:20+00:00",
-      "resumen": "En la medianoche de hoy finalizará el Black Friday de 2026. Una edición bastante larga que ha tenido lugar a lo largo de varias semanas en tiendas como PcComponentes, Amazon o MediaMarkt . Y aunque todavía queda el próximo lunes para aprovechar descuentazos, con la llegada del Cy",
-      "id": "5bb0d454e8744f80"
-    },
-    {
-      "titulo": "La IA de Oracle ya está en Colombia: de la Fórmula 1 al corazón de las empresas",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOdU1ETzUtbDlPR1F2cTI4U2gyb0F1TVRXTFRNZVFSbU1XNWVoZ0tfRFM3bGJ5eUZSaXVyREd1Rkk3ZEtSRmkwdWFySmhHRUh3OHVCdmRUWnhXUlhBSk4tOW5OWHBiUHhfbzl4M1BDSWgtckFzRjdzVXdDWHFKNzlrcDdNT0xKb2g2bTlLNFFzdlRkX243RDJ6VlQ5al9wWG90blp4djVIT3lUM0ZFMEt1TElQU0pVcjB2LTVCZU5Lbk9CZmNBX2JHUzlRd0RWbFBKeWxWblVOd9IB1wFBVV95cUxOdU1ETzUtbDlPR1F2cTI4U2gyb0F1TVRXTFRNZVFSbU1XNWVoZ0tfRFM3bGJ5eUZSaXVyREd1Rkk3ZEtSRmkwdWFySmhHRUh3OHVCdmRUWnhXUlhBSk4tOW5OWHBiUHhfbzl4M1BDSWgtckFzRjdzVXdDWHFKNzlrcDdNT0xKb2g2bTlLNFFzdlRkX243RDJ6VlQ5al9wWG90blp4djVIT3lUM0ZFMEt1TElQU0pVcjB2LTVCZU5Lbk9CZmNBX2JHUzlRd0RWbFBKeWxWblVOdw?oc=5",
-      "fuente": "Revista Semana",
-      "categoria": "Tecnología",
-      "fecha": "2026-11-27T17:03:40+00:00",
-      "resumen": "",
-      "id": "7338a9455acb9783"
-    },
-    {
-      "titulo": "Jóvenes pastusos accedieron a educación superior gratuita",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUTRnWnpPSzlKTEdKYzNfQklUbnJ1QktfNkluR1lpR3pQV3BCQ3FMVk1UeHJqQWpNUGhMRVc2Y3ZBT3U4YktIa1ZSTDhmdENhcUl3MW1va2Y1ZjExWGZOVXBjOThqNS1kUzJBQ1phUU1sUXRwLTk5NWRoNDM4YnhESkFmaVUxSTcyQ1hMb3hTd05yeDZ3?oc=5",
-      "fuente": "HSB Noticias",
-      "categoria": "Educación",
-      "fecha": "2026-11-27T17:03:06+00:00",
-      "resumen": "",
-      "id": "bed4e0631bf78208"
-    },
-    {
-      "titulo": "ICETEX tendrá 15.000 nuevos cupos de crédito educativo y subsidios a las tasas de interés",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMGpoRFdZdkdSVzNFbTBuaFpfbFFyWUJUMU1qUEhOOUJFSkNtekw3OWVUM1o4UEpSZzVFSmt5WGFYMjVhTGdJTzgySks0OGJKTFhfdXNaeHl1ZVh6bEdNbnA5aUtZUHZsNHlBSmZ6ZzdEeXhkVVV6NXBTMjhFaW9ibmRSYmU1UjNNZlNoeHh1UjFSdUR0WmJIZHlpd1RrZ1o1X08yb2R3TVpBYmphMHRBN0JiMVk3dWZKMDNIczJLNWVPeGZHaGdwcHd3?oc=5",
-      "fuente": "Forbes Colombia",
-      "categoria": "Educación",
-      "fecha": "2026-11-27T16:38:04+00:00",
-      "resumen": "",
-      "id": "71079643442c32f8"
-    },
-    {
-      "titulo": "Gobernación del Valle del Cauca abre convocatoria Digicampus con cien becas completas y descuentos para posgrados",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTVJIekJNWGIxQlVZSnU5MElzNlZxZjJxRkt5MURrM2N5SzE2dEs4R2NsZWJCWFFDQnJ6Q1EzOHZmNktFWE9rVkFqcjJKc2ZJcGhSckYyT1BMWW9fNVlGZWdDVzBmY204RmVXckR6eU4xV19XdjVXRk9TcVdwMnVXbmYtQTN5UmtuUUpZYy1sZkNaRVRpWXU4ZXU4VHRYenVjZmNDd3pYcGZQY2dvNF9kVEkyZU52UXJQeHZaOGxVY2NKcU12bkJDWkhkZm1nd9IB0wFBVV95cUxOZnk3LWxEcGdCQTIxNUhGWUpkN05nZEdVam1aLWNiRW1Xeko0dDFZN3RwUHQ3enJVU0VydXVyai1TeUJEb2hBLWZfeHJvQkhiUkxvVnl4dlFCVG1lNHlrSkE1RC1EZTRmeGF1RTdrVm1id2lzVXZGRndmbWt2Q0tEakh1eWFaQ3lHanZxM0FVWS15eHlSSGxfaTJPbGNTdF9TOG15N2NPcU0yWFplRDIxUkM0TUNPbVRRZkhFSWVuZ2RRZGdzQWlGT3Y5WGZRN3VnN244?oc=5",
-      "fuente": "Pulzo",
-      "categoria": "Educación",
-      "fecha": "2026-11-27T16:36:21+00:00",
-      "resumen": "",
-      "id": "d5763c3190e7ec45"
-    },
-    {
       "titulo": "¿Quieres trabajar en ciberseguridad? Estos son los roles y conocimientos que debes aprender",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMWFZcl9TUmdkb0xxWEItWDhCcm11ZmhLcnl2dkRubGtvLXcySjRwSkhGNWlvb3hUMVVmNlJTRnNnWWdfY1V5eXIxaHdJbnp3cU1CVU5JQXpVRXF5Ml8tVEI3UHJLWGhuTHZibWhIb2xUNGZfcjRZeTNPOFhnT1o1RVNRTXdKNTJVVkZ1ZnQtUFN4OThOYmxLYTZBb2xST0RsRE1sLUlDN0NDRzI4Nl9FdEYxd25jeTBURWR2UzZpRHVyV2xt?oc=5",
       "fuente": "ENTER.CO",
       "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-27T15:51:57+00:00",
+      "fecha": "2026-11-27T15:56:12+00:00",
       "resumen": "",
       "id": "2df46c1d3294078b"
-    },
-    {
-      "titulo": "Ministra de Educación participó de la convención provida del Congreso: insistió en revisar la política de educación sexual y 'no temer invocar a Dios'",
-      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPRUNpWkxjX1RGMWZjSTlFdkkydkdDZUVRWnFJekFtS0JLa1hKYXVtZ2VlWFFOX0UtUnRQZW12eXdKSXJqY29EQlNwUDVrNUdPZlB2YmFlU3VqT01rZXJjLVFnLVdKbUFMTUxYdlN0ZnVBRHVLNVhaWDhhS0RFZHdlTXJqdWpYNFFuWUZERGExdGF5MldXQnFLZ3hVR2ZLOXJRb3FmUXZDQXdUY21IV3QyN19Nc0RFVXcwODg1SEFkdUVYLXJudlJ6cFFPMGx4MzBsY3o0eEoxcGdIVEdFcFlJZC1CQ0pKbEFfSU1wSmtNTF9NMWhsOS1zYXRqUGdDTWFmcHBibkJVallXaWxnX0cxcXkzQ0dFbkFRRWxKY09JbGLSAaYCQVVfeXFMT0hJVEptSG9EQUNVUEJRUFBEVTFyWDQ3MGlObTk0QjNXZHZlWEZwMUtNN2JaWDZpRUtjN3pKUXFhSG9YMmpWOGhoVUNRRzBQTjdpQUVKX1lFX1p0d2pTLThJQ2txRFRKa2JFTzVTQVZ3TUNoZkd6N2txSDduRHJoeVlDY1JOUE1mOGtlVjRRTWxXYkpEeFdxVXY1TlFYRTRPZ1hMUktsd0pGd295ek5ZMVl6ZEx0d3dfTEpyWEI2c3pTRzh4OEFKZW4weTBmRlVVcWF1Qm8zT2dtNS01ekdGSnZFYUIteWpjbEh5eldsQW1JaVotMWt4eGVZSXBmOGNRV0ozM3dOWE1nOTVCZlpHLXdPdWVyMllzQktsckp1eVN0dEhKRHRR?oc=5",
-      "fuente": "El Tiempo",
-      "categoria": "Educación",
-      "fecha": "2026-11-27T15:37:43+00:00",
-      "resumen": "",
-      "id": "d55d93e73ddfc8cc"
-    },
-    {
-      "titulo": "Internxt es la nube europea que garantiza el cifrado de conocimiento cero, y ahora cuesta un 90% menos en su Black Friday",
-      "url": "https://www.xataka.com/seleccion/internxt-nube-europea-que-garantiza-cifrado-conocimiento-cero-ahora-cuesta-90-su-black-friday",
-      "fuente": "Xataka",
-      "categoria": "Ingeniería de sistemas",
-      "fecha": "2026-11-27T14:11:00+00:00",
-      "resumen": "En un mundo donde las suscripciones se han vuelto el pan de cada día, hay algunas que merecen la pena y otras que podríamos considerar como \"gastos hormiga\". Sin duda alguna, tener un buen sistema de almacenamiento en la nube es de los primeros, especialmente con la cantidad de e",
-      "id": "75775baf06d58238"
-    },
-    {
-      "titulo": "Retos de gestión de las universidades ante la IA: Cosimo Lorenzo Guerriero",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPV0NPTDR5WWp6T2FfT1hFS2JoVFBSbDJTMWRmaU5NZGhPV2l5WVZDRW9CTUVkYlIwY1dDR19RbkQtTEJfcDJyRGtZNnhVOFJJaVlINzVYWl8xUkE5WG9DQm5xWW9ueWh4N24zRGhfSWdCQTVvMUFYdm1EWGR2XzRfbWZHbTZpMW1YNU9aeEl4RERkM1BUTi10REhaRThzdWIyMUdjSVV5Tkg?oc=5",
-      "fuente": "El Observatorio de la Universidad Colombiana",
-      "categoria": "Educación",
-      "fecha": "2026-11-27T01:13:12+00:00",
-      "resumen": "",
-      "id": "bad72afbb96fcdca"
     },
     {
       "titulo": "De hacker a vicepresidencia de Meta: quién es el español Chema Alonso y su trayectoria en empresas tecnológicas",
